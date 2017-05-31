@@ -2,4 +2,4 @@
 *.tfstate.backup
 .terraform
 *.iml
-.passwd
+passwd
