@@ -9,6 +9,7 @@ provider "aws" {
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
+  key_name        = "${var.key_pair}"
   security_groups = ["${aws_security_group.instance.id}"]
 
   user_data = <<-EOF
@@ -45,6 +46,13 @@ resource "aws_security_group" "instance" {
   ingress {
     from_port   = "${var.server_port}"
     to_port     = "${var.server_port}"
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
