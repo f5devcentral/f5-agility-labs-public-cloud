@@ -18,7 +18,7 @@ resource "aws_vpc" "terraform-vpc" {
   }
 }
 
-resource "aws_subnet" "public-1" {
+resource "aws_subnet" "public-d" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.1.0/24"
   map_public_ip_on_launch = "true"
@@ -29,7 +29,7 @@ resource "aws_subnet" "public-1" {
   }
 }
 
-resource "aws_subnet" "private-1" {
+resource "aws_subnet" "private-d" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.100.0/24"
   map_public_ip_on_launch = "false"
@@ -40,7 +40,7 @@ resource "aws_subnet" "private-1" {
   }
 }
 
-resource "aws_subnet" "public-2" {
+resource "aws_subnet" "public-e" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.2.0/24"
   map_public_ip_on_launch = "true"
@@ -51,7 +51,7 @@ resource "aws_subnet" "public-2" {
   }
 }
 
-resource "aws_subnet" "private-2" {
+resource "aws_subnet" "private-e" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.200.0/24"
   map_public_ip_on_launch = "false"
@@ -60,6 +60,32 @@ resource "aws_subnet" "private-2" {
   tags {
     Name = "private"
   }
+}
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = "${aws_vpc.terraform-vpc.id}"
+
+  tags {
+    Name = "internet-gateway"
+  }
+}
+
+resource "aws_route_table" "rt1" {
+  vpc_id = "${aws_vpc.terraform-vpc.id}"
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = "${aws_internet_gateway.gw.id}"
+  }
+
+  tags {
+    Name = "Default"
+  }
+}
+
+resource "aws_route_table_association" "association-subnet" {
+  subnet_id      = "${aws_subnet.public-d.id}"
+  route_table_id = "${aws_route_table.rt1.id}"
 }
 
 resource "aws_launch_configuration" "example" {
@@ -79,30 +105,25 @@ resource "aws_launch_configuration" "example" {
   }
 }
 
-resource "aws_instance" "deployedToNewVPC" {
-  ami             = "ami-40d28157"
-  instance_type   = "t2.micro"
-  key_name        = "${var.key_pair}"
-  security_groups = ["${aws_security_group.testsg.id}"]
-  subnet_id       = "${aws_subnet.public-1.id}"
+resource "aws_autoscaling_group" "example" {
+  launch_configuration = "${aws_launch_configuration.example.id}"
+  vpc_zone_identifier  = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]
 
-  user_data = <<-EOF
-              #!/bin/bash
-              echo "Hello, World" > index.html
-              nohup busybox httpd -f -p "${var.server_port}" &
-              EOF
+  load_balancers    = ["${aws_elb.example.name}"]
+  health_check_type = "ELB"
 
-  tags {
-    Name = "deployedToNewVC"
-  }
+  min_size = 2
+  max_size = 10
 
-  lifecycle {
-    create_before_destroy = true
+  tag {
+    key                 = "Name"
+    value               = "terraform-asg-example"
+    propagate_at_launch = true
   }
 }
 
-resource "aws_security_group" "testsg" {
-  name   = "testsg"
+resource "aws_security_group" "instance" {
+  name   = "terraform-example-instance"
   vpc_id = "${aws_vpc.terraform-vpc.id}"
 
   ingress {
@@ -124,51 +145,33 @@ resource "aws_security_group" "testsg" {
   }
 }
 
-resource "aws_autoscaling_group" "example" {
-  launch_configuration = "${aws_launch_configuration.example.id}"
-  availability_zones   = ["${data.aws_availability_zones.all.names}"]
+/*
+resource "aws_instance" "example" {
+  ami                    = "ami-40d28157"
+  instance_type          = "t2.micro"
+  subnet_id              = "${aws_subnet.private-d.id}"
+  vpc_security_group_ids = ["${aws_security_group.instance.id}"]
 
-  load_balancers    = ["${aws_elb.example.name}"]
-  health_check_type = "ELB"
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Hello, World" > index.html
+              nohup busybox httpd -f -p "${var.server_port}" &
+              EOF
 
-  min_size = 2
-  max_size = 10
-
-  tag {
-    key                 = "Name"
-    value               = "terraform-asg-example"
-    propagate_at_launch = true
+  tags {
+    Name = "terraform-example"
   }
 }
 
-resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
-
-  ingress {
-    from_port   = "${var.server_port}"
-    to_port     = "${var.server_port}"
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
+*/
 data "aws_availability_zones" "all" {}
 
 resource "aws_elb" "example" {
-  name               = "terraform-asg-example"
-  availability_zones = ["${data.aws_availability_zones.all.names}"]
-  security_groups    = ["${aws_security_group.elb.id}"]
+  name = "terraform-asg-example"
+
+  #availability_zones = ["us-east-1d", "us-east-1e"]
+  security_groups = ["${aws_security_group.elb.id}"]
+  subnets         = ["${aws_subnet.private-d.id}", "${aws_subnet.private-e.id}"]
 
   listener {
     lb_port           = 80
@@ -187,7 +190,8 @@ resource "aws_elb" "example" {
 }
 
 resource "aws_security_group" "elb" {
-  name = "terraform-example-elb"
+  name   = "terraform-example-elb"
+  vpc_id = "${aws_vpc.terraform-vpc.id}"
 
   ingress {
     from_port   = 80
