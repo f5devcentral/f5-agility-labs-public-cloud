@@ -7,8 +7,8 @@ resource "aws_cloudformation_stack" "f5-cluster" {
     bigipExternalSecurityGroup   = "${aws_security_group.elb.id}"
     bigipManagementSecurityGroup = "${aws_security_group.f5_management.id}"
     imageName                    = "Best"
-    licenseKey1                  = "DUQVK-SIYYP-WTCHG-VHRFG-JLSFYQF"
-    licenseKey2                  = "LOXBY-PQCUE-TUAHN-TSRHU-USSTGLH"
+    licenseKey1                  = "11111-11111-11111-11111-11111"
+    licenseKey2                  = "22222-22222-22222-22222-22222"
     managementSubnetAz1          = "${aws_subnet.f5-management-d.id}"
     managementSubnetAz2          = "${aws_subnet.f5-management-e.id}"
     restrictedSrcAddress         = "0.0.0.0/0"
@@ -20,3 +20,4 @@ resource "aws_cloudformation_stack" "f5-cluster" {
   template_url = "https://github.com/F5Networks/f5-aws-cloudformation/blob/master/supported/cluster/2nic/across-az-ha/f5-existing-stack-across-az-cluster-byol-2nic-bigip.template"
 }
 */
+
