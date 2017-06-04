@@ -51,11 +51,11 @@ output "bigipManagementSecurityGroup" {
 }
 
 output "licenseKey1" {
-  value = "11111-11111-11111-11111-11111"
+  value = "${licenseKey1}"
 }
 
 output "licenseKey2" {
-  value = "22222-22222-22222-22222-22222"
+  value = "${licenseKey2}"
 }
 
 output "managementSubnetAz1" {
