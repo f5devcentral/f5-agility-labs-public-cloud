@@ -18,6 +18,28 @@ resource "aws_vpc" "terraform-vpc" {
   }
 }
 
+resource "aws_subnet" "f5-management-d" {
+  vpc_id                  = "${aws_vpc.terraform-vpc.id}"
+  cidr_block              = "10.0.101.0/24"
+  map_public_ip_on_launch = "true"
+  availability_zone       = "us-east-1d"
+
+  tags {
+    Name = "management"
+  }
+}
+
+resource "aws_subnet" "f5-management-e" {
+  vpc_id                  = "${aws_vpc.terraform-vpc.id}"
+  cidr_block              = "10.0.102.0/24"
+  map_public_ip_on_launch = "true"
+  availability_zone       = "us-east-1e"
+
+  tags {
+    Name = "management"
+  }
+}
+
 resource "aws_subnet" "public-d" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.1.0/24"
@@ -146,6 +168,13 @@ resource "aws_security_group" "instance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   lifecycle {
     create_before_destroy = true
   }
@@ -210,5 +239,42 @@ resource "aws_security_group" "elb" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+resource "aws_security_group" "f5_management" {
+  name   = "f5_management"
+  vpc_id = "${aws_vpc.terraform-vpc.id}"
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["69.123.176.179/32"]
+  }
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["69.123.176.179/32"]
+  }
+
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
