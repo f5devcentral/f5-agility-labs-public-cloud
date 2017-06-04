@@ -83,11 +83,17 @@ resource "aws_route_table" "rt1" {
   }
 }
 
+resource "aws_main_route_table_association" "association-subnet" {
+  vpc_id         = "${aws_vpc.terraform-vpc.id}"
+  route_table_id = "${aws_route_table.rt1.id}"
+}
+
+/*
 resource "aws_route_table_association" "association-subnet" {
   subnet_id      = "${aws_subnet.public-d.id}"
   route_table_id = "${aws_route_table.rt1.id}"
 }
-
+*/
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
@@ -169,9 +175,8 @@ data "aws_availability_zones" "all" {}
 resource "aws_elb" "example" {
   name = "terraform-asg-example"
 
-  #availability_zones = ["us-east-1d", "us-east-1e"]
   security_groups = ["${aws_security_group.elb.id}"]
-  subnets         = ["${aws_subnet.private-d.id}", "${aws_subnet.private-e.id}"]
+  subnets         = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]
 
   listener {
     lb_port           = 80

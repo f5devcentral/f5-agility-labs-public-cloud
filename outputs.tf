@@ -6,18 +6,18 @@ output "vpc-id" {
   value = "${aws_vpc.terraform-vpc.id}"
 }
 
-output "vpc-publicsubnet" {
+output "vpc-public-d" {
   value = "${aws_subnet.public-d.cidr_block}"
 }
 
-output "vpc-publicsubnet-id" {
-  value = "${aws_subnet.public-e.id}"
+output "vpc-public-d-id" {
+  value = "${aws_subnet.public-d.id}"
 }
 
-output "vpc-privatesubnet" {
+output "vpc-private-d" {
   value = "${aws_subnet.private-d.cidr_block}"
 }
 
-output "vpc-privatesubnet-id" {
-  value = "${aws_subnet.private-e.id}"
+output "vpc-private-d-id" {
+  value = "${aws_subnet.private-d.id}"
 }
