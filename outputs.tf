@@ -51,11 +51,11 @@ output "bigipManagementSecurityGroup" {
 }
 
 output "licenseKey1" {
-  value = "DUQVK-SIYYP-WTCHG-VHRFG-JLSFYQF"
+  value = "11111-11111-11111-11111-11111"
 }
 
 output "licenseKey2" {
-  value = "LOXBY-PQCUE-TUAHN-TSRHU-USSTGLH"
+  value = "22222-22222-22222-22222-22222"
 }
 
 output "managementSubnetAz1" {

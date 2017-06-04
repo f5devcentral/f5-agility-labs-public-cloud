@@ -12,11 +12,11 @@ variable "key_pair" {
 variable "licenseKey1" {
   description = "license key 1"
   type        = "string"
-  default     = "DUQVK-SIYYP-WTCHG-VHRFG-JLSFYQF"
+  default     = "11111-11111-11111-11111-11111-11111"
 }
 
 variable "licenseKey2" {
   description = "license key 2"
   type        = "string"
-  default     = "LOXBY-PQCUE-TUAHN-TSRHU-USSTGLH"
+  default     = "22222-22222-22222-22222-22222-22222"
 }
