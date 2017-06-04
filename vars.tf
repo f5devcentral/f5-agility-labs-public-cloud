@@ -8,3 +8,15 @@ variable "key_pair" {
   type        = "string"
   default     = "MyKeyPair"
 }
+
+variable "licenseKey1" {
+  description = "license key 1"
+  type        = "string"
+  default     = "DUQVK-SIYYP-WTCHG-VHRFG-JLSFYQF"
+}
+
+variable "licenseKey2" {
+  description = "license key 2"
+  type        = "string"
+  default     = "LOXBY-PQCUE-TUAHN-TSRHU-USSTGLH"
+}
