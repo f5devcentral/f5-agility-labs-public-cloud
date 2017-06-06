@@ -39,7 +39,7 @@ output "vpc-private-e-id" {
 }
 
 output "sshKey" {
-  value = "${key_pair}"
+  value = "${var.key_pair}"
 }
 
 output "bigipExternalSecurityGroup" {
@@ -51,11 +51,11 @@ output "bigipManagementSecurityGroup" {
 }
 
 output "licenseKey1" {
-  value = "${licenseKey1}"
+  value = "${var.licenseKey1}"
 }
 
 output "licenseKey2" {
-  value = "${licenseKey2}"
+  value = "${var.licenseKey2}"
 }
 
 output "managementSubnetAz1" {

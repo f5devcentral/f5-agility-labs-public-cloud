@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.8, < 0.9.7"
+  required_version = "=0.9.6"
 }
 
 provider "aws" {
@@ -110,12 +110,6 @@ resource "aws_main_route_table_association" "association-subnet" {
   route_table_id = "${aws_route_table.rt1.id}"
 }
 
-/*
-resource "aws_route_table_association" "association-subnet" {
-  subnet_id      = "${aws_subnet.public-d.id}"
-  route_table_id = "${aws_route_table.rt1.id}"
-}
-*/
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
@@ -169,7 +163,7 @@ resource "aws_security_group" "instance" {
   }
 
   ingress {
-    from_port   = 0
+    from_port   = 8
     to_port     = 0
     protocol    = "icmp"
     cidr_blocks = ["0.0.0.0/0"]
@@ -180,12 +174,13 @@ resource "aws_security_group" "instance" {
   }
 }
 
-/*
-resource "aws_instance" "example" {
+resource "aws_instance" "example-d" {
+  count                  = 3
   ami                    = "ami-40d28157"
   instance_type          = "t2.micro"
-  subnet_id              = "${aws_subnet.private-d.id}"
+  subnet_id              = "${aws_subnet.public-d.id}"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
+  key_name               = "${var.key_pair}"
 
   user_data = <<-EOF
               #!/bin/bash
@@ -194,11 +189,29 @@ resource "aws_instance" "example" {
               EOF
 
   tags {
-    Name = "terraform-example"
+    Name = "web-az1.${count.index}"
   }
 }
 
-*/
+resource "aws_instance" "example-e" {
+  count                  = 3
+  ami                    = "ami-40d28157"
+  instance_type          = "t2.micro"
+  subnet_id              = "${aws_subnet.public-e.id}"
+  vpc_security_group_ids = ["${aws_security_group.instance.id}"]
+  key_name               = "${var.key_pair}"
+
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Hello, World" > index.html
+              nohup busybox httpd -f -p "${var.server_port}" &
+              EOF
+
+  tags {
+    Name = "web-az2.${count.index}"
+  }
+}
+
 data "aws_availability_zones" "all" {}
 
 resource "aws_elb" "example" {
@@ -234,6 +247,13 @@ resource "aws_security_group" "elb" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -250,21 +270,21 @@ resource "aws_security_group" "f5_management" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["69.123.176.179/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["69.123.176.179/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port   = 0
+    from_port   = 8
     to_port     = 0
     protocol    = "icmp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/16"]
   }
 
   egress {
@@ -273,8 +293,51 @@ resource "aws_security_group" "f5_management" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
 
-  lifecycle {
-    create_before_destroy = true
+resource "aws_security_group" "f5_data" {
+  name   = "f5_data"
+  vpc_id = "${aws_vpc.terraform-vpc.id}"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 1026
+    to_port     = 1026
+    protocol    = "udp"
+    cidr_blocks = ["10.0.0.0/16"]
+  }
+
+  ingress {
+    from_port   = 4353
+    to_port     = 4353
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.0.0/16"]
+  }
+
+  ingress {
+    from_port   = 8
+    to_port     = 0
+    protocol    = "icmp"
+    cidr_blocks = ["10.0.0.0/16"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
