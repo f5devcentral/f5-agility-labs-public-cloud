@@ -37,7 +37,7 @@ Drop into a bash shell / terminal for all of Task 3.
 
    aws configure
 
-2. Create ssh key pairs. Public key will be stored in AWS as "MyKeyPair". Both your public and private key will be exported to MyKeyPair.pm in your working directory. This is what we'll later use to ssh to all of our AWS instances.
+2. Create ssh key pairs. Public key will be stored in AWS as "MyKeyPair". Both your public and private key will be exported to MyKeyPair.pem in your working directory. This is what we'll later use to ssh to all of our AWS instances.
 
 .. code-block:: bash
 
