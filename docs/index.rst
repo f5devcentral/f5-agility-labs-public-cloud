@@ -1,10 +1,10 @@
-.. projectName documentation master file, created by
-   sphinx-quickstart on Tue Jun  6 16:39:33 2017.
+.. marfil-f5-terraform documentation master file, created by
+   sphinx-quickstart on Tue Jun  6 18:10:18 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to projectName's documentation!
-=======================================
+Welcome to marfil-f5-terraform's documentation!
+===============================================
 
 .. toctree::
    :maxdepth: 2

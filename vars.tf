@@ -10,10 +10,12 @@ variable "key_pair" {
 
 variable "licenseKey1" {
   description = "license key 1"
-  default     = "11111-11111-11111-11111-11111-11111"
+
+  # default     = "11111-11111-11111-11111-11111-11111"
 }
 
 variable "licenseKey2" {
   description = "license key 2"
-  default     = "22222-22222-22222-22222-22222-22222"
+
+  #  default     = "22222-22222-22222-22222-22222-22222"
 }
