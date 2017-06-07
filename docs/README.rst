@@ -110,8 +110,8 @@ Terraform has successfully done its job, but we still must wait for instances to
 
 .. code-block:: bash
 
-   terraform output | grep elb_dns_name
-   elb_dns_name = terraform-asg-example-xxxxxxxxx.us-east-1.elb.amazonaws.com
+   terraform output elb_dns_name
+   terraform-asg-example-xxxxxxxxx.us-east-1.elb.amazonaws.com
    curl http://terraform-asg-example-xxxxxxxxx.us-east-1.elb.amazonaws.com
 
 The second environment is the "BIG-IP in AWS - Clustered 2-NIC across Availability Zones" up on GitHub with six web server instances across two Availability Zones (three web servers per AZ).
