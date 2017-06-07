@@ -184,3 +184,13 @@ Which servers are part of this pool? **Private IP address of web-az1.0-2 and web
 
 
 Stop the active BigIP instance and three web-az1.x instances in AZ1 via the AWS console and the elastic IP will 'float' over to the second BigIP.
+
+Task 6 - Nuke environment
+-------------------------
+1.  AWS Console -> Services -> Storage -> S3 -> Delete the S3 bucket prefaced with f5-cluster.
+
+2. Drop into a bash shell / terminal.
+
+.. code-block:: bash
+
+   terraform destroy
