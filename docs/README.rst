@@ -10,7 +10,7 @@ Prerequisites:
 - Generate 2 x BigIP Evaluation keys for: F5-BIG-VE-BT-25M-V13-LIC
 - Create AWS User and generate Access key ID and Secrete Access key. (Explained below)
 
-Task 1 - Create AWS User and generate Access key ID and Secrete Access key.
+Task 1 - Create AWS User and generate Access key ID and Secret Access key.
 ---------------------------------------------------------------------------
 
 1. From the AWS Console -> Services -> Security, Identity & Compliance ->  IAM -> Users -> "Add user"
@@ -25,7 +25,7 @@ Task 1 - Create AWS User and generate Access key ID and Secrete Access key.
 
 Task 2 - Accept license agreement.
 ----------------------------------
-1. If you haven't done so already, in the AWS Marketplace, find the BYOL F5 ami we're going to run (ami-4c76185a). Attempt to manually provision via the Marketplace only to the point where you click to accept the license agreement, then stop! Cloudformation deployments of F5 will fail if you don't accept the agreement.
+1. If you haven't done so already, in the AWS Marketplace, find the BYOL F5 ami we're going to run (ami-4c76185a). Attempt to manually provision via the Marketplace only to the point where you click to accept the license agreement, then stop! CloudFormation deployments of F5 will fail if you don't accept the agreement.
 
 Task 3 - Configure the AWS console with Access key ID, Secret access key and generate ssh keys.
 -----------------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ When done you should see a message like the one below.
    vpc-public-e = 10.0.1.0/24
    vpc-public-e-id = subnet-xxxxxxxx
 
-Terraform has successfully done it's job, but we still have to wait for instances to spin up. Log back in to the AWS Console to track status of the new instances.
+Terraform has successfully done its job, but we still must wait for instances to spin up. Log back in to the AWS Console to track status of the new instances.
 
 4. Two environments were created within a new VPC. The first environment is an ELB load-balancing two instances in an Auto Scaling group across two availability zones. You can test with the elb_dns_name in the terraform output.
 
@@ -158,13 +158,15 @@ Name: **vs1**
 
 High Availability. What IP address do you want to use for the virtual server? **Secondary private IP address of the first BigIP.**
 
+.. note:: The preconfigured HA_Across_AZs iApp has both IP addresses for the virtual servers prepopulated. The virtual server IP address configured here must match the virtual server IP address configured in the HA_Across_AZs iApp.
+
 What is the associated service port? **HTTP(80)**
 
 What IP address do you wish to use for the TCP virtual server in the other data center or availability zone? **Secondary private IP address of the second BigIP.**
 
-.. note:: The preconfigured HA_Across_AZs iApp has both of the IP addresses for the virtual servers prepopulated. The virtual server IP address configured here has to match the virtual server IP address configured in the HA_Across_AZs iApp.
+.. note:: The preconfigured HA_Across_AZs iApp has both IP addresses for the virtual servers prepopulated. The virtual server IP address configured here must match the virtual server IP address configured in the HA_Across_AZs iApp.
 
-Which servers are part of this pool? **Private IP address of web-az1.0-2 and web-az2.0-2.** Port: **8080.**
+Which servers are part of this pool? **Private IP address of web-az1.0-2 and web-az2.0-2.** Port: **8080**
 
 **Finished!**
 
