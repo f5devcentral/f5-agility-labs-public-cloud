@@ -196,3 +196,5 @@ Task 6 - Nuke environment
 .. code-block:: bash
 
    terraform destroy
+
+.. note:: Many thanks to Yevgeniy Brikman for his excellent *Terraform: Up and Running: Writing Infrastructure as Code 1st Edition* that helped me get started. http://shop.oreilly.com/product/0636920061939.do
