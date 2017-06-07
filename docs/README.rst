@@ -1,5 +1,5 @@
-Provision an AWS/F5 lab environment in an isolated VPC with Terraform
-=====================================================================
+Lab 1.1 - Provision an AWS/F5 lab environment in an isolated VPC with Terraform
+===============================================================================
 
 Prerequisites:
 --------------
@@ -10,33 +10,35 @@ Create AWS User and generate Access key Id and Secrete Access key.
 Generate 2 x BigIP Evaluation keys for: F5-BIG-VE-BT-25M-V13-LIC
 
 
-1. Create AWS User and generate Access key Id and Secrete Access key.
-Services -> Security, Identity & Compliance ->  IAM -> Users -> "Add user"
-Check to enable Access type* : Programmatic access
-Attach existing policies directly : AdministratorAccess.
+
+Task 1 - Create AWS User and generate Access key Id and Secrete Access key.
+1. Services -> Security, Identity & Compliance ->  IAM -> Users -> "Add user"
+2. Check to enable Access type* : Programmatic access
+3. Attach existing policies directly : AdministratorAccess.
 
 .. note:: text
 You almost certainly don't need AdministratorAccess. We'll lock down permissions later.
 
-"Next: Review"
-"Create user"
-Copy and save the Access key Id to a text file for later use.
-Copy the Secret access key to a text file for later use.
+4. "Next: Review"
+5. "Create user"
+6. Copy and save the Access key Id and Secret access key to a text file for later use.
 
-2. Find F5 in the Marketplace and accept agreement.
+Task 2 - Accept license agreemnt.
+1. If you haven't done so already: find the BYOL F5 instance we're going to run (ami-4c76185a). Attempt to manually provision via the Marketplace only to the point where you accept the license agreement, then stop! Cloudformation of F5 will fail if the you don't accept the agreement.
 
-Configure the AWS console with Access key ID, Secret access key and generate ssh keys.
+Task 3 - Configure the AWS console with Access key ID, Secret access key and generate ssh keys.
+
+.. code-block:: bash
 
 aws configure
-
-The command below should 
 aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text | out-file -encoding ascii -filepath MyKeyPair.pem
 
 Drop to bash shell (Linux), powershell(Windows) or terminal(MacOS):
 
 Download git repository and change to working directory.
 
-.. code-block:: language
+.. code-block:: bash
+
 git clone https://github.com/TonyMarfil/marfil-f5-terraform
 cd ./marfil-f5-terraform/
 
