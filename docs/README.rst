@@ -10,7 +10,7 @@ Prerequisites:
 - Generate 2 x BigIP Evaluation keys for: F5-BIG-VE-BT-25M-V13-LIC
 - Create AWS User and generate Access key ID and Secrete Access key. (Explained below)
 
-Task 1 - Create AWS User and generate Access key Id and Secrete Access key.
+Task 1 - Create AWS User and generate Access key ID and Secrete Access key.
 ---------------------------------------------------------------------------
 
 1. From the AWS Console -> Services -> Security, Identity & Compliance ->  IAM -> Users -> "Add user"
