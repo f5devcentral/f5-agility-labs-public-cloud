@@ -129,7 +129,7 @@ Task 5 - Deploy a virtual server on BigIP Cluster across two Availability Zones
 
 3. Highlight the second Big-IP : f5-cluster. In the Description tab, note the first assigned Elastic IP, this is the public management IP address. note the Secondary private IP. This is the IP to be assigned to the virtual server we will soon configure.
 
-4. Use the MyKeyPair.pem to ssh to the management IP address of the BigIPs noted in steps 3 and 4 above.
+4. Use MyKeyPair.pem generated previously to ssh to the management IP address of the BigIPs noted in steps 3 and 4 above.
 
 5. Create an admin password so you can login to the WebUI.
 
@@ -153,7 +153,8 @@ Task 5 - Deploy a virtual server on BigIP Cluster across two Availability Zones
 12. Configure iApp:
 
 Traffic Group: UNCHECK "Inherit traffic group from current partition / path"
-Name: vs1
+
+Name: **vs1**
 
 High Availability. What IP address do you want to use for the virtual server? **Secondary private IP address of the first BigIP.**
 
