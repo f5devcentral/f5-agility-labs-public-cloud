@@ -31,32 +31,34 @@ Task 3 - Configure the AWS console with Access key ID, Secret access key and gen
 -----------------------------------------------------------------------------------------------
 Drop into a bash shell / terminal for all of Task 3.
 
-1. Configure aws cli access. Cut and paste the aws keys when prompted and chose your preferred region [i.e. us-east-1].
+1. Clone this project's git repository and change to working directory.
+
+.. code-block:: bash
+
+   git clone https://github.com/TonyMarfil/marfil-f5-terraform
+   cd ./marfil-f5-terraform/
+
+
+2. Configure aws cli access. Cut and paste the aws keys when prompted and chose your preferred region [i.e. us-east-1].
 
 .. code-block:: bash
 
    aws configure
 
-2. Create ssh key pairs. Public key will be stored in AWS as "MyKeyPair". Both your public and private key will be exported to MyKeyPair.pem in your working directory. This is what we'll later use to ssh to all of our AWS instances.
+3. Create ssh key pairs. Public key will be stored in AWS as "MyKeyPair". Both your public and private key will be exported to MyKeyPair.pem in your working directory. This is what we'll later use to ssh to all of our AWS instances.
 
 Mac/Linux:
 
 .. code-block:: bash
 
    aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+   chmod 400 MyKeyPair.pem 
 
 Windows:
 
 .. code-block:: bash
 
    aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text | out-file -encoding ascii -filepath MyKeyPair.pem
-
-Clone this project's git repository and change to working directory.
-
-.. code-block:: bash
-
-   git clone https://github.com/TonyMarfil/marfil-f5-terraform
-   cd ./marfil-f5-terraform/
 
 Task 4 - Create entire AWS/F5 environment with a single command: terraform apply
 --------------------------------------------------------------------------------
@@ -204,5 +206,9 @@ Task 6 - Nuke environment
 .. code-block:: bash
 
    terraform destroy
+
+3. After destroy completes, remove MyKeyPair. From the AWS Console -> Services -> NETWORK & SECURITY -> Key Pairs -> Delete MyKeyPair.
+
+4. Remove User. From the AWS Console -> Services -> Security, Identity & Compliance ->  IAM -> Users -> Delete terraform.test user.
 
 .. note:: Many thanks to Yevgeniy Brikman for his excellent *Terraform: Up and Running: Writing Infrastructure as Code 1st Edition* that helped me get started. http://shop.oreilly.com/product/0636920061939.do
