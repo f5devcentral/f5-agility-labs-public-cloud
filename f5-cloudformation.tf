@@ -18,5 +18,6 @@ resource "aws_cloudformation_stack" "f5-cluster" {
     subnet1Az2                   = "${aws_subnet.public-e.id}"
   }
 
+  #CloudFormation templates triggered from Terraform must be hosted on AWS S3. Below is the temporary URL for testing.
   template_url = "https://s3.amazonaws.com/marfil-f5-cftemplates/f5-existing-stack-across-az-cluster-byol-2nic-bigip.template"
 }
