@@ -38,7 +38,7 @@ Drop into a bash shell / terminal for all of Task 3.
    git clone https://github.com/TonyMarfil/marfil-f5-terraform
    cd ./marfil-f5-terraform/
 
-.. attention:: The template is hardcoded for us-east-1. Chose us-east-1 for now. I'll fix this later.
+.. attention:: The template is hardcoded for us-east-1. Choose us-east-1 for now. I'll fix this later.
 
 2. Configure aws cli access. Cut and paste the aws keys when prompted and chose your preferred region [i.e. us-east-1].
 
