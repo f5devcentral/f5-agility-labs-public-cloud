@@ -14,7 +14,7 @@ resource "aws_vpc" "terraform-vpc" {
   enable_classiclink   = "false"
 
   tags {
-    Name = "terraform"
+    Name = "terraform_${var.emailid}_${timestamp()}"
   }
 }
 
@@ -139,7 +139,7 @@ resource "aws_autoscaling_group" "example" {
 
   tag {
     key                 = "Name"
-    value               = "terraform-asg-example"
+    value               = "tf-asg-elb-${var.emailid}"
     propagate_at_launch = true
   }
 }
@@ -175,7 +175,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_instance" "example-d" {
-  count                  = 3
+  count                  = 1
   ami                    = "ami-40d28157"
   instance_type          = "t2.micro"
   subnet_id              = "${aws_subnet.public-d.id}"
@@ -194,7 +194,7 @@ resource "aws_instance" "example-d" {
 }
 
 resource "aws_instance" "example-e" {
-  count                  = 3
+  count                  = 1
   ami                    = "ami-40d28157"
   instance_type          = "t2.micro"
   subnet_id              = "${aws_subnet.public-e.id}"
@@ -215,7 +215,7 @@ resource "aws_instance" "example-e" {
 data "aws_availability_zones" "all" {}
 
 resource "aws_elb" "example" {
-  name = "terraform-asg-example"
+  name = "tf-elb-${var.emailidsan}"
 
   security_groups = ["${aws_security_group.elb.id}"]
   subnets         = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]

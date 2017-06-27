@@ -19,3 +19,11 @@ variable "licenseKey2" {
 
   #  default     = "22222-22222-22222-22222-22222-22222"
 }
+
+variable "emailid" {
+  description = "emailid"
+}
+
+variable "emailidsan" {
+  description = "emailidsan"
+}
