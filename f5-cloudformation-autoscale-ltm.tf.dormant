@@ -1,0 +1,25 @@
+resource "aws_cloudformation_stack" "f5-autoscaleLTM" {
+  name         = "f5-autoscale-ltm-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
+  capabilities = ["CAPABILITY_IAM"]
+
+  parameters {
+    deploymentName           = "${var.emailidsans}"
+    vpc                      = "${aws_vpc.terraform-vpc.id}"
+    availabilityZones        = "us-east-1d, us-east-1e"
+    subnets                  = "${aws_subnet.f5-public-d.id}, ${aws_subnet.f5-public-e.id}"
+    restrictedSrcAddress     = "0.0.0.0/0"
+    bigipElasticLoadBalancer = "tf-elb-test1f5io"
+    sshKey                   = "${var.aws_keypair}"
+    throughput               = "25Mbps"
+    imageName                = "Good"
+    scalingMinSize           = "1"
+    scalingMaxSize           = "2"
+    notificationEmail        = "${var.emailid}"
+    virtualServicePort       = "8080"
+    applicationPort          = "8080"
+    appInternalDnsName       = "vs1.f5demo.local"
+  }
+
+  #CloudFormation templates triggered from Terraform must be hosted on AWS S3. Below is the temporary URL for testing.
+  template_url = "https://s3.amazonaws.com/f5-cft/f5-autoscale-bigip-ltm.template"
+}

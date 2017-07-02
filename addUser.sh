@@ -9,7 +9,8 @@ echo "Enter an aws console password:
 read awsConsolePass
 
 aliasprefix=f5agility2017
-alias=$aliasprefix`echo $emailid | sed 's/[\@._-]//g'`
+emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
+alias=${aliasprefix}${emailidsan}
 
 # create user
 
@@ -51,6 +52,10 @@ aws iam list-user-policies \
 
 aws ec2 create-key-pair --key-name MyKeyPair-${emailid} --query 'KeyMaterial' --output text > MyKeyPair-${emailid}.pem
 chmod 400 MyKeyPair-${emailid}.pem
+
+#create a self-signed SSL certificate
+
+openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout ${emailidsan}.key -out ${emailidsan}.crt -nodes
 
 # export environment varibales for use by terraform
 

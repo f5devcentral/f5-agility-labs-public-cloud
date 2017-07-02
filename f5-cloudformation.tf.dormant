@@ -6,7 +6,7 @@ resource "aws_cloudformation_stack" "f5-cluster" {
     Vpc                          = "${aws_vpc.terraform-vpc.id}"
     bigipExternalSecurityGroup   = "${aws_security_group.f5_data.id}"
     bigipManagementSecurityGroup = "${aws_security_group.f5_management.id}"
-    imageName                    = "Best"
+    imageName                    = "Good"
     instanceType                 = "t2.medium"
     licenseKey1                  = "${var.licenseKey1}"
     licenseKey2                  = "${var.licenseKey2}"

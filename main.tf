@@ -214,17 +214,25 @@ resource "aws_instance" "example-e" {
 
 data "aws_availability_zones" "all" {}
 
+resource "aws_iam_server_certificate" "elb_cert" {
+  name             = "elb_cert_${var.emailid}"
+  certificate_body = "${file("${var.emailidsan}.crt")}"
+  private_key      = "${file("${var.emailidsan}.key")}"
+}
+
 resource "aws_elb" "example" {
   name = "tf-elb-${var.emailidsan}"
 
-  security_groups = ["${aws_security_group.elb.id}"]
-  subnets         = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]
+  cross_zone_load_balancing = true
+  security_groups           = ["${aws_security_group.elb.id}"]
+  subnets                   = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]
 
   listener {
-    lb_port           = 80
-    lb_protocol       = "http"
-    instance_port     = "${var.server_port}"
-    instance_protocol = "http"
+    lb_port            = 443
+    lb_protocol        = "https"
+    instance_port      = "${var.server_port}"
+    instance_protocol  = "http"
+    ssl_certificate_id = "${aws_iam_server_certificate.elb_cert.arn}"
   }
 
   health_check {
