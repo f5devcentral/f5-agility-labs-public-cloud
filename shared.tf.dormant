@@ -1,0 +1,12 @@
+resource "aws_instance" "bigiq" {
+  count                  = 1
+  ami                    = "ami-f9dab6ef"
+  instance_type          = "m4.large"
+  subnet_id              = "${aws_subnet.public-e.id}"
+  vpc_security_group_ids = ["${aws_security_group.f5_management.id}"]
+  key_name               = "${var.aws_keypair}"
+
+  tags {
+    Name = "bigiq"
+  }
+}

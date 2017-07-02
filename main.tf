@@ -113,7 +113,7 @@ resource "aws_main_route_table_association" "association-subnet" {
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
-  key_name        = "${var.key_pair}"
+  key_name        = "${var.aws_keypair}"
   security_groups = ["${aws_security_group.instance.id}"]
 
   user_data = <<-EOF
@@ -180,7 +180,7 @@ resource "aws_instance" "example-d" {
   instance_type          = "t2.micro"
   subnet_id              = "${aws_subnet.public-d.id}"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
-  key_name               = "${var.key_pair}"
+  key_name               = "${var.aws_keypair}"
 
   user_data = <<-EOF
               #!/bin/bash
@@ -199,7 +199,7 @@ resource "aws_instance" "example-e" {
   instance_type          = "t2.micro"
   subnet_id              = "${aws_subnet.public-e.id}"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
-  key_name               = "${var.key_pair}"
+  key_name               = "${var.aws_keypair}"
 
   user_data = <<-EOF
               #!/bin/bash

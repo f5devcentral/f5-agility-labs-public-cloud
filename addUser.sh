@@ -4,6 +4,10 @@ echo "Enter an email address:
 "
 read emailid
 
+echo "Enter an aws console password:
+"
+read awsConsolePass
+
 aliasprefix=f5agility2017
 alias=$aliasprefix`echo $emailid | sed 's/[\@._-]//g'`
 
@@ -25,7 +29,7 @@ aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys.json
 
 aws iam create-login-profile \
 --user-name "$emailid" \
---password "mylabpassword"
+--password "$awsConsolePass"
 
 # create account alias
 
@@ -43,7 +47,11 @@ aws iam get-user \
 aws iam list-user-policies \
 --user-name "$emailid"
 
-aws ec2 create-key-pair --key-name MyKeyPair$emailid --query 'KeyMaterial' --output text > MyKeyPair$username.pem
-chmod 400 MyKeyPair.pem
+# create ssh keys and store private key locally
+
+aws ec2 create-key-pair --key-name MyKeyPair-${emailid} --query 'KeyMaterial' --output text > MyKeyPair-${emailid}.pem
+chmod 400 MyKeyPair-${emailid}.pem
+
+# export environment varibales for use by terraform
 
 . ./export.sh

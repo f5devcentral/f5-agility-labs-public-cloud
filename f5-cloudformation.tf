@@ -1,6 +1,5 @@
-/*
 resource "aws_cloudformation_stack" "f5-cluster" {
-  name         = "f5-cluster"
+  name         = "f5-cluster-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
   capabilities = ["CAPABILITY_IAM"]
 
   parameters {
@@ -14,7 +13,7 @@ resource "aws_cloudformation_stack" "f5-cluster" {
     managementSubnetAz1          = "${aws_subnet.f5-management-d.id}"
     managementSubnetAz2          = "${aws_subnet.f5-management-e.id}"
     restrictedSrcAddress         = "0.0.0.0/0"
-    sshKey                       = "${var.key_pair}"
+    sshKey                       = "${var.aws_keypair}"
     subnet1Az1                   = "${aws_subnet.public-d.id}"
     subnet1Az2                   = "${aws_subnet.public-e.id}"
   }
@@ -22,5 +21,3 @@ resource "aws_cloudformation_stack" "f5-cluster" {
   #CloudFormation templates triggered from Terraform must be hosted on AWS S3. Below is the temporary URL for testing.
   template_url = "https://s3.amazonaws.com/f5-cft/f5-existing-stack-across-az-cluster-byol-2nic-bigip.template"
 }
-*/
-

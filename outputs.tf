@@ -39,7 +39,7 @@ output "vpc-private-e-id" {
 }
 
 output "sshKey" {
-  value = "${var.key_pair}"
+  value = "${var.aws_keypair}"
 }
 
 output "bigipExternalSecurityGroup" {

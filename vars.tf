@@ -3,9 +3,8 @@ variable "server_port" {
   default     = 8080
 }
 
-variable "key_pair" {
+variable "aws_keypair" {
   description = "The name of an existing key pair. In AWS Console: NETWORK & SECURITY -> Key Pairs"
-  default     = "MyKeyPair"
 }
 
 variable "licenseKey1" {
