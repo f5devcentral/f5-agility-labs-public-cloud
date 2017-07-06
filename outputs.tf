@@ -2,6 +2,8 @@ output "elb_dns_name" {
   value = "${aws_elb.example.dns_name}"
 }
 
+#Disabled output of autoscale elb dns names because these variables are not available until <cloudformation>.tf.dormant => <cloudformation>.tf
+/*
 output "appInternalDnsName_ltm_autoscale" {
   value = "${aws_elb.f5-autoscale-ltm-elb.dns_name}"
 }
@@ -9,6 +11,7 @@ output "appInternalDnsName_ltm_autoscale" {
 output "appInternalDnsName_waf_autoscale" {
   value = "${aws_elb.f5-autoscale-waf-elb.dns_name}"
 }
+*/
 
 output "vpc-id" {
   value = "${aws_vpc.terraform-vpc.id}"

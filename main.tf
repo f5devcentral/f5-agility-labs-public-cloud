@@ -43,7 +43,7 @@ resource "aws_subnet" "f5-management-e" {
 resource "aws_subnet" "public-d" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.1.0/24"
-  map_public_ip_on_launch = "true"
+  map_public_ip_on_launch = "false"
   availability_zone       = "us-east-1d"
 
   tags {
@@ -65,7 +65,7 @@ resource "aws_subnet" "private-d" {
 resource "aws_subnet" "public-e" {
   vpc_id                  = "${aws_vpc.terraform-vpc.id}"
   cidr_block              = "10.0.2.0/24"
-  map_public_ip_on_launch = "true"
+  map_public_ip_on_launch = "false"
   availability_zone       = "us-east-1e"
 
   tags {
@@ -110,11 +110,14 @@ resource "aws_main_route_table_association" "association-subnet" {
   route_table_id = "${aws_route_table.rt1.id}"
 }
 
+/*
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-40d28157"
   instance_type   = "t2.micro"
   key_name        = "${var.aws_keypair}"
   security_groups = ["${aws_security_group.instance.id}"]
+
+  }
 
   user_data = <<-EOF
               #!/bin/bash
@@ -143,6 +146,7 @@ resource "aws_autoscaling_group" "example" {
     propagate_at_launch = true
   }
 }
+*/
 
 resource "aws_security_group" "instance" {
   name   = "terraform-example-instance"
@@ -189,7 +193,12 @@ resource "aws_instance" "example-d" {
               EOF
 
   tags {
-    Name = "web-az1.${count.index}"
+    Name        = "web-az1.${count.index}"
+    application = "f5app"
+    environment = "f5env"
+    group       = "f5group"
+    owner       = "f5owner"
+    costcenter  = "f5costcenter"
   }
 }
 
@@ -208,7 +217,12 @@ resource "aws_instance" "example-e" {
               EOF
 
   tags {
-    Name = "web-az2.${count.index}"
+    Name        = "web-az2.${count.index}"
+    application = "f5app"
+    environment = "f5env"
+    group       = "f5group"
+    owner       = "f5owner"
+    costcenter  = "f5costcenter"
   }
 }
 
@@ -240,6 +254,16 @@ resource "aws_elb" "example" {
     timeout             = 3
     interval            = 30
     target              = "HTTP:${var.server_port}/"
+  }
+
+  instances                   = ["${aws_instance.example-d.id}", "${aws_instance.example-e.id}"]
+  cross_zone_load_balancing   = true
+  idle_timeout                = 400
+  connection_draining         = true
+  connection_draining_timeout = 400
+
+  tags {
+    Name = "tf-elb-${var.emailidsan}"
   }
 }
 
