@@ -228,11 +228,10 @@ resource "aws_elb" "example" {
   subnets                   = ["${aws_subnet.public-d.id}", "${aws_subnet.public-e.id}"]
 
   listener {
-    lb_port            = 443
-    lb_protocol        = "https"
-    instance_port      = "${var.server_port}"
-    instance_protocol  = "http"
-    ssl_certificate_id = "${aws_iam_server_certificate.elb_cert.arn}"
+    lb_port           = 80
+    lb_protocol       = "http"
+    instance_port     = "${var.server_port}"
+    instance_protocol = "http"
   }
 
   health_check {

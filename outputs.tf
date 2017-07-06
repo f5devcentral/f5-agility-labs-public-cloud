@@ -2,6 +2,14 @@ output "elb_dns_name" {
   value = "${aws_elb.example.dns_name}"
 }
 
+output "appInternalDnsName_ltm_autoscale" {
+  value = "${aws_elb.f5-autoscale-ltm-elb.dns_name}"
+}
+
+output "appInternalDnsName_waf_autoscale" {
+  value = "${aws_elb.f5-autoscale-waf-elb.dns_name}"
+}
+
 output "vpc-id" {
   value = "${aws_vpc.terraform-vpc.id}"
 }
@@ -68,4 +76,8 @@ output "managementSubnetAz2" {
 
 output "restrictedSrcAddress" {
   value = "0.0.0.0/0"
+}
+
+output ssl_certificate_id {
+  value = "${aws_iam_server_certificate.elb_cert.arn}"
 }

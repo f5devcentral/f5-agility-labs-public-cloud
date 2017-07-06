@@ -4,6 +4,12 @@ echo "Enter an email address:
 "
 read emailid
 
+if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
+    echo "Account exists. Exporting shell variables.
+"
+    . ./export.sh
+else
+    
 echo "Enter an aws console password:
 "
 read awsConsolePass
@@ -24,7 +30,7 @@ aws iam add-user-to-group --user-name $emailid --group-name admins
 
 # create access key
 
-aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys.json
+aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys_$emailid.json
 
 # create console login
 
@@ -57,6 +63,8 @@ chmod 400 MyKeyPair-${emailid}.pem
 
 openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout ${emailidsan}.key -out ${emailidsan}.crt -nodes
 
-# export environment varibales for use by terraform
+# export environment variables for use by terraform
 
 . ./export.sh
+
+fi
