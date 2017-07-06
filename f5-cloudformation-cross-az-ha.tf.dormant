@@ -1,4 +1,4 @@
-resource "aws_cloudformation_stack" "f5-cluster" {
+resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
   name         = "f5-cluster-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
   capabilities = ["CAPABILITY_IAM"]
 

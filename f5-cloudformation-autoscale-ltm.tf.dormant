@@ -42,7 +42,7 @@ resource "aws_cloudformation_stack" "f5-autoscaleLTM" {
     scalingMinSize          = "1"
     scalingMaxSize          = "2"
     scaleDownBytesThreshold = 10000
-    scaleUpBytesThreshold   = 10
+    scaleUpBytesThreshold   = 35000
     notificationEmail       = "${var.emailid}"
 
     #WAF VIRTUAL SERVICE CONFIGURATION

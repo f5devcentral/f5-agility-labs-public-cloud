@@ -14,8 +14,15 @@ resource "aws_vpc" "terraform-vpc" {
   enable_classiclink   = "false"
 
   tags {
+    Name = "terraform_${var.emailid}"
+  }
+
+  #With timestamp
+  /*
+    tags {
     Name = "terraform_${var.emailid}_${timestamp()}"
   }
+  */
 }
 
 resource "aws_subnet" "f5-management-d" {

@@ -43,7 +43,6 @@ aws iam create-login-profile \
 aws iam create-account-alias \
 --account-alias "$alias"
 
-
 # get user info
 
 aws iam get-user \

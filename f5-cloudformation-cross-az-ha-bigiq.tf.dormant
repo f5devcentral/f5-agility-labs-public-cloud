@@ -1,0 +1,45 @@
+resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
+  name         = "f5-cluster-cross-az-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
+  capabilities = ["CAPABILITY_IAM"]
+
+  parameters {
+    #NETWORKING CONFIGURATION
+
+    Vpc                          = "${aws_vpc.terraform-vpc.id}"
+    managementSubnetAz1          = "${aws_subnet.f5-management-d.id}"
+    managementSubnetAz2          = "${aws_subnet.f5-management-e.id}"
+    bigipManagementSecurityGroup = "${aws_security_group.f5_management.id}"
+    subnet1Az1                   = "${aws_subnet.public-d.id}"
+    subnet1Az2                   = "${aws_subnet.public-e.id}"
+    bigipExternalSecurityGroup   = "${aws_security_group.f5_data.id}"
+
+    #INSTANCE CONFIGURATION
+
+    imageName            = "Good"
+    instanceType         = "t2.medium"
+    restrictedSrcAddress = "0.0.0.0/0"
+    sshKey               = "${var.aws_keypair}"
+    restrictedSrcAddress = "0.0.0.0/0"
+
+    #BIG-IQ LICENSING CONFIGURATION
+
+    bigiqAddress         = "34.229.243.5"
+    bigiqUsername        = "admin"
+    bigiqPasswordS3Arn   = "arn:aws:s3:::marfil-f5-cft/passwd"
+    bigiqLicensePoolName = "25xBest_1"
+
+    #TAGS
+
+    application = "f5app"
+    environment = "f5env"
+    group       = "f5group"
+    owner       = "f5owner"
+    costcenter  = "f5costcenter"
+  }
+
+  #CloudFormation templates triggered from Terraform must be hosted on AWS S3. Experimental hosted in non-canonical S3 bucket.
+  template_url = "https://s3.amazonaws.com/marfil-f5-cft/f5-existing-stack-across-az-cluster-bigiq-2nic-bigip.template"
+}
+
+#https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=BIGIP-Across-Az-ClusterBigIp-2nic-BIGIQ&templateURL=https:%2F%2Fs3.amazonaws.com%2Fmarfil-f5-cft%2Ff5-existing-stack-across-az-cluster-bigiq-2nic-bigip.template
+
