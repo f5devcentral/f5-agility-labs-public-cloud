@@ -1,3 +1,15 @@
+variable "bigiq_ami" {
+  description = "BigIQ ami to launch"
+}
+
+variable "bigiqAddress" {
+  description = "Management IP address of the BigIQ License Server"
+}
+
+variable "bigiqLicensePoolName" {
+  description = "BigIQ License Pool name"
+}
+
 variable "server_port" {
   description = "The port the server will use for HTTP requests"
 }
@@ -8,12 +20,10 @@ variable "aws_keypair" {
 
 variable "licenseKey1" {
   description = "license key 1"
-
 }
 
 variable "licenseKey2" {
   description = "license key 2"
-
 }
 
 variable "emailid" {

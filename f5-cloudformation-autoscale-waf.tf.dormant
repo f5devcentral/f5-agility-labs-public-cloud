@@ -46,7 +46,7 @@ resource "aws_cloudformation_stack" "f5-autoscaleWAF" {
     virtualServicePort = "${var.server_port}"
     applicationPort    = "${var.server_port}"
     appInternalDnsName = "${aws_elb.example.dns_name}"
-    policyLevel        = "low"
+    policyLevel        = "high"
 
     #TAGS
     application = "f5app"
