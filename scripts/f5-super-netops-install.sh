@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# update packages
-apk update
+#install ab
+apk add apache2-utils
 
 #install jq
 apk add jq
@@ -9,17 +9,17 @@ apk add jq
 #install openssl
 apk add openssl
 
-#install ab
-apk add apache2-utils
+#install wget
+apk add wget
 
 #install terraform
 curl -O https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip
 unzip terraform_0.9.11_linux_amd64.zip
-mv terraform ./usr/local/bin/
-terraform --version
+mv ./terraform ./usr/local/bin/
+echo "terraform --version"
+ech `terraform --version`
 
 #install aws-cli
-#if i just use defaults i probably don't need to put the path in here
 
 pip install --upgrade --user awscli
 mkdir ~/.aws/
@@ -30,10 +30,14 @@ openssl aes-256-cbc -d -a -in ~/.aws/config.enc -out ~/.aws/config -pass pass:$d
 export PATH=~/.local/bin:$PATH
 export AWS_CONFIG_FILE=~/.aws/config
 
-aws --version
+echo "aws --version"
+echo `aws --version`
 
 git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
 cd ./marfil-f5-terraform/
 chmod +x ./*.sh
 
 source ./addUser.sh
+
+# encrypt
+# openssl aes-256-cbc -a -salt -in config -out config.enc
