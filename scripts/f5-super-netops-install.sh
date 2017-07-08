@@ -33,9 +33,8 @@ export AWS_CONFIG_FILE=~/.aws/config
 echo "aws --version"
 echo `aws --version`
 
-git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
+#git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
 cd ./marfil-f5-terraform/
-chmod +x ./*.sh
 
 source ./addUser.sh
 
