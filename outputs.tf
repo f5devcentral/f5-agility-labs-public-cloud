@@ -1,5 +1,5 @@
 output "bigiqAddress" {
-  value = "${aws_instance.bigiq.public_ip}"
+  value = "${var.bigiqAddress}"
 }
 
 output "elb_dns_name" {

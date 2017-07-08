@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#sudo docker run -p 8080:80 -p 2222:22 -it -e decryptPassword= f5devcentral/f5-super-netops-container:base
+
 #git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
 #cd ./marfil-f5-terraform/
 #source /marfil-f5-terraform/scripts/f5-super-netops-install.sh
@@ -37,7 +39,7 @@ export AWS_CONFIG_FILE=~/.aws/config
 echo "aws --version"
 echo `aws --version`
 
-source ./scripts/addUser.sh
+source ./scripts/addUser.shexport
 
 # encrypt
 # openssl aes-256-cbc -a -salt -in config -out config.enc

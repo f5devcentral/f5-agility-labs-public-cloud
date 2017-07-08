@@ -2,10 +2,8 @@
 
 bigiq_ami = "ami-96d59281"
 
-bigiqAddress = "${aws_resource.bigiq.public_ip}"
-
 bigiqLicensePoolName = "bigiqLicPool"
 
 server_port = 80
 
-restrictedSrcAddress = "0.0.0.0/0"
+restrictedSrcAddress = ["0.0.0.0/0", "10.0.0.0/16"]

@@ -1,8 +1,7 @@
 #!/bin/bash
-y | rm MyKeyPair-*.pem
-rm *.json
-rm *tfstate*
-rm *.exists
+rm *.tfstate*
+rm *.pem
 rm *.crt
 rm *.key
+rm *.json
 ls -alt

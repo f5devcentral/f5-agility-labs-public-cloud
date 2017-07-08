@@ -233,7 +233,7 @@ resource "aws_instance" "example-e" {
   }
 }
 
-data "aws_availability_zones" "all" {}
+#data "aws_availability_zones" "all" {}
 
 resource "aws_iam_server_certificate" "elb_cert" {
   name             = "elb_cert_${var.emailid}"
@@ -282,14 +282,14 @@ resource "aws_security_group" "elb" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   egress {
@@ -308,21 +308,21 @@ resource "aws_security_group" "f5_management" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 8
     to_port     = 0
     protocol    = "icmp"
-    cidr_blocks = ["${var.restrictedSrcAddress}"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   egress {
@@ -341,35 +341,35 @@ resource "aws_security_group" "f5_data" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 1026
     to_port     = 1026
     protocol    = "udp"
-    cidr_blocks = ["10.0.0.0/16"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 4353
     to_port     = 4353
     protocol    = "tcp"
-    cidr_blocks = ["10.0.0.0/16"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   ingress {
     from_port   = 8
     to_port     = 0
     protocol    = "icmp"
-    cidr_blocks = ["10.0.0.0/16"]
+    cidr_blocks = "${var.restrictedSrcAddress}"
   }
 
   egress {
