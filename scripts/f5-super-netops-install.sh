@@ -18,8 +18,8 @@ apk add wget
 
 #install terraform
 curl -O https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip
-unzip terraform_0.9.11_linux_amd64.zip
-mv ./terraform ./usr/local/bin/
+unzip ./terraform_0.9.11_linux_amd64.zip
+mv ./terraform /usr/local/bin/
 echo "terraform --version"
 echo `terraform --version`
 
