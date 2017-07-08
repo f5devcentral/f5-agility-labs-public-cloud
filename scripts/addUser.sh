@@ -7,7 +7,7 @@ read emailid
 if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
     echo "Account exists. Exporting shell variables.
 "
-    . ./export.sh
+. ./scripts/export.sh
 else
     
 echo "Enter an aws console password:
