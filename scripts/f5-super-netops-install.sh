@@ -37,7 +37,7 @@ export AWS_CONFIG_FILE=~/.aws/config
 echo "aws --version"
 echo `aws --version`
 
-source ./addUser.sh
+source /marfil-f5-terraform/scripts /addUser.sh
 
 # encrypt
 # openssl aes-256-cbc -a -salt -in config -out config.enc

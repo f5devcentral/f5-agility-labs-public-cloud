@@ -65,6 +65,6 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 
 # export environment variables for use by terraform
 
-. ./export.sh
+. ./scripts/export.sh
 
 fi
