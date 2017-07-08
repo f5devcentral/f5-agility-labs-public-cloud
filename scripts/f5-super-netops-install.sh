@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
+#cd ./marfil-f5-terraform/
+#source /marfil-f5-terraform/scripts/f5-super-netops-install.sh
+
 #install ab
 apk add apache2-utils
 
@@ -17,7 +21,7 @@ curl -O https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_a
 unzip terraform_0.9.11_linux_amd64.zip
 mv ./terraform ./usr/local/bin/
 echo "terraform --version"
-ech `terraform --version`
+echo `terraform --version`
 
 #install aws-cli
 
@@ -32,9 +36,6 @@ export AWS_CONFIG_FILE=~/.aws/config
 
 echo "aws --version"
 echo `aws --version`
-
-#git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
-cd ./marfil-f5-terraform/
 
 source ./addUser.sh
 
