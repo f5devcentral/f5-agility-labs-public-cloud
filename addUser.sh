@@ -17,6 +17,7 @@ read awsConsolePass
 aliasprefix=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
 alias=${aliasprefix}${emailidsan}
+groupName=aws-full-access
 
 # create user
 
@@ -26,7 +27,7 @@ aws iam create-user \
 
 # add user to admins group
 
-aws iam add-user-to-group --user-name $emailid --group-name admins
+aws iam add-user-to-group --user-name $emailid --group-name $groupName
 
 # create access key
 

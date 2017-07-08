@@ -7,6 +7,11 @@ resource "aws_instance" "bigiq" {
   key_name                    = "${var.aws_keypair}"
   associate_public_ip_address = true
 
+  user_data = <<-EOF
+              #!/bin/bash
+              /usr/local/bin/SOAPLicenseClient --verbose --basekey "FPNUN-AEFULU-GFZ-MDBKYPZ-HXIKMWV"
+              EOF
+
   tags {
     Name = "f5-bigiq-5.1"
   }

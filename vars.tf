@@ -26,10 +26,19 @@ variable "licenseKey2" {
   description = "license key 2"
 }
 
+variable "bigiqLicense" {
+  description = "BigIQ base license key"
+}
+
 variable "emailid" {
   description = "emailid"
 }
 
 variable "emailidsan" {
   description = "emailidsan"
+}
+
+variable "restrictedSrcAddress" {
+  description = "Lock down management access by source IP address or network"
+  default     = "0.0.0.0/0"
 }

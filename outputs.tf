@@ -1,3 +1,7 @@
+output "bigiqAddress" {
+  value = "${aws_instance.bigiq.public_ip}"
+}
+
 output "elb_dns_name" {
   value = "${aws_elb.example.dns_name}"
 }
@@ -67,6 +71,10 @@ output "licenseKey1" {
 
 output "licenseKey2" {
   value = "${var.licenseKey2}"
+}
+
+output "bigiqLicense" {
+  value = "${var.bigiqLicense}"
 }
 
 output "managementSubnetAz1" {
