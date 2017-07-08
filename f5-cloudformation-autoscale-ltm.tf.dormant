@@ -1,5 +1,5 @@
 resource "aws_elb" "f5-autoscale-ltm-elb" {
-  name = "f5-autoscale-ltm-elb-${var.emailidsan}"
+  name = "ltm-${var.emailidsan}"
 
   cross_zone_load_balancing = true
   security_groups           = ["${aws_security_group.elb.id}"]
@@ -15,12 +15,12 @@ resource "aws_elb" "f5-autoscale-ltm-elb" {
 }
 
 resource "aws_cloudformation_stack" "f5-autoscaleLTM" {
-  name         = "f5-autoscale-ltm-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
+  name         = "ltm-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
   capabilities = ["CAPABILITY_IAM"]
 
   parameters {
     #DEPLOYMENT
-    deploymentName           = "autoscale-ltm-${var.emailidsan}"
+    deploymentName           = "ltm-${var.emailidsan}"
     vpc                      = "${aws_vpc.terraform-vpc.id}"
     availabilityZones        = "us-east-1d,us-east-1e"
     subnets                  = "${aws_subnet.public-d.id},${aws_subnet.public-e.id}"

@@ -4,7 +4,7 @@ bigiq_ami = "ami-96d59281"
 
 bigiqAddress = "${aws_resource.bigiq.public_ip}"
 
-bigiqLicensePoolName = "bestLicPool"
+bigiqLicensePoolName = "bigiqLicPool"
 
 server_port = 80
 
