@@ -9,6 +9,9 @@
 #install ab
 apk add apache2-utils
 
+#install gettext
+apk add gettext
+
 #install jq
 apk add jq
 

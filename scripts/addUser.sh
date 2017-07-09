@@ -76,5 +76,9 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 
 . ./scripts/export.sh
 
+# replace temporary aws config file with new account aws access key and secret access key; uses envsubst from the gettext package.
+
+envsubst < ./scripts/config.template > ~/.aws/config
+
 fi
 done
