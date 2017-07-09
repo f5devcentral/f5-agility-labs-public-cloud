@@ -18,6 +18,7 @@ variable "aws_keypair" {
   description = "The name of an existing key pair. In AWS Console: NETWORK & SECURITY -> Key Pairs"
 }
 
+/*
 variable "licenseKey1" {
   description = "license key 1"
 }
@@ -29,7 +30,7 @@ variable "licenseKey2" {
 variable "bigiqLicense" {
   description = "BigIQ base license key"
 }
-
+*/
 variable "emailid" {
   description = "emailid"
 }
