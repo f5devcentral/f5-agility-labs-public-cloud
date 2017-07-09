@@ -2,6 +2,10 @@ output "bigiqAddress" {
   value = "${var.bigiqAddress}"
 }
 
+output "aws_instance.bigiq.public_ip" {
+  value = "${aws_instance.bigiq.public_ip}"
+}
+
 output "elb_dns_name" {
   value = "${aws_elb.example.dns_name}"
 }
@@ -65,6 +69,7 @@ output "bigipManagementSecurityGroup" {
   value = "${aws_security_group.f5_management.id}"
 }
 
+/*
 output "licenseKey1" {
   value = "${var.licenseKey1}"
 }
@@ -72,7 +77,7 @@ output "licenseKey1" {
 output "licenseKey2" {
   value = "${var.licenseKey2}"
 }
-
+*/
 output "bigiqLicense" {
   value = "${var.bigiqLicense}"
 }
