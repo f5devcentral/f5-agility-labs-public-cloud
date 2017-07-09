@@ -97,3 +97,7 @@ output "restrictedSrcAddress" {
 output ssl_certificate_id {
   value = "${aws_iam_server_certificate.elb_cert.arn}"
 }
+
+output "Link alias to AWS Console" {
+  value = "${var.aws_alias}"
+}
