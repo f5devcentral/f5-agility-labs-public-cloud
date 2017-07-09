@@ -53,6 +53,10 @@ aws iam create-login-profile \
 aws iam create-account-alias \
 --account-alias "$alias"
 
+# capture aws alias link
+
+$aws_alias=https://`aws iam list-account-aliases | jq --raw-output .AccountAliases[]`.signin.aws.amazon.com/console
+
 # get user info
 
 aws iam get-user \
@@ -74,11 +78,11 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 
 # export environment variables for use by terraform
 
+. ./scripts/export.sh
+
 # replace temporary aws config file with new account aws access key and secret access key; uses envsubst from the gettext package.
 
 envsubst < ./scripts/config.template > ~/.aws/config
-
-. ./scripts/export.sh
 
 fi
 done
