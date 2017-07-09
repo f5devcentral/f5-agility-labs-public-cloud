@@ -4,7 +4,7 @@ ok=0
 
 while [ $ok = 0 ]
 do
-  echo "Enter an email address:
+  echo "Enter an email address - 25 characters max:
 "
   read emailid
 
@@ -74,11 +74,11 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 
 # export environment variables for use by terraform
 
-. ./scripts/export.sh
-
 # replace temporary aws config file with new account aws access key and secret access key; uses envsubst from the gettext package.
 
 envsubst < ./scripts/config.template > ~/.aws/config
+
+. ./scripts/export.sh
 
 fi
 done
