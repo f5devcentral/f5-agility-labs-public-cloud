@@ -76,8 +76,8 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 
 envsubst < ./scripts/config.template > ~/.aws/config
 
-#sleep 10s
-sleep 10s
+#sleep 5s
+sleep 5s
 
 # export environment variables for use by terraform
 
