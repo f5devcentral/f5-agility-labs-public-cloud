@@ -2,7 +2,7 @@ variable "bigiq_ami" {
   description = "BigIQ ami to launch"
 }
 
-variable "bigiqAddress" {
+variable "bigiqLicenseServer" {
   description = "Management IP address of the BigIQ License Server"
 }
 

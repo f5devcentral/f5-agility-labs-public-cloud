@@ -1,5 +1,5 @@
-output "bigiqAddress" {
-  value = "${var.bigiqAddress}"
+output "bigiqLicenseServer" {
+  value = "${var.bigiqLicenseServer}"
 }
 
 output "aws_instance.bigiq.public_ip" {

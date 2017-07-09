@@ -23,7 +23,7 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
 
     #BIG-IQ LICENSING CONFIGURATION
 
-    bigiqAddress         = "${var.bigiqAddress}"
+    bigiqLicenseServer   = "${var.bigiqLicenseServer}"
     bigiqUsername        = "admin"
     bigiqPasswordS3Arn   = "arn:aws:s3:::f5-marfil/passwd"
     bigiqLicensePoolName = "${var.bigiqLicensePoolName}"
