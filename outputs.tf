@@ -77,11 +77,11 @@ output "licenseKey1" {
 output "licenseKey2" {
   value = "${var.licenseKey2}"
 }
-*/
+
 output "bigiqLicense" {
   value = "${var.bigiqLicense}"
 }
-
+*/
 output "managementSubnetAz1" {
   value = "${aws_subnet.f5-management-d.id}"
 }
