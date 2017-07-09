@@ -1,14 +1,23 @@
 #/bin/bash
 
-echo "Enter an email address:
-"
-read -n 24 emailid
+ok=0
 
-if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
-    echo "Account exists. Exporting shell variables.
+while [ $ok = 0 ]
+do
+  echo "Enter an email address:
 "
-. ./scripts/export.sh
-else
+  read emailid
+
+  if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
+    echo "Account exists. Exporting shell variables.
+  "
+    . ./scripts/export.sh
+    ok=1
+  elif [ ${#emailid} -gt 25 ]
+  then
+    echo Too long - 25 characters max
+  else
+    ok=1
     
 echo "Enter an aws console password:
 "
@@ -68,3 +77,4 @@ openssl req -subj '/O=test LTD./CN=f5.io/C=US' -new -newkey rsa:2048 -days 365 -
 . ./scripts/export.sh
 
 fi
+done
