@@ -10,7 +10,7 @@ resource "aws_instance" "bigiq" {
   /* Doesn't work
     user_data = <<-EOF
                 #!/bin/bash
-                /usr/local/bin/SOAPLicenseClient --verbose --basekey "FPNUN-AEFULU-GFZ-MDBKYPZ-HXIKMWV"
+                /usr/local/bin/SOAPLicenseClient --verbose --basekey "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
                 EOF
   */
   tags {
