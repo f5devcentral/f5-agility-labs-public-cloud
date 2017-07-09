@@ -2,7 +2,7 @@
 
 echo "Enter an email address:
 "
-read -n 20 emailid
+read -n 24 emailid
 
 if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
     echo "Account exists. Exporting shell variables.
