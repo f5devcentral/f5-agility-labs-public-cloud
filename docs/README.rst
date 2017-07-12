@@ -20,11 +20,9 @@ https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-conso
 
 2. Confirm your source IP address:
 
-http://www.ipchicken.com
-
-http://www.iplocation.net
-
-http://www.whatismyip.com
+   - http://www.ipchicken.com
+   - http://www.iplocation.net
+   - http://www.whatismyip.com
 
 Task 1 - Prepare the F5-Super-Netops container and create you AWS lab account
 -----------------------------------------------------------------------------
