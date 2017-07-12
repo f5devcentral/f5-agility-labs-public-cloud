@@ -235,7 +235,7 @@ Task 6 - Deploy a virtual server on a BigIP Cluster across two Availability Zone
    modify auth user admin shell bash
    save sys config
 
-6. Login to the active BigIP configuration utility (web ui)
+6. Login to the active BigIP configuration utility (web ui).
 
 7. The "HA_Across_AZs" iApp will already be deployed in the Common partition.
 
