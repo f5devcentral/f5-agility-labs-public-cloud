@@ -39,7 +39,7 @@ If the Decryption Password is SuperSecretPass then the command would be:
 
    docker run -p 8080:80 -p 2222:22 -it -e decryptPassword=SuperSecretPass f5devcentral/f5-super-netops-container:base
 
-2. Clone the git repository for this lab, change to the working directory, and run the f5-super-netops-install.sh script.
+2. Wait until the f5-super-netops has finished launching. From the container's Bash shell, clone the git repository for this lab, change to the working directory, and run the f5-super-netops-install.sh script.
 
 .. code-block:: bash
 
