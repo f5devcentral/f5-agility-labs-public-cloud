@@ -9,11 +9,14 @@ https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-conso
 
 1. Install Docker:
 
-https://docs.docker.com/docker-for-mac/
+   - Mac:
+     https://docs.docker.com/docker-for-mac/
 
-https://docs.docker.com/docker-for-windows/install/
+   - Windows:
+     https://docs.docker.com/docker-for-windows/install/
 
-https://docs.docker.com/engine/installation/
+   - Linux
+     https://docs.docker.com/engine/installation/
 
 2. Confirm your source IP address:
 
@@ -23,8 +26,8 @@ http://www.iplocation.net
 
 http://www.whatismyip.com
 
-Task 1 - Prepare the F5-Super-Netops container and creat you aws lab account
-----------------------------------------------------------------------------
+Task 1 - Prepare the F5-Super-Netops container and create you AWS lab account
+-----------------------------------------------------------------------------
 
 1. From a Linux terminal, MacOS terminal, or Windows PowerShell, launch super-netops docker container. Replace [Decryption Password] with the Decryption Password provided at the start of the lab.
 
