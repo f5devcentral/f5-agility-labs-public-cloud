@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ok=0
 
@@ -22,6 +22,8 @@ do
 echo "Enter an aws console password:
 "
 read awsConsolePass
+
+echo $awsConsolePass > ./passwd
 
 aliasprefix=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`

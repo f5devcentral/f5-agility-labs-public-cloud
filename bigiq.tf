@@ -8,11 +8,11 @@ resource "aws_instance" "bigiq" {
   associate_public_ip_address = true
 
   /* Doesn't work
-    user_data = <<-EOF
-                #!/bin/bash
-                /usr/local/bin/SOAPLicenseClient --verbose --basekey "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
-                EOF
-  */
+      user_data = <<-EOF
+                  #!/bin/bash
+                  /usr/local/bin/SOAPLicenseClient --verbose --basekey "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+                  EOF
+    */
   tags {
     Name = "f5-bigiq-5.1"
   }

@@ -23,7 +23,7 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
 
     #BIG-IQ LICENSING CONFIGURATION
 
-    bigiqLicenseServer   = "${var.bigiqLicenseServer}"
+    bigiqAddress   = "${var.bigiqLicenseManager}"
     bigiqUsername        = "admin"
     bigiqPasswordS3Arn   = "arn:aws:s3:::f5-marfil/passwd"
     bigiqLicensePoolName = "${var.bigiqLicensePoolName}"
@@ -38,5 +38,5 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
   }
 
   #CloudFormation templates triggered from Terraform must be hosted on AWS S3. Experimental hosted in non-canonical S3 bucket.
-  template_url = "https://s3.amazonaws.com/marfil-f5-cft/f5-existing-stack-across-az-cluster-bigiq-2nic-bigip.template"
+  template_url = "https://s3.amazonaws.com/f5-marfil/f5-existing-stack-across-az-cluster-bigiq-2nic-bigip.template"
 }
