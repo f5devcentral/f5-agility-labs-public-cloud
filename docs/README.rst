@@ -74,7 +74,7 @@ When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. 
 Task 2 - Login to the AWS console
 ---------------------------------
 
-1. Use the alias aws console link, email address and password you created earlier to login to the aws console. Navigate to Service => Networking & Content Delivery => VPC. Click on # VPCs. In the search field type your email address or last three digits of your vpc-id. You should see your VPC details.
+1. Use the alias aws console link, email address and password you created earlier to login to the aws console. Navigate to Services => Networking & Content Delivery => VPC. Click on # VPCs. In the search field type your email address or last three digits of your vpc-id. You should see your VPC details.
 
 2. Services => Compute => EC2 => Resources => # Running Instances. In the search field enter your email address. You should see your newly created instance running.
 
@@ -263,7 +263,7 @@ Task 6 - Deploy a virtual server on a BigIP Cluster across two Availability Zone
 
 .. note:: The preconfigured HA_Across_AZs iApp has both IP addresses for the virtual servers prepopulated. The virtual server IP address configured here must match the virtual server IP address configured in the HA_Across_AZs iApp.
 
-   Which servers are part of this pool? **Private IP address of web-az1.0-2 and web-az2.0-2.** Port: **8080**
+   Which servers are part of this pool? **Private IP address of web-az1.0 and web-az2.0.** Port: **80**
 
    **Finished!**
 
@@ -302,13 +302,13 @@ Task 9 - Nuke environment
 
 3. Click on 'Instances' tab below. Select your Instance. Actions => Instance Protection => Remove Scale In Protection.
 
-4. Drop into a bash shell / terminal.
+4. From the f5-super-netops terminal:
 
 .. code-block:: bash
 
    terraform destroy
 
-5. After destroy completes, remove MyKeyPair-[email address]. From the AWS Console -> Services -> NETWORK & SECURITY -> Key Pairs -> Delete MyKeyPair.
+5. After destroy completes, remove MyKeyPair-[email address]. From the AWS Console -> Services -> NETWORK & SECURITY -> Key Pairs -> Delete MyKeyPair-[email address].
 
 6. Remove User. From the AWS Console -> Services -> Security, Identity & Compliance ->  IAM -> Users. Filter by email address. Delete user.
 
