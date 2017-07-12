@@ -55,7 +55,7 @@ Enter and verify the password when prompted. Note the password. This will be the
 
 2. Upload config.esc to an S3 bucket. Select config.esc in the list under the Objects tab. Note the Link value to the right: https://s3.amazonaws.com/[BucketName]/config.enc
 
-Task 3 - Apply IP access restriction to S3 Bucket
+Task 3 - Apply IP access restriction to S3 bucket
 -------------------------------------------------
 
 1. From the AWS console, navigate to the S3 bucket hosting the config.enc encrypted access key file.
