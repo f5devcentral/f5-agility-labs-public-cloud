@@ -43,7 +43,7 @@ If the Decryption Password is SuperSecretPass then the command would be:
 
 .. code-block:: bash
 
-   git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
+   git clone https://github.com/TonyMarfil/marfil-f5-terraform
    cd ./marfil-f5-terraform/
    source ./scripts/f5-super-netops-install.sh
 
