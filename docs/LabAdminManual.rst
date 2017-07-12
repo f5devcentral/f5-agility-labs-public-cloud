@@ -15,13 +15,6 @@ Task 1 - Create AWS User and generate Access key ID and Secret Access key.
 
 6. Copy and save the Access key Id and Secret access key to a file named "config" using the template below. Substitute $AWS_SECRET_ACCESS_KEY and $AWS_ACCESS_KEY_ID for the keys generated.
 
-.. code-block:: bash
-
-   [default]
-   aws_secret_access_key = $AWS_SECRET_ACCESS_KEY
-   region = us-east-1
-   aws_access_key_id = $AWS_ACCESS_KEY_ID
-
 For example:
 
 .. code-block:: bash

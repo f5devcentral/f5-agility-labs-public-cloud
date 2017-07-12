@@ -284,9 +284,10 @@ Task 6 - Deploy a virtual server on a BigIP Cluster across two Availability Zone
 
 Stop the active BigIP instance in AZ1 via the AWS console and the elastic IP will 'float' over to the second BigIP.
 
-Task 7 - Application Services iApp and Ansible! Deploy http virtual server with iRule for 0-day attack.
--------------------------------------------------------------------------------------------------------
+Task 7 - Application Services iApp, Service Discovery iApp, and Ansible! Deploy http virtual server with iRule for 0-day attack.
+--------------------------------------------------------------------------------------------------------------------------------
 - coming soon
+- Deploy the Service Discovery iApp and use tags to automatically create and populate F5 BigIP pools.
 - Deploy the previous task's iApp programmatically via Ansible.
 - Deploy http virtual server with iRule for 0-day attack with Application Services iApp.
 
