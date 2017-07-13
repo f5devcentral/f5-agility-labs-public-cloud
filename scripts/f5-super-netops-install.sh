@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#sudo docker run -p 8080:80 -p 2222:22 -it -e decryptPassword= f5devcentral/f5-super-netops-container:base
-
-#git clone -b dev https://github.com/TonyMarfil/marfil-f5-terraform
-#cd ./marfil-f5-terraform/
-#source /marfil-f5-terraform/scripts/f5-super-netops-install.sh
-
 #install ab
 apk add apache2-utils
 
@@ -32,15 +26,19 @@ echo `terraform --version`
 
 pip install --upgrade --user awscli
 mkdir ~/.aws/
+export PATH=~/.local/bin:$PATH
+export AWS_CONFIG_FILE=~/.aws/config
+echo "aws --version"
+echo `aws --version`
+
+echo "Enter decryption password:
+"
+read decryptPassword
 
 cd ~/.aws/ && { curl -O https://s3.amazonaws.com/f5-marfil/config.enc ; cd -; }
 openssl aes-256-cbc -d -a -in ~/.aws/config.enc -out ~/.aws/config -pass pass:$decryptPassword
 
-export PATH=~/.local/bin:$PATH
-export AWS_CONFIG_FILE=~/.aws/config
-
-echo "aws --version"
-echo `aws --version`
+cp ./scripts/.profile ~/.profile
 
 source ./scripts/addUser.sh
 

@@ -1,7 +1,10 @@
-# static license keys
-# export TF_VAR_licenseKey1=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
-# export TF_VAR_licenseKey2=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
-# export TF_VAR_bigiqLicense=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+#!/bin/bash
+
+if [ -f *.emailid ]; then 
+export emailid=$(basename `ls *.emailid` .emailid);
+echo "emailid exists and is ${emailid}";
+else echo "Zero or multiple emailids! Something went wrong."
+fi
 export AWS_ACCESS_KEY_ID=`cat aws_accesskeys_${emailid}.json | jq --raw-output .AccessKey.AccessKeyId`
 export AWS_SECRET_ACCESS_KEY=`cat aws_accesskeys_${emailid}.json | jq --raw-output .AccessKey.SecretAccessKey`
 export TF_VAR_terraform_aws_vpc=terraform-vpc-${emailid}

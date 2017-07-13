@@ -23,8 +23,6 @@ echo "Enter an aws console password:
 "
 read awsConsolePass
 
-echo $awsConsolePass > ./passwd
-
 aliasprefix=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
 alias=${aliasprefix}${emailidsan}
@@ -80,6 +78,10 @@ envsubst < ./scripts/config.template > ~/.aws/config
 
 #sleep 5s
 sleep 5s
+
+#touch *.emailid file and echo awsConsolePass.
+echo $awsConsolePass > ./passwd
+touch $emailid.emailid
 
 # export environment variables for use by terraform
 

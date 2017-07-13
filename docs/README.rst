@@ -27,19 +27,13 @@ https://aws.amazon.com/premiumsupport/knowledge-center/browsers-management-conso
 Task 1 - Prepare the F5-Super-Netops container and create you AWS lab account
 -----------------------------------------------------------------------------
 
-1. From a Linux terminal, MacOS terminal, or Windows PowerShell, launch super-netops docker container. Replace [Decryption Password] with the Decryption Password provided at the start of the lab.
+1. From a Linux terminal, MacOS terminal, or Windows PowerShell, launch super-netops docker container.
 
 .. code-block:: bash
 
-   docker run -p 8080:80 -p 2222:22 -it -e decryptPassword=[Decryption Password] f5devcentral/f5-super-netops-container:base
+   docker run -p 8080:80 -p 2222:22 -it -e f5devcentral/f5-super-netops-container:base
 
-If the Decryption Password is SuperSecretPass then the command would be:
-
-.. code-block:: bash
-
-   docker run -p 8080:80 -p 2222:22 -it -e decryptPassword=SuperSecretPass f5devcentral/f5-super-netops-container:base
-
-2. Wait until the f5-super-netops has finished launching. From the container's Bash shell, clone the git repository for this lab, change to the working directory, and run the f5-super-netops-install.sh script.
+2. Wait until the f5-super-netops continer has finished launching. From inside the container, clone the git repository for this lab, change to the working directory, and run the f5-super-netops-install.sh script.
 
 .. code-block:: bash
 
@@ -47,7 +41,14 @@ If the Decryption Password is SuperSecretPass then the command would be:
    cd ./marfil-f5-terraform/
    source ./scripts/f5-super-netops-install.sh
 
-3. When prompted, enter an email address and aws console password. The email address is used to create an aws console login and to tag all of your lab components.
+.. attention:: For a smooth ride, always invoke commands as root, from inside the cloned git repository. To check you're in the right place:
+
+.. code-block:: bash
+   
+   pwd
+   /root/marfil-f5-terraform
+
+3. When prompted, enter the decryption password, email address, and aws console password. The email address is used to create an aws console login and to tag all of your lab components.
 
 4. Invoke terraform.
 
@@ -78,13 +79,13 @@ Task 2 - Login to the AWS console
 
 2. Services => Compute => EC2 => Resources => # Running Instances. In the search field enter your email address. You should see your newly created instance running.
 
-3. Once your instances are green and ELB is up and running you can test with the command:
+3. While your instances and ELB are waking up, you can test with the command:
 
 .. code-block:: bash
 
-   curl `terraform output elb_dns_name`
+   while :; do curl `terraform output elb_dns_name`; sleep 1; done
 
-...and see a reply 'Hello, World'
+...until you see a reply 'Hello, World'. Hit <ctrl>+C to stop.
 
 Task 3 - License Big-IQ License Manager and apply license pools
 ---------------------------------------------------------------
@@ -103,7 +104,7 @@ Task 3 - License Big-IQ License Manager and apply license pools
 ...and change the arn to reflect the new arn of your passwd file.
 
 
-1. SSH into the Big-IQ License Manager.
+1. SSH into the Big-IQ License Manager. Be patient, the Big-IQ License Manager instance is the last one to come up. This might take up to 5 minutes.
 
 ssh -i ./MyKeyPair-[email address].pem admin@`terraform output aws_instance.bigiq.public_ip`
 
@@ -119,7 +120,10 @@ ssh -i ./MyKeyPair-t.marfil@f5.io.pem admin@`terraform output aws_instance.bigiq
 
    modify auth user admin password mylabpass
    save sys config
+   bash
    /usr/local/bin/SOAPLicenseClient --verbose --basekey XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+   exit
+   quit
 
 3. Note the terraform output value for aws_instance.bigiq.public_ip. HTTPS to this IP address from the browser and apply one or more F5-BIG-VEP3-25M-4V13-LIC pool licenses.
 
@@ -286,14 +290,14 @@ Stop the active BigIP instance in AZ1 via the AWS console and the elastic IP wil
 
 Task 7 - Application Services iApp, Service Discovery iApp, and Ansible! Deploy http virtual server with iRule for 0-day attack.
 --------------------------------------------------------------------------------------------------------------------------------
-- coming soon
+- Under development
 - Deploy the Service Discovery iApp and use tags to automatically create and populate F5 BigIP pools.
 - Deploy the previous task's iApp programmatically via Ansible.
 - Deploy http virtual server with iRule for 0-day attack with Application Services iApp.
 
 Task 8 - Enable Bot protection and autoscale WAF
 ------------------------------------------------
-- coming soon
+- Under development
 
 Task 9 - Nuke environment
 -------------------------
