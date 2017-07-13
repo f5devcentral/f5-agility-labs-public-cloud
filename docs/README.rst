@@ -64,8 +64,6 @@ Cut and paste the commands below to accomplish the steps above.
    
    su -
 
-...to invoke commands as root.
-
 3. When prompted, enter the decryption password, email address, and aws console password. The email address is used to create an aws console login and to tag all of your lab components.
 
 4. Invoke terraform.
@@ -257,7 +255,7 @@ Task 6 - Deploy a virtual server on a BigIP Cluster across two Availability Zone
 
 .. code-block:: bash
 
-   modify auth user admin shell bash
+   modify auth user admin password mylabpass
    save sys config
 
 6. Login to the active BigIP configuration utility (web ui).
