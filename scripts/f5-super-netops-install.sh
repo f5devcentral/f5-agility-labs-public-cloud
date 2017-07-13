@@ -35,7 +35,7 @@ echo "Enter decryption password:
 "
 read decryptPassword
 
-cd ~/.aws/ && { curl -O https://s3.amazonaws.com/f5-marfil/config.enc ; cd -; }
+cd ~/.aws/ && { curl -O https://s3.amazonaws.com/marfil-f5-terraform/config.enc ; cd -; }
 openssl aes-256-cbc -d -a -in ~/.aws/config.enc -out ~/.aws/config -pass pass:$decryptPassword
 
 cp ./scripts/.profile ~/.profile

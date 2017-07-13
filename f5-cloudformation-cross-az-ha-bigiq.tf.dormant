@@ -25,7 +25,7 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az" {
 
     bigiqAddress   = "${var.bigiqLicenseManager}"
     bigiqUsername        = "admin"
-    bigiqPasswordS3Arn   = "arn:aws:s3:::f5-marfil/passwd"
+    bigiqPasswordS3Arn   = "arn:aws:s3:::f5-public-cloud/passwd"
     bigiqLicensePoolName = "${var.bigiqLicensePoolName}"
 
     #TAGS
