@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#install boto3
+pip install boto3
+
+
 #install ab
 apk add apache2-utils
 
