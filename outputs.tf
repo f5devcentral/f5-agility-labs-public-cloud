@@ -2,24 +2,9 @@ output "bigiqLicenseManager" {
   value = "${var.bigiqLicenseManager}"
 }
 
-output "aws_instance.bigiq.public_ip" {
-  value = "${aws_instance.bigiq.public_ip}"
-}
-
 output "elb_dns_name" {
   value = "${aws_elb.example.dns_name}"
 }
-
-#Disabled output of autoscale elb dns names because these variables are not available until <cloudformation>.tf.dormant => <cloudformation>.tf
-/*
-output "appInternalDnsName_ltm_autoscale" {
-  value = "${aws_elb.f5-autoscale-ltm-elb.dns_name}"
-}
-
-output "appInternalDnsName_waf_autoscale" {
-  value = "${aws_elb.f5-autoscale-waf-elb.dns_name}"
-}
-*/
 
 output "vpc-id" {
   value = "${aws_vpc.terraform-vpc.id}"
@@ -69,19 +54,6 @@ output "bigipManagementSecurityGroup" {
   value = "${aws_security_group.f5_management.id}"
 }
 
-/*
-output "licenseKey1" {
-  value = "${var.licenseKey1}"
-}
-
-output "licenseKey2" {
-  value = "${var.licenseKey2}"
-}
-
-output "bigiqLicense" {
-  value = "${var.bigiqLicense}"
-}
-*/
 output "managementSubnetAz1" {
   value = "${aws_subnet.f5-management-d.id}"
 }
