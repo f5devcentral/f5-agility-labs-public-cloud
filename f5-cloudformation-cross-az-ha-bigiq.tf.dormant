@@ -20,7 +20,7 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az-ha-bigiq" {
     restrictedSrcAddress = "0.0.0.0/0"
     sshKey               = "${var.aws_keypair}"
     restrictedSrcAddress = "0.0.0.0/0"
-    ntpServer            = "pool.ntp.org"
+    ntpServer            = "0.pool.ntp.org"
 
     #BIG-IQ LICENSING CONFIGURATION
 

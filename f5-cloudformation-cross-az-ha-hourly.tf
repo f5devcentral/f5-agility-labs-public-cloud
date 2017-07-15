@@ -15,12 +15,12 @@ resource "aws_cloudformation_stack" "f5-cluster-cross-az-ha-hourly" {
 
     #INSTANCE CONFIGURATION
 
-    imageName            = "Good"
+    imageName            = "Good25Mbps"
     instanceType         = "t2.medium"
     restrictedSrcAddress = "0.0.0.0/0"
     sshKey               = "${var.aws_keypair}"
     restrictedSrcAddress = "0.0.0.0/0"
-    ntpServer            = "pool.ntp.org"
+    ntpServer            = "0.pool.ntp.org"
 
     #BIG-IQ LICENSING CONFIGURATION
 

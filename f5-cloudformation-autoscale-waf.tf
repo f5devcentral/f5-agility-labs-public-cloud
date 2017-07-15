@@ -14,7 +14,7 @@ resource "aws_elb" "f5-autoscale-waf-elb" {
   }
 }
 
-resource "aws_cloudformation_stack" "f5-autoscaleWAF" {
+resource "aws_cloudformation_stack" "f5-autoscale-waf" {
   name         = "waf-${var.emailidsan}-${aws_vpc.terraform-vpc.id}"
   capabilities = ["CAPABILITY_IAM"]
 
