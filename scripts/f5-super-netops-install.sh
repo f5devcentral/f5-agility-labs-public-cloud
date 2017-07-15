@@ -3,7 +3,6 @@
 #install boto3
 pip install boto3
 
-
 #install ab
 apk add apache2-utils
 
@@ -35,9 +34,11 @@ export AWS_CONFIG_FILE=~/.aws/config
 echo "aws --version"
 echo `aws --version`
 
-echo "Enter decryption password:
-"
-read decryptPassword
+if [ -z "$decryptPassword" ]; then
+   echo "Enter decryption password:
+   "
+   read decryptPassword
+fi
 
 cd ~/.aws/ && { curl -O https://s3.amazonaws.com/marfil-f5-terraform/config.enc ; cd -; }
 openssl aes-256-cbc -d -a -in ~/.aws/config.enc -out ~/.aws/config -pass pass:$decryptPassword

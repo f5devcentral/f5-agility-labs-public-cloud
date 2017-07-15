@@ -4,24 +4,29 @@ ok=0
 
 while [ $ok = 0 ]
 do
-  echo "Enter an email address - 25 characters max:
-"
-  read emailid
+  if [ -z "$emailid" ]; then
+    echo "Enter an email address - 25 characters max:
+    "
+    read emailid
+  fi
 
   if [ -f "./aws_accesskeys_${emailid}.json" ]; then 
     echo "Account exists. Exporting shell variables.
-  "
+    "
     . ./scripts/export.sh
     ok=1
-  elif [ ${#emailid} -gt 25 ]
-  then
+  elif [ ${#emailid} -gt 25 ]; then
     echo Too long - 25 characters max
   else
     ok=1
-    
-echo "Enter an aws console password:
-"
-read awsConsolePass
+
+# Disabling redundant awsConsolePass. Using decryptPassword for console access and auto-license login to Big-IQ License Manager.
+#
+# if [ -z "$awsConsolePass" ]; then
+#    echo "Enter an aws console password:
+#    "
+#    read awsConsolePass
+# fi
 
 aliasprefix=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
@@ -46,7 +51,8 @@ aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys_$emailid.j
 
 aws iam create-login-profile \
 --user-name "$emailid" \
---password "$awsConsolePass"
+  --password $decryptPassword
+# --password "$awsConsolePass"
 
 # create account alias
 

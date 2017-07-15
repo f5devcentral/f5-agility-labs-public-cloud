@@ -1,0 +1,2 @@
+#!/bin/bash
+. ./scripts/f5-super-netops-install.sh
