@@ -91,7 +91,7 @@ resource "aws_security_group" "f5_management" {
 resource "aws_instance" "bigiq" {
   count                       = 1
   ami                         = "${var.bigiq_ami}"
-  instance_type               = "m4.large"
+  instance_type               = "m4.xlarge"
   subnet_id                   = "${aws_subnet.f5-management-d.id}"
   vpc_security_group_ids      = ["${aws_security_group.f5_management.id}"]
   key_name                    = "${var.aws_keypair}"
@@ -99,6 +99,6 @@ resource "aws_instance" "bigiq" {
   disable_api_termination     = true
 
   tags {
-    Name = "f5-bigiq-5.1"
+    Name = "DO_NO_DELETE_f5-bigiq-5.1_terraform"
   }
 }

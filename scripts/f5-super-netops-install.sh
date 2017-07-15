@@ -34,6 +34,9 @@ export AWS_CONFIG_FILE=~/.aws/config
 echo "aws --version"
 echo `aws --version`
 
+#mark lab-info python script executable
+chmod +x ./scripts/lab-info
+
 if [ -z "$decryptPassword" ]; then
    echo "Enter decryption password:
    "

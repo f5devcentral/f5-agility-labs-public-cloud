@@ -9,3 +9,7 @@ output "BIG-IQ License Manager dns name" {
 output "Big-IQ License Manager key name" {
   value = "${aws_instance.bigiq.key_name}"
 }
+
+output "vpc-id" {
+  value = "${aws_vpc.terraform-vpc.id}"
+}
