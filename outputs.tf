@@ -69,3 +69,7 @@ output "restrictedSrcAddress" {
 output ssl_certificate_id {
   value = "${aws_iam_server_certificate.elb_cert.arn}"
 }
+
+output "**aws_alias**" {
+  value = "${var.aws_alias}"
+}

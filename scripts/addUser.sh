@@ -20,6 +20,7 @@ do
   else
     ok=1
 
+alias=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
 groupName=aws-full-access
 
@@ -42,6 +43,11 @@ aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys_$emailid.j
 aws iam create-login-profile \
 --user-name "$emailid" \
   --password $decryptPassword
+
+# create account alias
+#
+# aws iam create-account-alias \
+# --account-alias "$alias"
 
 # get user info
 
