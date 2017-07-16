@@ -20,17 +20,7 @@ do
   else
     ok=1
 
-# Disabling redundant awsConsolePass. Using decryptPassword for console access and auto-license login to Big-IQ License Manager.
-#
-# if [ -z "$awsConsolePass" ]; then
-#    echo "Enter an aws console password:
-#    "
-#    read awsConsolePass
-# fi
-
-aliasprefix=f5agility2017
 emailidsan=`echo $emailid | sed 's/[\@._-]//g'`
-alias=${aliasprefix}${emailidsan}
 groupName=aws-full-access
 
 # create user
@@ -52,12 +42,6 @@ aws iam create-access-key --user-name "$emailid" | tee aws_accesskeys_$emailid.j
 aws iam create-login-profile \
 --user-name "$emailid" \
   --password $decryptPassword
-# --password "$awsConsolePass"
-
-# create account alias
-
-aws iam create-account-alias \
---account-alias "$alias"
 
 # get user info
 
@@ -85,8 +69,7 @@ envsubst < ./scripts/config.template > ~/.aws/config
 #sleep 5s
 sleep 5s
 
-#touch *.emailid file and echo awsConsolePass.
-echo $awsConsolePass > ./passwd
+#touch *.emailid file.
 touch $emailid.emailid
 
 # export environment variables for use by terraform
