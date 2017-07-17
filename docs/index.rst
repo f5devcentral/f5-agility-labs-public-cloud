@@ -1,9 +1,20 @@
-F5 Agility Lab Index
-====================
+F5 Agility Labs - Index
+=======================
 
-.. include:: labs.include
+Welcome
+-------
+
+Welcome to the |classbold| lab at F5 Agility |year|
+
+|repoinfo|
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Index:
+   :maxdepth: 2
+   :numbered:
+   :caption: Contents:
+   :glob:
+
+   intro*
+   class*/class*
+   examples
+   markdown

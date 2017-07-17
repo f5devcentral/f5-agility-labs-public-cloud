@@ -5,10 +5,10 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "F5 Agility Labs"
+classname = "Getting Started with F5 BIG-IP"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/f5-agility-labs"
+github_repo = "https://github.com/f5devcentral/your-class-repo"
 
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'
@@ -195,7 +195,38 @@ htmlhelp_basename =  cleanname + 'doc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = { }
+front_cover_image = 'front_cover'
+back_cover_image = 'back_cover'
+
+front_cover_image_path = os.path.join('_static', front_cover_image + '.png')
+back_cover_image_path = os.path.join('_static', back_cover_image + '.png')
+
+latex_additional_files = [front_cover_image_path, back_cover_image_path]
+
+template = string.Template(open('preamble.tex').read())
+
+latex_contents = r"""
+\frontcoverpage
+\contentspage
+"""
+
+backcover_latex_contents = r"""
+\backcoverpage
+"""
+
+latex_elements = {
+    'papersize': 'letterpaper',
+    'pointsize': '10pt',
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    'preamble': template.substitute(eventname=eventname,
+                                    project=project,
+                                    author=author,
+                                    frontcoverimage=front_cover_image,
+                                    backcoverimage=back_cover_image),
+
+    'tableofcontents': latex_contents,
+    'printindex': backcover_latex_contents
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
