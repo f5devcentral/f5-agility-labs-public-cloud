@@ -5,10 +5,8 @@ Class - |classname|
 
 This class covers the following topics:
 
-- Downloading a |f5| |bip| |ve|
-- Installing a |bip| |ve| image on a hypervisor
-- Installing a |f5| |bip| Appliance
-- Powering on a |bip| Appliance
+- Deploying an Auto Scale WAF solution
+- Deploying an HA pair across AZ
 
 Expected time to complete: **3 hours**
 

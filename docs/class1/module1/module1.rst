@@ -1,9 +1,9 @@
-Module – Installing a BIG-IP Virtual Edition
-=============================================
+Module – Deploying BIG-IP Virtual Edition in AWS
+================================================
 
 .. TODO:: Needs module description
 
-In this module you will learn how to install a |f5| |bip| |ve| into your
+In this module you will learn how to deploy a  |f5| |bip| |ve| into your AWS
 environment.
 
 .. toctree::
