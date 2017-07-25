@@ -1,10 +1,7 @@
-Module – Deploying BIG-IP Virtual Edition in AWS
-================================================
+Infrastructure As Code
+===============================
 
-.. TODO:: Needs module description
-
-In this module you will learn how to deploy a  |f5| |bip| |ve| into your AWS
-environment.
+This lab will use HashiCorp Terraform to deploy F5 BIG-IP VE in AWS.
 
 .. toctree::
    :maxdepth: 1
