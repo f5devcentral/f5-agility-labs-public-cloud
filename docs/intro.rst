@@ -14,35 +14,19 @@ lab and access your jump host.
 Lab Topology
 ~~~~~~~~~~~~
 
-.. TODO:: Complete lab topology
+Before you start the lab you will have an empty environment.  You will be building out the following topology.
 
-The following components have been included in your lab environment:
+Network Topology
+^^^^^^^^^^^^^^^^^
 
-- 2 x F5 BIG-IP VE (v12.1)
-- 1 x F5 iWorkflow VE (v2.1)
-- 1 x Linux LAMP Webserver (xubuntu 14.04)
-- 1 x Windows Jumphost
+.. image:: /_static/f5-public-cloud-network-toplogy.png
+  :scale: 50%
 
-Lab Components
-^^^^^^^^^^^^^^
+The following components will be built in your lab environment:
 
-.. TODO:: Complete lab components table
+- 1-2 x F5-BIG VE WAF (v13.0) - Auto Scale WAF 
+- 2 x F5 BIG-IP VE (v13.0) - Active/Standby cross-AZ deployment
+- 2 x Linux LAMP Webserver (Amazon Linux AMI)
 
-The following table lists VLANS, IP Addresses and Credentials for all
-components:
-
-.. list-table::
-    :widths: 20 40 40
-    :header-rows: 1
-    :stub-columns: 1
-
-    * - **Component**
-      - **VLAN/IP Address(es)**
-      - **Credentials**
-    * - Sample Host
-      - - **Management:** 10.1.1.250
-        - **Internal:** 10.1.10.250
-        - **External:** 10.1.20.250
-      - ``admin``/``admin``
 
 
