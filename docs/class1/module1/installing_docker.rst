@@ -16,4 +16,4 @@
    - Windows:
      https://docs.docker.com/docker-for-windows/install/
 
-.. warning:: Docker for Windows is based on Microsoft Hyper-V and will disable VMWware Workstation if running on the same machine. If you have VMWare Workstation, do not install Docker for Windows. Stick to the webshell.
+.. warning:: Docker for Windows is based on Microsoft Hyper-V and will disable VMWware Workstation if running on the same machine. If you have VMWare Workstation, do not install Docker for Windows.
