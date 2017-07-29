@@ -28,7 +28,7 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 .. image:: ./images/aws-console-login1.png
   :scale: 50%
 
-  .. image:: ./images/aws-console-login2.png
+.. image:: ./images/aws-console-login2.png
   :scale: 50%
 
 #. Navigate to Services => Networking & Content Delivery => VPC. Click on # VPCs. In the search field type your user account name. You should see your VPC details. VPC stands for virtual private cloud, this is the slice of the amazon cloud that has been dedicated for your lab environment.
@@ -58,7 +58,7 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 .. image:: ./images/aws-console-cloud-init1.png
   :scale: 50%
 
-  .. image:: ./images/aws-console-cloud-init2.png
+.. image:: ./images/aws-console-cloud-init2.png
   :scale: 50%
 
 #. Services => Compute => EC2 => AUTO SCALING => Auto Scaling Groups.
@@ -70,12 +70,14 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
    - Choose the tf-elb-userXX load balancer and highlight the "Instances" tab below. This is the load balancer that is in front of your simple web application hosted on web-az1.0 and web-az2.0.
    - Choose the waf-userXX load balancer and highlight the "Instances" tab below. This is the load balancer that is in front of your F5 web application firewall(s).
 
-   .. image:: ./images/aws-console-elb.png
+.. image:: ./images/aws-console-elb1.png
+  :scale: 50%
+.. image:: ./images/aws-console-elb2.png
   :scale: 50%
 
 #. GitHub. Fully supported F5 Networks Solutions are hosted in the official F5 Networks GitHub repository:
 
-   .. image:: ./images/f5-github.png
+.. image:: ./images/f5-github.png
   :scale: 50%
 
    - https://github.com/f5networks
