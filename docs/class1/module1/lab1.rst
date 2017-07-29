@@ -119,10 +119,6 @@ When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. 
 
 Video example
 -------------
-The video below walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example, but always remember to replace the example values with the values assigned to you by the lab instructor.
+This video_ walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example, but always remember to replace the example values with the values assigned to you by the lab instructor.
 
-.. raw:: html
-
-    <embed>
-       https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
-    </embed>
+.. _video: http://www.python.org/ https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
