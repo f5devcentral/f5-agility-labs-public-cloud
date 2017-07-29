@@ -74,7 +74,6 @@ Sample output above. lab-info will quickly orient you around our deployment. All
 .. image:: ./images/waf-example-site.png
   :scale: 50%
 
-
 We can now start configuring the Big-IPs to responsibly fulfill our part of the shared responsibility security model: https://aws.amazon.com/compliance/shared-responsibility-model/
 
 .. image:: https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png

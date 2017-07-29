@@ -4,6 +4,9 @@ Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zon
 
 #. Navigate to iApps. The "HA_Across_AZs" iApp will already be deployed in the Common partition and is automatically configured when you deploy the HA CloudFormation template across availability zones.
 
+.. image:: ./images/service-discovery1.png
+  :scale: 50%
+
 #. The Service Discovery iApp will automatically discover and populate nodes in the cloud based on tags.
 
 #. From the configuration utility (web ui) of Big-IP1. iApps => Application Services => Create...
@@ -28,5 +31,10 @@ Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zon
 | Create a new health monitor or use an existing one?                        | http                             |
 +----------------------------------------------------------------------------+----------------------------------+
 
+.. image:: ./images/service-discovery2.png
+  :scale: 50%
 
 5. Local Traffic => Pools => track the newly created service_discovery_pool. Within 60 seconds it should light up green. The service_discovery iApp has discovered and auto-populated the service_discovery_pool with two web servers.
+
+.. image:: ./images/service-discovery3.png
+  :scale: 50%

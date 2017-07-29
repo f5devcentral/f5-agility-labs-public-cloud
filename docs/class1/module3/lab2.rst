@@ -9,7 +9,7 @@ Configuration Utility (Web UI) access
 
 ...look for three instances of MGMT IP.
 
-2. Use the reset-password script create an admin password. Perforrm this task for all three of the MGMT IP's. Replace the example IP address in the example below with the MGMT IP addresses specific to your lab.
+2. Use the reset-password script to create an admin password. Perforrm this task for all three of the MGMT IP's. Replace the example IP address in the example below with the MGMT IP addresses specific to your lab.
 
 .. code-block:: bash
 
