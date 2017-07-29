@@ -1,4 +1,4 @@
-Task 6 - Deploy an AWS High-Availability-aware virtual server across two Availability Zones
+Deploy an AWS High-Availability-aware virtual server across two Availability Zones
 ---------------------------------------------------------------------------------------------
 
 1. From the Linux web shell, run the lab-info utility. This is a quick way to gather the details you'll need to configure the AWS high-availability-aware TCP virtual server.

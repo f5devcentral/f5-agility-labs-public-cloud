@@ -1,54 +1,61 @@
-Verify a healthy F5 environment
-----------------------------------------
+Explore the F5 / AWS lab environment
+------------------------------------
 
-1. Run the handy lab-info command to quickly identify the IP addresses assigned to your environment.
+CloudFormation templates are the AWS declarative method to deploy full application stacks to AWS.
 
-.. code-block:: bash
+F5 Virtual Edition can be deployed via CloudFormation Templates and are an F5 officially supported deployment method.
 
-   ./scripts/lab-info
+During the previous lab you deployed via Terraform the following F5 CFT Solution.
 
-.. code-block:: bash
+- Auto scaling the BIG-IP VE Web Application Firewall in AWS:
 
-   WAF ELB
-     URL: https://waf-user01f5io-499431932.us-east-1.elb.amazonaws.com
+https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/solutions/autoscale/waf/
 
-   web-az1.0
-     PRIVATE IP:	10.0.1.221
+.. image:: ./images/config-diagram-autoscale-waf.png
+  :scale: 50%
 
-   web-az2.0
-     PRIVATE IP:	10.0.2.221
+...you also deployed:
 
-   Big-IP2: ha-user01f5io-vpc-74c7a70d
-     MGMT IP:	34.194.27.11
-     VIP IP:	10.0.2.252
+- "Deploying the BIG-IP in AWS - Clustered 2-NIC across Availability Zones" which supports automatic Big-IQ Licensing (we opted to use hourly billing in the previous lab):
 
-   BIG-IP Autoscale Instance: waf-user01f5io
-     MGMT IP:	54.165.15.2
+https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluster/2nic/across-az-ha
 
-   Big-IP1: ha-user01f5io-vpc-74c7a70d
-     MGMT IP:	34.230.189.240
-     VIP IP:	10.0.1.37
-     Elastic IP:	34.196.122.217
+.. image:: ./images/aws-2nic-cluster-across-azs.png
+  :scale: 50%
 
-Sample output above. lab-info will quickly orient you around our deployment. All of the same information is available via the AWS Console, the lab-info script is here for convenience.
+2. Use the alias aws console link, email address, and shortUrl as password to login to the aws console.
 
-   - We have an application behind an F5 autoscale WAF that can be reached by the WAF ELB URL.
+#. Navigate to Services => Networking & Content Delivery => VPC. Click on # VPCs. In the search field type your user account name. You should see your VPC details. VPC stands for virtual private cloud, this is the slice of the amazon cloud that has been dedicated for your lab environment.
 
-   - The web-az1.0 and webaz2.0 PRIVATE IP addresses will soon be configured as pool members for our Big-IP HA cluster.
+#. In the upper right-hand corner, ensure you are in the correct region. For example: N. Virginia region (us-east-1) is the default.
 
-   - Big-IP1 and Big-IP2 are configured as a high availability cluster across two separate availability zones. Only the active Big-IP will have an Elastic IP address assigned. Configuration changes to the active unit will automatically propagate to the standby unit. During an outage, even one affecting an entire availability zone, the Elastic IP will 'float' over to the unit that is not affected.
+#. Track things are going well in the AWS management console: Services => Management Tools => CloudFormation template. When done, both of your deployed CloudFormation templates will be Status: CREATE_COMPLETE. Here you can expand and review the steps or troubleshoot if something went wrong.
 
+#. The web application is hosted on webaz1.0 in one availability zone and webaz2.0 in another availability zone. Highlight web-az1.0, in the "Description" tab below note the availability zone. Highlight web-az2.0 and do the same.
 
-   - BIG-IP Autoscale Instance is a single NIC deployment WAF with the MGMT IP address identified.
+#. Three Big-IP virtual editions are running:
 
-2. From the f5-super-netops container test out application behind the auto-scale waf is up.
+  - BIGIP1 and BIGIP2 are in a cross-availability zone cluster that was deployed via a CloudFormation template.
+  - BIG-IP Autoscale Instance is the first F5 web application firewall provisioned for Application Security Manager with a low, medium, or high starter policy enabled. Depending on configurable traffic thresholds the WAF will scale from 1 to N instances. These thresholds are controlled via an auto scale group policy.
 
-.. code-block:: bash
+8.  Cloud-init. Version 13 of Big-IP supports cloud-init. Right click on BIGIP1 => Instance Settings => View/Change User Data. Cloud-init is the industry standard way to inject commands into an F5 cloud image to automate all aspects of the on-boarding process: https://cloud-init.io/.
 
-   curl -k https://waf-user01f5io-499431932.us-east-1.elb.amazonaws.com
+#. Services => Compute => EC2 => AUTO SCALING => Auto Scaling Groups.
+   - In the search filter enter your username. Highlight the waf... auto scaling group.
+   - Under the "Scaling Policies" tab below review the policy for scaling up and scaling down.
 
-Hello, World
+#. Services => Compute => EC2 => LOAD BALANCING => Load Balancers. In the search filter enter your username. You should see your newly created elastic load balancers running.
 
-...this is a sign that things went well and we can start configuring the Big-IPs to responsibly fulfill our part of the shared responsibility security model: https://aws.amazon.com/compliance/shared-responsibility-model/
+   - Choose the tf-elb-userXX load balancer and highlight the "Instances" tab below. This is the load balancer that is in front of your simple web application hosted on web-az1.0 and web-az2.0.
+   - Choose the waf-userXX load balancer and highlight the "Instances" tab below. This is the load balancer that is in front of your F5 web application firewall(s).
 
-.. image:: https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png
+#. GitHub. Fully supported F5 Networks Solutions are hosted in the official F5 Networks GitHub repository:
+
+   - https://github.com/f5networks
+   - We are running the lab from the f5-super-devops container: https://github.com/f5devcentral/f5-super-netops-container
+
+   - AWS CloudFormation templates: https://github.com/F5Networks/f5-aws-cloudformation
+
+   - Native template formats are also available for Microsoft Azure (arm templates): https://github.com/F5Networks/f5-azure-arm-templates
+
+   - Native template formats are also available for Google Cloud Platform (gdm templates): https://github.com/F5Networks/f5-google-gdm-templates

@@ -58,7 +58,7 @@ Copy and paste the commands below to accomplish the steps above (replacing the e
    export shortUrl=abc123
    printenv
 
-The ``printenv`` command will echo all your environment variables.  Confirm the exported variables are correct.
+The ``printenv`` command will echo all your environment variables.  Look for emailid and shortUrl. Confirm the exported variables are correct.
 
 Initialize your Lab Environment
 -------------------------------
@@ -106,9 +106,9 @@ Once "terraform apply" completes, you can test your web server instances and ELB
 
 .. code-block:: bash
 
-   while :; do curl `terraform output elb_dns_name`; sleep 1; done
+   while :; do curl -I `terraform output elb_dns_name`; sleep 1; done
 
-You should see a reply with content. Hit <ctrl>+C to stop.
+You should see a reply with status code "HTTP/1.1 200 OK". Hit <ctrl>+C to stop.
 
 When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. Open up your \*\*aws_alias\*\* link in a browser and login to the AWS console with the email address and password you created during the install. You can always get these values by invoking terraform output with the variable name:
 
@@ -119,4 +119,6 @@ When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. 
 
 .. warning:: terraform apply will take five minutes to complete, but the environment will not be ready for another 15 minutes as the Big-IP virtual editions and supporting infrastructure wake up. In the meantime, we can begin to explore the AWS lab environment.
 
-=================================
+Video example
+-------------
+The video below walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example variable, but always remember to replace the example values with the values provided to by the lab instructor.
