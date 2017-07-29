@@ -4,11 +4,13 @@ Nuke environment
 1. Run the lab-cleanup script:
 
 .. code-block:: bash
+
    lab-cleanup
 
 2. Followed by "terraform destroy". Confirm destory with 'yes' when prompted.
 
 .. code-block:: bash
+
    terraform destroy
 
 .. image:: ./images/lab-cleanup.png
