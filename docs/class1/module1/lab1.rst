@@ -124,5 +124,14 @@ The video below walks through all of the steps in this part of the lab. The emai
 .. raw:: html
 
     <embed>
-        https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
+        <html>
+        <head>
+          <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+        </head>
+        <body>
+          <asciinema-player src="/asciicast-131291.json" cols="183" rows="69"></asciinema-player>
+          ...
+          <script src="/asciinema-player.js"></script>
+        </body>
+        </html>
     </embed>
