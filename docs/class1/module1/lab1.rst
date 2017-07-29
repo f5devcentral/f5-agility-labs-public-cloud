@@ -121,4 +121,4 @@ Video example
 -------------
 This video_ walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example, but always remember to replace the example values with the values assigned to you by the lab instructor.
 
-.. _video: http://www.python.org/ https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
+.. _video: https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
