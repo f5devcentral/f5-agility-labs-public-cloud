@@ -50,7 +50,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
    ./scripts/lab-info
 
-12. Hit the example site behind virtual_server_1 from the Linux shell or a web browser.
+12. Hit the example site behind virtual_server_1 from the Linux shell or a web browser. From a web browser, note the AZ # that is serving up the example web site.
 
 .. code-block:: bash
 
@@ -68,7 +68,16 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
    X-COLOR: a0bf37
    Connection: keep-alive
 
-13. AWS Console => Services => Compute => EC2. Right click on the active BigIP1 instance => Instance State => Reboot. In a few seconds, the AWS console and the elastic IP will 'float' over to the second BigIP.
+...from a web browser:
+
+.. image:: ./images/ha-example-site2.png
+  :scale: 50%
+
+
+13. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device manaement -> Devices -> click on the active unit and "Force Offline".
+
+.. image:: ./images/force-standby.png
+  :scale: 50%
 
 .. code-block:: bash
 
@@ -76,7 +85,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 .. code-block:: bash
 
-   curl -I http://34.232.9.141
+   curl -I http://52.6.236.56
 
 ...watch for HTTP/1.1 200 OK status code. This is a sign that things went well
 
@@ -90,4 +99,11 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
    X-COLOR: a0bf37
    Connection: keep-alive
 
-14. Traditional HA failover relies on Layer 2 connectivity and a heartbeat to trigger a fail-over event and move a 'floating IP' to a new active unit. There is no Layer 2 connectivity in the cloud across availability zones. The Big-IP will detect an availability zone outage or trouble with a Big-IP VE and the elastic IP will 'float' over to the new active device as you just saw.
+14. Note the example web site behind virtual_server_1 is now being served up from another availability zone!
+
+.. image:: ./images/ha-example-site1.png
+  :scale: 50%
+
+.. note::
+   
+   Traditional HA failover relies on Layer 2 connectivity and a heartbeat to trigger a fail-over event and move a 'floating IP' to a new active unit. There is no Layer 2 connectivity in the cloud across availability zones. The Big-IP will detect an availability zone outage or trouble with a Big-IP VE and the elastic IP will 'float' over to the new active device as you just saw.

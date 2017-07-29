@@ -1,5 +1,5 @@
 Autoscale WAF
-----------------------
+-------------
 
 1. Navigate to Services => AUTO SCALINE => Auto Scaling Groups. Filter on your username and select your waf-userxx... auto scaling group.
 2. Select the 'Instances' tab below, and select your Instance ID (there should be only one). If your instance is "Protected from... Scale in" then it will always stay up regardless of scale up/down thresholds configured.

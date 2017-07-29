@@ -7,7 +7,7 @@ Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zon
 .. image:: ./images/service-discovery1.png
   :scale: 50%
 
-#. The Service Discovery iApp will automatically discover and populate nodes in the cloud based on tags.
+3. The Service Discovery iApp will automatically discover and populate nodes in the cloud based on tags.
 
 #. From the configuration utility (web ui) of Big-IP1. iApps => Application Services => Create...
 
