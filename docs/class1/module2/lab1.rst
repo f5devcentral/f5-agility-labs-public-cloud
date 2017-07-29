@@ -50,8 +50,8 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 
 #. Three Big-IP virtual editions are running:
 
-  - BIGIP1 and BIGIP2 are in a cross-availability zone cluster that was deployed via a CloudFormation template.
-  - BIG-IP Autoscale Instance is the first F5 web application firewall provisioned for Application Security Manager with a low, medium, or high starter policy enabled. Depending on configurable traffic thresholds the WAF will scale from 1 to N instances. These thresholds are controlled via an auto scale group policy.
+   - BIGIP1 and BIGIP2 are in a cross-availability zone cluster that was deployed via a CloudFormation template.
+   - BIG-IP Autoscale Instance is the first F5 web application firewall provisioned for Application Security Manager with a low, medium, or high starter policy enabled. Depending on configurable traffic thresholds the WAF will scale from 1 to N instances. These thresholds are controlled via an auto scale group policy.
 
 8.  Cloud-init. Version 13 of Big-IP supports cloud-init. Right click on BIGIP1 => Instance Settings => View/Change User Data. Cloud-init is the industry standard way to inject commands into an F5 cloud image to automate all aspects of the on-boarding process: https://cloud-init.io/.
 
@@ -77,9 +77,6 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 
 #. GitHub. Fully supported F5 Networks Solutions are hosted in the official F5 Networks GitHub repository:
 
-.. image:: ./images/f5-github.png
-  :scale: 50%
-
    - https://github.com/f5networks
    - We are running the lab from the f5-super-devops container: https://github.com/f5devcentral/f5-super-netops-container
 
@@ -88,3 +85,6 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
    - Native template formats are also available for Microsoft Azure (arm templates): https://github.com/F5Networks/f5-azure-arm-templates
 
    - Native template formats are also available for Google Cloud Platform (gdm templates): https://github.com/F5Networks/f5-google-gdm-templates
+
+.. image:: ./images/f5-github.png
+  :scale: 50%

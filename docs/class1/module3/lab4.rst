@@ -1,9 +1,9 @@
 Deploy an AWS High-Availability-aware virtual server across two Availability Zones
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
-1. From the Linux web shell, run the lab-info utility. This is a quick way to gather the details you'll need to configure the AWS high-availability-aware TCP virtual server.
+1. Run the lab-info utility. This is a quick way to gather the details you'll need to configure the AWS high-availability-aware TCP virtual server.
 
-#. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: https://34.230.189.240.
+#. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: http://34.232.9.141.
 
 #. The "HA_Across_AZs" iApp will already be deployed in the Common partition.
 
@@ -41,27 +41,27 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
       .. note:: The preconfigured HA_Across_AZs iApp has both IP addresses for the virtual servers prepopulated. The virtual server IP addresses configured here must match the virtual server IP address configured in the HA_Across_AZs iApp.
 
-
 **Finished!**
 
 10. Login to the standby BigIP configuration utility (web ui) and confirm the changes are in sync.
 
-#. Confirm the virtual server is up!
+#. Confirm the virtual server is up. You can test from the Linux shell or just hit the URL from a browser.
 
 .. code-block:: bash
 
-   curl http://34.196.122.217
+   curl -I http://34.232.9.141
 
-...watch for Hello, World response from Big-IP1.
+...watch for HTTP/1.1 200 OK status code. This is a sign that things went well
 
-   StatusCode        : 200
+.. code-block:: bash
 
-   StatusDescription : OK
-
-   Content           : Hello, World
-
-   ...
-
+   HTTP/1.1 200 OK
+   Accept-Ranges: bytes
+   Content-Type: text/html
+   Date: Sat, 29 Jul 2017 15:50:12 GMT
+   Set-Cookie: TS01e70004=01eeb64b413ca1778c867b0174b4a4e8901d5361c37a2ef5634917272e2f6f9b77d14ed447d3903a5e45d1aeb723a0af78bd798f1a; Path=/
+   X-COLOR: a0bf37
+   Connection: keep-alive
 
 .. code-block:: bash
 
@@ -75,6 +75,18 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 .. code-block:: bash
 
-   curl http://52.205.85.86
+   curl -I http://34.232.9.141
 
-...watch for Hello, World response from Big-IP2. Traditional HA failover relies on Layer 2 connectivity and a heartbeat to trigger a fail-over event and move a 'floating IP' to a new active unit. There is no Layer 2 connectivity in the cloud across availability zones. The Big-IP will detect an availability zone outage or trouble with a Big-IP VE and the elastic IP will 'float' over to the new active device as you just saw.
+...watch for HTTP/1.1 200 OK status code. This is a sign that things went well
+
+.. code-block:: bash
+
+   HTTP/1.1 200 OK
+   Accept-Ranges: bytes
+   Content-Type: text/html
+   Date: Sat, 29 Jul 2017 15:50:12 GMT
+   Set-Cookie: TS01e70004=01eeb64b413ca1778c867b0174b4a4e8901d5361c37a2ef5634917272e2f6f9b77d14ed447d3903a5e45d1aeb723a0af78bd798f1a; Path=/
+   X-COLOR: a0bf37
+   Connection: keep-alive
+
+Traditional HA failover relies on Layer 2 connectivity and a heartbeat to trigger a fail-over event and move a 'floating IP' to a new active unit. There is no Layer 2 connectivity in the cloud across availability zones. The Big-IP will detect an availability zone outage or trouble with a Big-IP VE and the elastic IP will 'float' over to the new active device as you just saw.

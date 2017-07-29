@@ -44,13 +44,13 @@ Verify a healthy F5 environment
 
 Sample output above. lab-info will quickly orient you around our deployment. All of the same information is available via the AWS Console, the lab-info script is here for convenience.
 
-   - We have an application behind an F5 autoscale WAF that can be reached by the WAF ELB URL.
+    - We have an application behind an F5 autoscale WAF that can be reached by the WAF ELB URL.
 
-   - The web-az1.0 and webaz2.0 PRIVATE IP addresses will soon be configured as pool members for our Big-IP HA cluster.
+    - The web-az1.0 and webaz2.0 PRIVATE IP addresses will soon be configured as pool members for our Big-IP HA cluster.
 
-   - Big-IP1 and Big-IP2 are configured as a high availability cluster across two separate availability zones. Only the active Big-IP will have an Elastic IP address assigned. Configuration changes to the active unit will automatically propagate to the standby unit. During an outage, even one affecting an entire availability zone, the Elastic IP will 'float' over to the unit that is not affected.
+    - Big-IP1 and Big-IP2 are configured as a high availability cluster across two separate availability zones. Only the active Big-IP will have an Elastic IP address assigned. Configuration changes to the active unit will automatically propagate to the standby unit. During an outage, even one affecting an entire availability zone, the Elastic IP will 'float' over to the unit that is not affected.
 
-   - BIG-IP Autoscale Instance is a single NIC deployment WAF with the MGMT IP address identified.
+    - BIG-IP Autoscale Instance is a single NIC deployment WAF with the MGMT IP address identified.
 
 2. From the f5-super-netops container test out application behind the auto-scale waf is up. Replace the example https url with the one specific to your lab. See lab-info.
 
@@ -59,7 +59,7 @@ Sample output above. lab-info will quickly orient you around our deployment. All
    curl -kI https://waf-user01f5io-499431932.us-east-1.elb.amazonaws.com
 
 
--- code-block:: bash
+.. code-block:: bash
 
    HTTP/1.1 200 OK
    Accept-Ranges: bytes
@@ -69,6 +69,12 @@ Sample output above. lab-info will quickly orient you around our deployment. All
    X-COLOR: a0bf37
    Connection: keep-alive
 
-...The HTTP/1.1 200 OK status code i a sign that things went well and we can start configuring the Big-IPs to responsibly fulfill our part of the shared responsibility security model: https://aws.amazon.com/compliance/shared-responsibility-model/
+...The HTTP/1.1 200 OK status code is a sign that things went well. You can hit the example site behind the F5 WAF with a web browser.
+
+.. image:: ./images/waf-example-site.png
+  :scale: 50%
+
+
+We can now start configuring the Big-IPs to responsibly fulfill our part of the shared responsibility security model: https://aws.amazon.com/compliance/shared-responsibility-model/
 
 .. image:: https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png

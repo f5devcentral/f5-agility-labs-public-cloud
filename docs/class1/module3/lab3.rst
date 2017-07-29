@@ -1,6 +1,6 @@
 Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zones
 ----------------------------------------------------------------------------------
-1. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: http://34.232.9.141.
+1. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: https://34.232.9.141.
 
 #. Navigate to iApps. The "HA_Across_AZs" iApp will already be deployed in the Common partition and is automatically configured when you deploy the HA CloudFormation template across availability zones.
 
