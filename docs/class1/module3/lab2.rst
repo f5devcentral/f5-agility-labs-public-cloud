@@ -7,7 +7,12 @@ Configuration Utility (Web UI) access
 
    ./scripts/lab-info
 
-...look for three instances of MGMT IP.
+...look for three instances of MGMT IP and make absolutely sure that **"STATUS:      MCPD is up, System Ready"**
+
+.. attention::
+
+   Before creating an admin password on your Big-IPs you must be certain that cloud-init has finished the Big-IP onboarding process. Wait until **"STATUS:      MCPD is up, System Ready"**.
+
 
 2. Use the reset-password script to create an admin password. Perforrm this task for all three of the MGMT IP's. Replace the example IP address in the example below with the MGMT IP addresses specific to your lab.
 
