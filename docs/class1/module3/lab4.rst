@@ -37,7 +37,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 .. note:: The preconfigured HA_Across_AZs iApp has both IP addresses for the virtual servers prepopulated. The virtual server IP addresses configured here must match the virtual server IP address configured in the HA_Across_AZs iApp.
 
-**Finished!**
+**Finished**
 
 .. image:: ./images/cross-az-ha1.png
   :scale: 50%
@@ -74,7 +74,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
   :scale: 50%
 
 
-14. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device manaement -> Devices -> click on the active unit and "Force Offline".
+14. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device management -> Devices -> click on the active unit and "Force Offline".
 
 .. image:: ./images/force-offline.png
   :scale: 50%

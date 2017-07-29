@@ -31,6 +31,8 @@ Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zon
 | Create a new health monitor or use an existing one?                        | http                             |
 +----------------------------------------------------------------------------+----------------------------------+
 
+**Finished**
+
 .. image:: ./images/service-discovery2.png
   :scale: 50%
 
