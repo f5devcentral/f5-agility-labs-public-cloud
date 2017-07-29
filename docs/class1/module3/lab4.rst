@@ -48,7 +48,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 .. code-block:: bash
 
-   ./scripts/lab-info
+   lab-info
 
 13. Hit the example site behind virtual_server_1 from the Linux shell or a web browser. From a web browser, note the AZ # that is serving up the example web site.
 
@@ -81,7 +81,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 .. code-block:: bash
 
-   ./scripts/lab-info
+   lab-info
 
 .. code-block:: bash
 

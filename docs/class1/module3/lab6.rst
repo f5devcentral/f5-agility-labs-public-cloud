@@ -1,7 +1,7 @@
 Nuke environment
 ----------------
 
-1. Run the lab-cleanup script:
+1. Run the lab-cleanup script.
 
 .. code-block:: bash
 

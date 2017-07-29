@@ -5,7 +5,7 @@ Configuration Utility (Web UI) access
 
 .. code-block:: bash
 
-   ./scripts/lab-info
+   lab-info
 
 ...look for three instances of MGMT IP and make absolutely sure that **"STATUS:      MCPD is up, System Ready"**
 

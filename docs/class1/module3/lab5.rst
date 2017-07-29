@@ -17,7 +17,7 @@ Autoscale WAF
 
 .. code-block:: bash
 
-   ./scripts/lab-info
+   lab-info
 
 5. In the Big-IP Configuration utility (Web UI) navigate to Security -> Application Security -> Security Policies -> Active Polices. A "linux-high" policy was deployed via CloudFormation template and is in Enforcment Mode: Blocking.
 
