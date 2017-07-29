@@ -39,18 +39,18 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 **Finished!**
 
-.. image:: ./images/cross-az-ha.png
+.. image:: ./images/cross-az-ha1.png
   :scale: 50%
 
-10. Login to the standby BigIP configuration utility (web ui) and confirm the changes are in sync.
+11. Login to the standby BigIP configuration utility (web ui) and confirm the changes are in sync.
 
-11. Run the lab-info and look for the "Elastic IP" belonging to the active Big-IP virtual_server_1 we just created.
+12. Run the lab-info and look for the "Elastic IP" belonging to the active Big-IP virtual_server_1 we just created.
 
 .. code-block:: bash
 
    ./scripts/lab-info
 
-12. Hit the example site behind virtual_server_1 from the Linux shell or a web browser. From a web browser, note the AZ # that is serving up the example web site.
+13. Hit the example site behind virtual_server_1 from the Linux shell or a web browser. From a web browser, note the AZ # that is serving up the example web site.
 
 .. code-block:: bash
 
@@ -74,9 +74,9 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
   :scale: 50%
 
 
-13. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device manaement -> Devices -> click on the active unit and "Force Offline".
+14. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device manaement -> Devices -> click on the active unit and "Force Offline".
 
-.. image:: ./images/force-standby.png
+.. image:: ./images/force-offline.png
   :scale: 50%
 
 .. code-block:: bash
@@ -99,7 +99,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
    X-COLOR: a0bf37
    Connection: keep-alive
 
-14. Note the example web site behind virtual_server_1 is now being served up from another availability zone!
+15. Note the example web site behind virtual_server_1 is now being served up from another availability zone!
 
 .. image:: ./images/ha-example-site1.png
   :scale: 50%
