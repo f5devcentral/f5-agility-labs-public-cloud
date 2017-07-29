@@ -22,8 +22,6 @@ Variable Name   Variable Value
  emailid        Account name for each student (i.e. user01@f5demo.com)
 ============== ===========================================================
 
-.. important:: Your student account, and short URL path will be announced at the start of the lab.
-
 Run Docker
 -------------
 
@@ -88,7 +86,7 @@ Copy and paste the commands below to accomplish the steps above.
 Launch Terraform
 -----------------
 
-Now that we have created credentials to access the AWS account we will use Terraform to deploy or lab environment.
+Now that we have created credentials to access the AWS account we will use Terraform to deploy our lab environment.
 
 Invoke terraform.
 
@@ -121,4 +119,10 @@ When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. 
 
 Video example
 -------------
-The video below walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example variable, but always remember to replace the example values with the values provided to by the lab instructor.
+The video below walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example, but always remember to replace the example values with the values assigned to you by the lab instructor.
+
+.. raw:: html
+
+    <embed>
+        https://asciinema.org/a/Tj8vreWGmvXBT7dGhqv36RFMg
+    </embed>
