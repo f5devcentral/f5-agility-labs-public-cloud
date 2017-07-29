@@ -48,9 +48,9 @@ Set Variables
 The following will store the lab variables that will be used later in the lab.
 
 Export your student account and short URL path variables.
-Your student account will be used to create an AWS console login and provide unique names for infrastructure that you create in the shared account. The short URL path will be used to grant access to the shared AWS account both via the AWS API and as the password for the AWS web console. Replace the emailid and shortUrl values below with the student account name and decryption password assigned to you at the start of the lab.
+Your student account will be used to create an AWS console login and provide unique names for infrastructure that you create in the shared account. The short URL path will be used to grant access to the shared AWS account both via the AWS API and as the password for the AWS web console. Replace the emailid and shortUrl values below with the student account name and short URL assigned to you at the start of the lab.
 
-Copy and paste the commands below to accomplish the steps above (replacing the values with ones provided by your instructor).
+Copy and paste the commands below to accomplish the steps above (replacing the example values with the values provided by your instructor).
 
 .. code-block:: shell
 
