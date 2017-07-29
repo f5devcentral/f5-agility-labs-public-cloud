@@ -1,11 +1,7 @@
-Extending and Securing your Cloud
-=================================
+Exploring AWS
+==============
 
-This lab will use the Lab Environment created previously to explore other capabilities including
-
-* Service Discovery
-* Failover Across Availability Zones
-* Triggering an Auto Scale event
+This lab will examine the Lab Environment created previously.
 
 .. toctree::
    :maxdepth: 1
