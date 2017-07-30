@@ -24,7 +24,7 @@ Autoscale WAF
 .. image:: ./images/waf-policy.png
   :scale: 50%
 
-6. From the f5-super-netops container, let's launch some traffic against the application behind our WAF and watch it autoscale to service the surge! Replace the https://waf-userxx... in the command below with the one in the output of lab-info and don't miss that critical forward slas / at the end!
+6. From the f5-super-netops container, let's launch some traffic against the application behind our WAF and watch it autoscale to service the surge! Replace the https://waf-userxx... in the command below with the one in the output of lab-info and don't miss that critical forward slash / at the end!
 
 .. code-block:: bash
 

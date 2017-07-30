@@ -3,7 +3,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 1. Run the lab-info utility. This is a quick way to gather the details you'll need to configure the AWS high-availability-aware TCP virtual server.
 
-#. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: http://34.232.9.141.
+#. Login to the active Big-IP1 configuration utility (web ui). Using the examples in our lab-info output: https://34.232.9.141.
 
 #. The "HA_Across_AZs" iApp will already be deployed in the Common partition.
 
