@@ -7,7 +7,7 @@ Nuke environment
 
    lab-cleanup
 
-2. Followed by "terraform destroy". Confirm destory with 'yes' when prompted.
+2. Followed by "terraform destroy". Confirm destroy with 'yes' when prompted.
 
 .. code-block:: bash
 
