@@ -1,7 +1,7 @@
 Configuration Utility (Web UI) access
 -------------------------------------
 
-1. Use the lab-info script to identify the management IP address of each of the three BigIP instances that we created. By defaultt, F5 cloud instances are locked down to ssh key access only. Let's create an admin password so we can login via the configuration utility (web ui). 
+1. Use the lab-info script to identify the management IP address of each of the three BigIP instances that we created. By default, F5 cloud instances are locked down to ssh key access only. Let's create an admin password so we can login via the configuration utility (web ui). 
 
 .. code-block:: bash
 
@@ -18,7 +18,7 @@ Configuration Utility (Web UI) access
 
 .. code-block:: bash
 
-   ./scripts/reset-password 52.207.200.169
+   reset-password 52.207.200.169
 
 ...your console output should look like the screeshot below.
 

@@ -104,7 +104,7 @@ Once "terraform apply" completes, you can test your web server instances and ELB
 
 .. code-block:: bash
 
-   while :; do curl -I `terraform output elb_dns_name`; sleep 1; done
+   curl -I `terraform output elb_dns_name`
 
 You should see a reply with status code "HTTP/1.1 200 OK". Hit <ctrl>+C to stop.
 
