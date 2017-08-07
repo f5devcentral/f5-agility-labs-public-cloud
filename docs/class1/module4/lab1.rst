@@ -55,6 +55,10 @@ If the student accidentally exits and as a result stops the super-netops docker 
 ----------------------------------
 This is difficult to calibrate. You can have fun and have multiple students gang up on a single WAF instance instead of each student using the apache-bench (ab) tool to try to trigger auto-scale in their own environment. You can then show the auto scale event on your shared screen.
 
+Test lab and confirm AWS limits beforehand
+------------------------------------------
+https://github.com/TonyMarfil/aws-lab-tools
+
 Misc.
 -----
 
