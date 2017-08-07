@@ -23,12 +23,12 @@ If the student enters the wrong shortUrl, the start script will install all of t
   export shortUrl=seattle-dumplings
   source ./start
 
-I don't see any instances in AWS console?
------------------------------------------
+I don't see any instances in AWS console
+----------------------------------------
 Student is in the wrong region. If this happens more than once (this gotcha is in the documentation) you can take the opportunity to explain to the class: regions vs. availability zones.
 
-Accidently exit and stop the super-netops container?
-----------------------------------------------------
+Accidently exit and stop the super-netops container
+---------------------------------------------------
 If the student accidentally exits and as a result stops the super-netops docker container, they will have to restart and attach to the super-netops container. From the Linux host:
 
 .. code-block:: bash
