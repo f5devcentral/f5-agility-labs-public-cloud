@@ -30,7 +30,7 @@ Autoscale WAF
 
    ab -t 120 -c 100 https://waf-user01f5io-xxxxxxxxx.us-east-1.elb.amazonaws.com/
 
-7. Navigate to Service => INSTANCES => Instances. Filter on your username and after 60 seconds (the lowest configurable time threshold) hit refresh to see your 2nd autoscale WAF instance starting.
+7. Services => Compute => EC2 => INSTANCES => Instances. Filter on your username and after 60 seconds (the lowest configurable time threshold) hit refresh to see your 2nd autoscale WAF instance starting.
 
 .. image:: ./images/autoscale-initializing.png
   :scale: 50%

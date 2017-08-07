@@ -43,7 +43,7 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 .. image:: ./images/aws-console-cloudformation.png
   :scale: 50%
 
-5. Navigate to Services => INSTANCES => Instances. The web application is hosted on webaz1.0 in one availability zone and webaz2.0 in another availability zone. Highlight web-az1.0, in the "Description" tab below note the availability zone. Highlight web-az2.0 and do the same. Select the Tags tab for web-az1.0 and web-az2.0. We will use these tags later in the lab to autodiscover these instances as pool members from a Big-IP VE.
+5. Navigate to Services => Compute => EC2 => INSTANCES => Instances. The web application is hosted on webaz1.0 in one availability zone and webaz2.0 in another availability zone. Highlight web-az1.0, in the "Description" tab below note the availability zone. Highlight web-az2.0 and do the same. Select the Tags tab for web-az1.0 and web-az2.0. We will use these tags later in the lab to autodiscover these instances as pool members from a Big-IP VE.
 
 .. image:: ./images/aws-console-ec2-az.png
   :scale: 50%
