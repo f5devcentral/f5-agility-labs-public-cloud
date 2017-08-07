@@ -1,7 +1,0 @@
-
-*.pem
-*.tfstate
-*.tfstate.backup
-.terraform
-*.iml
-passwd
