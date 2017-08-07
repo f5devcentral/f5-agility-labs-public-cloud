@@ -16,11 +16,7 @@ If the student accidentally deviates from the emailid format it's no big deal, a
 
 Wrong shortUrl
 --------------
-If the student enters the wrong shortUrl. the start script will install all of the prerequisite software but eventually abort. with error message: "Invalid shortUrl.  Aborting." In this case you need only
-
-  export shortUrl=<shortUrl value here>
-
-...with the right value and re-run the start script. For example if the valid shortUrl=seattle-dumplings.
+If the student enters the wrong shortUrl, the start script will install all of the prerequisite software but eventually abort with error message: "Invalid shortUrl.  Aborting." In this case you need only export shortUrl= with the right value and re-run the start script. For example if the valid shortUrl=seattle-dumplings.
 
 .. code-block:: bash
 
@@ -29,7 +25,7 @@ If the student enters the wrong shortUrl. the start script will install all of t
 
 I don't see any instances in AWS console?
 -----------------------------------------
-Student is in the wrong region. If this happens more than once (this gotcha is in the documentation) you can take the chance to explain to the class: regions vs. availability zones.
+Student is in the wrong region. If this happens more than once (this gotcha is in the documentation) you can take the opportunity to explain to the class: regions vs. availability zones.
 
 Accidently exit and stop the super-netops container?
 ----------------------------------------------------
@@ -53,7 +49,7 @@ If the student accidentally exits and as a result stops the super-netops docker 
 
 2.3.5 Autoscale WAF not triggering
 ----------------------------------
-This is difficult to calibrate. You can have fun and have multiple students gang up on a single WAF instance instead of each student using the apache-bench (ab) tool to try to trigger auto-scale in their own environment. You can then show the auto scale event on your shared screen.
+This is difficult to calibrate. You can have fun and ensure success by asking multiple students to use the apache-bench tool (ab) to gang up on a single WAF instance instead of each student trying to trigger auto-scale in their own environment. You can then show the auto scale event on your shared screen.
 
 Test lab and confirm AWS limits beforehand
 ------------------------------------------
