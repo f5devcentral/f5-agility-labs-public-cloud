@@ -3,7 +3,7 @@ Troubleshooting Guide
 
 To help all students get past the first part of the lab, Walk through 2.1.1 - 2.1.6 in front of the class for all to see. Then leave your shared screen up on the monitor like this:
 
-.. image:: /_static/side-by-side.png
+.. image:: ./images/side-by-side.png
   :scale: 25%
 
 emailid format
