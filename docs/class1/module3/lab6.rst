@@ -1,5 +1,5 @@
-Nuke environment
-----------------
+Destroy environment
+-------------------
 
 1. Run the lab-cleanup script.
 
