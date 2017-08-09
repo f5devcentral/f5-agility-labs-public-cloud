@@ -28,7 +28,8 @@ Autoscale WAF
 
 .. code-block:: bash
 
-   ab -t 120 -c 100 https://waf-user01f5io-xxxxxxxxx.us-east-1.elb.amazonaws.com/
+   base64 /dev/urandom | head -c 3000 > payload
+   ab -t 120 -c 200 -c 5 -T 'multipart/form-data; boundary=1234567890' -p payload https://waf-user11f5democom-xxxxxxxxx.us-east-1.elb.amazonaws.com/
 
 7. Services => Compute => EC2 => INSTANCES => Instances. Filter on your username and after 60 seconds (the lowest configurable time threshold) hit refresh to see your 2nd autoscale WAF instance starting.
 
