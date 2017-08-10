@@ -31,6 +31,19 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 .. image:: ./images/aws-console-login2.png
   :scale: 50%
 
+Alias AWS console url:   | https://f5agility2017.signin.aws.amazon.com/console?region=ap-southeast-1
+
++--------------------------+------------------------------------------------------+
+| Parameter                | value                                                |
++==========================+======================================================+
+| Account:                 | f5agility2017                                        |
++--------------------------+------------------------------------------------------+
+| User Name:               | userxx@f5demo.com, change xx to your student number  |
++--------------------------+------------------------------------------------------+
+| Password:                | sames as shortUrl / echo $shortUrl                   |
++--------------------------+------------------------------------------------------+
+
+
 2. Navigate to Services => Networking & Content Delivery => VPC. Click on # VPCs. In the search field type your user account name. You should see your VPC details. VPC stands for virtual private cloud, this is the slice of the amazon cloud that has been dedicated for your lab environment.
 
 3. In the upper right-hand corner, ensure you are in the correct region. For example: N. Virginia region (us-east-1) is the default.

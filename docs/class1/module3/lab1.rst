@@ -52,6 +52,10 @@ Sample output above. lab-info will quickly orient you around our deployment. All
 
     - BIG-IP Autoscale Instance is a single NIC deployment WAF with the MGMT IP address identified.
 
+.. attention::
+
+   ``BIG-IP Autoscale Instance: waf-user...`` is usually the last to come up. Make sure that ``STATUS: MCPD is up, System Ready`` in the output for ``lab-info`` before proceeding to next step.
+
 2. From the f5-super-netops container test out application behind the auto-scale waf is up. Replace the example https url with the one specific to your lab. See lab-info.
 
 .. code-block:: bash
