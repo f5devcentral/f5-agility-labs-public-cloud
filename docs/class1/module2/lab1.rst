@@ -31,7 +31,7 @@ https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/cluste
 .. image:: ./images/aws-console-login2.png
   :scale: 50%
 
-Alias AWS console url:   | https://f5agility2017.signin.aws.amazon.com/console?region=ap-southeast-1
+https://f5agility2017.signin.aws.amazon.com/console?region=ap-southeast-1
 
 +--------------------------+------------------------------------------------------+
 | Parameter                | value                                                |

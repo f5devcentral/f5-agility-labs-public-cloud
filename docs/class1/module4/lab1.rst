@@ -6,6 +6,27 @@ To help all students get past the first part of the lab, Walk through 2.1.1 - 2.
 .. image:: ./images/side-by-side.png
   :scale: 25%
 
+terraform apply fails
+---------------------
+
+If a student's 'terraform apply' operation fails, the best thing to do is to shutdown the docker container, assign a new student number, and start all over. This is always a sign that we've reached the AWS API limits because of too many simultaneous labs coming on line at once and AWS is throttling: https://forums.aws.amazon.com/thread.jspa?messageID=720883
+
+For example, if tragically, user20@f5demo.com failed to complete 'terraform apply'
+
+CTRL+p+q to exit the container, then stop and remove the container and start fresh as user120@f5demo.com
+
+.. code-block:: bash
+
+   docker stop $(docker ps -lq)
+   docker rm $(docker ps -lq)
+
+   docker run -p 8080:80 -p 2222:22 -it -e SNOPS_AUTOCLONE=0 f5devcentral/f5-super-netops-container:base
+
+   export emailid=user120@f5demo.com
+   ...
+
+...continue with Task 2.1.4 from here.
+
 emailid format
 --------------
 If the student accidentally deviates from the emailid format it's no big deal, as long as it's unique and a standard email format <name@domain.suffix> there will be no problem. If the student forgets the emailid you can always verify from the working directory:
@@ -33,15 +54,15 @@ If the student accidentally exits and as a result stops the super-netops docker 
 
 .. code-block:: bash
    
-  docker start $(docker ps -aq)
-  docker attach $(docker ps -q)
+  docker start $(docker ps -lq)
+  docker attach $(docker ps -lq)
   source ~/.profile
 
 ...or alternatively you can start the super-netops container, but instead of attaching to the container console, you can ssh to the container. This makes it impossible to accidentally stop the container.
 
 .. code-block:: bash
 
-  docker start $(docker ps -aq)
+  docker start $(docker ps -lq)
   ssh -p 2222 snops@localhost
   default
   su -
