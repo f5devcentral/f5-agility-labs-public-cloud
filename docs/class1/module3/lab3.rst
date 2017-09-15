@@ -20,9 +20,9 @@ Deploy the Service Discovery iApp on a BigIP Cluster across two Availability Zon
 +----------------------------------------------------------------------------+----------------------------------+
 | Pool                                                                                                          |
 +----------------------------------------------------------------------------+----------------------------------+
-| What is the tag key on your cloud provider for the members of this pool?   | application                      |
+| What is the tag key on your cloud provider for the members of this pool?   | findme                           |
 +----------------------------------------------------------------------------+----------------------------------+
-| What is the tag value on your cloud provider for the members of this pool? | f5app                            |
+| What is the tag value on your cloud provider for the members of this pool? | web                              |
 +----------------------------------------------------------------------------+----------------------------------+
 | Do you want to create a new pool or use an existing one?                   | Create new pool...               |
 +----------------------------------------------------------------------------+----------------------------------+

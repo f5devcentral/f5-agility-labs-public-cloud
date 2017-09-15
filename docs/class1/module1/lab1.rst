@@ -117,6 +117,42 @@ When 'terraform apply' completes, note the \*\*aws_alias\*\* and vpc-id values. 
 
 .. warning:: terraform apply will take five minutes to complete, but the environment will not be ready for another 15 minutes as the Big-IP virtual editions and supporting infrastructure wake up. In the meantime, we can begin to explore the AWS lab environment.
 
+What just happened? That was a lot of random text scrolling in my Docker console!
+---------------------------------------------------------------------------------
+
+This is the TL;DR version of the steps completed.
+
+When you clone the git repository, you are pulling down a fresh copy of the all of the files you need to get started. These files are hosted on Github, the most popular online revision control repository, and include:
+
+- Onboarding scripts that create your AWS account and other prerequisites: *f5-super-netops-install.sh*, *addUser.sh*, *export.sh*.
+- all of the terraform configuration files--a declarative, comprehensive representation of our entire application stack:
+
+	*main.tf* - Every terraform configuration has a main.tf. This contains all of the AWS specific (non-F5) environment configuration, including web instances
+
+	*f5-cloudformation-autoscale-waf.tf* and *f5-cloudformation-cross-az-ha-hourly.tf* - Nothing more than a terraform file that takes the officially supported CloudFormation template hosted at:
+
+	https://s3.amazonaws.com/f5-cft/f5-autoscale-bigip.template
+
+	https://s3.amazonaws.com/f5-cft/f5-existing-stack-across-az-cluster-hourly-2nic-bigip.template
+
+	...and stuffs all of the prerequisite parameters so we don't have to do it manually.
+
+	*outputs.tf* - Any variable in the outputs.tf file can be rendered to the console with 'terraform output' and is exposed to other command line tools.
+
+	*vars.tf* - Variables for terraform.
+
+- Handy utilities to help move the lab along with minimum fuss: *lab-info*, *password-reset*, *lab-cleanup*.
+
+The start script takes care of all of the prerequisites to standing up an AWS environment. Precisely:
+
+- Installs all of the necessary software, including: terraform, the aws cli, and various other command line tools.
+- Creates your AWS console login and api account and stores the keys locally for use by the AWS command line.
+- Creates SSH keys for use by all of your EC2 instances: web servers and Big-IP virtual editions.
+- Creates a self-signed SSL certificate for use in deploying https services.
+- Sets the default region: us-east-1 (Virginia), ap-southeast-1 (Singapore), etc.
+
+The terraform files go into effect when you invoke 'terraform apply'. This step makes use of all of the prerequisites from the step before to build the environment in AWS.
+
 Video example
 -------------
 This video_ walks through all of the steps in this part of the lab. The emailid and shortUrl values used are only examples and no longer valid. You can pause, cut, and paste from the example, but always remember to replace the example values with the values assigned to you by the lab instructor.

@@ -74,10 +74,17 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
   :scale: 50%
 
 
-14. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Device management -> Devices -> click on the active unit and "Force Offline".
+14. From the Big-IP configuration utility let's simulate an availability zone failure. Navigate to Local Traffic -> Pools -> Pool List -> service_discover_pool -> Members -> Select the primary pool member and "Force Offline"
+
+.. image:: ./images/pool-member-offline.png
+  :scale: 50%
+
+15. Navigate to Device management -> Devices -> click on the active unit and "Force Offline".
 
 .. image:: ./images/force-offline.png
   :scale: 50%
+
+16. Cross Availability Zone begins.
 
 .. code-block:: bash
 
@@ -99,7 +106,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
    X-COLOR: a0bf37
    Connection: keep-alive
 
-15. Note the example web site behind virtual_server_1 is now being served up from another availability zone!
+17. Note the example web site behind virtual_server_1 is now being served up from another availability zone!
 
 .. image:: ./images/ha-example-site1.png
   :scale: 50%
