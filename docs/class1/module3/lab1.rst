@@ -56,28 +56,6 @@ Sample output above. lab-info will quickly orient you around our deployment. All
 
    ``BIG-IP Autoscale Instance: waf-user...`` is usually the last to come up. Make sure that ``STATUS: MCPD is up, System Ready`` in the output for ``lab-info`` before proceeding to next step.
 
-2. From the f5-super-netops container test out application behind the auto-scale waf is up. Replace the example https url with the one specific to your lab. See lab-info.
-
-.. code-block:: bash
-
-   curl -kI https://waf-user01f5io-499431932.us-east-1.elb.amazonaws.com
-
-
-.. code-block:: bash
-
-   HTTP/1.1 200 OK
-   Accept-Ranges: bytes
-   Content-Type: text/html
-   Date: Sat, 29 Jul 2017 15:50:12 GMT
-   Set-Cookie: TS01e70004=01eeb64b413ca1778c867b0174b4a4e8901d5361c37a2ef5634917272e2f6f9b77d14ed447d3903a5e45d1aeb723a0af78bd798f1a; Path=/
-   X-COLOR: a0bf37
-   Connection: keep-alive
-
-...The HTTP/1.1 200 OK status code is a sign that things went well. You can hit the example site behind the F5 WAF with a web browser.
-
-.. image:: ./images/waf-example-site.png
-  :scale: 50%
-
 We can now start configuring the Big-IPs to responsibly fulfill the **CUSTOMER** part of the shared responsibility security model: https://aws.amazon.com/compliance/shared-responsibility-model/
 
 .. image:: https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png
