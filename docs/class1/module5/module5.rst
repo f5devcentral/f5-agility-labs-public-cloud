@@ -1,7 +1,7 @@
-Troubleshooting Guide
-=====================
+Run the lab on your own
+=======================
 
-Troubleshooting guide covers some known issues and common scenarios where thing derail and how to get back on track.
+You can run this lab on your own, on any AWS account, but you will need to create your own admin account and tweak the startup steps slightly.
 
 .. toctree::
    :maxdepth: 1
