@@ -77,7 +77,7 @@ Copy and paste the commands below to accomplish the steps above.
    cd ~
    git clone https://github.com/TonyMarfil/marfil-f5-terraform
    cd ~/marfil-f5-terraform/
-   source ./start
+   source start
 
 .. attention::
 
