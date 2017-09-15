@@ -15,11 +15,11 @@ You can run this lab on your own, on any AWS account, but you will need to creat
 
 .. attention::
   
-  The emailid and shortUrl environment variables must still be exported, but they can be anything you want. emailid must be in valid email format, though not a valid email.
+  The emailid and shortUrl environment variables must still be exported, but they can be anything you want. emailid must be in valid email format, but does not have to be a real email address that can be validated.
 
 .. attention::
   
-  Do not initialize your lab environment as show for students in a coordinated F5 lab session. Replace **2.1.5. Initialize your Lab Environment** with the steps below.
+  Do not initialize your lab environment as shown for students in a coordinated F5 lab session. Replace **2.1.5. Initialize your Lab Environment** with the steps below.
 
 - Change to your home directory.
 - Clone the git repository for this lab.
