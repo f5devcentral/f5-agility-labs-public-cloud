@@ -9,7 +9,7 @@ Deploy an AWS High-Availability-aware virtual server across two Availability Zon
 
 #. The "service_discovery" iApp will already be deployed as well.
 
-#. Download the latest iApp package from https://s3.amazonaws.com/f5-marfil/iapps-1.0.0.468.0.zip.
+#. Download the latest iApp package from https://s3.amazonaws.com/f5-public-cloud/f5.tcp.v1.0.0rc2.tmpl.
 
 #. Extract \\TCP\Release_Candidates\\f5.tcp.v1.0.0rc2.tmpl. This is the tested version of the iApp.
 
