@@ -41,7 +41,7 @@ Autoscale WAF
 
    lab-info
 
-6. In the Big-IP Configuration utility (Web UI) navigate to Security -> Application Security -> Security Policies -> Active Polices. A "linux-high" policy was deployed via CloudFormation template and is in Enforcment Mode: Blocking.
+6. In the Big-IP Configuration utility (Web UI) navigate to Security -> Application Security -> Security Policies -> Active Polices. A "linux-low" policy was deployed via CloudFormation template and is in Enforcment Mode: Blocking.
 
 .. image:: ./images/waf-policy.png
   :scale: 50%
