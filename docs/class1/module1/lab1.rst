@@ -31,7 +31,7 @@ Cut and past the command below to accomplish the steps above.
 
 .. code-block:: bash
 
-   docker run -p 8080:80 -p 2222:22 -it -e SNOPS_AUTOCLONE=0 f5devcentral/f5-super-netops-container:base
+   docker run -p 8080:80 -p 2222:22 -it -e SNOPS_AUTOCLONE=0 --name dev --restart always tonymarfil/f5-aws-lab:base
 
 This command will launch  in interactive mode, map port 22 on the container with 2222 on the host, and port 80 on the container with 8080 on the host.
 
