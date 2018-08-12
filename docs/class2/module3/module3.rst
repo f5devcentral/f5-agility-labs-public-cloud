@@ -1,14 +1,7 @@
-BIG-IP ASM Configuration
-========================
+F5 Networks AWS WAF Rules
+=========================
 
-Let's review what we achieved so far:
-
-- F5 BIG-IP positioned in front of the AWS API Gateway
-- DNS record careX-secureapigw.acmelatamlab.f5.com pointing to the F5 BIG-IP
-- All request signing is working fine, since we configured careX-secureapigw.acmelatamlab.f5.com as a Custom Domain Name in the API Gateway.
-- All communication is secure (TLS) and we are using SNI on the server side.
-
-All we need to do now is protect the API Gateway (REST). Let's do it!
+This lab will use the lab environment created previously to protect our application with AWS WAF Rules.
 
 .. toctree::
    :maxdepth: 1

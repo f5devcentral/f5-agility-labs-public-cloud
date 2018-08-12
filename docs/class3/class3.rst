@@ -1,4 +1,4 @@
-Class - |classname|
+F5 WAF in AWS
 ===================
 
 This class covers the following topics:
