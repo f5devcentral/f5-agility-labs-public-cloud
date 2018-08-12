@@ -2,7 +2,7 @@ Welcome to F5 Agility 2018 -- Secure BIG-IP and Application deployments in AWS d
 =============================================================================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :glob:
 
-module*/module*
+   module*/module*
