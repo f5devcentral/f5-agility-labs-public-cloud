@@ -1,34 +1,30 @@
-Create and Apply a logging profile
-----------------------------------
+Create WAF logging profile
+--------------------------
+**Create a logging profile to capture events associated with the WAF policies.**
 
-1. Go to “Security > Event Logs > Logging Profiles” and click Create.
+#. Select **Security->Event Logs->Logging Profiles** then click **Create**
+#. For **Profile Name** enter :guilabel:`waf_log`
+#. Select the **Application Security, Dos Protection**, and **Bot Defense** checkboxes
 
-2. Profile Name: apigwlog
+   .. image:: ./images/image301.png
+      :height: 200px
 
-3. Select Application Security and DoS Protection
+#. On the **Application Security** tab, for **Request Type** select **All requests**
 
-   |image32|
+   .. image:: ./images/image302.png
+      :height: 150px
 
-4. In the DoS Protection section, enable “Local Publisher”.
+#. On the **DoS Protection** tab select the **Local Publisher** checkbox
 
-   |image33|
+   .. image:: ./images/image303.png
+      :height: 150px
 
-5. Go to Application Security section, change the request type to “All
-   Requests”
+#. On the **Bot Defense** tab select the **Local Publisher, Log Illegal Requests** and **Log Challenged Requests** checkboxes
 
-   |image34|
+   .. image:: ./images/image304.png
+      :height: 200px
 
-6. Click Finish
+#. Click **Finished** and you should see a :guilabel:`waf_log`
 
-7. Go to “Local Traffic > Virtual Servers > Virtual Servers List” and
-   click on the Virtual Server you just created.
-
-8. In the top menu, go to “Security” then “Policies”
-
-9. Log Profile: apigwlog (Selected)
-
-10. Click Update
-
-.. |image32| image:: image32.png
-.. |image33| image:: image33.png
-.. |image34| image:: image34.png
+   .. image:: ./images/image305.png
+      :height: 200px

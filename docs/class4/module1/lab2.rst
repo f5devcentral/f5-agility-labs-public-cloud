@@ -1,60 +1,69 @@
-Import the SSL Certificate and Create Client SSL Profiles
-----------------------------------------------------------
+Deploy the BIG-IP
+-----------------
 
-1. Go to “System > Certificate Management > Traffic Certificate
-   Management > SSL Certificate List” and click “Import”
+In Module 2 we will deploy the BIG-IP into the AWS VPC created in Module 1.
 
-2. Import type: key
+F5 publishes CFTs on a regular basis to Github.
 
-.. NOTE:: On this lab guide, X must be replaced by your student number given at the beginning of this session.
+Launch BIG-IP into existing VPC
+```````````````````````````````
 
-3. Key Name: careX-secureapigw.acmelatamlab.f5.com
+We will use the instructor provided CFT to launch a BIG-IP into the VPC that already exists.
 
-4. Upload the Key file (privkey1.pem) or Paste its contents. You can
-   find the files on a folder called “Certificates” on the Desktop.
+First, we need to create and save a key pair.
 
-5. Click Import
-   
-   |image13|
+#. In the AWS Management Console, navigate to **EC2** and then under **Network & Security** to **Key Pairs**
+#. Click **Create Key Pair** and name it :guilabel:`Student#-BIG-IP`.
+#. Click **Create** and it will download the :guilabel:`Student#-BIG-IP.pem` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
+#.  You will need to change the permissions of the :guilabel:`Student#-BIG-IP.pem` key pair. On a MAC, open a terminal and go to the folder you saved the :guilabel:`Student#-BIG-IP.pem` key pair. To change the file permissions type:
 
-6. In the SSL Certificate List, click the name of the certificate you
-   are importing
+  :guilabel:`chmod 400 Student#-BIG-IP.pem`
 
-7. Verify you are in the Certificate tab, paste or upload cert1.pem file
-   and click Import
+Next, we're ready to deploy the CFT.
 
-   |image14|
+#. Go to: |CFT-template|
+#. At the **Select Template** page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click **Next**.
+#. For **Stack name** enter a value of :guilabel:`Student#-BIG-IP-CFT`.
+#. In the **VPC** in the drop down, find your :guilabel:`Student#-VPC-CFT` (you may have to scroll down the list).
+#. For the **Management Subnet AZ1** select :guilabel:`Student#-VPC-CFT-MgmtSubnet`.
+#. Similarly, for **Subnet1** and **Subnet2** assign the :guilabel:`Student#-VPC-CFT-External Subnet` and :guilabel:`Student#-VPC-CFT-Internal Subnet` subnets from the drop down.
+#. Ensure the **BIG-IP Image Name** is set to :guilabel:`AWAF25Mbps`.
+#. Ensure the **AWS Instance Size** is set to :guilabel:`t2.large`.
+#. For the **SSH Key** utilize the :guilabel:`Student#-BIG-IP` key in the drop down.
+#. In the **Source Address(es) for Management Access**, enter :guilabel:`64.251.121.0/24`.
+#. in the **Source Address(es) for Web Application Access (80/443)** field, enter :guilabel:`0.0.0.0/0`.
+#. Leave all other fields at default values and select **Next**.
+#. Leave all fields in the **Options** page at defaults and select **Next**.
+#. Review the settings, check the **I acknowledge that AWS CloudFormation might create IAM resources** box and click **Create**.
+#. Refresh the page to see the status of the deployment. 
+#. Wait until the status of the CFT shows :guilabel:`CREATE_COMPLETE`.
 
-8. We need to import the Intermediate Certificate (Chain). Make sure you are on “System > Certificate Management > Traffic Certificate
-   Management > SSL Certificate List” and click “Import”
 
-9. Import Type: Certificate
+Set the admin password for BIG-IP VE
+````````````````````````````````````
+To initially change the password for the BIG-IP management utility we need to connect via SSH and then modify the admin password.
 
-10. Certificate Name: intermediate\_careX
+#. Navigate to **EC2 -> Network Interfaces** and filter for :guilabel:`Student#-BIG-IP`. Find **Management** interface of your BIG-IP instance . Note the **IPv4 Public IP** address for the **Management** interface.
 
-11. Upload chain1.pem or paste its contents. Click Import.
-   
-   |image15|
+.. figure:: ../images/mgmt-public-ip.png
 
-12. Go to “Local Traffic > Profiles > SSL > Client” and click Create.
+#. You can connect using an SSH utility - make sure to use :guilabel:`admin` as the username (do not use ``root``) and the **Management IPv4 Public IP** from the previous step. Use the **Student#-BIG-IP.pem** key pair you saved when you created the instance in Lab 1. For example:
 
-13. Name: careX-secureapigw.acmelatamlab.f5.com
+    :guilabel:`ssh -i Student#.pem admin@<IPv4-Public-IP>`
 
-14. On Certificate Key Chain, select Custom check box and then Add.
+#.  After connecting via SSH issue the command :guilabel:`modify auth password admin` - change the admin password to one that you will remember
+#.  Save the password change by issuing the command :guilabel:`save sys config`
+#.  You can now connect to the BIG-IP Web UI on HTTPS using the **IPv4 Public IP** for the **Management** interface (bypass the self-signed cert warning) and use the credentials :guilabel:`admin/<password-from-step-4>`
+#.  Once logged in to the F5 management console click on **System -> Resource Provisioning**.
+#.  Select :guilabel:`ASM`, :guilabel:`Fraud Protection Service`, and :guilabel:`iRules Language Extensions (iRulesLX)`.
+#.  Unselect :guilabel:`LTM`
+#.  Click on **Submit** and then **OK**.  The admin console will be inaccessible for a couple minutes as the new options are enabled.
 
-15. Certificate: careX-secureapigw.acmelatamlab.f5.com
 
-   Key: careX-secureapigw.acmelatamlab.f5.com
+.. |github| raw:: html
 
-   Chain: intermediate\_careX
+   <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic/existing-stack/payg" target="_blank">F5's Github repository</a>
 
-   Click Add
- 
-   |image16|
+.. |CFT-template| raw:: html
 
-16. Click Finished
-
-.. |image13| image:: image13.png
-.. |image14| image:: image14.png
-.. |image15| image:: image15.png
-.. |image16| image:: image16.png
+   <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?templateURL=https:%2F%2Fs3-external-1.amazonaws.com%2Fcf-templates-k2dflj3mk02p-us-east-1%2F2018201LuF-template191z9ht7gde7&redirectId=DesignTemplate" target="_blank">F5 Advanced WAF Cloud Formation Template</a>

@@ -1,0 +1,1492 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "817f1096-7e82-4c31-b7bd-0a572128f2b4": {
+        "size": {
+          "width": 1420,
+          "height": 960
+        },
+        "position": {
+          "x": -480,
+          "y": 1200
+        },
+        "z": 0,
+        "embeds": [
+          "bb98e26b-1ecf-4082-b7c7-7b547090f282",
+          "29c5204a-a167-46f7-ab4d-0792577cd71c",
+          "b2b636d4-1639-4dd0-9c9b-773863537e58",
+          "dd2f5944-00bd-434c-97ee-525008db27f2",
+          "dc144415-2c8c-43c9-94b5-4e1efa9adaa1",
+          "74662090-c70a-4c68-ab6b-73f0278bd8a8",
+          "200bba88-2b47-4cec-88fe-913a5a286cb7",
+          "eef93b12-3c57-4ed3-bc50-2e870454ae05"
+        ]
+      },
+      "eef93b12-3c57-4ed3-bc50-2e870454ae05": {
+        "size": {
+          "width": 170,
+          "height": 90
+        },
+        "position": {
+          "x": -380,
+          "y": 1540
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "200bba88-2b47-4cec-88fe-913a5a286cb7": {
+        "size": {
+          "width": 120,
+          "height": 170
+        },
+        "position": {
+          "x": -370,
+          "y": 1840
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "dc144415-2c8c-43c9-94b5-4e1efa9adaa1": {
+        "size": {
+          "width": 130,
+          "height": 170
+        },
+        "position": {
+          "x": 260,
+          "y": 1730
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "74662090-c70a-4c68-ab6b-73f0278bd8a8": {
+        "size": {
+          "width": 120,
+          "height": 170
+        },
+        "position": {
+          "x": 610,
+          "y": 1530
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "bb98e26b-1ecf-4082-b7c7-7b547090f282": {
+        "size": {
+          "width": 560,
+          "height": 100
+        },
+        "position": {
+          "x": -400,
+          "y": 1250
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [
+          "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        ],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -670,
+          "y": 1480
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "439a060d-5c66-4c58-9304-4786d2690483": {
+        "source": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 2
+      },
+      "b14de609-932b-4ae4-8e2b-4f24188b1c17": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -330,
+          "y": 1280
+        },
+        "z": 2,
+        "parent": "bb98e26b-1ecf-4082-b7c7-7b547090f282",
+        "embeds": [],
+        "references": [
+          "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        ],
+        "dependson": [
+          "bb98e26b-1ecf-4082-b7c7-7b547090f282",
+          "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        ]
+      },
+      "a3253f1f-fe17-4e6e-b6b7-9212a7c054d9": {
+        "source": {
+          "id": "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        },
+        "target": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        },
+        "z": 3
+      },
+      "555e627e-3114-41fb-8205-ad48e7bf94d0": {
+        "source": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        },
+        "target": {
+          "id": "200bba88-2b47-4cec-88fe-913a5a286cb7"
+        },
+        "z": 4
+      },
+      "685009b8-967a-43ad-9365-46b9b969c4c9": {
+        "source": {
+          "id": "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        },
+        "target": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        },
+        "z": 11
+      },
+      "296f68bd-ccb7-4412-910c-df1c3da57b52": {
+        "source": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        },
+        "target": {
+          "id": "200bba88-2b47-4cec-88fe-913a5a286cb7"
+        },
+        "z": 1
+      },
+      "04c7b02f-573f-4bf3-aa61-abaec3d2bfe2": {
+        "source": {
+          "id": "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        },
+        "target": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        },
+        "z": 13
+      },
+      "9c0a1750-5f3d-4a80-914f-f73349d80bf6": {
+        "source": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 14
+      },
+      "a8d13353-26bf-4283-9762-688bba9f9908": {
+        "source": {
+          "id": "200bba88-2b47-4cec-88fe-913a5a286cb7"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 15
+      },
+      "6f53f43a-871d-48c8-8c9b-bbd7918ce953": {
+        "source": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 16
+      },
+      "c05985f5-bb7f-47f3-9541-ebf574629b9e": {
+        "source": {
+          "id": "74662090-c70a-4c68-ab6b-73f0278bd8a8"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 17
+      },
+      "9e9e4ca4-2c50-42c4-9371-5ff74071c800": {
+        "source": {
+          "id": "eef93b12-3c57-4ed3-bc50-2e870454ae05"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 18
+      },
+      "301d8a5d-e8b0-4976-81ae-fe8dad3984fd": {
+        "source": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 0
+      },
+      "ad0dcd23-0e3e-4e6c-be8d-222327d084f4": {
+        "source": {
+          "id": "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        },
+        "target": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        },
+        "z": 13
+      },
+      "1bb03fff-0fb8-40f4-9e9d-00c3a587bcc3": {
+        "source": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        },
+        "target": {
+          "id": "eef93b12-3c57-4ed3-bc50-2e870454ae05"
+        },
+        "z": 1
+      },
+      "dd2f5944-00bd-434c-97ee-525008db27f2": {
+        "size": {
+          "width": 230,
+          "height": 90
+        },
+        "position": {
+          "x": 560,
+          "y": 1280
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "242d26ef-174a-4b45-a980-102d54d79496": {
+        "source": {
+          "id": "dd2f5944-00bd-434c-97ee-525008db27f2"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 4
+      },
+      "6d24d5c4-0b1d-4168-b550-0c2066df6db8": {
+        "source": {
+          "id": "dd2f5944-00bd-434c-97ee-525008db27f2"
+        },
+        "target": {
+          "id": "74662090-c70a-4c68-ab6b-73f0278bd8a8"
+        },
+        "z": 1
+      },
+      "b2b636d4-1639-4dd0-9c9b-773863537e58": {
+        "size": {
+          "width": 120,
+          "height": 120
+        },
+        "position": {
+          "x": 260,
+          "y": 1400
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": [],
+        "dependson": [
+          "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        ]
+      },
+      "e7d5e706-a975-4d47-a355-103b9077706f": {
+        "source": {
+          "id": "b2b636d4-1639-4dd0-9c9b-773863537e58"
+        },
+        "target": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        },
+        "z": 6
+      },
+      "c9180e7c-6105-4e8c-8730-9d5d5ac38470": {
+        "source": {
+          "id": "b2b636d4-1639-4dd0-9c9b-773863537e58"
+        },
+        "target": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        },
+        "z": 1
+      },
+      "29c5204a-a167-46f7-ab4d-0792577cd71c": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -12.917430310270339,
+          "y": 1505.9452622104704
+        },
+        "z": 1,
+        "parent": "817f1096-7e82-4c31-b7bd-0a572128f2b4",
+        "embeds": []
+      }
+    }
+  },
+  "Resources": {
+    "MgmtSubnetAZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1MgmtSubnetCIDR"
+        },
+        "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Mgmt"
+          },
+          {
+            "Key": "Name",
+            "Value": "Mgmt Subnet AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "eef93b12-3c57-4ed3-bc50-2e870454ae05"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet1AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet1CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "Public Subnet AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "200bba88-2b47-4cec-88fe-913a5a286cb7"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet2AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet2CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet1 AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet3AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet3CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Intern"
+          },
+          {
+            "Key": "Name",
+            "Value": "Intern Subnet1 AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "74662090-c70a-4c68-ab6b-73f0278bd8a8"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet4AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet4CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet4 AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet5AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet5CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet5 AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet6AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet6CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet6 AZ1"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet7AZ1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ1subnet7CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "0", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet7 AZ1 "
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "MgmtSubnetAZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2MgmtSubnetCIDR"
+        },
+        "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Mgmt"
+          },
+          {
+            "Key": "Name",
+            "Value": "Mgmt Subnet AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "eef93b12-3c57-4ed3-bc50-2e870454ae05"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet10AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet10CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "Public Subnet1 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "200bba88-2b47-4cec-88fe-913a5a286cb7"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet20AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet20CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet2 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet30AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet30CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Intern"
+          },
+          {
+            "Key": "Name",
+            "Value": "Intern Subnet3  AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "74662090-c70a-4c68-ab6b-73f0278bd8a8"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet40AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet40CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet4 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet50AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet50CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet5 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet60AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet60CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet6 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "subnet70AZ2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "CidrBlock": {
+          "Ref": "AZ2subnet70CIDR"
+        },
+         "AvailabilityZone" : {
+        "Fn::Select" : [ "1", { "Fn::GetAZs" : "" } ]
+      },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Subnet7 AZ2"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dc144415-2c8c-43c9-94b5-4e1efa9adaa1"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "InternetGateway": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "0ab5ac22-5f61-43d9-ae08-0dbe8cbd4aba"
+        }
+      }
+    },
+    "PublicRoute": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "PublicRouteTable"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "InternetGateway"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b14de609-932b-4ae4-8e2b-4f24188b1c17"
+        }
+      },
+      "DependsOn": [
+        "PublicRouteTable",
+        "InternetGateway"
+      ]
+    },
+    "SUBRTE1AJW0": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "PublicRouteTable"
+        },
+        "SubnetId": {
+          "Ref": "subnet1AZ1"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "296f68bd-ccb7-4412-910c-df1c3da57b52"
+        }
+      }
+    },
+    "VGWA207IQ": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "InternetGatewayId": {
+          "Ref": "InternetGateway"
+        },
+        "VpcId": {
+          "Ref": "VPC"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "301d8a5d-e8b0-4976-81ae-fe8dad3984fd"
+        }
+      }
+    },
+    "SUBRTE41WV8": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "PublicRouteTable"
+        },
+        "SubnetId": {
+          "Ref": "MgmtSubnetAZ1"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "1bb03fff-0fb8-40f4-9e9d-00c3a587bcc3"
+        }
+      }
+    },
+    "InternRouteTable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Intern"
+          },
+          {
+            "Key": "Name",
+            "Value": "Intern Route Table"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "dd2f5944-00bd-434c-97ee-525008db27f2"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "SUBRTE1N5OO": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "InternRouteTable"
+        },
+        "SubnetId": {
+          "Ref": "subnet3AZ1"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6d24d5c4-0b1d-4168-b550-0c2066df6db8"
+        }
+      }
+    },
+    "PrivateRouteTable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "Private Route Table"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b2b636d4-1639-4dd0-9c9b-773863537e58"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    },
+    "SUBRTE522Q": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "PrivateRouteTable"
+        },
+        "SubnetId": {
+          "Ref": "subnet2AZ1"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "c9180e7c-6105-4e8c-8730-9d5d5ac38470"
+        }
+      }
+    },
+    "MgmtSG": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Management Security Group",
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": "22",
+            "ToPort": "22",
+            "CidrIp": {
+              "Ref": "VPCMgmtAccess"
+            }
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": "443",
+            "ToPort": "443",
+            "CidrIp": {
+              "Ref": "VPCMgmtAccess"
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Management Security Group"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "29c5204a-a167-46f7-ab4d-0792577cd71c"
+        }
+      }
+    },
+    "VPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": {
+          "Ref": "VPCCIDR"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "817f1096-7e82-4c31-b7bd-0a572128f2b4"
+        }
+      }
+    },
+    "PublicRouteTable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPC"
+        },
+        "Tags": [
+          {
+            "Key": "Application",
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
+          {
+            "Key": "Network",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "Public Route Table"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "bb98e26b-1ecf-4082-b7c7-7b547090f282"
+        }
+      },
+      "DependsOn": [
+        "VPC"
+      ]
+    }
+  },
+  "Mappings": {},
+  "Outputs" : {
+  "VPCID":{
+  "Value": {
+    "Ref": "VPC"
+   }
+  },
+  "AZ1MgmtSubnet": {
+  "Description": "MgmtSubnetAZ1ID",
+  "Value": {
+    "Ref": "MgmtSubnetAZ1"
+    }
+   },
+   "subnet1AZ1": {
+  "Description": "subnet1AZ1ID",
+  "Value": {
+    "Ref": "subnet1AZ1"
+    }
+   },
+   "AZ1subnet2": {
+  "Description": "subnet2AZ1ID",
+  "Value": {
+    "Ref": "subnet2AZ1"
+    }
+   },
+   "AZ1subnet3": {
+  "Description": "subnet3AZ1ID",
+  "Value": {
+    "Ref": "subnet3AZ1"
+    }
+   },
+   "AZ1subnet4": {
+  "Description": "subnet2AZ1ID",
+  "Value": {
+    "Ref": "subnet4AZ1"
+    }
+   },
+   "AZ1subnet5": {
+  "Description": "subnet5AZ1ID",
+  "Value": {
+    "Ref": "subnet5AZ1"
+    }
+   },
+   "AZ1subnet6": {
+  "Description": "subnet6AZ1ID",
+  "Value": {
+    "Ref": "subnet6AZ1"
+    }
+   },
+   "AZ1subnet7": {
+  "Description": "subnet7AZ1ID",
+  "Value": {
+    "Ref": "subnet7AZ1"
+    }
+   },
+   "AZ2MgmtSubnet": {
+  "Description": "MgmtSubnetAZ2ID",
+  "Value": {
+    "Ref": "MgmtSubnetAZ2"
+    }
+   },
+   "AZ2subnet10": {
+  "Description": "subnet10AZ2ID",
+  "Value": {
+    "Ref": "subnet10AZ2"
+    }
+   },
+   "AZ2subnet20": {
+  "Description": "subnet20AZ2ID",
+  "Value": {
+    "Ref": "subnet20AZ2"
+    }
+   },
+   "AZ2subnet30": {
+  "Description": "subnet30AZ2ID",
+  "Value": {
+    "Ref": "subnet30AZ2"
+    }
+   },
+   "AZ2subnet40": {
+  "Description": "subnet40AZ2ID",
+  "Value": {
+    "Ref": "subnet40AZ2"
+    }
+   },
+   "AZ2subnet50": {
+  "Description": "subnet50AZ2ID",
+  "Value": {
+    "Ref": "subnet50AZ2"
+    }
+   },
+   "AZ2subnet60": {
+  "Description": "subnet60AZ2ID",
+  "Value": {
+    "Ref": "subnet60AZ2"
+    }
+   },
+   "AZ2subnet70": {
+  "Description": "subnet70AZ2ID",
+  "Value": {
+    "Ref": "subnet70AZ2"
+    }
+   },
+  },
+  "Parameters": {
+    "VPCCIDR": {
+      "Description": "VPC CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.0.0/16",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1MgmtSubnetCIDR": {
+      "Description": "Management Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.0.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet1CIDR": {
+      "Description": "Public Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.10.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet2CIDR": {
+      "Description": "Private Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.20.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet3CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.30.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet4CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.40.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet5CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.50.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet6CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.60.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ1subnet7CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.70.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2MgmtSubnetCIDR": {
+      "Description": "Management Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.100.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet10CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.110.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet20CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.120.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet30CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.130.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet40CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.140.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet50CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.150.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet60CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.160.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "AZ2subnet70CIDR": {
+      "Description": "Intern Subnet CIDR IP range",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "10.128.170.0/24",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    },
+    "VPCMgmtAccess": {
+      "Description": "CIDR IP range allowed to login to the VPC mgmt instances",
+      "Type": "String",
+      "MinLength": "9",
+      "MaxLength": "18",
+      "Default": "0.0.0.0/0",
+      "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
+      "ConstraintDescription": "must be a valid CIDR range of the form x.x.x.x/x."
+    }
+  }
+}

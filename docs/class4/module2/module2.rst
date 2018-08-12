@@ -1,12 +1,14 @@
-Serverless Application Vulnerabilities
-=============================================
+Securing your BIG-IP instance in AWS and deploying SSL App
+==========================================================
 
-Before creating a Application Security Policy to protect the API Gateway, it is important to know what specific vulnerability we will address in the next module. The object here is not be an in-depth ASM Course on how to protect APIs. There are other F5 Labs you can take that focus on API Protection Policies.
-
-The idea here is to show how things work together. So let's see a couple of vulnerabilities we need to handle.
+Welcome to Lab2.  We will secure our BIG-IP instance and then deploy our virtual server with SSL protections.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :includehidden:
+   :caption: Switches
    :glob:
 
-   lab*
+   mgmt-cipher
+   ssl-ciphers
+   hackazon

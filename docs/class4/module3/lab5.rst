@@ -1,52 +1,53 @@
-Checking Signatures Protection
-------------------------------
+Update Parent WAF Policy
+------------------------
+**Task 1 - Simulate attacks to demonstrate newly discovered vulnerability.**
 
-1. Click “Send your Feedback”
+#. Open browser and go to :guilabel:`https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd`
+#. Enter credentials to login successfully.
 
-2. Open developer tools by right clicking anywhere in the webpage, then
-   select Inspect
+   .. image:: ./images/image350.png
+     :height: 350px
 
-3. Select the Network tab
+   .. NOTE::
 
-4. Open the File XSS.txt that is in your Desktop on the Windows Jump
-   Host. Paste the attack in the form. Click Create.
+      This is a common :guilabel:`OS command injection` attack. Upon successful login it displayed
+      the desired page along with the results for :guilabel:`cat /etc/passwd`.
 
-   .. code-block:: html
-      
-      <a href="#" onclick="for(var i in localStorage) { alert(localStorage.key(i) + ' = /n' + localStorage[i]) }">Click Here Pleaaaaaase!</a>
+**Task 2 - Modify the parent waf policy to mitigate the command injection vulnerability**
 
-5. You should ‘ve received a pop-up error to fetch. That is because
-   the request was blocked.
-   
-   |image45|
+#. Open the **Security -> Application Security -> Security Policies -> Policies List** page
+#. Select :guilabel:`waf_base` then click :guilabel:`waf_base` to view properties
 
-6. Click on the last “note” entry on developer tools. You should see
-   the request payload with the content you submitted.
-   
-   |image46|
+   .. image:: ./images/image351.png
+     :height: 200px
 
-7. Click the “Response” tab on the right. You will see ASM Block Page
-   encoded in JSON:
-   
-   |image47|
+   .. image:: ./images/image352.png
+     :height: 200px
 
-8. Go to “Security > Event Logs > Application > Requests”
+#. Click on :guilabel:`Attack Signatures Configuration`
+#. On the **Attack Signatures** section click **Change**
 
-9. Select the Blocked request. Look how nice it is to test using the
-   Cloud. You can see that ASM shows the Country the request came
-   from:
-   
-   |image48|
+   .. image:: ./images/image353.png
+     :height: 100px
 
-10. Verify why ASM blocked this request.
+#. Click **OS Command Injection Signatures** check box then click **Change**
 
-    |image49|
+   .. image:: ./images/image354.png
+     :height: 350px
 
-11. Click “Attack signature detected” to see the signatures matching the
-    content you sent.
+#. Click **Save** at the bottom of the properties page
+#. Click **Apply Policy** to commit changes
 
-.. |image45| image:: image45.png
-.. |image46| image:: image46.png
-.. |image47| image:: image47.png
-.. |image48| image:: image48.png
-.. |image49| image:: image49.png
+   .. image:: ./images/image343.png
+     :height: 50px
+
+**Task 6 - Repeat simulated command injection attack**
+
+#. Open browser and go to :guilabel:`https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd`
+#. Your request should be rejected.
+
+   .. NOTE::
+
+      Updates to the Parent policy will be inherited by the Child policies based
+      on the Inheritance configuration. Since :guilabel:`waf_base` parent policy
+      **Attack Signatures** was **Mandatory** all Child policies inherited the changes.
