@@ -1,10 +1,13 @@
-Public Cloud Architectures I: Deploying BIG-IP Virtual Edition in AWS
-=====================================================================
+Class - |classname|
+===================
 
 This class covers the following topics:
 
-- Deploying an Auto Scale WAF solution
-- Deploying an HA pair across AZ
+- Deploying AWS environments with CloudFormation Templates and Terraform
+- Service Discovery iApp for dynamically populating pool members using instance tags
+- Cross Availability Zone HA with F5
+- Autoscale WAF
+- Logging to Cloudwatch
 
 .. toctree::
    :maxdepth: 1

@@ -1,7 +1,7 @@
-Run the lab on your own
-=======================
+Logging to CloudWatch
+=====================
 
-You can run this lab on your own, on any AWS account, but you will need to create your own admin account and tweak the startup steps slightly.
+F5 Virtual Editions support comprehensive request and security logging for compliance and troubleshooting using two AWS native features: S3 Buckets and CloudWatch. In this lab we'll configure logging to CloudWatch.
 
 .. toctree::
    :maxdepth: 1

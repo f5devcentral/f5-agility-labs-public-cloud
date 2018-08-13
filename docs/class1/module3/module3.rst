@@ -1,11 +1,7 @@
-Extending and Securing your Cloud
-=================================
+Explore the F5 Big-IP Virtual Editions Deployed
+===============================================
 
-This lab will use the Lab Environment created previously to explore other capabilities including
-
-* Service Discovery
-* Failover Across Availability Zones
-* Triggering an Auto Scale event
+In this lab we'll take a close look at the Big-IP Virtual Editions deployed.
 
 .. toctree::
    :maxdepth: 1

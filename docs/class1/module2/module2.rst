@@ -1,7 +1,7 @@
 Exploring AWS
 ==============
 
-This lab will examine the Lab Environment created previously.
+This lab will examine the AWS Lab Environment created previously.
 
 .. toctree::
    :maxdepth: 1
