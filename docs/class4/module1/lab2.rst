@@ -45,7 +45,7 @@ To initially change the password for the BIG-IP management utility we need to co
 
 #. Navigate to **EC2 -> Network Interfaces** and filter for :guilabel:`Student#-BIG-IP`. Find **Management** interface of your BIG-IP instance . Note the **IPv4 Public IP** address for the **Management** interface.
 
-.. figure:: ../images/mgmt-public-ip.png
+.. figure:: ./images/mgmt-public-ip.png
 
 #. You can connect using an SSH utility - make sure to use :guilabel:`admin` as the username (do not use ``root``) and the **Management IPv4 Public IP** from the previous step. Use the **Student#-BIG-IP.pem** key pair you saved when you created the instance in Lab 1. For example:
 
