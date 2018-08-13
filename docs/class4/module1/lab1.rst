@@ -7,7 +7,7 @@ The following diagram shows a basic multi-NIC deployment of BIG-IP VE in an Amaz
 
 Complete the tasks in this guide to create this deployment.
 
-.. figure:: ../images/multi_deploy1.png
+.. figure:: ./images/multi_deploy1.png
 
 
 |
@@ -30,7 +30,7 @@ All labs as part of this class will be done through the AWS Management Console. 
 - IAM user name <Student#> where # is the number assigned during class
 - Password <Given in classroom>
 
-.. figure:: ../images/login_example.png
+.. figure:: ./images/login_example.png
 
 **Important! After login, ensure all you are in the US East (N. Virginia) region!**
 
