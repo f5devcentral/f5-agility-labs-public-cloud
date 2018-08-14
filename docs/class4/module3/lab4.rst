@@ -125,7 +125,7 @@ Create Credentials Protection WAF Child Policy
 #. For **Password** enter random incorrect password.  Repeat multiple times using different password to simulate brute force attack.  You should receive a captcha challenge after 3 failed attempts.
 #. Enter **captcha challenge** then enter correct credentials to login in successfully.
 #. Open new **incognito browser** and open **developer tools**. (View->Developer-Developer Tools)
-#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login with **username** :guilabel:`f5student` and **password** guilabel:`password`
+#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login with **username** :guilabel:`f5student` and **password** :guilabel:`password`
 #. Once successfully logged in, review log on **Developer Tool**.
 
    - Select :guilabel:`Network` tab
