@@ -39,7 +39,8 @@ In the following steps you will build and run a Docker container called agility2
     - sudo docker build -t agility2018 . **(A space is required after the period for this command to work)**
     - Verify that the agility2018 container exists and look at the other docker containers currently on the system
     - sudo docker images
-    - Run the Docker container
+ #. Run the Docker container
+
     - `sudo docker run -it --rm agility2018`  **(there are 2 hyphens before the rm part of this command)**
     - Note the change at the prompt. You are now working inside the Docker container
     - Prompt is now /home/ansible
@@ -48,7 +49,7 @@ In the following steps you will build and run a Docker container called agility2
 
     - git clone https://github.com/ajgerace/azure-f5
     - Create environment variables utilizing the student ID and password provided by the instructor
-    - export AZURE_USERNAME=x-student#@f5custlabs.onmicrosoft.com  **insert the correct values in the username**
+    - export AZURE_USERNAME=student#@f5custlabs.onmicrosoft.com  **insert the correct values in the username**
     - export AZURE_PW=ChangeMeNow123
     - Run bash script to create the Azure Service Principal and Secret
     - cd azure-f5
@@ -61,7 +62,7 @@ In the following steps you will build and run a Docker container called agility2
 	 
     - Login to Azure Portal
     - https://portal.azure.com
-    - USERNAME: x-student#@f5custlabs.onmicrosoft.com
+    - USERNAME: student#@f5custlabs.onmicrosoft.com
     - Password: ChangeMeNow123
     - Click on Azure Active Directory
     - Click App registration
@@ -104,25 +105,25 @@ Let’s take a look at what was built by the process in Azure. This section will
 
    - Access the Azure portal
    - https://portal.azure.com 
-    - Username: x-student#@f5custlabs.onmicrosoft.com
+    - Username: student#@f5custlabs.onmicrosoft.com
     - Password: ChangeMeNow123
    - Gather information about the Management port on the BIG-IP 
    - Resource Groups
    - Inspect the BIG-IP virtual machine object
     - f5vm01
    - Inspect the object which contains the BIG-IP management address
-    - x-student#-mgmt-pip
+    - student#-mgmt-pip
     - Note the Public IP Address    
-    - x-student#-mgmt-nsg
+    - student#-mgmt-nsg
     - Notice that 443 and 22 are permitted
     - Notice that only one source IP address is allowed to connect. The allowed IP address is the IP of the Ravello Jump Host used to build the environment    
    - Inspect the object which contains the external IP mapping
-    - x-student#-ext
+    - student#-ext
     - Select IP configurations from the panel on the left
-    - Note the Public IP Address and Private IP address associated with x-student#_rg-ext-ipconfig0 -  
+    - Note the Public IP Address and Private IP address associated with student#_rg-ext-ipconfig0 -  
     - You will browse to the VIP associated with Public IP address  to connect  to the application VIP
     - The Private IP address will be configured as a VIP on the BIG-IP
-    - x-student#-ext-nsg
+    - student#-ext-nsg
     - Notice that ports 443 and 22 are permitted
     - Notice that only one source IP address is allowed to connect. In a typical environment this would be less restrictive, possibly any.
    - Inspect the network  address assignments on the 2 Linux servers created by the orchestration script
@@ -142,7 +143,7 @@ Inspect the BIG-IP Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    - https://<BIG-IP-MGMT-IP-ADDRESS> (from the ansible output or look at the management interface in the Azure portal)
-    - Username: x-student#
+    - Username: student#
     - Password: ChangeMeNow123
    - Inspect the VIP on the BIG-IP
    |image203|  
@@ -202,19 +203,19 @@ Add a VIP to the existing Application environment
 #. Let’s take a look at the configuration changes on ther BIG-IP and the Azure environmet
 
     - Access BIG-IP Management interface
-     - Username: x-student#
+     - Username: student#
      - Password: ChangeMeNow123
     - Local Traffic>>Virtual Servers>>Virtual Server List
     - Note that bodgedit_vs2 is present. IP address 10.0.10.247
     - Access the Azure portal
     - https://portal.azure.com 
-     - Username: x-student#@f5custlabs.onmicrosoft.com
+     - Username: student#@f5custlabs.onmicrosoft.com
      - Password: ChangeMeNow123
      - Inspect the external network interface in Azure
      - Resource Groups
-     - Select your Resource Group  <x-student#_rg>
+     - Select your Resource Group  <student#_rg>
      - Inspect the BIG-IP virtual machine Network Interface object
-     - x-student#-ext
+     - student#-ext
      - IP Configurations from the tool list on the left of the screen
      - Note the Public IP associated with 10.0.10.247
 
@@ -232,7 +233,7 @@ Destroy the environment and verify that the objects were deleted
    - **This step takes about 15 minutes**
    - Access the Azure portal
    - https://portal.azure.com 
-   - Username: x-student#@f5custlabs.onmicrosoft.com
+   - Username: student#@f5custlabs.onmicrosoft.com
    - Password: ChangeMeNow123
    - Verify that the Resource group and associated objects is removed
 

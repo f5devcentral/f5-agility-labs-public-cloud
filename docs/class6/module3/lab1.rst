@@ -46,7 +46,7 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
 
     - Access BIG-IP Management interface
     - https://<BIG-IP-MGMT-IP-ADDRESS> (Obtain this info from the ansible output or the Azure portal)
-    - Username: x-student#
+    - Username: student#
     - Password: ChangeMeNow123
     - Determine which BIG-IP is active and perform the following on the GUI
     - Device Management>>Devices
@@ -70,7 +70,7 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
 
     - Access the Azure portal
     - https://portal.azure.com 
-    - Username: x-student#@f5custlabs.onmicrosoft.com
+    - Username: student#@f5custlabs.onmicrosoft.com
     - Password: ChangeMeNow123
     - Notice the Availability set and Microsoft Compute/Virtual Machines
     - https://www.petri.com/understanding-azure-availability-sets 
@@ -82,9 +82,9 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
 
     - Inspect the External Network Security groups associated with each BIG-IP
     - Resource Groups
-    - xstudent#-rg
-    - xstudent#-ext0
-    - xstudent#-ext1
+    - student#-rg
+    - student#-ext0
+    - student#-ext1
     - Only one of these objects has a Public IP associated with the VIP 10.10.10.10
 
 
@@ -100,7 +100,7 @@ Destroy the environment and verify that the objects were deleted
  #. Access the Azure portal to verify that the objects have been deleted
 
     - https://portal.azure.com 
-    - Username: x-student#@f5custlabs.onmicrosoft.com
+    - Username: student#@f5custlabs.onmicrosoft.com
     - Password: ChangeMeNow123
     - Verify that the Resource group and associated objects is removed
 

@@ -31,7 +31,7 @@ Accessing Ravello Jump Host and deploy BIG-IP
  #. You will be redirected to portal.azure.com
 
     - Log into the azure portal when prompted
-    - Username : x-student#@f5custlabs.onmicrosoft.com
+    - Username : student#@f5custlabs.onmicrosoft.com
     - Password:  ChangeMeNow123
 
  #. Complete the Customized template with the following values **(don’t follow the screen shot)**
@@ -39,7 +39,7 @@ Accessing Ravello Jump Host and deploy BIG-IP
     +------------------------+---------------------+
     | Resource Group         | Select Create New   |
     +------------------------+---------------------+
-    | Resource Group         | x-student#-rg       |
+    | Resource Group         | student#-rg         |
     +------------------------+---------------------+
     | Location               | East US             |
     +------------------------+---------------------+
@@ -47,7 +47,7 @@ Accessing Ravello Jump Host and deploy BIG-IP
     +------------------------+---------------------+
     | Admin Password         | ChangeMeNow123      |
     +------------------------+---------------------+
-    | DNS Label              | x-student#BIGIP     |
+    | DNS Label              | student#BIGIP       |
     +------------------------+---------------------+
     | Licensed Bandwidth     | 25M                 |
     +------------------------+---------------------+
@@ -81,7 +81,7 @@ Install a Linux Server in Azure
  #. Complete the Customized template with the following values **(don’t follow the screen shot)**
 
     +------------------------+---------------------+
-    | Name                   | F5Ubuntux-student#  |
+    | Name                   | F5Ubuntu-student#   |
     +------------------------+---------------------+
     | VM disk type           | HDD                 |
     +------------------------+---------------------+
@@ -91,7 +91,7 @@ Install a Linux Server in Azure
     +------------------------+---------------------+
     | Resource Group         | Select:Use Existing |
     +------------------------+---------------------+
-    | Resource Group         | x-student#-rg       |
+    | Resource Group         | student#-rg         |
     +------------------------+---------------------+
     | Location               | East US             |                      
     +------------------------+---------------------+
@@ -163,7 +163,7 @@ Use the Azure portal to gather IP information about the systems you have built
  
     - Resource Groups
     - Select your Resource Group
-    - Identify the Object with the BIG-IP Management Interface x-student#-mgmt
+    - Identify the Object with the BIG-IP Management Interface student#-mgmt
     - Note Public IP mapped to the management interface
 
     |image111|
@@ -173,7 +173,7 @@ Use the Azure portal to gather IP information about the systems you have built
 
     - Resource Groups
     - Select your Resource Group
-    - Identify the Object with the BIG-IP External Interface x-student#bigip-ext
+    - Identify the Object with the BIG-IP External Interface student#bigip-ext
     - Select "IP configurations" in the left panel
     - Note External Self IP mapped to 10.0.2.4
     - Note External Self IP mapped to 10.0.2.10 (this will be used to configure the VIP on the BIG-IP)
@@ -248,7 +248,7 @@ Add an ACL in the Azure portal to permit HTTP traffic to the VIP and test connec
 
     - Resource Groups
     - Select your Resource Group
-    - Identify the Object with the BIG-IP Network Security **x-student#bigip-ext-nsg** 
+    - Identify the Object with the BIG-IP Network Security **student#bigip-ext-nsg** 
     - Select Inbound Security Rules
     - Press the +Add button at the top of the page
     - Create a rule permitting destination port 80
@@ -271,7 +271,7 @@ In this section we will add a new application to the existing BIG-IP.  Since we 
    
     - Review the existing external interface 
     - Resource Group
-    - x-student#bigip-ext   	Network interface
+    - student#bigip-ext   	Network interface
     - IP configurations
     - Note that we currently have 4 IP addresses on the 10.0.2.0 segment
 
@@ -279,13 +279,13 @@ In this section we will add a new application to the existing BIG-IP.  Since we 
    
  #. Add a Public IP to Private IP NAT to the external interface in Azure
     - Select +ADD at the top of the GUI
-     - Name 			x-student#-rg-ext-ipconfig20
+     - Name 			student#-rg-ext-ipconfig20
      - Allocation		Static
      - IP address		10.0.2.20
      - Public IP address	Enabled
      - Configure Required Settings
      - Click "Create New" at the top of the page
-     - Name			x-student#bigip-ext-pip20
+     - Name			student#bigip-ext-pip20
      - SKU			Basic	
      - Assignment		Static
      - OK (bottom right)
