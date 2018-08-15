@@ -1,5 +1,5 @@
-Class - |classname|
-===================
+Public Cloud Architectures I: Deploying BIG-IP Virtual Edition in AWS
+=====================================================================
 
 This class covers the following topics:
 
