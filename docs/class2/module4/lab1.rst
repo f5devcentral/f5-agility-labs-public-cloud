@@ -65,7 +65,6 @@ Create a Virtual Server on Big-IP VE the Old Fashioned Way
 | Default Pool                             |  \+ to create pool1                                               |
 +------------------------------------------+-------------------------------------------------------------------+
 
-
 .. image:: ./images/5_virtual_server_part1.png
   :scale: 50%
 
@@ -100,7 +99,7 @@ Click Finished to complete the creation of Virtual Server app1.
 
    terraform output
 
-...Note the BigipUrl value. Change the port from 8443 to 443 and open in a web browser. Your Big-IP is protecting traffic to/from our sample application.
+...Note the BigipUrl value. HTTPS to the BigipUrl **without** explicit port number (default 443). Your Big-IP is protecting traffic to/from our sample application.
 
 .. image:: ./images/9_https_to_app1.png
   :scale: 50%
