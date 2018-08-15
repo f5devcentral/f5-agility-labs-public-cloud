@@ -9,7 +9,7 @@ Create a Virtual Server on Big-IP VE the Old Fashioned Way
 
 ...Note both the Bigip1subnet1Az1SelfEipAddress and BigipUrl values.
 
-2. Big-IP Virtual Edition appliances deployed to public cloud are initially accessible only via ssh key. You have to create an admin account and password before you can configure this Big-IP from the Configuration utility (Web UI). Run the `password-reset` script to create an admin account. 
+2. Big-IP Virtual Edition appliances deployed to public cloud are initially accessible only via ssh key. You have to create an admin account and password before you can configure this Big-IP from the Configuration utility (Web UI). Run the `reset-password` script to create an admin account. 
 
 .. attention::
    
@@ -17,7 +17,7 @@ Create a Virtual Server on Big-IP VE the Old Fashioned Way
 
 .. code-block:: bash
 
-   password-reset x.x.x.x
+   reset-password x.x.x.x
 
 .. image:: ./images/1_reset_password.png
   :scale: 50%
@@ -60,6 +60,8 @@ Create a Virtual Server on Big-IP VE the Old Fashioned Way
 +------------------------------------------+-------------------------------------------------------------------+
 | SSL Profile (Client)                     | clientssl-secure                                                  |
 +------------------------------------------+-------------------------------------------------------------------+
+| Source Address Translation               |  Auto Map                                                         |
++------------------------------------------+-------------------------------------------------------------------+
 | Default Pool                             |  \+ to create pool1                                               |
 +------------------------------------------+-------------------------------------------------------------------+
 
@@ -97,7 +99,7 @@ Click Finished to complete the creation of Virtual Server app1.
 
    terraform output
 
-...Note the BigipUrl value. Change the port from 8443 to 443 and open in a web browser. Your Big-IP is protecting traffic to/from our sample application.
+...Note the BigipUrl value. HTTPS to the BigipUrl **without** explicit port number (default 443). Your Big-IP is protecting traffic to/from our sample application.
 
 .. image:: ./images/9_https_to_app1.png
   :scale: 50%

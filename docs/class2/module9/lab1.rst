@@ -44,6 +44,8 @@ Click Create.
 .. image:: ./images/2b_create_ssg_app_2.png
   :scale: 50%
 
+This step will create a virtual server with IP address 0.0.0.0 and network mask 0.0.0.0.
+
 From the Big-IQ terminal, track logs for warnings, errors and failures.
 
 .. code-block:: bash
