@@ -26,6 +26,7 @@ Accessing Ravello Jump Host and deploy BIG-IP
     - Scroll down to the List of F5 ARM templates for Azure deployments to the section titled Deploying the BIG-IP VE in Azure 
     - 3 NICs  
     - Click PAYG Deploy to Azure
+    
     |image101|
 
  #. You will be redirected to portal.azure.com
@@ -278,18 +279,20 @@ In this section we will add a new application to the existing BIG-IP.  Since we 
     |image116|
    
  #. Add a Public IP to Private IP NAT to the external interface in Azure
+
     - Select +ADD at the top of the GUI
-     - Name 			student#-rg-ext-ipconfig20
-     - Allocation		Static
-     - IP address		10.0.2.20
-     - Public IP address	Enabled
-     - Configure Required Settings
-     - Click "Create New" at the top of the page
-     - Name			student#bigip-ext-pip20
-     - SKU			Basic	
-     - Assignment		Static
-     - OK (bottom right)
-     - OK (bottom left)
+
+      - Name 			student#-rg-ext-ipconfig20
+      - Allocation		Static
+      - IP address		10.0.2.20
+      - Public IP address	Enabled
+      - Configure Required Settings
+      - Click "Create New" at the top of the page
+      - Name			student#bigip-ext-pip20
+      - SKU			Basic	
+      - Assignment		Static
+      - OK (bottom right)
+      - OK (bottom left)
 
     |image117|
 
@@ -313,7 +316,7 @@ In this section we will add a new application to the existing BIG-IP.  Since we 
     +---------------------------------------------+---------------------------------------+
     | HTTP Profile                                | http                                  |
     +---------------------------------------------+---------------------------------------+
-    |Source Address Translation                   | auto map                              |
+    | Source Address Translation                  | auto map                              |
     +---------------------------------------------+---------------------------------------+
     | Default Pool                                | Azure_Ubuntu_pool                     |
     +---------------------------------------------+---------------------------------------+
@@ -325,7 +328,8 @@ In this section we will add a new application to the existing BIG-IP.  Since we 
     - http://<Public-IP mapped to the VIP address--this info can be found in the Azure portal>
 
 Access the Azure portal to delete the objects you created in this lab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
  #. Access the Azure Portal
  
     - Resource Groups

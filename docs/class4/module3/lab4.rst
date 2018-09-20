@@ -90,7 +90,7 @@ Create Credentials Protection WAF Child Policy
 
 #. For the **URL path** enter :guilabel:`/user/login`
 #. Expand the Menu again and Select **Parameters**
-#  In the **Parameter Name** enter :guilabel:`username` and click **Add**
+#. In the **Parameter Name** enter :guilabel:`username` and click **Add**
 #. Check **Identify as Username** and **Encrypt** check boxes
 #. In the **Parameter Name** enter :guilabel:`password` and click **Add**
 #. Check **Encrypt** check box

@@ -25,7 +25,7 @@ RDP client.
 1. Open browser and go to the URL provided by instructor.
 
 2.  Choose to connect with RDP.
-   Leave this connection for entire lab duration.
+    Leave this connection for entire lab duration.
 
    +------------+---------------------------+
    | |image1|   | Username: ``Ubuntu``      |

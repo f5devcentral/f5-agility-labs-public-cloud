@@ -9,8 +9,6 @@ Complete the tasks in this guide to create this deployment.
 
 .. figure:: ./images/multi_deploy1.png
 
-
-|
 This deployment shows three subnets:
 
 - An external, public subnet, where you'll create a virtual server to accept Internet traffic.

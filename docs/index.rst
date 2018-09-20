@@ -14,5 +14,4 @@ Welcome to the |classbold| lab at F5 Agility |year|
    :caption: Contents:
    :glob:
 
-   intro*
    class*/class*

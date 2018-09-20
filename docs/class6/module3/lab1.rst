@@ -16,15 +16,16 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
  #. Edit group_vars/azure-f5.yml file to enable deployment of A/P BIG-IP cluster.
 
     - Change the following variables
-    +----------------+------------------+-------------------+
-    | Variable       | Existing Value   + New Value         |
-    +================+==================+===================+
-    | deployment     | 2nic             | ha                |
-    +----------------+------------------+-------------------+
-    | extVipAddr1    | 10.10.10.246     | 10.10.10.10       |
-    +----------------+------------------+-------------------+
 
- #. Let’s take a look at the Ansible Playbooks used to create the objects (BIG-IP, BIG-IP configuration, and Linux servers) instead of running the 2nic playbook, this deployment will run the bigip_ha playbook.
+      +----------------+------------------+-------------------+
+      | Variable       | Existing Value   + New Value         |
+      +================+==================+===================+
+      | deployment     | 2nic             | ha                |
+      +----------------+------------------+-------------------+
+      | extVipAddr1    | 10.10.10.246     | 10.10.10.10       |
+      +----------------+------------------+-------------------+
+
+ #. Let's take a look at the Ansible Playbooks used to create the objects (BIG-IP, BIG-IP configuration, and Linux servers) instead of running the 2nic playbook, this deployment will run the bigip_ha playbook.
 
     - View the variable assignments in the group_vars/azure-f5.yml
     - cat group_vars/azure-f5.yml
@@ -40,7 +41,8 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
  #. Re-run the Ansible playbook to create the new deployment. A message is displayed to console with the public IP addresses for the BIG-IP management interfaces as well as the virtual server.
 
     - ansible-playbook -i notahost, f5agility.yml -e deploy_state=present
-    |image301|
+    
+      |image301|
 
  #. Let’s take a look at the BIG-IP configurations which were created. Access both BIG-IP’s using the information provided in the final comments following the TASK deployment. You can also access this information in the resource group objects on the Azure portal. In this exercise, the main focus will be the HA configuration. 
 
@@ -57,14 +59,15 @@ This lab assumes that you have completed LAB 2 which includes build and run the 
     - Confirm operation by selecting Force to Standby again
    
     - **Note that while the HA configuration on the BIG-IP in Azure is very similar to traditional HA configurations in an on prem data center, the operation is different. In Azure, an Azure API is triggered when a failover occurs. The public IP associated with a VIP is only assigned to the external network on the active member of the HA pair. Failover time can be greater than 30 seconds when using this method**
-    |image302|
+
+      |image302|
 
     - Inspect the service discovery iApp
     - iApps>>Application Services>>Applications
     - Components
     - Reconfigure
 
-    |image303|
+      |image303|
 
  #. Inspect the HA components in Azure
 

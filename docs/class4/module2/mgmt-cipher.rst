@@ -1,7 +1,7 @@
 SSL Security of F5 Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**There are some vulnerabilities in the default HTTPS access of the management on the F5 documented here: |K13400|
+**There are some vulnerabilities in the default HTTPS access of the management on the F5 documented here: |K13400|**
 
 **To protect against this we will disable all non-TLSv1.2 connections to the management by doing the following:**
 
