@@ -78,23 +78,23 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
    - availabilityZone1: **'us-west2-a'**
 
-   - mgmtNetwork: **'my-management-network'**
+   - mgmtNetwork: **'management-vpc'**
 
-   - mgmtSubnet: **'my-management-subnetwork'**
+   - mgmtSubnet: **'management-vpc-subnet'**
 
    - restrictedSrcAddress: **'0.0.0.0/0'**
 
-   - network1: **'my-application-network'**
+   - network1: **'external-vpc'**
 
-   - subnet1: **'my-application-subnetwork'**
+   - subnet1: **'external-vpc-subnet'**
 
    - aliasIp: **'This Value is assigned on a per student basis'**
 
    - numberOfForwardingRules: **'1'**
 
-   - network2: **'my-internal-network'**
+   - network2: **'internal-vpc'**
 
-   - subnet2: **'my-internal-subnetwork'**
+   - subnet2: **'internal-vpc-subnet'**
 
    - provisionPublicIP: **'yes'**
 
