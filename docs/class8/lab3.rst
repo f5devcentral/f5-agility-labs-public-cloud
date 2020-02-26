@@ -246,3 +246,6 @@ You should see something like the following in the log files.
 .. |image044| image:: media/image44.png
    :width: 4.35in
    :height: 2.51in
+.. |image044| image:: media/image45.png
+   :width: 11.22in
+   :height: 9.06in
