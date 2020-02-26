@@ -74,9 +74,9 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
   properties:
 
-   - region: **'us-west2'**
+   - region: **'us-west1'**
 
-   - availabilityZone1: **'us-west2-a'**
+   - availabilityZone1: **'us-west1-a'**
 
    - mgmtNetwork: **'management-vpc'**
 
