@@ -48,20 +48,6 @@ https://github.com/f5devcentral/f5-cloud-failover-extension/releases
 
 
 
-Then you need to EDIT The collection to modify the baseURL values.
-
-Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on the bottom right and select "Edit". (See image)
-
-|image044|
-
-    - Click on the variables tab
-    - Set the Current value IP to be the IP of bigip1
-    - Set the Initial value IP to be the IP of bigip2
-    - Click the Update Button
-    
-|image045|
-
-
 Task – Label Instances and Configure your Failover Declaration wtih Postman
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -85,6 +71,32 @@ This can be accmplished by going to File/Settings.
 
 |image017|
 
+4. Import the Cloud Failover Extension API collection and configure the baseURL values.
+
+
+To import the cloud Failover Extension API collection select File\Import
+
+**The collection file is called develop-postman-collection**
+
+**The collection file is located at c:\\Users\\Public\\Public Documents**
+
+
+
+5. EDIT The collection to modify the baseURL values.
+
+Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on the bottom right and select "Edit". (See image)
+
+|image044|
+
+    - Click on the variables tab
+    - Set the Current value IP to be the IP of bigip1
+    - Set the Initial value IP to be the IP of bigip2
+    - Click the Update Button
+    
+|image045|
+
+6. Using Postman verify the CFE to ensure it is running correctly.
+
 **For Each BigIP** Using a RESTful API client like Postman, send a GET request to the URI https://{{host}}/mgmt/shared/cloud-failover/info to ensure Cloud Failover is running properly
 
 You should receive an expected response like the following after you have posted this declaration.
@@ -96,9 +108,9 @@ You should receive an expected response like the following after you have posted
     "schemaMinimum": "0.9.0"
 }
 
-Set up your failover trigger with the second declaration. 
 
-4. Label instances and storage buckets.
+
+7. Label instances and storage buckets.
 
 Note that the “labels” and “value” can be arbitrary but they must match the tags that you assign to your GCP infrastructure.
 
@@ -106,7 +118,7 @@ Note that the “labels” and “value” can be arbitrary but they must match 
       - Label storage bucket for example with "f5_cloud_failover_label": "studentx" - where x is your student number
 
 
-5. In google create a student specific route.
+8. In google create a student specific route.
 
       - Route name: labuserx where x is your student number.
       Label the description in the route with f5_cloud_failover_labels={"f5_cloud_failover_label":"studentx"} - where x is your student number.
@@ -114,7 +126,7 @@ Note that the “labels” and “value” can be arbitrary but they must match 
       - Destination IP - this will be a 10.2.x.x/29 network that will be unique to each student (see deploying GDM) template in lab1.
       - Next Hop: will be and IP address that is an internal self IP address on one of the instances that you deployed in lab1
     
-5. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
+9. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
 
 
 Note.
