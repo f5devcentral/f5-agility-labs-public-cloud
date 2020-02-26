@@ -119,7 +119,9 @@ gcloud deployment-manager deployments create labuserx --config f5-existing-stack
 
 Example deployment deletion.
 
-**gcloud deployment-manager deployments delete labuser28**
+Where X is the number of the labuser type the command.
+
+**gcloud deployment-manager deployments delete labuserX**
 
 NOTE:After you run the template create it will take **at least 15 minutes** for the BigIPs to come up… before you can SSH to the boxes.
 
