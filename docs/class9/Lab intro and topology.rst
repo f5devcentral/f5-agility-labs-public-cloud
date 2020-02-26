@@ -4,8 +4,7 @@ This GCP-121 class consist of following tasks:
 
 - Task 1: Deploy single-NIC BIGIP-A using Google Cloud Console.
 - Task 2: Deploy single-NIC BIGIP-B using Google Deployment Manager.
-- Task 3: Setup config-sync between BGIP-A and BIGIP-B.
-- Task 4: Deploy Google Load Balancer and test failover between BIGIP-A and BIGIP-B.
+- Task 3: Deploy Google Load Balancer and test failover between BIGIP-A and BIGIP-B.
 
 All the Google Cloud resources (vpc, subnets etc.) are pre-configured for this lab.
 In single_NIC setup, all access to the BIG-IP VE is through the same IP address and virtual network interface (vNIC). Because only one self IP address is available in this configuration, the BIG-IP VE high availability feature is not available.  (You cannot create an active-standby pair.). We will leverage Google loadbalacner to support high availability (with active-active setup).
