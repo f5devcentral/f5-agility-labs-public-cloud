@@ -32,7 +32,7 @@ Click the “Create” button on the top right.
  
 |image004|
 
-Note: You an get the IP for the Nginx back end server by typing 
+Note: You an get the IP for the Apache back end server by typing 
 
 ‘gcloud compute instances list’
 
@@ -41,7 +41,7 @@ You will use the “internal IP address”
 PoolName: ‘pool’
 Health Monitor:’http’
 Node Name:’nginx1’
-Address: <IPFORNGINX Server”
+Address: <Apache Server IP”
 Click “add” to add the pool member
 Click “Finished”
 
