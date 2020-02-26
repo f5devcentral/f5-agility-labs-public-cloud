@@ -46,7 +46,7 @@ Use the git command to clone the google cloud templates.
 
 Type the following..
 
-git clone https://github.com/F5Networks/f5-google-gdm-templates.git
+git clone https://github.com/dudesweet/f5-google-gdm-templates.git
 
 |image013|
 
