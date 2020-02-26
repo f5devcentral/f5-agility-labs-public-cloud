@@ -68,7 +68,7 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
 |image014|
 
-**Save the file as **f5-existing-stack-same-net-cluster-payg-3nic-bigip.yaml**
+**Save the file as **f5-existing-stack-same-net-cluster-payg-3nic-bigip.sample.yaml**
 
 #. Edit the Following Values in the YAML file
 
