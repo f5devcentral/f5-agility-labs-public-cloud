@@ -90,7 +90,7 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
    - aliasIp: **'This Value is assigned on a per student basis'**
 
-   - numberOfForwardingRules: **'1'**
+   - numberOfForwardingRules: **1**
 
    - network2: **'internal-vpc'**
 
