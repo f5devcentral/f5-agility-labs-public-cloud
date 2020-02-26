@@ -47,6 +47,21 @@ https://github.com/f5devcentral/f5-cloud-failover-extension/releases
 |image015|
 
 
+
+Then you need to EDIT The collection to modify the baseURL values.
+
+Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on the bottom right and select "Edit". (See image)
+
+|image044|
+
+    - Click on the variables tab
+    - Set the Current value IP to be the IP of bigip1
+    - Set the Initial value IP to be the IP of bigip2
+    - Click the Update Button
+    
+|image045|
+
+
 Task – Label Instances and Configure your Failover Declaration wtih Postman
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -228,3 +243,6 @@ You should see something like the following in the log files.
 .. |image019| image:: media/image19.png
    :width: 7.89in
    :height: 9.42in
+.. |image044| image:: media/image44.png
+   :width: 4.35in
+   :height: 2.51in
