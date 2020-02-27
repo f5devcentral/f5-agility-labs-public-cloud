@@ -157,43 +157,45 @@ You will add the route under the Networking/VPC Network/Routes.
 Note.
 
     - The defaultNextHopAddresses should be the selfIP associated with your "internal network"
-    - The deployment labe should be "studentx" where x is your labuser number.. for instance "student28"
-{
-    "class": "Cloud_Failover",
-    "environment": "gcp",
-    "externalStorage": {
-        "scopingTags": {
-            "f5_cloud_failover_label": "student16"
-        }
-    },
-    "failoverAddresses": {
-        "scopingTags": {
-            "f5_cloud_failover_label": "student16"
-        }
-    },
-    "failoverRoutes": {
-        "scopingTags": {
-            "f5_cloud_failover_label": "student16"
-        },
-        "scopingAddressRanges": [
-            {
-                "range": "10.2.0.240/29"
-            }
-        ],
-        "defaultNextHopAddresses": {
-            "discoveryType": "static",
-            "items": [
-                "10.3.0.7",
-                "10.3.0.8"
-            ]
-        }
-    },
-    "controls": {
-        "class": "Controls",
-        "logLevel": "info"
-    }
-}
+    - The deployment labe should be "studentx" where x is your labuser number.. for instance "student28"::
+    
+                {
+                    "class": "Cloud_Failover",
+                    "environment": "gcp",
+                    "externalStorage": {
+                        "scopingTags": {
+                            "f5_cloud_failover_label": "student16"
+                        }
+                    },
+                    "failoverAddresses": {
+                        "scopingTags": {
+                            "f5_cloud_failover_label": "student16"
+                        }
+                    },
+                    "failoverRoutes": {
+                        "scopingTags": {
+                            "f5_cloud_failover_label": "student16"
+                        },
+                        "scopingAddressRanges": [
+                            {
+                                "range": "10.2.0.240/29"
+                            }
+                        ],
+                        "defaultNextHopAddresses": {
+                            "discoveryType": "static",
+                            "items": [
+                                "10.3.0.7",
+                                "10.3.0.8"
+                            ]
+                        }
+                    },
+                    "controls": {
+                        "class": "Controls",
+                        "logLevel": "info"
+                    }
+                }
 
+_____
 
 Also you should receive a response back from postman that looks like the following.
 
