@@ -119,8 +119,8 @@ _____
 
 Note that the “labels” and “value” can be arbitrary but they must match the tags that you assign to your GCP infrastructure.
 
-      - Label instances with for example "f5_cloud_failover_label": "studentx" - where x is your student number
-      - Label storage bucket for example with "f5_cloud_failover_label": "studentx" - where x is your student number
+- Label instances with for example "f5_cloud_failover_label": "studentx" - where x is your student number
+- Label storage bucket for example with "f5_cloud_failover_label": "studentx" - where x is your student number
 
 
 8. In google create a student specific route.
