@@ -13,7 +13,7 @@ Objective:
 ----------
 
 -  Gain an understanding of how the cloud failover extension is implemented in Google Cloud.
-
+c
 
 Lab Requirements:
 -----------------
