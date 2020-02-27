@@ -98,9 +98,9 @@ To test.
 **On each BIG-IP**
 
 - ssh to box as user
-- in TMSH type "run util bash" to get to a bash command line
-- tail -f /var/log/cloud/google/failover.log
--  In TMUI go to devices/device management/ and select “force to standby on the active unit”d) 
+- in TMSH type **run util bash** to get to a bash command line
+- **tail -f /var/log/cloud/google/failover.log**
+- In TMUI go to devices/device management/ and select “force to standby on the active unit”d) 
    
 - Watch logs.
 
