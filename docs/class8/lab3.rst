@@ -7,7 +7,9 @@ The F5 cloud failover extension has three main benefits:
 
 
 -Standardization: Failover patterns will look similar across all clouds.
+
 -Portability: You can leverage a variety of methods, including cloud-native templates, Terraform, and Ansible, to install and run CF.
+
 -Lifecycle and Supportability: You can upgrade BIG-IP without having to call F5 support to fix failover.
 
 
