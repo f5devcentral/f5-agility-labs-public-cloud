@@ -90,7 +90,7 @@ This can be accmplished by going to File/Settings.
 
 5. EDIT The collection to modify the baseURL values.
 
-Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on the bottom right and select "Edit". (See image)
+Hover over the Cloud Failover (CF) Extension collection and click the 3 dots on the bottom right and select "Edit". (See image)
 
 |image044|
 
