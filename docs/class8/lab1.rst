@@ -208,7 +208,7 @@ You can use the user1 that we created in order to login to the Big-IPSs.
  
  
  Lab 1 is now Complete.
-------------------------
+-----------------------
 
 
 
