@@ -12,3 +12,16 @@ Lifecycle and Supportability: You can upgrade BIG-IP without having to call F5 s
 
 Objective:
 ----------
+
+-  Gain an understanding of how the cloud failover extension is implemented in Google Cloud.
+c
+
+Lab Requirements:
+-----------------
+
+-  Completed Lab1 "Deploying GDM Template"
+
+-  Estimated completion time: 40 minutes
+
+Excercise: Install Cloud Failover Extension
+-------------------------------------------
