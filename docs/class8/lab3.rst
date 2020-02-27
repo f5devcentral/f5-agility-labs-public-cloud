@@ -46,7 +46,7 @@ Log in to TMUI. From iApps/Package Management LX select the Import button.
     -   Click iApps > Package Management LX.
     -   Click the Import button.
     -   Click Choose File and then browse to the location you saved the RPM file, and then click Ok.
-    -   Click the Upload button.
+    -   Click the Upload button. ::
 
 |image015|
 
