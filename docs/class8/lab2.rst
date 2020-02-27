@@ -97,12 +97,12 @@ To test.
 
 **On each BIG-IP**
 
-    - ssh to box as user
-    - in TMSH type "run util bash" to get to a bash command line
-    - tail -f /var/log/cloud/google/failover.log
-    -  In TMUI go to devices/device management/ and select “force to standby on the active unit”d) 
+- ssh to box as user
+- in TMSH type "run util bash" to get to a bash command line
+- tail -f /var/log/cloud/google/failover.log
+-  In TMUI go to devices/device management/ and select “force to standby on the active unit”d) 
    
-    - Watch logs.
+- Watch logs.
 
 You should note the following in the failover.log on box that is being failed to…
 
