@@ -207,7 +207,7 @@ You can user the user1 that we created in order to login to the Big-IPSs
  |image003|
 
  Exersize 1 is now Complete
-
+ -----------------
 
 .. |image001| image:: media/image001.png
    :width: 6.14in
