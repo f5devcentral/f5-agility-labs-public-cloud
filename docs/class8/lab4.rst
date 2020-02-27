@@ -197,6 +197,17 @@ Note.
 
 _____
 
+Also you should receive a response back from postman that looks like the following.
+
+{"message":"success","declaration":{"class":"Cloud_Failover","environment":"gcp","externalStorage":                         {"scopingTags":{"f5_cloud_failover_label":"mydeployment"}},"failoverAddresses":{"scopingTags":                               {"f5_cloud_failover_label":"mydeployment"}},"failoverRoutes":{"scopingTags":                                                 {"f5_cloud_failover_label":"mydeployment"},"scopingAddressRanges":["0.0.0.0/0"]},"schemaVersion":"0.9.0"}}
+
+_____
+  |image018|
+
+
+Task – Verify Cloud Failover Scripts 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. |image015| image:: media/image15.png
    :width: 13.04in
