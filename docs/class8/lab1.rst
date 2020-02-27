@@ -138,7 +138,7 @@ You will now need IP addresses in order to SSH to the particular instances that 
 
 In the jumpbox type.
 
-gcloud compute instances list --filter="name:( <yourdeploymentname> )"
+**gcloud compute instances list --filter="name:( <yourdeploymentname> )"**
 
 
 Note the template will create “ephemeral” ip addresses. These can be made static in a real world deployment through the google template.
