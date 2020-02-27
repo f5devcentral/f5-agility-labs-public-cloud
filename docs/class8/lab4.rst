@@ -197,3 +197,22 @@ Note.
 
 _____
 
+
+.. |image015| image:: media/image15.png
+   :width: 13.04in
+   :height: 9.04in
+.. |image017| image:: media/image17.png
+   :width: 17.4in
+   :height: 10.78in
+.. |image018| image:: media/image18.png
+   :width: 18.79in
+   :height: 7.64in
+.. |image019| image:: media/image19.png
+   :width: 7.89in
+   :height: 9.42in
+.. |image044| image:: media/image44.png
+   :width: 4.35in
+   :height: 2.51in
+.. |image045| image:: media/image45.png
+   :width: 11.22in
+   :height: 9.06in
