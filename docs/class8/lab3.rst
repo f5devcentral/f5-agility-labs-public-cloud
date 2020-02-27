@@ -78,11 +78,11 @@ This can be accmplished by going to File/Settings.
 4. Import the Cloud Failover Extension API collection and configure the baseURL values.
 
 
-To import the cloud Failover Extension API collection select File\Import
+-To import the cloud Failover Extension API collection select File\\Import
 
-**The collection file is called develop-postman-collection**
+-**The collection file is called develop-postman-collection**
 
-**The collection file is located at c:\\Users\\Public\\Public Documents**
+-**The collection file is located at c:\\Users\\Public\\Public Documents**
 
 
 
