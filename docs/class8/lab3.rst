@@ -159,7 +159,7 @@ where x is         your student number.
 Note.
 
 - The defaultNextHopAddresses should be the selfIP associated with your "internal network"
-- The deployment labe should be "studentx" where x is your labuser number.. for instance "student28"::
+- The deployment label should be "studentx" where x is your labuser number.. for instance "student28"::
     
                 {
                     "class": "Cloud_Failover",
