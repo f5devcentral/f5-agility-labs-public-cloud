@@ -122,10 +122,15 @@ Note that the “labels” and “value” can be arbitrary but they must match 
 
 8. In google create a student specific route.
 
+You will add the route under the Networking/VPC Network/Routes.
+
+**Click the "Create Rpoute Button**
+
+
       - Route name: labuserx where x is your student number.
       Label the description in the route with f5_cloud_failover_labels={"f5_cloud_failover_label":"studentx"} - where x is your student number.
-      - Network: my-internal-network
-      - Destination IP - this will be a 10.2.x.x/29 network that will be unique to each student (see deploying GDM) template in lab1.
+      - Network: internal-vpc-221
+      - Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template in lab1.
       - Next Hop: will be and IP address that is an internal self IP address on one of the instances that you deployed in lab1
     
 9. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
