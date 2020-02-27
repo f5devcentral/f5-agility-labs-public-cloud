@@ -197,29 +197,6 @@ Also you should receive a response back from postman that looks like the followi
   |image018|
 
 
-
-
-Task – Add  Student Specific Test Route in the Google Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Login to each BigIP. And note the internal selfIP address.. they should fall into the 10.3.0.0 range.
-
-Login to the google console with your console username/passwrod.
-
-  -Name: labuserx (Where x is the lab user number)
-
-  -Description: Label the description in the route with f5_cloud_failover_labels={"f5_cloud_failover_label":"studentx"} - where x is your student number.
-      
-  -Network: **my-internal-network**
-
-  - Destination IP - this will be a 10.2.x.x/29 network that will be unique to each student (see deploying GDM) template in lab1.
-
-  -Next Hop. Specify the next HOP as the **selfIP on the active Unit**
-
-
-|image019|
-
-
 Task – Disable Cloud Failover Scripts 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
