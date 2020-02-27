@@ -204,7 +204,7 @@ SSH to each box with user1
 
   - then type "run util bash"
 
-  - change directory to /config/active
+  - change directory to /config/failover/active
 
   - On each file **tgactive and tgrefresh"** use VI to comment out
         #/usr/bin/f5-rest-node /config/cloud/gce/node_modules/@f5devcentral/f5-cloud-libs-gce/scripts/failover.js
