@@ -109,11 +109,11 @@ properties:
 
 #. Run the command…
 
-gcloud deployment-manager deployments create <name of deployment> --config <name of yaml file> --description <description>
+**gcloud deployment-manager deployments create <name of deployment> --config <name of yaml file> --description <description>**
 
 For example...
 
-gcloud deployment-manager deployments create labuserx --config f5-existing-stack-same-net-cluster-payg-3nic-bigip.sample.yaml --description labuserx
+**gcloud deployment-manager deployments create labuserx --config f5-existing-stack-same-net-cluster-payg-3nic-bigip.sample.yaml --description labuserx**
 
 **If the deployment fails you should delete, fix the yaml file and re-create the deployment**
 
