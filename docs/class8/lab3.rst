@@ -28,9 +28,13 @@ Excercise: Install Cloud Failover Extension
 Task – Download and Install Cloud Failover Extension RPM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Download the Latest Cloud Failover Extension from
+1. Install the cloud failover extension on Each Bigip.
 
-https://github.com/f5devcentral/f5-cloud-failover-extension/releases
+Log in to TMUI. From iApps/Package Management LX select the Import button.
+
+**The cloud failover extension file is located at c:\\Users\\Public\\Documents**
+
+**The file is called develop-f5-cloud-failover-0.9.1-1.noarch.rpm**
 
 
 
