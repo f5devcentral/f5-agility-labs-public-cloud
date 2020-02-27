@@ -157,19 +157,18 @@ You will use these IP addresses in order to connect to your resources in googleâ
 Task â€“ Configure BIG-IP Pair
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Login into the first bigip and create a user. 
+1. Use PUTTY to Login to the first bigip and create a user. 
 
+As the boxes are in a sync failover group the changes with be synced across both units so you can make changes on one box and they will be synched to the other box.
 
-    As the boxes are in a sync failover group the changes with be synced across both units so you can make changes on one box and they will be synched to the other box.
+ssh to the admin server of each bigIP 
 
-    ssh to the admin server of each bigIP 
-
-    ssh admin@<yourbigIPaddress>
+**ssh admin@<yourbigIPaddress>**
     
-    **Note you will need a key to login ot the admin server**
-    **The key is called "labusers" amd it is located in C:\\Users\\Public\\Documents**
-    **Putty is installed on the jumphost**
-    **You will need to set the private key in putty under 'SSH\Auth'
+**Note you will need a key to login ot the admin server**
+**The key is called "labusers" amd it is located in C:\\Users\\Public\\Documents**
+**Putty is installed on the jumphost**
+**You will need to set the private key in putty under 'SSH\Auth'**
 
     |image021|
 
