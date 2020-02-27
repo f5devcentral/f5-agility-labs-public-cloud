@@ -40,13 +40,13 @@ Log in to TMUI. From iApps/Package Management LX select the Import button.
 
 2. Install the Cloud Failover on each BIG-IP using the Configuration utility¶
 
-    From the Configuration utility:
+From the Configuration utility:
 
-    -   If you are using a BIG-IP version prior to 14.0, before you can use the Configuration utility, you must enable the framework using the BIG-IP command line. From the CLI, type the following command: touch /var/config/rest/iapps/enable. You only need to run this command once per BIG-IP system.
-    -   Click iApps > Package Management LX.
-    -   Click the Import button.
-    -   Click Choose File and then browse to the location you saved the RPM file, and then click Ok.
-    -   Click the Upload button. ::
+-   If you are using a BIG-IP version prior to 14.0, before you can use the Configuration utility, you must enable the framework using the BIG-IP command line. From the CLI, type the following command: touch /var/config/rest/iapps/enable. You only need to run this command once per BIG-IP system.
+-   Click iApps > Package Management LX.
+-   Click the Import button.
+-   Click Choose File and then browse to the location you saved the RPM file, and then click Ok.
+-   Click the Upload button. ::
 
 |image015|
 
@@ -58,7 +58,7 @@ Task – Label Instances and Configure your Failover Declaration wtih Postman
 
 1. Using Postman Post the the cloud declaration.
 
-  Send two Declarations to each BIG-IP in my pair via Postman. (again following along with the documentation)
+Send two Declarations to each BIG-IP in my pair via Postman. (again following along with the documentation)
 
 
 2. Install Postman if it is not already installed.
