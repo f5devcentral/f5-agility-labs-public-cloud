@@ -128,8 +128,8 @@ You will add the route under the Networking/VPC Network/Routes.
 
 
       - Route name: labuserx where x is your student number.
-      
-      - Label the description in the route with f5_cloud_failover_labels={"f5_cloud_failover_label":"studentx"} - where x is         your student number.
+      dfsgd
+      - Label the description in the route with f5_cloud_failover_labels **{"f5_cloud_failover_label":"student16","f5_self_ips":["10.3.0.10","10.3.0.11"]} ** where x is         your student number.
       
       - Network: internal-vpc-221
       
@@ -156,17 +156,17 @@ Note.
     "environment": "gcp",
     "externalStorage": {
         "scopingTags": {
-            "f5_cloud_failover_label": "student28"
+            "f5_cloud_failover_label": "student16"
         }
     },
     "failoverAddresses": {
         "scopingTags": {
-            "f5_cloud_failover_label": "student28"
+            "f5_cloud_failover_label": "student16"
         }
     },
     "failoverRoutes": {
         "scopingTags": {
-            "f5_cloud_failover_label": "student28"
+            "f5_cloud_failover_label": "student16"
         },
         "scopingAddressRanges": [
             {
