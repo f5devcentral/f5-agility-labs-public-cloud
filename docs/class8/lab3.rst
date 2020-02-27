@@ -79,9 +79,7 @@ This can be accmplished by going to File/Settings.
 
 
 -To import the cloud Failover Extension API collection select File\\Import
-
 -**The collection file is called develop-postman-collection**
-
 -**The collection file is located at c:\\Users\\Public\\Public Documents**
 
 
