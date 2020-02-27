@@ -103,16 +103,17 @@ Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on t
 
 **For Each BigIP** Using a RESTful API client like Postman, send a GET request to the URI https://{{host}}/mgmt/shared/cloud-failover/info to ensure Cloud Failover is running properly
 
-You should receive an expected response like the following after you have posted this declaration.
+You should receive an expected response like the following after you have posted this declaration. ::
 
-{
-    "version": "0.9.1",
-    "release": "1",
-    "schemaCurrent": "0.9.0",
-    "schemaMinimum": "0.9.0"
-}
+                {
+                    "version": "0.9.1",
+                    "release": "1",
+                    "schemaCurrent": "0.9.0",
+                    "schemaMinimum": "0.9.0"
+                }
 
 
+_____
 
 7. Label instances and storage buckets.
 
