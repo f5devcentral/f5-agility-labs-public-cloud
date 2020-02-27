@@ -200,6 +200,8 @@ Also you should receive a response back from postman that looks like the followi
 {"message":"success","declaration":{"class":"Cloud_Failover","environment":"gcp","externalStorage":                         {"scopingTags":{"f5_cloud_failover_label":"mydeployment"}},"failoverAddresses":{"scopingTags":                               {"f5_cloud_failover_label":"mydeployment"}},"failoverRoutes":{"scopingTags":                                                 {"f5_cloud_failover_label":"mydeployment"},"scopingAddressRanges":["0.0.0.0/0"]},"schemaVersion":"0.9.0"}}
 
 
+The following images shows an example declaration from postman.
+
   |image018|
 
 
