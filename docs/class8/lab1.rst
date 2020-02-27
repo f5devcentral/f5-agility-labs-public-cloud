@@ -72,35 +72,35 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
 #. Edit the Following Values in the YAML file
 
-  properties:
+properties:
 
-   - region: **'us-west1'**
+- region: **'us-west1'**
 
-   - availabilityZone1: **'us-west1-a'**
+- availabilityZone1: **'us-west1-a'**
 
-   - mgmtNetwork: **'management-vpc-221'**
+- mgmtNetwork: **'management-vpc-221'**
 
-   - mgmtSubnet: **'management-vpc-subnet-221'**
+- mgmtSubnet: **'management-vpc-subnet-221'**
 
-   - restrictedSrcAddress: **'0.0.0.0/0'**
+- restrictedSrcAddress: **'0.0.0.0/0'**
 
-   - network1: **'external-vpc-221'**
+- network1: **'external-vpc-221'**
 
-   - subnet1: **'external-vpc-subnet-221'**
+- subnet1: **'external-vpc-subnet-221'**
 
-   - aliasIp: **'This Value is assigned on a per student basis'**
+- aliasIp: **'This Value is assigned on a per student basis'**
 
-   - numberOfForwardingRules: **1**
+- numberOfForwardingRules: **1**
 
-   - network2: **'internal-vpc-221'**
+- network2: **'internal-vpc-221'**
 
-   - subnet2: **'internal-vpc-subnet-221'**
+- subnet2: **'internal-vpc-subnet-221'**
 
-   - provisionPublicIP: **'yes'**
+- provisionPublicIP: **'yes'**
 
-   - imageName: **'f5-bigip-15-0-1-0-0-11-payg-best-1gbps-190803012348'**
+- imageName: **'f5-bigip-15-0-1-0-0-11-payg-best-1gbps-190803012348'**
 
-   - serviceAccount: **agility221@f5-gcs-4261-sales-agility2020.iam.gserviceaccount.com**
+- serviceAccount: **agility221@f5-gcs-4261-sales-agility2020.iam.gserviceaccount.com**
 
 
 **After you have made changes to the YAML file. Save it in VSCode File/Save.**
