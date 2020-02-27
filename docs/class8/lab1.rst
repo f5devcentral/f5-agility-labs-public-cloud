@@ -7,7 +7,7 @@ Objective:
 
 -  Deploy an API based failiver pair of BIG-IPs in google cloud.
 
--  Familiarize yourself with the YAML configuration file that is used to deploy the template in google cloude.
+-  Familiarize yourself with the YAML configuration file that is used to deploy the template in google cloud.
 
 Lab Requirements:
 -----------------
