@@ -11,8 +11,7 @@ In single_NIC setup, all access to the BIG-IP VE is through the same IP address 
 
 Lab Topology
 ---------------
-.. image:: ./images/topology.png
-
+![img1](./images/topology.png)
 
 Connecting to Google Cloud Console
 --------------------------------------
@@ -37,32 +36,28 @@ The lab will make use of unique variables to provide access to the lab
 - Labuser number
 - BIG-IP VE Evaluation keys.
 
-============== ===========================================================
-Variable Name   Variable Value
-============== ===========================================================
- shortUrl       Unique key that provides access to this lab (i.e. abc123)
- emailid        Account name for each student (i.e. user1@agility20.com)
-============== ===========================================================
+| Name | Value |
+| ---| --- |
+| shortUrl | Contains Eval keys |
+| emailID | Account name for each lab user (e.g. labuser29@agility20.com) |
 
 
 IP Address
 -------------
-============== =============== ==========================================
-Device Name     IP Address            Zone
-============== =============== ==========================================
- BIGIP-A       10.1.1.x/16            us-west1-a
- BIGIP-B       10.1.2.x/16            us-west1-b
-============== =============== ==========================================
-Replace "x" with you lab user number. For example, BIGIP-A address for labuser1 will be 10.1.1.1/16.
+| Device Name | IP Address | Zone |
+| ---| --- | --- |
+| BIGIP-A | 10.1.1.x/16 | us-west1-a |
+| BIGIP-B | 10.1.2.x/16 | us-west1-b |
 
+Replace "x" with you lab user number. For example, BIGIP-A address for labuser29 will be 10.1.1.29/16.
 
 
 Backend Address
 ---------------
-============== =============== ==========================================
-Device Name      IP Address            Zone
-============== =============== ==========================================
- web-server1       10.3.1.1/16            us-west1-a
- web-server2       10.3.2.1/16            us-west1-b
-============== =============== ==========================================
+
+| Device Name | IP Address | Zone |
+| ---| --- | --- |
+| web-server1 | 10.3.1.1/16 | us-west1-a |
+| web-server2 | 10.3.2.1/16 | us-west1-b |
+
 The backend servers are pre-configured and no need to create them.
