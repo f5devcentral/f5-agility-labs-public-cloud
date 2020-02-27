@@ -139,9 +139,9 @@ You will add the route under the Networking/VPC Network/Routes.
       
       - Network: internal-vpc-221
       
-      - Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template in lab1.
+      - Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template         in lab1.
       
-      - Next Hop: will be and IP address that is an internal self IP address on one of the instances that you deployed in lab1. The next HOP is the **selfIP on the active Unit**
+      - Next Hop: will be an IP address that is an internal self IP address on one of the instances that you deployed in             lab1. The next HOP is the **selfIP on the active Unit**
       
     
 |image019|
@@ -150,7 +150,7 @@ You will add the route under the Networking/VPC Network/Routes.
 9. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
 
 **Note in the example declaration in the postman collection for google the "environment" value is "gce" this needs to be changed to "gcp"**
-**Modify the declaration withing postman for you student number. Your particular student specific scoping address range and you student specific cloud failover label**
+**Modify the declaration within postman for you student number. Your particular student specific scoping address range and you student specific cloud failover label**
 ** Your student specific Next Hope IP addresses... note these are "internal" self IP's on your BigIP **
 
 Note.
