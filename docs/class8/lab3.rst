@@ -227,7 +227,7 @@ Force the active unit to standby while tailing
 
 - tail –f /var/log/restnoded/restnoded.log on both machines.
 
-You should see something like the following in the log files. ::
+You should see something like the following in the log files.::
 
 | Sat, 18 Jan 2020 19:28:35 GMT - info: [f5-cloud-failover] Performing failover - execute
 | Sat, 18 Jan 2020 19:28:36 GMT - info: [f5-cloud-failover] Performing Failover - discovery
