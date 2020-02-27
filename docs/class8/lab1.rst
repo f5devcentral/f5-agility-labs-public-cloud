@@ -178,13 +178,13 @@ Task – Configure BIG-IP Pair
 
 -	Disables password-based ssh for the default accounts (this means the BIG-IP web GUI can’t be accessed either) – add steps for creating non-key account: 
 
-create auth user user1 password G40dp4ssw0rd! partition-access add { all-partitions { role admin } }
+**create auth user user1 password G40dp4ssw0rd! partition-access add { all-partitions { role admin } }**
 
-modify auth user user1 shell bash
+**modify auth user user1 shell bash**
 
-save sys config
+**save sys config**
 
- |image002|
+|image002|
 
 You will now be able to use this username and password in order to login to TMUI.
 
@@ -195,7 +195,7 @@ Task – Testing
 
 To determine the IP addresses to access TMUI you can type
 
-gcloud compute instances list --filter="name:( <yourdeploymentname> )"
+**gcloud compute instances list --filter="name:( <yourdeploymentname> )"**
 
 
 TMUI can be reached by typing 
