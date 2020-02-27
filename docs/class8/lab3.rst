@@ -124,7 +124,7 @@ Note that the “labels” and “value” can be arbitrary but they must match 
 
 You will add the route under the Networking/VPC Network/Routes.
 
-**Click the "Create Rpoute Button**
+**Click the "Create Route Button**
 
 
       - Route name: labuserx where x is your student number.
