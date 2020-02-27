@@ -1,5 +1,5 @@
-Exersize 1: Deploying the GDM Template
-======================================
+Exersize 1: Deploying the GDM 3NIC Api Based Failover Template
+==============================================================
 
 
 Objective:
