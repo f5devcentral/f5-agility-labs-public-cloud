@@ -222,9 +222,9 @@ SSH to each box with user1
 Task – Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- - Test
+- Test
 
- Force the active unit to standby while tailing 
+Force the active unit to standby while tailing 
 
 - tail –f /var/log/restnoded/restnoded.log on both machines.
 
