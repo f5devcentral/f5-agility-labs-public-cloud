@@ -110,6 +110,8 @@ You should note the following in the failover.log on box that is being failed to
 
 
 The lab is now Completed.
+-------------------------
+
 
 .. |image004| image:: media/image004.png
    :width: 6.49in
