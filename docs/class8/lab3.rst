@@ -243,7 +243,9 @@ _____
 
 |Also you should be able to observe the route that you created and see that the "next hop" value has changed to the selfIP on the other Big-IP.
 
-    The lab is now Complete.
+The lab is now Complete.
+------------------------
+
 
 
 .. |image015| image:: media/image15.png
