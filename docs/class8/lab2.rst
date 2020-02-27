@@ -68,11 +68,11 @@ Click Local Traffic/Virtual Servers/Virtual Server List
 
 Select Create..
 
-    - Name: ‘testvip’
-    - Destination Address/Mask: <IPNOTEDINVIRTUALADRESS>
-    - Service Port: 80:
-    - SNAT: Automap
-    - Default Pool: ‘pool’
+- Name: ‘testvip’
+- Destination Address/Mask: <IPNOTEDINVIRTUALADRESS>
+- Service Port: 80:
+- SNAT: Automap
+- Default Pool: ‘pool’
 
  
 |image008|
