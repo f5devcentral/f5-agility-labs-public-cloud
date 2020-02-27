@@ -65,7 +65,7 @@ Task – Label Instances and Configure your Failover Declaration wtih Postman
 
 The installer is located at.
 
-    "C:\\Users\\Public\\Public Documents"
+**"C:\\Users\\Public\\Public Documents"**
 
 3. Open up postman.
 
