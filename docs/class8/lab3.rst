@@ -92,10 +92,10 @@ Hover over the Cloud Failover (CF) Extension collectin and click the 3 dots on t
 
 |image044|
 
-    - Click on the variables tab
-    - Set the Current value IP to be the IP of bigip1
-    - Set the Initial value IP to be the IP of bigip2
-    - Click the Update Button
+- Click on the variables tab
+- Set the Current value IP to be the IP of bigip1
+- Set the Initial value IP to be the IP of bigip2
+- Click the Update Button
     
 |image045|
 
@@ -132,17 +132,17 @@ You will add the route under the Networking/VPC Network/Routes.
 **Click the "Create Route Button**
 
 
-      - Route name: labuserx where x is your student number.
+- Route name: labuserx where x is your student number.
       
-      - Label the description in the route with f5_cloud_failover_labels 
-      **{"f5_cloud_failover_label":"student16","f5_self_ips":["10.3.0.10","10.3.0.11"]}** 
-      where x is         your student number.
+- Label the description in the route with f5_cloud_failover_labels 
+**{"f5_cloud_failover_label":"student16","f5_self_ips":["10.3.0.10","10.3.0.11"]}** 
+where x is         your student number.
       
-      - Network: internal-vpc-221
+- Network: internal-vpc-221
       
-      - Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template         in lab1.
+- Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template         in lab1.
       
-      - Next Hop: will be an IP address that is an internal self IP address on one of the instances that you deployed in             lab1. The next HOP is the **selfIP on the active Unit**
+- Next Hop: will be an IP address that is an internal self IP address on one of the instances that you deployed in             lab1. The next HOP is the **selfIP on the active Unit**
       
     
 |image019|
@@ -156,8 +156,8 @@ You will add the route under the Networking/VPC Network/Routes.
 
 Note.
 
-    - The defaultNextHopAddresses should be the selfIP associated with your "internal network"
-    - The deployment labe should be "studentx" where x is your labuser number.. for instance "student28"::
+- The defaultNextHopAddresses should be the selfIP associated with your "internal network"
+- The deployment labe should be "studentx" where x is your labuser number.. for instance "student28"::
     
                 {
                     "class": "Cloud_Failover",
