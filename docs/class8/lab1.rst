@@ -207,6 +207,7 @@ You can use the user1 that we created in order to login to the Big-IPSs.
 
 |image003|
  
+ 
  Lab 1 is now Complete.
 ------------------------
 
