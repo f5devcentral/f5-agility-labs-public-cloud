@@ -84,7 +84,7 @@ This management interface may be accessible to the Internet, so the password mus
 
 .. code-block:: bash
 
-    modify sys global-settings hostname bigip-1a.agility20.com
+    modify sys global-settings hostname bigip-29a.agility20.com
 
 2.7 Ensure that the system retains the changes:
 
