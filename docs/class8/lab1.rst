@@ -80,13 +80,13 @@ properties:
 
 - mgmtNetwork: **'management-vpc-221'**
 
-- mgmtSubnet: **'management-vpc-subnet-221'**
+- mgmtSubnet: **'management-vpc-221-subnet'**
 
 - restrictedSrcAddress: **'0.0.0.0/0'**
 
 - network1: **'external-vpc-221'**
 
-- subnet1: **'external-vpc-subnet-221'**
+- subnet1: **'external-vpc-221-subnet'**
 
 - aliasIp: **'This Value is assigned on a per student basis'**
 
@@ -94,7 +94,7 @@ properties:
 
 - network2: **'internal-vpc-221'**
 
-- subnet2: **'internal-vpc-subnet-221'**
+- subnet2: **'internal-vpc-221-subnet'**
 
 - provisionPublicIP: **'yes'**
 
