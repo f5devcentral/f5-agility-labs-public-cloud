@@ -27,7 +27,7 @@ Step1 - Download and prepare the GDM template
 1.3 Open Visual Studio Code program from the desktop, to view/edit the
 YAML file. **File->Open folder** to **C:\\Users\\labuserX\\f5-google-gdm-templates\\supported\\standalone\\1nic\\existing-stack\\byol**
 
-1.4 You should see python, schema and yaml files. YAML file contains the parameters necessary to deploy the BIG-IP instance in Google Cloud, and calls the python script to launch the instance. Open **f5-existing-stack-byol-1nic-bigip.yaml** file to review. All the editing work will be done in this YAML file.
+1.4 You should see 3 files: python, schema and yaml files. YAML file contains the parameters necessary to deploy the BIG-IP instance in Google Cloud, and calls the python script to launch the instance. Open **f5-existing-stack-byol-1nic-bigip.yaml** file to review. All the editing work will be done in this YAML file.
 
 1.5 Edit the parameters in the YAML file as described below. Don't forget to **Save** the file.
 
