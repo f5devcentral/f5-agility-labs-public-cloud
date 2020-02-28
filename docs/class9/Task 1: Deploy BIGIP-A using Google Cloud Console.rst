@@ -74,8 +74,7 @@ setting. Go to **Networking** tab, under **Network interfaces**.
 
 |img5| |img6|
 
-1.6 Click \*\* Create\ **. It will take **\ at least 10 minutes\*\* for
-the BIG-IP to boot up before you can SSH into it.
+1.6 Click ** Create**. It will take at least 10 minutes for the BIG-IP to boot up fully before you can SSH into it.
 
 Step2 - Setup initial configuration on BIG-IP
 ---------------------------------------------
