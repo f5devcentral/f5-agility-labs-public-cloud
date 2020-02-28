@@ -24,7 +24,7 @@ Step1 - Download and prepare the GDM template
 
 1.2 All the templates are pre-cloned to the window jumphost. We will use
 **1nic standalone byol** template for this lab. The 1nic template file
-can be found at \*\*C:5-google-gdm-templatesnic-stack\*
+can be found at **C:\f5-google-gdm-templatesnic-stack\**
 
 1.3 Open Visual Studio Code program from the desktop, to view/edit the
 YAML file. **File->Open folder** to C:5-google-gdm-templatesnic-stack
