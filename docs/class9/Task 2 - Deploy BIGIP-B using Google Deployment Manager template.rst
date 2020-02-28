@@ -76,7 +76,6 @@ YAML file. **File->Open folder** to **C:\\Users\\labuserX\\f5-google-gdm-templat
 .. figure:: ./images/task2/yaml.png
    :alt: yaml configuration file
 
-   yaml configuration file
 1.6 No action needed on this step. Google cloud SDK(gcloud) is already pre-installed and initialized on the window jumphost. You can review how-to documents below later.
 
 ::
@@ -110,7 +109,6 @@ Once the deployment is successfully completed. you will see something like below
 .. figure:: ./images/task2/deployment-status.png
    :alt: deployment
 
-   deployment
 NOTE: If the deployment fails you should delete, fix the yaml file and re-create the deployment.
 
 ``gcloud deployment-manager deployments delete labuserX-deployment``
@@ -125,7 +123,6 @@ Step2 - Setup initial configuration of BIG-IP
 .. figure:: ./images/task2/putty2.png
    :alt: putty2
 
-   putty2
 2.2 Login with default username **admin**. To ensure you are at the tmsh command prompt, type **tmsh**.
 
 ``modify auth password admin``
@@ -153,13 +150,11 @@ Step2 - Setup initial configuration of BIG-IP
 .. figure:: ./images/task1/licensing2.png
    :alt: license1
 
-   license1
 2.10 Choose **Resource Provisioning** screen. Default is fine. Click **Submit**.
 
 .. figure:: ./images/task1/module-provision1.png
    :alt: license1
 
-   license1
 Step3 - Create a pool and a virtual server
 ------------------------------------------
 
@@ -186,13 +181,11 @@ Step3 - Create a pool and a virtual server
 .. figure:: ./images/task1/pool1.png
    :alt: pool1
 
-   pool1
 3.4 Verify all pool members are healthy **Local Traffic -> Pools:Pool List ->web\_pool -> Members**.
 
 .. figure:: ./images/task1/pool2.png
    :alt: pool2
 
-   pool2
 3.5 Now we will create a virtual server that listens for packets destined for BIGIP's IP address. In BIG-IP configuration utility, **Local Traffic -> Virtual Servers**. Click **Create**.
 
 +------------------------------+---------------+
@@ -211,15 +204,12 @@ Step3 - Create a pool and a virtual server
 | Default Pool                 | web\_pool     |
 +------------------------------+---------------+
 
-|vs1| |vs2| |vs3|
-
 3.6 You can test the application now. Open a browser **http://10.1.1.x**. You should see a webpage with **Web Server 1!** or
 **Web Server 2!**.
 
 .. figure:: ./images/task1/verify.png
    :alt: verify
 
-   verify
 Task 2 is completed here :)
 ---------------------------
 
