@@ -24,10 +24,10 @@ Step1 - Download and prepare the GDM template
 
 1.2 All the templates are pre-cloned to the window jumphost. We will use
 **1nic standalone byol** template for this lab. The 1nic template file
-can be found at **C:\f5-google-gdm-templatesnic-stack\**
+can be found at **C:\Users\labuserX\f5-google-gdm-templates\supported\standalone\1nic\existing-stack\byol**
 
 1.3 Open Visual Studio Code program from the desktop, to view/edit the
-YAML file. **File->Open folder** to C:5-google-gdm-templatesnic-stack
+YAML file. **File->Open folder** to **C:\Users\labuserX\f5-google-gdm-templates\supported\standalone\1nic\existing-stack\byol**
 
 1.4 You should see python, schema and yaml files. YAML file contains the
 parameters necessary to deploy the BIG-IP instance in Google Cloud, and
