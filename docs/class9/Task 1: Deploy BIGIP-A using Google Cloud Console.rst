@@ -25,7 +25,6 @@ Navigation menu icon. Choose **COMPUTE->Compute Engine->VM instances**.
 .. figure:: ./images/task1/menu.png
    :alt: img1
 
-   img1
 1.3 Click **CREATE INSTANCE**. Enter the following information and leave
 the rest as default.
 
@@ -47,13 +46,11 @@ For **Machine configuration** setting. From the dropdown menu. \| Field
 .. figure:: ./images/task1/instance1.png
    :alt: img2
 
-   img2
 For **Boot disk** setting. Click **Change** button.
 
 .. figure:: ./images/task1/instance2.png
    :alt: img3
 
-   img3
 Go to **Custom images** tab. Choose the pre-loaded image named
 **bigip-byol-good**. |img4|
 
@@ -132,14 +129,12 @@ keys provided to you.
 .. figure:: ./images/task1/licensing2.png
    :alt: img6
 
-   img6
 2.10 Choose **Resource Provisioning** screen. Default is fine. Click
 submit.
 
 .. figure:: ./images/task1/module-provision1.png
    :alt: img7
 
-   img7
 Step3 - Create a pool and a virtual server
 ------------------------------------------
 
@@ -169,14 +164,12 @@ are pre-configured in the GCP environment.
 .. figure:: ./images/task1/pool1.png
    :alt: img8
 
-   img8
 3.4 Verify all pool members are healthy **Local Traffic -> Pools:Pool
 List ->web\_pool -> Members**.
 
 .. figure:: ./images/task1/pool2.png
    :alt: img9
 
-   img9
 3.5 Now we will create a virtual server that listens for packets
 destined for BIGIP's IP address. In BIG-IP Configuration utility,
 **Local Traffic -> Virtual Servers**. Click **Create**.
@@ -206,13 +199,6 @@ destined for BIGIP's IP address. In BIG-IP Configuration utility,
 .. figure:: ./images/task1/verify.png
    :alt: img13
 
-   img13
 Task 1 is completed here :)
 ---------------------------
 
-.. |img4| image:: ./images/task1/instance3.png
-.. |img5| image:: ./images/task1/instance5.png
-.. |img6| image:: ./images/task1/instance6.png
-.. |img10| image:: ./images/task1/vs1.png
-.. |img11| image:: ./images/task1/vs2.png
-.. |img12| image:: ./images/task1/vs3.png
