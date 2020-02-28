@@ -87,7 +87,7 @@ YAML file. **File->Open folder** to **C:\\Users\\labuserX\\f5-google-gdm-templat
 
 1.7 Open the command prompt from the Desktop. Change the directory to where the 1nic template files are.
 
-``cd C:\Users\labuserX\f5-google-gdm-templates\supported\standalone\1nic\existing-stack\byol``
+``cd c:\users\labuserX\f5-google-gdm-templates\supported\standalone\1nic\existing-stack\byol``
 
 1.8 Now we are ready to deploy the template file with gcloud. Run the command.
 
