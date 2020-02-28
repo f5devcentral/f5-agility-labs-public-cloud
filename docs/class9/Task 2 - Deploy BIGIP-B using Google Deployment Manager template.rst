@@ -22,7 +22,7 @@ Step1 - Download and prepare the GDM template
 
 1.1 RDP to window jumphost at **35.197.78.160** using provided credentials.
 
-1.2 All the templates are pre-cloned to the window jumphost. We will use **1nic standalone byol** template for this lab. The 1nic template file can be found at **C:\\Users\\labuserX\\f5-google-gdm-templates\\supported\\standalone\\1nic\\existing-stack\\byol**
+1.2 All the templates are pre-cloned to the window jumphost. We will use **1nic standalone byol** template for this lab. The 1nic template file can be found at **c:\\users\\labuserX\\f5-google-gdm-templates\\supported\\standalone\\1nic\\existing-stack\\byol**
 
 1.3 Open Visual Studio Code program from the desktop, to view/edit the
 YAML file. **File->Open folder** to **C:\\Users\\labuserX\\f5-google-gdm-templates\\supported\\standalone\\1nic\\existing-stack\\byol**
