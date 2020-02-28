@@ -36,19 +36,14 @@ Note: You an get the IP for the back end web server by typing
 
 ‘gcloud compute instances list’
 
-You will use the “internal IP address of the web server for your pool member IP”::
+You will use the “internal IP address of the web server for your pool member IP”
 
 
 -PoolName: ‘pool’
-
 -Health Monitor:’http’
-
 -Node Name:’testnode’
-
 -Address: '10.3.1.242'
-
 -Click “add” to add the pool member
-
 -Click “Finished”
 
 |image005|
