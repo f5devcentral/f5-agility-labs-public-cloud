@@ -1,4 +1,4 @@
-Login to F5's Remote Lab platform (Unifed Demo Framework) and Launch Remote Desktop Session
+Login to F5's remote lab platform (Unified Demo Framework) and Launch Remote Desktop Session
 ===========================================================================================
 
 Follow the link in your email invite and login in to the lab environment.
