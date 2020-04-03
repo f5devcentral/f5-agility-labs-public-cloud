@@ -102,6 +102,10 @@ Back to the browser tab with the example application. [CTRL] + [F5] a few times 
 .. image:: ./images/16_example_app_bigip2_bypass_warning.png
 	   :scale: 50%
 
+.. attention::
+
+  The example application reports which Availability Zone is serving up the content (pool member), *not* which Availability Zone is hosting the active Big-IP.
+
 .. image:: ./images/17_example_app_bigip2.png
 	   :scale: 50%
 

@@ -11,7 +11,11 @@ From the Visual Studio Code Terminal, invoke ``terraform output``. Note the ``bi
 .. image:: ./images/1_terraform_output_bigip2_private_mgmt_address.png
 	   :scale: 50%
 
-From the Big-IP1 Configuration Utility (WebUI), "Device Management" => "Device Trust" => Create a new Device Trust.
+.. attention::
+
+  Make sure you are in the /Common partition before proceeding.
+
+From the Big-IP1 Configuration Utility (WebUI), "Device Management" => "Device Trust" => "Device Trust Members" => [Add...].
 
 +------------------------------+----------------------------------------------------------------------+
 | Parameter                    | Value                                                                |
@@ -62,6 +66,10 @@ Eventually, the status will be 200 OK. Our DO declaration has successfully creat
 
 .. image:: ./images/8_postman_ha_cluster_complete_200.png
 	   :scale: 50%
+
+.. attention::
+
+  Make sure Big-IP1 is active and Big-IP2 is standby before proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" => bigip2.f5lab.dev => [Force to Standby].
 
 From the Big-IP1 Configuration Utility (WebUI), note that bigip1.f5lab.dev is the "ONLINE (ACTIVE)" device and "In Sync".
 

@@ -34,7 +34,7 @@ Click "Import" in the upper-left-hand corner. Choose "Import From Link". Import 
 
 Confirm the **F5 Agility 2020 PC201 Lab** Collection has been imported.
 
-In the upper-right-hand corner. To the far right of the "No Environment" drop-down menu. Click on the Environment Settings icon and "Import from File".
+In the upper-right-hand corner. To the far right of the "No Environment" drop-down menu. Click on the gear icon and "Import from File".
 Navigate to \\This PC\\Desktop\\postman_rendered.json => [Open].
 
 .. image:: ./images/5_postman_import_environment.png
@@ -51,7 +51,7 @@ More info:
 
 https://clouddocs.f5.com/cloud/public/v1/shared/cloudinit.html
 
-We'll install manually in this the lab to emphasize the role each iControl LX package plays.
+We'll install manually in this lab to emphasize the role each iControl LX package plays.
 
 F5 Application Services 3 Extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,6 +117,11 @@ Big-IP1 => iApps => Package Management LX => confirm all five packages installed
 Do the same for Big-IP2.
 
 .. image:: ./images/12_bigip2_icontrol_lx_all.png
+	   :scale: 50%
+
+From Postman, choose the "Agility 2020 - Use Terraform" environment in the upper-right hand corner.
+
+.. image:: ./images/00_postman_environment_check.png
 	   :scale: 50%
 
 From Postman, select "Step 1: Check DO - BIGIP1" request.

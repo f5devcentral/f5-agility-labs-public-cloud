@@ -44,7 +44,7 @@ From the AWS Console, Services => type "cloudwatch" in the search box, choose "C
 .. image:: ./images/7_aws_console_search_cloudwatch.png
 	   :scale: 50%
 
-From the AWS Console, CloudWatch => Log Groups => studentf5labdev => log-stream. Hit the refresh icon frequently.
+From the AWS Console, CloudWatch => Logs => Log Groups => studentf5labdev => log-stream. Hit the refresh icon frequently.
 
 .. image:: ./images/8_aws_console_cloudwatch_logstream.png
 	   :scale: 50%

@@ -115,6 +115,10 @@ From the browser, in the tab with the example HTTPS application, hit [CTRL] + [F
 .. image:: ./images/20_example_app_http2.png
 	   :scale: 50%
 
+.. attention::
+
+  In the following examples, the cert and keys are stored as Postman environment variables. This is for illustrative purposes only. In a secure production environment you must incorporate a proper secrets management solution.
+
 From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 6: Create AS3 - Example01/example01 ECDSA Cert”. => [Send].
 
 .. image:: ./images/21_postman_modern_protocols_ecdsa_certs.png
