@@ -1,7 +1,7 @@
-Login to F5's Remote Lab platform (Unified Demo Framework) and Launch Remote Desktop Session
-============================================================================================
+Login to F5's lab platform (Unified Demo Framework) and launch a remote desktop session
+=======================================================================================
 
-Follow the link in your email invite and login in to the lab environment.
+Follow the link in your email invite and login to the lab environment.
 
 Your Deployment => Systems => win2019 => DETAILS. Copy the Administrator password to your clipboard. The password starts immediately after Administrator:
 
@@ -10,7 +10,7 @@ Your Deployment => Systems => win2019 => DETAILS. Copy the Administrator passwor
 
 Click [Done] in the lower right-hand corner.
 
-Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the Administrator credentials from your clipboard.
+Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the Administrator credentials. Copy and paste credentials from your clipboard.
 
 .. image:: ./images/01_rdp.png
   :scale: 50%
@@ -43,11 +43,11 @@ Login to AWS Console
 
 A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In".
 
-First launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
+First, launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
 
-If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar, and only then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
+If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
 
-Alternatively you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
+Alternatively, you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
 
 .. image:: ./images/3_aws_console_desktop_link.png
   :scale: 50%
