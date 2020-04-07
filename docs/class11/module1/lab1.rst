@@ -38,30 +38,19 @@ You will see:
 
 Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner of the Terminal.
 
-Launch Remote Desktop Session
-============================
-
-Launch a Remote Desktop Session to the Windows 2019 jump host. You can run the entire lab from within the Windows jump host.
-
-Visual Studio Code => View => Terminal
-
-You will see:
-  - AWS Console URL
-  - AWS Console Username
-  - AWS Console Password
-
-.. image:: ./images/1_vscode_terminal.png
-  :scale: 50%
-
-Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner of the Terminal.
-
 .. image:: ./images/2_vscode_terminal.png
   :scale: 50%
 
 Login to AWS Console
 ====================
 
-A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In". Click on the "Amazon Web Services Sign-In" URL shortcut.
+A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In".
+
+First, launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
+
+If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
+
+Alternatively, you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
 
 .. image:: ./images/3_aws_console_desktop_shortcut.png
   :scale: 50%
