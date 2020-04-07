@@ -27,6 +27,12 @@ From the Visual Studio Code Terminal, enable the f5-cft-outputs.tf terraform fil
 .. image:: ./images/3_vscode_mv_f5_cft_outputs_zzz_to_tf.png
   :scale: 50%
 
+Initialize Terraform modules.
+
+.. code-block:: bash
+
+    terraform init
+
 `terraform validate`
 
 .. code-block:: bash
