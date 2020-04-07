@@ -58,6 +58,8 @@ Fill in the iApp template parameters. Leave defaults where not explicitly called
 | for the TCP virtual server in the other data center    |                                                      |
 | or availability zone?                                  |                                                      |
 +--------------------------------------------------------+------------------------------------------------------+
+| What is the associated service port?                   | HTTP(80)                                             |
++--------------------------------------------------------+------------------------------------------------------+
 | Do you want to create a new pool                       |                                                      |
 | or use and existing one?                               | Choose "service_discovery_pool" from drop-down.      |
 +--------------------------------------------------------+------------------------------------------------------+
@@ -109,7 +111,7 @@ Note the Elastic IP address (public IPv4 address) mapping for the Secondary IP a
 .. image:: ./images/13_f5_aws_console_elastic_ip_before_failover.png
   :scale: 50%
 
-Big-IP1 => Device Management => Devices => [Force to Standby]. Click [OK] to confirm.
+Big-IP1 => Device Management => Devices => Self => [Force to Standby]. Click [OK] to confirm.
 
 .. image:: ./images/14_f5_bigip1_force_to_standby.png
   :scale: 50%

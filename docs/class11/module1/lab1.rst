@@ -1,3 +1,43 @@
+Login to F5's lab platform (Unified Demo Framework) and launch a remote desktop session
+=======================================================================================
+
+Follow the link in your email invite and login to the lab environment.
+
+Your Deployment => Systems => win2019 => DETAILS. Copy the Administrator password to your clipboard. The password starts immediately after Administrator:
+
+.. image:: ./images/00_admin_pass.png
+  :scale: 50%
+
+Click [Done] in the lower right-hand corner.
+
+Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the Administrator credentials. Copy and paste credentials from your clipboard.
+
+.. image:: ./images/01_rdp.png
+  :scale: 50%
+
+When prompted with the blue "Networks" message click "Yes".
+
+.. image:: ./images/02_networks.png
+  :scale: 50%
+
+.. attention::
+
+  Before proceeding, wait 30 seconds for the Visual Studio Code and Postman applications to start automatically.
+
+You can run the entire lab from within the Windows jump host.
+
+Visual Studio Code => View => Terminal
+
+You will see:
+  - AWS Console URL
+  - AWS Console Username
+  - AWS Console Password
+
+.. image:: ./images/1_vscode_terminal.png
+  :scale: 50%
+
+Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner of the Terminal.
+
 Launch Remote Desktop Session
 ============================
 

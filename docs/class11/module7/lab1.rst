@@ -1,6 +1,14 @@
 Delete the configuration objects you manually created
 -----------------------------------------------------
 
+Delete the TCP iApp that created the Virtual Servers.
+
+iApps => Application Services => Applications. Select *example01* and delete. Delete again to confirm.
+
+.. attention::
+
+  Alternatively, follow the steps below to delete the configuration objects manually.
+
 From Big-IP1, Local Traffic => Virtual Servers => Select both Virtual Servers and [Delete].
 
 .. image:: ./images/1_delete_virtual_servers.png
@@ -15,6 +23,7 @@ From Local Traffic => Nodes => Node List => Select both nodes and [Delete].
 
 .. image:: ./images/3_delete_node.png
 	   :scale: 50%
+
 
 Prepare Postman
 ---------------
@@ -52,7 +61,7 @@ Click "Import" in the upper-left-hand corner. Choose "Import From Link". Import 
 
 Confirm the **F5 Agility 2020 PC101 Lab** Collection has been imported.
 
-In the upper-right-hand corner. To the far right of the "No Environment" drop-down menu. Click on the Environment Settings icon and "Import from File".
+In the upper-right-hand corner. To the far right of the "No Environment" drop-down menu. Click the gear icon and "Import from File".
 Navigate to \\This PC\\Desktop\\postman_rendered.json => [Open].
 
 .. image:: ./images/9_import_environment_from_desktop.png
@@ -148,7 +157,7 @@ From the browser, connect to the example application over HTTPS. We are using se
 
 .. attention::
 
-   Preface the IP address with https://!
+   Preface the IP address with https://
 
 Hover over the lightning bolt icon in the upper-right hand corner and note "HTTP/2 is active for the top-level document" 
 

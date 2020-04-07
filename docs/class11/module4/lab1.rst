@@ -90,8 +90,11 @@ SSH to Big-IP1 to confirm state and change the admin password.
 
    bigip1
    modify auth user admin password f5letme1n
+   modify /sys global-settings gui-setup disabled
    save /sys config
    quit
+
+Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?" **yes**
    
 .. image:: ./images/11_bigip1_confirm_state.png
   :scale: 50%
@@ -109,8 +112,11 @@ SSH to Big-IP2 to confirm state and change the admin password.
 
    bigip2
    modify auth user admin password f5letme1n
+   modify /sys global-settings gui-setup disabled
    save /sys config
    quit
+
+Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?" **yes**
 
 .. image:: ./images/13_bigip2_modify_auth.png
   :scale: 50%
