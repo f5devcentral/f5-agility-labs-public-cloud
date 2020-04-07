@@ -39,8 +39,6 @@ From Big-IP1, iApps => Application Services => Create a new iApp.
 
   Template: f5.tcp.v1.0.0rc5.tmpl
 
-...Click [Finished]
-
 .. image:: ./images/4_f5_tcp_iapp4.png
   :scale: 50%
 
@@ -89,9 +87,9 @@ From the Visual Studio Code Terminal, invoke `terraform output`.
 
 .. code-block:: bash
 
-   terraform output
+   terraform output | grep Bigip1VipEipAddress
 
-...Ctrl + click on the *BigIP1Url=*. This is the same Elastic IP we just reviewed in the AWS Console.
+...Ctrl + click on the *Bigip1VipEipAddress=*. This is the same Elastic IP we just reviewed in the AWS Console.
 
 .. image:: ./images/11_f5_aws_console_virtual_server.png
   :scale: 50%

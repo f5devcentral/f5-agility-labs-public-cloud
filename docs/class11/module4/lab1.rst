@@ -27,7 +27,7 @@ From the Visual Studio Code Terminal, enable the f5-cft-outputs.tf terraform fil
 .. image:: ./images/3_vscode_mv_f5_cft_outputs_zzz_to_tf.png
   :scale: 50%
 
-Initialize Terraform modules.
+`terraform init`
 
 .. code-block:: bash
 
@@ -71,7 +71,7 @@ Run the `create-ssh-to-bigip-alias.sh` shell script to create convenient command
 
 .. code-block:: bash
 
-   create-ssh-to-bigip-alias.sh
+   source create-ssh-to-bigip-alias.sh
 
 .. image:: ./images/9_create_ssh_to_bigip_alias.png
   :scale: 50%
