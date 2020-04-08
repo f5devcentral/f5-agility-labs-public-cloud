@@ -110,10 +110,16 @@ To test.
    
 - Watch logs.
 
-You should note the following in the failover.log on box that is being failed to…
+You should see something like the following in the log files.:
 
-|image011|
-
+| Sat, 18 Jan 2020 19:28:35 GMT - info: [f5-cloud-failover] Performing failover - execute
+| Sat, 18 Jan 2020 19:28:36 GMT - info: [f5-cloud-failover] Performing Failover - discovery
+| Sat, 18 Jan 2020 19:28:37 GMT - info: [f5-cloud-failover] Performing Failover - update
+| Sat, 18 Jan 2020 19:28:42 GMT - info: [f5-cloud-failover] Update routes successful.
+| Sat, 18 Jan 2020 19:28:43 GMT - info: [f5-cloud-failover] Disassociate NICs successful.
+| Sat, 18 Jan 2020 19:28:49 GMT - info: [f5-cloud-failover] Associate NICs successful.
+| Sat, 18 Jan 2020 19:29:07 GMT - info: [f5-cloud-failover] Updated forwarding rules successfully
+| Sat, 18 Jan 2020 19:29:07 GMT - info: [f5-cloud-failover] Failover complete
 
 The lab is now Completed.
 -------------------------
