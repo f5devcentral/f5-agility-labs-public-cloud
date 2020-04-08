@@ -131,3 +131,7 @@ You will see the example app now behind the new active Big-IP2.
 
 .. image:: ./images/17_f5_bigip2_confirm_example_app.png
   :scale: 50%
+
+.. attention::
+
+  The example application reports which Availability Zone is serving up the content (pool member), *not* which Availability Zone is hosting the active Big-IP.

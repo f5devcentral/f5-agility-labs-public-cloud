@@ -153,6 +153,11 @@ In Postman, Select the "Step 5: Create AS3 - Example01/example01 HA Modern Proto
 .. image:: ./images/24_postman_as3_modern_protocols2_200.png
 	   :scale: 50%
 
+In Postman, Select the "Step 6: Create AS3 - Example01/example01 ECDSA Cert" request. Click [Send]
+
+.. image:: ./images/26_postman_as3_modern_protocols_ecdsa_200.png
+	   :scale: 50%
+
 From the browser, connect to the example application over HTTPS. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
 
 .. attention::
@@ -162,16 +167,6 @@ From the browser, connect to the example application over HTTPS. We are using se
 Hover over the lightning bolt icon in the upper-right hand corner and note "HTTP/2 is active for the top-level document" 
 
 .. image:: ./images/25_bigip1_example01_example_app_https_http2.png
-	   :scale: 50%
-
-In Postman, Select the "Step 6: Create AS3 - Example01/example01 ECDSA Cert" request. Click [Send]
-
-.. image:: ./images/26_postman_as3_modern_protocols_ecdsa_200.png
-	   :scale: 50%
-
-From the browser, connect to the example application over https. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
-
-.. image:: ./images/27_bigip1_example01_example_app_ecdsa_bypass_warning.png
 	   :scale: 50%
 
 From the browser explore the ciphers used.
