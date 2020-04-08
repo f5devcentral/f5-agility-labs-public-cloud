@@ -3,7 +3,7 @@ Cleanup
 
 Delete the S3 bucket.
 
-AWS => Services => S3 => f5-public-cloud-failover-...
+AWS => Services => S3 => delete bucket.
 
 .. image:: ./images/1_delete_s3_bucket.png
 	   :scale: 50%
