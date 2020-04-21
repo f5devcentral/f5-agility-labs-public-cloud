@@ -111,7 +111,7 @@ properties:
 
 **After you have made changes to the YAML file. Save it in VSCode File/Save.**
 
-**Note the file C:\\Users\\Public\\Documents\\studentsubs for student specific \29 subnet assignments for aliasIP**
+**Note the file C:\\Users\\Public\\Documents\\studentsubs for student specific \\29 subnet assignments for aliasIP**
 
 #. Run the command…
 
