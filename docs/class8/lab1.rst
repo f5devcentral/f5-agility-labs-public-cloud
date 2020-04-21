@@ -78,6 +78,8 @@ properties:
 
 - availabilityZone1: **'us-west1-a'**
 
+- availabilityZone2: **'us-west1-b'**
+
 - mgmtNetwork: **'management-vpc-221'**
 
 - mgmtSubnet: **'management-vpc-221-subnet'**
