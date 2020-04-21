@@ -102,6 +102,10 @@ properties:
 
 - imageName: **'f5-bigip-15-0-1-0-0-11-payg-best-1gbps-190803012348'**
 
+- ntpserver: **pool.ntp.org**
+
+- timezone: **America/Los_Angeles**
+
 - serviceAccount: **agility221@f5-gcs-4261-sales-agility2020.iam.gserviceaccount.com**
 
 
