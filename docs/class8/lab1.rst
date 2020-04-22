@@ -101,10 +101,10 @@ properties:
 - provisionPublicIP: **'yes'**
 
 - imageName: **'f5-bigip-15-0-1-0-0-11-payg-best-1gbps-190803012348'**
+ 
+- ntpserver:Commment out **#ntpServer: <server server>**
 
-- ntpserver: **pool.ntp.org**
-
-- timezone: **America/Los_Angeles**
+- timezone: Comment out **#timezone: <timezone>**
 
 - serviceAccount: **agility221@f5-gcs-4261-sales-agility2020.iam.gserviceaccount.com**
 
