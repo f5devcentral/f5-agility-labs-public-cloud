@@ -108,7 +108,7 @@ properties:
 
 - serviceAccount: **agility221@f5-gcs-4261-sales-agility2020.iam.gserviceaccount.com**
 
-**Note that the service account does NOT have to be in quotes**
+**Note that the service account should NOT be in quotes**
 
 **After you have made changes to the YAML file. Save it in VSCode File/Save.**
 
