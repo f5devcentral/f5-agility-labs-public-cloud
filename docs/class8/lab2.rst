@@ -43,11 +43,17 @@ You will use the “internal IP address of the web server for your pool member I
 
 -Health Monitor:’http’
 
--Node Name:’testnode’
+-Node Name:’server1’
+
+-Address: '10.3.1.241'
+
+-Click “add” to add the pool member
+
+-Node Name:'server2'
 
 -Address: '10.3.1.242'
 
--Click “add” to add the pool member
+-Clikc "add" to add the pool member.
 
 -Click “Finished”
 
