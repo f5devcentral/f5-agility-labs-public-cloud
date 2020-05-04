@@ -1,5 +1,5 @@
 Getting Started
----------------
+----------------
 
 This lab provides an overview of API based failover. We start with deploying an API based failover 3 NIC google cloud formation template.
 
