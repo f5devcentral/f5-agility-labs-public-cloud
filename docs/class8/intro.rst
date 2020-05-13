@@ -26,7 +26,7 @@ Lab Topology
 The following components have been included in your lab environment:
 
 - 1 x Windows Jumphost- Server 2016
-- 1 x Nginx Server
+- 2 x Test Web Servers
 
 Lab Components
 ^^^^^^^^^^^^^^
@@ -40,7 +40,7 @@ components:
 | jumpbox.f5lab.local    | - Management <ephemeral>| - labuserx/labuserx password | 
 |                        |                         |                              | 
 +------------------------+-------------------------+------------------------------+
-| nginx server           | - IP 10.3.x.x           |                              |  
+| web server             | - IP 10.3.x.x           |                              |  
 +------------------------+-------------------------+------------------------------+
      
 
