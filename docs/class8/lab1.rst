@@ -54,6 +54,10 @@ or  (meaning your particular home directory for your student number. Should be c
    
    File will be of the pattern **f5-existing-stack-same-net-cluster-payg-3nic-bigip.sample.working.labuserX.yaml**
    
+   You need to copy the file to:-
+   
+   **C:Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg\\**   
+   
 #. Open VS Code
 
 Review the file 
