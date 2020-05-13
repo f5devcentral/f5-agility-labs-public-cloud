@@ -106,7 +106,7 @@ properties:
 
 **Note the file C:\\Users\\Public\\Documents\\studentsubs for student specific \\29 subnet assignments for aliasIP**
 
-4. Run the command…
+5. Run the command…
 
 **gcloud deployment-manager deployments create <name of deployment> --config <name of yaml file> --description <description>**
 
