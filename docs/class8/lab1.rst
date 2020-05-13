@@ -21,18 +21,6 @@ Excercise 1: Deploying The GDM template
 -----------------
 
 
-Task – Review the template YAML file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Open Visual Studio Code. 
-
-#. Open your particular YAML file to review.
-
-The file will be at 
-
-- c:\\Users\\labuserX\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\byol
-
-
 Task Deploying the BigIP VE templates.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,6 +48,12 @@ or  (meaning your particular home directory for your student number. Should be c
 ~/f5-google-gdm-templates/supported/failover/same-net/via-api/3nic/existing-stack/payg
 
 
+#. Copy your student specific YAML file from
+
+   **C:\\Users\\Public\\Documents\\**
+   
+   File will be of the pattern **f5-existing-stack-same-net-cluster-payg-3nic-bigip.sample.working.labuserX.yaml**
+   
 #. Open VS Code
 
 Open the file 
