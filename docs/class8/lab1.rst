@@ -38,7 +38,7 @@ git clone https://github.com/dudesweet/f5-google-gdm-templates.git
 
 |image013|
 
-#. Change directory to.. 
+2. Change directory to.. 
 
 C:\\Users\\labuserx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg>
 
@@ -48,7 +48,7 @@ or  (meaning your particular home directory for your student number. Should be c
 ~/f5-google-gdm-templates/supported/failover/same-net/via-api/3nic/existing-stack/payg
 
 
-#. Copy your student specific YAML file from
+3. Copy your student specific YAML file from
 
    **C:\\Users\\Public\\Documents\\**
    
@@ -106,7 +106,7 @@ properties:
 
 **Note the file C:\\Users\\Public\\Documents\\studentsubs for student specific \\29 subnet assignments for aliasIP**
 
-#. Run the command…
+4. Run the command…
 
 **gcloud deployment-manager deployments create <name of deployment> --config <name of yaml file> --description <description>**
 
