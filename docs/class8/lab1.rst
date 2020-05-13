@@ -62,7 +62,7 @@ C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via
 
 |image014|
 
-#. Review the Following Values in the YAML file
+Review the Following Values in the YAML file
 
 properties:
 
