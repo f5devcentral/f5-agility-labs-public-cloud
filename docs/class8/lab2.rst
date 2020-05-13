@@ -71,7 +71,7 @@ Note the forwarding IP..
 
 Click on local traffic/Virtual Servers/Virtual Address List
 
-Note the IP address.
+Note the **PUBLIC** IP address.
 
  |image007|
 
