@@ -148,7 +148,7 @@ Note the template will create “ephemeral” ip addresses. These can be made st
 
 Note the IP addresses.
 
-** In the output the first IP is External, the secodnd Mgmt,  and the third Internal. **
+** In the output the first IP is External, the second Mgmt,  and the third Internal. **
 **The ephemeral  IP's for the management interface are the last IP addresses in the list.**
 
 |image020|
