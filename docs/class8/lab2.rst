@@ -58,19 +58,39 @@ Traffic -> Pools**. Click **Create** per below.
 +-------------------+----------------------+
 
 
-Click "add" to add the pool member.
+In the **Name** field, type **pool**. Two backend web servers
+are pre-configured in the GCP environment.
 
 -Click “Finished”
 
 |image005|
 
 
-Your end state should look like the following.
+Verify all pool members are healthy **Local Traffic -> Pools:Pool
+List ->pool -> Members**.
 
 
-#.	Create VIP
+#.	Now we will create a virtual server that listens for packets
+destined for BIGIP's IP address. In BIG-IP Configuration utility,
+**Local Traffic -> Virtual Servers**. Click **Create**.
 
-The VIP should use the forwarding IP that was created.
++------------------------------+---------------+
+| Field                        | Value         |
++==============================+===============+
+| Name                         | vs\_web       |
++------------------------------+---------------+
+| Destination Address/Mask     | **PUBLIC**    |
++------------------------------+---------------+
+| Service Port                 | 80            |
++------------------------------+---------------+
+| HTTP Profile                 | http          |
++------------------------------+---------------+
+| Source Address Translation   | Auto Map      |
++------------------------------+---------------+
+| Default Pool                 | pool          |
++------------------------------+---------------+
+
+**The VIP should use the forwarding IP that was created.**
 
 Note the forwarding IP..
 
