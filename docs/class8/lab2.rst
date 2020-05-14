@@ -57,6 +57,7 @@ Traffic -> Pools**. Click **Create** per below.
 | Service Port      | 80                   |
 +-------------------+----------------------+
 
+
 -Clikc "add" to add the pool member.
 
 -Click “Finished”
