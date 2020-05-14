@@ -70,7 +70,7 @@ Verify all pool members are healthy **Local Traffic -> Pools:Pool
 List ->pool -> Members**.
 
 
-#.	Now we will create a virtual server that listens for packets
+2. 	Now we will create a virtual server that listens for packets
 destined for BIGIP's IP address. 
 
 **The VIP should use the forwarding IP that was created.**
@@ -116,11 +116,11 @@ Your end state should similar to the below.
 Task – Test Failover
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Open a browser and navigate to http://yourvip 
+1. Open a browser and navigate to http://yourvip 
 
 Note the VIP uses the forwarding IP that was created by the template.
 
-#. Perform a failover while tailing the failover log.
+2. Perform a failover while tailing the failover log.
 
 To test.
 
