@@ -38,6 +38,9 @@ Note: You an get the IP for the back end web server by typing
 
 You will use the “internal IP address of the web server for your pool member IP”
 
+Create a pool with two members. On the Main tab, click **Local
+Traffic -> Pools**. Click **Create** per below.
+
 
 
 +-------------------+----------------------+
@@ -49,7 +52,7 @@ You will use the “internal IP address of the web server for your pool member I
 +-------------------+----------------------+
 | Node Name         | web1, web2           |
 +-------------------+----------------------+
-| Address           | 10.3.1.1, 10.3.2.1   |
+| Address           | 10.3.1.241,10.3.1.242|
 +-------------------+----------------------+
 | Service Port      | 80                   |
 +-------------------+----------------------+
