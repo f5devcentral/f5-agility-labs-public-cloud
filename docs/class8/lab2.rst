@@ -71,24 +71,7 @@ List ->pool -> Members**.
 
 
 #.	Now we will create a virtual server that listens for packets
-destined for BIGIP's IP address. In BIG-IP Configuration utility,
-**Local Traffic -> Virtual Servers**. Click **Create**.
-
-+------------------------------+---------------+
-| Field                        | Value         |
-+==============================+===============+
-| Name                         | vs\_web       |
-+------------------------------+---------------+
-| Destination Address/Mask     | **PUBLIC**    |
-+------------------------------+---------------+
-| Service Port                 | 80            |
-+------------------------------+---------------+
-| HTTP Profile                 | http          |
-+------------------------------+---------------+
-| Source Address Translation   | Auto Map      |
-+------------------------------+---------------+
-| Default Pool                 | pool          |
-+------------------------------+---------------+
+destined for BIGIP's IP address. 
 
 **The VIP should use the forwarding IP that was created.**
 
@@ -101,15 +84,24 @@ Note the **PUBLIC** IP address.
  |image007|
 
 
-Click Local Traffic/Virtual Servers/Virtual Server List
+In BIG-IP Configuration utility,
+**Local Traffic -> Virtual Servers**. Click **Create**.
 
-Select Create..
-
-- Name: ‘testvip’
-- Destination Address/Mask: <IPNOTEDINVIRTUALADRESS>
-- Service Port: 80:
-- SNAT: Automap
-- Default Pool: ‘pool’
++------------------------------+---------------+
+| Field                        | Value         |
++==============================+===============+
+| Name                         | testvip       |
++------------------------------+---------------+
+| Destination Address/Mask     | **PUBLIC**    |
++------------------------------+---------------+
+| Service Port                 | 80            |
++------------------------------+---------------+
+| HTTP Profile                 | http          |
++------------------------------+---------------+
+| Source Address Translation   | Auto Map      |
++------------------------------+---------------+
+| Default Pool                 | pool          |
++------------------------------+---------------+
 
  
 |image008|
