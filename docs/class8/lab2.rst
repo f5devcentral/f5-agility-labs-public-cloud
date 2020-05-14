@@ -40,25 +40,22 @@ You will use the “internal IP address of the web server for your pool member I
 
 
 
-Create a pool with two members. On the Main tab, click **Local
-Traffic -> Pools**. Click **Create** per below.
-
 +-------------------+----------------------+
 | Field             | Value                |
 +===================+======================+
-| Name              | pool            |
+| Name              | web\_pool            |
 +-------------------+----------------------+
 | Health Monitors   | http                 |
 +-------------------+----------------------+
-| Node Name         | server1,server2      |
+| Node Name         | web1, web2           |
 +-------------------+----------------------+
-| Address           | 10.3.1.241,10.3.1.242|
+| Address           | 10.3.1.1, 10.3.2.1   |
 +-------------------+----------------------+
 | Service Port      | 80                   |
 +-------------------+----------------------+
 
 
--Clikc "add" to add the pool member.
+Click "add" to add the pool member.
 
 -Click “Finished”
 
