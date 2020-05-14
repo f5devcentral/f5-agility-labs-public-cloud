@@ -39,19 +39,23 @@ Note: You an get the IP for the back end web server by typing
 You will use the “internal IP address of the web server for your pool member IP”
 
 
--PoolName: ‘pool’
 
--Health Monitor:’http’
+Create a pool with two members. On the Main tab, click **Local
+Traffic -> Pools**. Click **Create** per below.
 
--Node Name:’server1’
-
--Address: '10.3.1.241'
-
--Click “add” to add the pool member
-
--Node Name:'server2'
-
--Address: '10.3.1.242'
++-------------------+----------------------+
+| Field             | Value                |
++===================+======================+
+| Name              | pool            |
++-------------------+----------------------+
+| Health Monitors   | http                 |
++-------------------+----------------------+
+| Node Name         | server1,server2      |
++-------------------+----------------------+
+| Address           | 10.3.1.241,10.3.1.242|
++-------------------+----------------------+
+| Service Port      | 80                   |
++-------------------+----------------------+
 
 -Clikc "add" to add the pool member.
 
