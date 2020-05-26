@@ -25,7 +25,7 @@ A "200 OK" response indicates the f5-cloud-failover extension is ready.
 AWS Tags to Track Cloud Failover Objects
 ----------------------------------------
 
-From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the "Tags" tab below. Note the Elastic IP has been tagged for use by the f5-cloud-failover extension.
+From the AWS Console, Services => EC2 => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the “Tags” tab below. Note the Elastic IP has been tagged for use by the f5-cloud-failover extension
 
 .. image:: ./images/4_aws_console_elastic_ip.png
 	   :scale: 50%
