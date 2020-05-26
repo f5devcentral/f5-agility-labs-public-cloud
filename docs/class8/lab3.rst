@@ -26,37 +26,8 @@ Lab Requirements:
 
 -  Estimated completion time: 40 minutes
 
-Excercise: Install Cloud Failover Extension
--------------------------------------------
 
-Task – Download and Install Cloud Failover Extension RPM
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Install the cloud failover extension on Each Bigip.
-
-Log in to TMUI. From iApps/Package Management LX select the Import button.
-
-**The cloud failover extension file is located at c:\\Users\\Public\\Documents**
-
-**The file is called develop-f5-cloud-failover-0.9.1-1.noarch.rpm**
-
-
-
-2. Install the Cloud Failover on each BIG-IP using the Configuration utility¶
-
-From the Configuration utility:
-
--   If you are using a BIG-IP version prior to 14.0, before you can use the Configuration utility, you must enable the framework using the BIG-IP command line. From the CLI, type the following command: touch /var/config/rest/iapps/enable. You only need to run this command once per BIG-IP system.
--   Click iApps > Package Management LX.
--   Click the Import button.
--   Click Choose File and then browse to the location you saved the RPM file, and then click Ok.
--   Click the Upload button. ::
-
-|image015|
-
-
-
-Task – Label Instances and Configure your Failover Declaration wtih Postman
+Task – Send Failover Declaration wtih Postman to Each BigIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
