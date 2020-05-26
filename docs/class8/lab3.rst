@@ -157,7 +157,7 @@ Task – Create Route
 
 You will add the route under the Networking/VPC Network/Routes.
 
-**gcloud compute routes create <labuserx> --destination-range=<your//29> subnet --network=internal-vpc-22 --next-hop-address=<selfIP of active BigIP> --description='f5_cloud_failover_labels={"f5_cloud_failover_label":"<yourlabuser>"}'**
+**gcloud compute routes create <labuserx> --destination-range=<your/29> subnet --network=internal-vpc-22 --next-hop-address=<selfIP of active BigIP> --description='f5_cloud_failover_labels={"f5_cloud_failover_label":"<yourlabuser>"}'**
 
 
 - Route name: labuserx where x is your labuserid.
