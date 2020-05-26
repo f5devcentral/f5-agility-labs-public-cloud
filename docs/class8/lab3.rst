@@ -88,40 +88,20 @@ You should receive an expected response like the following after you have posted
 
 _____
 
-7. Label instances and storage buckets.
-
-**Note this step must be performed from the google cloud console**
-
-Note that the “labels” and “value” can be arbitrary but they must match the tags that you assign to your GCP infrastructure.
-
-- Label instances with for example "f5_cloud_failover_label": "studentx" - where x is your student number
-- Label storage bucket for example with "f5_cloud_failover_label": "studentx" - where x is your student number
 
 
-8. In google create a student specific route.
+7. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
 
-You will add the route under the Networking/VPC Network/Routes.
+**Note in the example declaration in the postman collection for google the "environment" value is "gce" this needs to be changed to "gcp"**
+**Modify the declaration within postman for you student number. Your particular student specific scoping address range and you student specific cloud failover label**
+** Your student specific Next Hope IP addresses... note these are "internal" self IP's on your BigIP **
 
-**Click the "Create Route Button**
+Note.
 
-
-- Route name: labuserx where x is your student number.
-      
-- Label the description in the route with f5_cloud_failover_labels 
-**{"f5_cloud_failover_label":"student16","f5_self_ips":["10.3.0.10","10.3.0.11"]}** 
-where x is         your student number.
-      
-- Network: internal-vpc-221
-      
-- Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template         in lab1.
-      
-- Next Hop: will be an IP address that is an internal self IP address on one of the instances that you deployed in             lab1. The next HOP is the **selfIP on the active Unit**
-      
+- The defaultNextHopAddresses should be the selfIP associated with your "internal network"
+- The deployment label should be "studentx" where x is your labuser number.. for instance "student28"::
     
-|image019|
-      
-    
-9. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
+                9. **For Each BigIP** Using Postman, send a POST request to the URI https://<BIG-IP>/mgmt/shared/cloud-failover/declare
 
 **Note in the example declaration in the postman collection for google the "environment" value is "gce" this needs to be changed to "gcp"**
 **Modify the declaration within postman for you student number. Your particular student specific scoping address range and you student specific cloud failover label**
@@ -168,17 +148,34 @@ Note.
                     }
                 }
 
-_____
 
-Also you should receive a response back from postman that looks like the following.
-
-{"message":"success","declaration":{"class":"Cloud_Failover","environment":"gcp","externalStorage":                         {"scopingTags":{"f5_cloud_failover_label":"mydeployment"}},"failoverAddresses":{"scopingTags":                               {"f5_cloud_failover_label":"mydeployment"}},"failoverRoutes":{"scopingTags":                                                 {"f5_cloud_failover_label":"mydeployment"},"scopingAddressRanges":["0.0.0.0/0"]},"schemaVersion":"0.9.0"}}
+Task – Create Route
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-The following images shows an example declaration from postman.
+1. In google create a student specific route.
 
-  |image018|
+You will add the route under the Networking/VPC Network/Routes.
 
+**Click the "Create Route Button**
+
+
+- Route name: labuserx where x is your student number.
+      
+- Label the description in the route with f5_cloud_failover_labels 
+**{"f5_cloud_failover_label":"student16","f5_self_ips":["10.3.0.10","10.3.0.11"]}** 
+where x is         your student number.
+      
+- Network: internal-vpc-221
+      
+- Destination IP - this will be a 10.1.x.x/29 network that will be unique to each student (see deploying GDM) template         in lab1.
+      
+- Next Hop: will be an IP address that is an internal self IP address on one of the instances that you deployed in             lab1. The next HOP is the **selfIP on the active Unit**
+      
+    
+|image019|
+      
+    
 
 Task – Verify Cloud Failover Scripts 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
