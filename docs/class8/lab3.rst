@@ -78,11 +78,11 @@ Hover over the Cloud Failover (CF) Extension collection and click the 3 dots on 
 
 You should receive an expected response like the following after you have posted this declaration. ::
 
-                {
-                    "version": "0.9.1",
-                    "release": "1",
-                    "schemaCurrent": "0.9.0",
-                    "schemaMinimum": "0.9.0"
+               {
+    "version": "1.1.0",
+    "release": "0",
+    "schemaCurrent": "1.1.0",
+    "schemaMinimum": "0.9.1"
                 }
 
 
