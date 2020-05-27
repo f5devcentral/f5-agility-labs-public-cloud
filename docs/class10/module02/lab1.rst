@@ -34,12 +34,16 @@ SSH to Big-IP1 to confirm state and change the admin password.
 .. code-block:: bash
 
    bigip1
+
+Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?"
+
+.. code-block:: bash
+
+   yes
    modify auth user admin password f5letme1n
    modify /sys global-settings gui-setup disabled
    save /sys config
    quit
-
-Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?" **yes**
 
 SSH to Big-IP2 to confirm state and change the admin password.
 
@@ -50,12 +54,16 @@ SSH to Big-IP2 to confirm state and change the admin password.
 .. code-block:: bash
 
    bigip2
+
+Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?"
+
+.. code-block:: bash
+
+   yes
    modify auth user admin password f5letme1n
    modify /sys global-settings gui-setup disabled
    save /sys config
    quit
-
-Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?" **yes**
 
 .. image:: ./images/3_bigip_modify_auth.png
 	   :scale: 50%

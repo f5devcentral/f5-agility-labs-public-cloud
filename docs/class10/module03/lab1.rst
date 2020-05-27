@@ -40,7 +40,15 @@ Navigate to \\This PC\\Desktop\\postman_rendered.json => [Open].
 .. image:: ./images/5_postman_import_environment.png
 	   :scale: 50%
 
+Close the MANAGE ENVIRONMENTS box.
+
+.. image:: ./images/5_postman_environment_imported.png
+	   :scale: 50%
+
 Confirm the environment was successfully imported. Choose "Agility 2020 - Use Terraform to..." from the Environment drop-down menu in the upper-right-hand corner.
+
+.. image:: ./images/00_postman_environment_check.png
+	   :scale: 50%
 
 Install iControl LX Extensions
 -------------------------------
@@ -56,7 +64,7 @@ We'll install manually in this lab to emphasize the role each iControl LX packag
 F5 Application Services 3 Extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Big-IP1 => iApps => Package ManagementLX => [Browse] => This PC\\Downloads\\iControl_LX\\f5-appsvcs… Upload the f5-appsvc… package.
+Big-IP1 => iApps => Package ManagementLX => Import => [Browse] => This PC\Downloads\iControl_LX\f5-appsvcs… Upload the f5-appsvc… package => click Upload
 
 Do the same for Big-IP2.
 
@@ -70,7 +78,7 @@ Do the same for Big-IP2.
 F5 Cloud Failover Extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Big-IP1 => iApps => Package ManagementLX => [Browse] => This PC\\Downloads\\iControl_LX\\f5-cloud-failover… Upload the f5-cloud-failover… package.
+Big-IP1 => iApps => Package ManagementLX => Import => [Browse] => This PC\Downloads\iControl_LX\f5-cloud-failover… Upload the f5-cloud-failover… package => click Upload
 
 Do the same for Big-IP2.
 
@@ -84,7 +92,7 @@ Do the same for Big-IP2.
 F5 Declarative Onboarding Extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Big-IP1 => iApps => Package ManagementLX => [Browse] => This PC\\Downloads\\iControl_LX\\f5-declarative-onboarding… Upload the f5-declarative-onboarding… package.
+Big-IP1 => iApps => Package ManagementLX => Import => [Browse] => This PC\Downloads\iControl_LX\f5-declarative-onboarding… Upload the f5-declarative-onboarding… package => click Upload
 
 Do the same for Big-IP2
 
@@ -98,7 +106,8 @@ Do the same for Big-IP2
 F5 Telemetry Streaming Extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Big-IP1 => iApps => Package ManagementLX => [Browse] => This PC\\Downloads\\iControl_LX\\f5-telemetry-streaming… Upload the f5-telemetry-streaming… package.
+Big-IP1 => iApps => Package ManagementLX => Import => [Browse] => This PC\Downloads\iControl_LX\f5-telemetry-streaming… Upload the f5-telemetry-streaming… package => click Upload
+
 
 Do the same for Big-IP2
 	   

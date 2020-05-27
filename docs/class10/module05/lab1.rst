@@ -34,6 +34,11 @@ From the Big-IP1 Configuration Utility (WebUI), "Device Management" => "Device T
 .. image:: ./images/2_bigip1_device_trust1.png
 	   :scale: 50%
 
+... [Device Certificate Matches].
+
+.. image:: ./images/11_device_certificate_matches.png
+	   :scale: 50%
+
 [Add Device]
 
 .. image:: ./images/3_bigip1_device_trust2.png
