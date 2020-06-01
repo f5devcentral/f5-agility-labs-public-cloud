@@ -194,6 +194,9 @@ You will now be able to use this username and password in order to login to TMUI
 Task – Testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+You can use the same IP address that was used to access the BIG-IP in the putty session.
+
+Or you can get that IP address again by listing the IP address via the Gcloud Command.
 
 To determine the IP addresses to access TMUI you can type
 
