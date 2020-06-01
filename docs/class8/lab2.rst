@@ -120,6 +120,10 @@ Task – Test Failover
 
 Note the VIP uses the forwarding IP that was created by the template.
 
+You should see the WebPage come up.
+
+|image012|
+
 2. Perform a failover while tailing the failover log.
 
 To test.
@@ -170,5 +174,8 @@ The lab is now Completed.
    :width: 6.49in
    :height: 0.69in
 .. |image011| image:: media/image11.png
+   :width: 6.53in
+   :height: 2.81in
+.. |image012| image:: media/image12.png
    :width: 6.53in
    :height: 2.81in
