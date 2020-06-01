@@ -176,6 +176,6 @@ The lab is now Completed.
 .. |image011| image:: media/image11.png
    :width: 6.53in
    :height: 2.81in
-.. |image012| image:: media/image12.png
-   :width: 6.53in
-   :height: 2.81in
+.. |image22| image:: media/image22.png
+   :width: 17.36in
+   :height: 13.1in
