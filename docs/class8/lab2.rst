@@ -139,14 +139,15 @@ To test.
 
 You should see something like the following in the log files.:
 
-| Sat, 18 Jan 2020 19:28:35 GMT - info: [f5-cloud-failover] Performing failover - execute
-| Sat, 18 Jan 2020 19:28:36 GMT - info: [f5-cloud-failover] Performing Failover - discovery
-| Sat, 18 Jan 2020 19:28:37 GMT - info: [f5-cloud-failover] Performing Failover - update
-| Sat, 18 Jan 2020 19:28:42 GMT - info: [f5-cloud-failover] Update routes successful.
-| Sat, 18 Jan 2020 19:28:43 GMT - info: [f5-cloud-failover] Disassociate NICs successful.
-| Sat, 18 Jan 2020 19:28:49 GMT - info: [f5-cloud-failover] Associate NICs successful.
-| Sat, 18 Jan 2020 19:29:07 GMT - info: [f5-cloud-failover] Updated forwarding rules successfully
-| Sat, 18 Jan 2020 19:29:07 GMT - info: [f5-cloud-failover] Failover complete
+Mon, 01 Jun 2020 21:44:46 GMT - info: [f5-cloud-failover] Performing failover - execute
+Mon, 01 Jun 2020 21:44:47 GMT - info: [f5-cloud-failover] Performing Failover - discovery
+Mon, 01 Jun 2020 21:44:48 GMT - info: [f5-cloud-failover] Performing Failover - update
+Mon, 01 Jun 2020 21:44:48 GMT - info: [f5-cloud-failover] No route operations to run
+Mon, 01 Jun 2020 21:44:49 GMT - info: [f5-cloud-failover] Disassociate NICs successful.
+Mon, 01 Jun 2020 21:44:49 GMT - info: [f5-cloud-failover] Updated forwarding rules successfully
+Mon, 01 Jun 2020 21:44:49 GMT - info: [f5-cloud-failover] Associate NICs successful.
+Mon, 01 Jun 2020 21:44:49 GMT - info: [f5-cloud-failover] Failover complete
+
 
 The lab is now Completed.
 -------------------------
