@@ -71,7 +71,7 @@ List ->pool -> Members**.
 
 
 2. 	Now we will create a virtual server that listens for packets
-destined for BIGIP's IP address. 
+destined for the BIG-IP's IP address. 
 
 **The VIP should use the forwarding IP that was created.**
 
