@@ -122,7 +122,7 @@ Note the VIP uses the forwarding IP that was created by the template.
 
 You should see the WebPage come up.
 
-|image012|
+|image22|
 
 2. Perform a failover while tailing the failover log.
 
