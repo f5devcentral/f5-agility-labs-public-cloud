@@ -152,60 +152,79 @@ You should now see an http response.
 |image60|
 
 This is the end of Module 4!
+
 .. |image42| image:: media/image37.png
    :width: 1.48763in
    :height: 0.61255in
+
 .. |image43| image:: media/image38.png
    :width: 1.05009in
    :height: 0.25836in
+
 .. |image44| image:: media/image39.png
    :width: 6.5in
    :height: 0.68333in
+
 .. |image45| image:: media/image40.png
    :width: 2.2877in
    :height: 1.68348in
+
 .. |image46| image:: media/image41.png
    :width: 3.4503in
    :height: 0.77923in
+
 .. |image47| image:: media/image42.png
    :width: 2.7169in
    :height: 2.65023in
+
 .. |image48| image:: media/image43.png
    :width: 2.22936in
    :height: 1.64598in
+
 .. |image49| image:: media/image2.png
    :width: 2.86691in
    :height: 2.83775in
+
 .. |image50| image:: media/image18.png
    :width: 6.5in
    :height: 0.86667in
+
 .. |image51| image:: media/image19.png
    :width: 2.78358in
    :height: 2.22936in
+
 .. |image52| image:: media/image44.png
    :width: 1.39179in
    :height: 1.54597in
+
 .. |image53| image:: media/image45.png
    :width: 1.98767in
    :height: 1.02509in
+
 .. |image54| image:: media/image46.png
    :width: 6.04219in
    :height: 3.14194in
+
 .. |image55| image:: media/image47.png
    :width: 1.50013in
    :height: 2.3627in
+
 .. |image56| image:: media/image48.png
    :width: 6.5in
    :height: 1.83681in
+
 .. |image57| image:: media/image49.png
    :width: 6.5in
    :height: 2.70833in
+
 .. |image58| image:: media/image50.png
    :width: 1.17094in
    :height: 1.45429in
+
 .. |image59| image:: media/image51.png
    :width: 5.31713in
    :height: 2.34187in
+
 .. |image60| image:: media/image52.png
    :width: 3.0711in
    :height: 0.90841in
