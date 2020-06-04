@@ -1,12 +1,6 @@
-Class - PC 211 - Deploying F5 Solutions to AWS with CloudFormation Templates
+PC211 Secure Azure Computing Architecture
 ============================================================================
-
-This is a self-guided introductory lab that covers:
-
-- Deploying F5 solutions to AWS with Terraform and CloudFormation Templates 
-- Service Discovery iApp - Dynamically populate pool members with the AutoDiscovery iApp.
-- Cross Availability Zone HA with F5
-- Application Services Extension - Automate the creation of virtual servers and associated services using a declarative model.
+**PC211** is an instructor led class that will explore F5 & Microsofts joint efforts to develop an Automated reference architecture that will meet Federal Requiremetns for Cloud Access Points (CAP) and Virtual Datacenter Security Stacks (VDSS).
 
 .. toctree::
    :maxdepth: 1
