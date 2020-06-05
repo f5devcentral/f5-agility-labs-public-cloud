@@ -55,7 +55,7 @@ This can be accmplished by going to File/Settings.
 
 -To import the cloud Failover Extension API collection select File\\Import
 -**The collection file is called PostmanCollection.json**
--**The collection file is located at https://github.com/F5Networks/f5-cloud-failover-extension/releases/tag/v1.1.0**
+-**The collection file is located at https://github.com/F5Networks/f5-cloud-failover-extension/releases/tag/v1.3.0**
 
 
 
