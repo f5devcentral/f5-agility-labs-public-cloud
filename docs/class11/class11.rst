@@ -1,5 +1,5 @@
-Class - PC 101 - Deploying F5 Solutions to AWS with CloudFormation Templates
-============================================================================
+PC 101 - Deploying F5 Solutions to AWS with CloudFormation Templates
+====================================================================
 
 This is a self-guided introductory lab that covers:
 
