@@ -110,43 +110,44 @@ Note.
 Note.
 
 - The defaultNextHopAddresses should be the selfIP associated with your "internal network"
-- The deployment label should be "studentx" where x is your labuser number.. for instance "student28"::
+- The deployment label should be "labuserx" where x is your labuser number.. for instance "labuser49"::
     
                 {
-                    "class": "Cloud_Failover",
-                    "environment": "gcp",
-                    "externalStorage": {
-                        "scopingTags": {
-                            "f5_cloud_failover_label": "student16"
-                        }
-                    },
-                    "failoverAddresses": {
-                        "scopingTags": {
-                            "f5_cloud_failover_label": "student16"
-                        }
-                    },
-                    "failoverRoutes": {
-                        "scopingTags": {
-                            "f5_cloud_failover_label": "student16"
-                        },
-                        "scopingAddressRanges": [
-                            {
-                                "range": "10.2.0.240/29"
-                            }
-                        ],
-                        "defaultNextHopAddresses": {
-                            "discoveryType": "static",
-                            "items": [
-                                "10.3.0.7",
-                                "10.3.0.8"
-                            ]
-                        }
-                    },
-                    "controls": {
-                        "class": "Controls",
-                        "logLevel": "info"
-                    }
+        "class": "Cloud_Failover",
+        "environment": "gcp",
+        "externalStorage": {
+            "scopingTags": {
+                "f5_cloud_failover_label": "labuser49"
+            }
+        },
+        "failoverAddresses": {
+            "scopingTags": {
+                "f5_cloud_failover_label": "labuser49"
+            }
+        },
+        "failoverRoutes": {
+            "scopingTags": {
+                "f5_cloud_failover_label": "labuser49"
+            },
+            "scopingAddressRanges": [
+                {
+                    "range": "10.1.11.128/29"
                 }
+            ],
+            "defaultNextHopAddresses": {
+                "discoveryType": "static",
+                "items": [
+                    "10.3.0.40",
+                    "10.3.0.39"
+                ]
+            }
+        },
+        "controls": {
+            "class": "Controls",
+            "logLevel": "info"
+        },
+        "schemaVersion": "1.3.0"
+}
 
 
 Task – Create Route
