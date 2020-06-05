@@ -1,5 +1,4 @@
 docs/_build/*
-media/
 .DS_Store
 pdf/*
 .vscode
