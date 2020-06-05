@@ -18,7 +18,7 @@ Lab Requirements:
 
 
 Excercise 1: Deploying The GDM template
------------------
+---------------------------------------
 
 
 Task Deploying the BigIP VE templates.
@@ -180,11 +180,11 @@ ssh to the admin server of each bigIP
 
 -	Disables password-based ssh for the default accounts (this means the BIG-IP web GUI can’t be accessed either) – add steps for creating non-key account: 
 
-**create auth user user1 password G40dp4ssw0rd! partition-access add { all-partitions { role admin } }**
+   **create auth user user1 password G40dp4ssw0rd! partition-access add { all-partitions { role admin } }**
 
-**modify auth user user1 shell bash**
+   **modify auth user user1 shell bash**
 
-**save sys config**
+   **save sys config**
 
 |image002|
 
@@ -211,13 +211,8 @@ You can use the user1 that we created in order to login to the Big-IPSs.
 
 |image003|
  
- 
- 
- Lab 1 is now Complete.
+Lab 1 is now Complete.
 -----------------------
-
-
-
 
 .. |image001| image:: media/image001.png
    :width: 6.14in

@@ -14,7 +14,8 @@ Summary steps
 
 
 Step1 - Deploy BIG-IP VE from GCP's Marketplace
------------------------------------------
+-----------------------------------------------
+
 1.1 Login to Google Cloud Console at https://console.cloud.google.com using provided credentials
 
 1.2 In the Google Cloud Console, in the top left corner, click the Navigation menu icon. Choose **Marketplace** from the dropdown.
@@ -57,8 +58,6 @@ This management interface may be accessible to the Internet, so the password mus
 
 2.1 Use an SSH tool to connect to the BIG-IP VE instance as admin. To ensure you are at the tmsh command prompt, type **tmsh**.
 
-
-
 2.2 Use an SSH tool to connect to the BIG-IP VE instance as admin.
 
 .. code-block:: bash
@@ -91,8 +90,6 @@ This management interface may be accessible to the Internet, so the password mus
 .. code-block:: bash
 
    save sys config
-
-
 
 2.8 Open a web browser and log in to the BIGIP Configuration utility by using the external IP address and port 8443.
     For example: **https://10.1.1.x:8443**.

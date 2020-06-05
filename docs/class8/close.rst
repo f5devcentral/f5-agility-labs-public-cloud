@@ -19,17 +19,16 @@ NOTE… deployment deletion fails sometimes.. requires that storage bucket be de
 
 See below.
 
+.. code-block:: text
 
-
-Waiting for delete [operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c]...failed.                    
-ERROR: (gcloud.deployment-manager.deployments.delete) Delete operation operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c failed.
-Error in Operation [operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c]: errors:
-- code: RESOURCE_ERROR
-  location: /deployments/studentxdeployment/resources/f5-bigip-studentxdeployment-51958
-  message: '{"ResourceType":"storage.v1.bucket","ResourceErrorCode":"409","ResourceErrorMessage":{"code":409,"errors":[{"domain":"global","message":"The
-    bucket you tried to delete was not empty.","reason":"conflict"}],"message":"The
-    bucket you tried to delete was not empty.","statusMessage":"Conflict","requestPath":"https://www.googleapis.com/storage/v1/b/f5-bigip-studentxdeployment-51958","httpMethod":"DELETE"}}'
-
+   Waiting for delete [operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c]...failed.                    
+   ERROR: (gcloud.deployment-manager.deployments.delete) Delete operation operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c failed.
+   Error in Operation [operation-1577658115008-59adf2785a9bf-90292e3c-177ee45c]: errors:
+   - code: RESOURCE_ERROR
+   location: /deployments/studentxdeployment/resources/f5-bigip-studentxdeployment-51958
+   message: '{"ResourceType":"storage.v1.bucket","ResourceErrorCode":"409","ResourceErrorMessage":{"code":409,"errors":[{"domain":"global","message":"The
+      bucket you tried to delete was not empty.","reason":"conflict"}],"message":"The
+      bucket you tried to delete was not empty.","statusMessage":"Conflict","requestPath":"https://www.googleapis.com/storage/v1/b/f5-bigip-studentxdeployment-51958","httpMethod":"DELETE"}}'
 
 #.	List device name..
 

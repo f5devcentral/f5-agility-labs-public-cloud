@@ -18,7 +18,7 @@ Lab Requirements:
 -  Estimated completion time: 25 minutes
 
 Excercise 2: Create VIP and Test
------------------
+--------------------------------
 
 Task – Create a Test VIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

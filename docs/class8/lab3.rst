@@ -1,5 +1,5 @@
 Lab 3: Introduction to the F5 Cloud Failover Extension
-====================================================
+======================================================
 
 The purpose of this lab is to install the cloud failover extension after deploying your API based failover google cloud template.
 
@@ -112,7 +112,7 @@ Note.
 - The defaultNextHopAddresses should be the selfIP associated with your "internal network"
 - The deployment label should be "labuserx" where x is your labuser number.. for instance "labuser49"::
     
-                {
+      {
         "class": "Cloud_Failover",
         "environment": "gcp",
         "externalStorage": {
@@ -147,7 +147,7 @@ Note.
             "logLevel": "info"
         },
         "schemaVersion": "1.3.0"
-}
+      }
 
 
 Task – Create Route
@@ -164,8 +164,9 @@ You will add the route under the Networking/VPC Network/Routes.
 - Route name: labuserx where x is your labuserid.
       
 - Label the description in the route with f5_cloud_failover_labels 
-**f5_cloud_failover_labels={"f5_cloud_failover_label":"labuser49"}** 
-where x is         your labuser number.
+
+   **f5_cloud_failover_labels={"f5_cloud_failover_label":"labuser49"}** 
+   where x is         your labuser number.
       
 - Network: internal-vpc-221
       
