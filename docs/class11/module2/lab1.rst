@@ -3,19 +3,6 @@ F5 CloudFormation templates on Github
 
 Open a new tab in the web browser. Click on the "f5-aws-cloudformation" URL bookmark in the bookmark toolbar. Supported F5 CloudFormation templates are hosted on the official F5 GitHub repo: https://github.com/F5Networks/.
 
-.. image:: ./images/1_f5_aws_cloudformation_bookmark.png
-  :scale: 50%
-
-Scroll down and click on "Launch Stack".
-
-.. image:: ./images/2_f5_aws_cloudformation_launch_stack.png
-  :scale: 50%
-
-Choose "US West (Oregon) us-west-2 from the region drop-down menu in the upper-right-hand side.
-
-.. image:: ./images/3_f5_aws_cloudformation_confirm_region.png
-  :scale: 50%
-
 Scroll down and click on "Next"
 
 .. image:: ./images/4_f5_aws_cloudformation_confirm_region2.png
