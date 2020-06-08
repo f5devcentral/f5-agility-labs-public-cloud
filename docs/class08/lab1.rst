@@ -84,6 +84,8 @@ properties:
 
 - network1: **'external-vpc-221'**
 
+- network1SharedVpc: **'None'**
+
 - subnet1: **'external-vpc-221-subnet'**
 
 - aliasIp: **'This Value is assigned on a per student basis'**
@@ -141,7 +143,7 @@ You will now need IP addresses in order to SSH to the particular instances that 
 
 In the jumpbox type.
 
-**gcloud compute instances list --filter="name:( <yourdeploymentname> )"**
+**gcloud compute instances list --filter=labuserX**
 
 
 Note the template will create “ephemeral” ip addresses. These can be made static in a real world deployment through the google template.
@@ -164,9 +166,8 @@ Task – Configure BIG-IP Pair
 
 As the boxes are in a sync failover group the changes with be synced across both units so you can make changes on one box and they will be synched to the other box.
 
-ssh to the admin server of each bigIP 
+Use Putty to login to the each bigIP as **admin**
 
-**ssh admin@<yourbigIPaddress>**
     
 **Note you will need a key to login ot the admin server**
 **The key is called "labusers" amd it is located in C:\\Users\\Public\\Documents**
@@ -195,13 +196,6 @@ Task – Testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use the same IP address that was used to access the BIG-IP in the putty session.
-
-Or you can get that IP address again by listing the IP address via the Gcloud Command.
-
-To determine the IP addresses to access TMUI you can type
-
-**gcloud compute instances list --filter="name:( <yourdeploymentname> )"**
-
 
 TMUI can be reached by typing 
 
