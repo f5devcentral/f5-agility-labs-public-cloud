@@ -26,7 +26,7 @@ Task – Create a Test VIP
 
 #.	Create Pool 
 
-Navigate to local traffic/traffic/pools list.
+Navigate to **Local Traffic  ››  Pools : Pool List**.
 Click the “Create” button on the top right.
 
  
