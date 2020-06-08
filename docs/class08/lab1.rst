@@ -28,7 +28,7 @@ Task Deploying the BigIP VE templates.
 
 Navigate to 
 
-c:\\Users\\labuserx
+c:\\Users\\labuserX
 
 Use the git command to clone the google cloud templates.
 
@@ -40,10 +40,10 @@ git clone https://github.com/dudesweet/f5-google-gdm-templates.git
 
 2. Change directory to.. 
 
-C:\\Users\\labuserx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg>
+C:\\Users\\labuserX\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg
 
 
-or  (meaning your particular home directory for your student number. Should be c:\\Users\\labuserx
+meaning your particular home directory for your student number. Should be c:\\Users\\labuserX
 
 ~/f5-google-gdm-templates/supported/failover/same-net/via-api/3nic/existing-stack/payg
 
@@ -62,7 +62,7 @@ or  (meaning your particular home directory for your student number. Should be c
 
 Review the file 
 
-C:\Users\\labuserxx\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg\\f5-existing-stack-same-net-cluster-payg-3nic-bigip.yaml
+C:\Users\\labuserX\\f5-google-gdm-templates\\supported\\failover\\same-net\\via-api\\3nic\\existing-stack\\payg\\f5-existing-stack-same-net-cluster-payg-3nic-bigip.yaml
 
 |image014|
 
