@@ -1,4 +1,4 @@
-Exersize 1: Deploying the GDM 3NIC Api Based Failover Template
+Exercise 1: Deploying the GDM 3NIC Api Based Failover Template
 ==============================================================
 
 
