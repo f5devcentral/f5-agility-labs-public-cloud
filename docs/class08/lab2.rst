@@ -32,14 +32,10 @@ Click the “Create” button on the top right.
  
 |image004|
 
-Note: You an get the IP for the back end web server by typing 
-
-‘gcloud compute instances list’
 
 You will use the “internal IP address of the web server for your pool member IP”
 
-Create a pool with two members. On the Main tab, click **Local
-Traffic -> Pools**. Click **Create** per below.
+Create a pool with two members. On the Main tab, click **Local Traffic  ››  Pools : Pool List**. Click **Create** per below.
 
 
 
@@ -50,9 +46,9 @@ Traffic -> Pools**. Click **Create** per below.
 +-------------------+---------------------------------------+
 | Health Monitors   | http                                  |
 +-------------------+---------------------------------------+
-| Node Name         | web-gcp221-1, web-gcp221-2            |
+| Node Name         | web1, web2                            |
 +-------------------+---------------------------------------+
-| Address           | 10.3.1.241,10.3.1.242                 |
+| Address           | 10.3.1.241, 10.3.1.242                |
 +-------------------+---------------------------------------+
 | Service Port      | 80                                    |
 +-------------------+---------------------------------------+
@@ -96,7 +92,7 @@ In BIG-IP Configuration utility,
 +------------------------------+--------------------------+
 | Service Port                 | 80                       |
 +------------------------------+--------------------------+
-| HTTP Profile                 | http                     |
+| HTTP Profile (Client)        | http                     |
 +------------------------------+--------------------------+
 | Source Address Translation   | Auto Map                 |
 +------------------------------+--------------------------+
