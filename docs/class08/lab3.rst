@@ -94,7 +94,7 @@ _____
 
 
 **Modify the declaration within postman for your student number. Your particular student specific scoping address range and you student specific cloud failover label**
-** Your student specific Next Hope IP addresses... note these are "internal" self IP's on your BigIP **
+** Your student specific Next  IP addresses... note these are "internal" self IP's on your BigIP **
 
 Note.
 
@@ -105,7 +105,7 @@ Note.
 
 **Note in the example declaration in the postman collection for google the "environment" value is "gce" this needs to be changed to "gcp"**
 **Modify the declaration within postman for you student number. Your particular student specific scoping address range and you student specific cloud failover label**
-** Your student specific Next Hope IP addresses... note these are "internal" self IP's on your BigIP **
+** Your student specific Next hop IP addresses... note these are "internal" self IP's on your BigIP **
 
 Note.
 
