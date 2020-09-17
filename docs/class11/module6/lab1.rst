@@ -59,7 +59,7 @@ Fill in the iApp template parameters. Leave defaults where not explicitly called
 | What is the associated service port?                   | HTTP(80)                                             |
 +--------------------------------------------------------+------------------------------------------------------+
 | Do you want to create a new pool                       |                                                      |
-| or use and existing one?                               | Choose "service_discovery_pool" from drop-down.      |
+| or use an existing one?                                | Choose "service_discovery_pool" from drop-down.      |
 +--------------------------------------------------------+------------------------------------------------------+
 
 Scroll down and click [Finished].
