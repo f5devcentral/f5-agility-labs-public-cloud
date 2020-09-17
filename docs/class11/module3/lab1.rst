@@ -11,7 +11,7 @@ Services => VPC => Internet Gateways. An Internet Gateway was created to allow i
 .. image:: ./images/3_aws_console_explore_internet_gateway.png
   :scale: 50%
 
-Services => VPC => Subnets. Terraform created management and traffic subnets (both public and private) across two Availability Zones: us-wesst-2a and us-west-2b.
+Services => VPC => Subnets. Terraform created management and traffic subnets (both public and private) across two Availability Zones: us-west-2a and us-west-2b.
 
 .. image:: ./images/4_aws_console_explore_subnets.png
   :scale: 50%
