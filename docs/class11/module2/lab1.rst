@@ -1,9 +1,9 @@
 F5 CloudFormation templates on Github
 -------------------------------------
 
-Open a new tab in the web browser. Click on the "PC101 AS3 Template" URL bookmar in the bookmark toolbar. An AS3 Declaration is a single JSON-formatted file that defines your virtual server(s) and all accompanying configuration objects. Some interesting configuration objects are highlighted int the screenshot below:
+Open a new tab in the web browser. Click on the "PC101 AS3 Template" URL bookmark in the bookmark toolbar. An AS3 Declaration is a single JSON-formatted file that defines your virtual server(s) and all accompanying configuration objects. Some interesting configuration objects are highlighted in the screenshot below:
 
-  - We use AWS tags to lookup the application pool members dynamically. You do not hardcode the IP addresses of pool members.
+  - You use AWS tags to lookup the application pool members dynamically. You do not hardcode the IP addresses of pool members.
   - An HTTP/2 profile is enabled.
   - The Virtual Server Address is a "catch-all" wildcard address: 0.0.0.0/0.
   
