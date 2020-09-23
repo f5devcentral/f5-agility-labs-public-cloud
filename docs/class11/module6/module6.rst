@@ -1,7 +1,7 @@
-Creating High Availability Virtual Servers in AWS
-=================================================
+Delete Environment in Fell Swoops
+=================================
 
-The F5 Virtual Edition can discover instances in AWS dynamically using tags.
+The promise of declarative automation tools is that we can both quickly stand up *and* tear down environments.
 
 .. toctree::
    :maxdepth: 1

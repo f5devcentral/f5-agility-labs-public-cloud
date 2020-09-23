@@ -197,3 +197,7 @@ Look in the upper-left-hand corner. Note whether this is the active or standby u
 
 .. image:: ./images/21a_bigip2_login_active.png
   :scale: 50%
+
+.. attention::
+
+  Make sure Big-IP1 is active and Big-IP2 is standby before proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" => bigip2.f5lab.dev => [Force to Standby].

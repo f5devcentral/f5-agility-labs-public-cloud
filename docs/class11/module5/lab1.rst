@@ -1,76 +1,55 @@
-Confirm HA Across AZ iApp
--------------------------
+Check example application is running
+------------------------------------
 
-The CloudFormation template will automatically create a device trust between Big-IP1 in Availability Zone #1 and Big-IP2 in Availability Zone #2, resulting in a working HA f5 cluster in AWS. To confirm: Device Management => Device Trust.
+From the Visual Studio Code Terminal, invoke `terraform output`.
 
-.. image:: ./images/1_device_trust.png
+.. code-block:: bash
+
+   terraform output | grep Bigip1VipEipAddress
+
+...Ctrl + click on the *Bigip1VipEipAddress=*. This is the same Elastic IP we just reviewed in the AWS Console.
+
+.. image:: ./images/11_f5_aws_console_virtual_server.png
   :scale: 50%
 
-From the Big-IP1 Configuration Utility (WebUI), iApps => Application Services => Applications => HA_Across_AZ. The F5 CloudFormation template has automatically installed and configured the HA_Across_AZ iApp that maps a shared Elastic IP to the active Big-IP. This elastic IP is ready to automatically attach to the standby unit (thus making it active) if there is a problem/outage in the AZ.
+We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
+You will see the example app.
 
-.. image:: ./images/2_ha_across_az.png
+.. image:: ./images/12_f5_example_app.png
   :scale: 50%
 
-Explore instance tags for web servers
--------------------------------------
+Survive a fail-over event across Availability Zones
+---------------------------------------------------
 
-Services => INSTANCES => Instances => web-az1. Select the "Tags" tab below. Note the "findme : web" tag.
-Do the same for web-az2.
-Services => INSTANCES => Instances => web-az2. Select the "Tags" tab below. Note the "findme : web" tag.
-We'll use these tags to auto-discover these NGINX web servers as pool members.
+From the AWS Console, Services => EC2 => NETWORK & SECURITY => Elastic IPs.
+Note the Elastic IP address (public IPv4 address) mapping for the Secondary IP address of our **Active** Big-IP1 (10.0.1.x).
 
-.. image:: ./images/2a_ec2_web_server_tags.png
+.. image:: ./images/13_f5_aws_console_elastic_ip_before_failover.png
   :scale: 50%
 
-Dynamically discover and populate web server pools with the Service Discovery iApp
-----------------------------------------------------------------------------------
+Big-IP1 => Device Management => Devices => Self => [Force to Standby]. Click [OK] to confirm.
 
-On Big-IP1, iApps => Application Services => Applications => Create New Application Service.
-
-  Name: service_discovery
-
-  Template: f5.service_discovery
-
-Fill in the iApp template parameters. Leave defaults where not explicitly called out below.
-
-+--------------------------------------------------------+------------------------------------------------------+
-| Parameter                                              | Value                                                |
-+========================================================+======================================================+
-| **Cloud Provider**                                                                                            |
-+--------------------------------------------------------+------------------------------------------------------+
-| In which cloud provider are the pool members deployed? | US West(Oregon                                       |
-+--------------------------------------------------------+------------------------------------------------------+
-| Pool                                                                                                          |
-+--------------------------------------------------------+------------------------------------------------------+
-| What is the tag key on your cloud provider             | findme                                               |
-| for the members of this pool?                          |                                                      |
-+--------------------------------------------------------+------------------------------------------------------+
-| What is the tag value on your cloud provider           | web                                                  |
-| for the members of this pool?                          |                                                      |
-+--------------------------------------------------------+------------------------------------------------------+
-
-Scroll down and click [Finished].
-
-.. image:: ./images/3_service_discovery1.png
+.. image:: ./images/14_f5_bigip1_force_to_standby.png
   :scale: 50%
 
-.. image:: ./images/3_service_discovery2.png
+Big-IP2 is now active.
+
+.. image:: ./images/15_f5_bigip2_confirm_now_active.png
   :scale: 50%
 
-.. image:: ./images/3_service_discovery_finished.png
+From the AWS Console, Services => EC2 => NETWORK & SECURITY => Elastic IPs.
+Note the Elastic IP address (public IPv4 address) mapping for the Secondary IP has changed to the new **Active** Big-IP2 (10.0.2.x).
+Hit the refresh icon in the upper-right-hand side a few times until you notice the change.
+
+.. image:: ./images/16_f5_bigip2_confirm_elastic_ip_moved.png
   :scale: 50%
 
-Local Traffic => Pools => service_discovery_pool has been created.
+Back to the example app screen. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
+You will see the example app now behind the new active Big-IP2.
 
-.. image:: ./images/4_service_discovery_pool_created.png
+.. image:: ./images/17_f5_bigip2_confirm_example_app.png
   :scale: 50%
 
-Local Traffic => Pools => service_discovery_pool => members. Pool members have been auto-populated.
+.. attention::
 
-.. image:: ./images/5_service_discovery_pool_members.png
-  :scale: 50%
-
-On the standby Big-IP, Local Traffic => Pools => service_discovery_pool. The service_discovery_pool is ready on the standby unit as well. Config sync works.
-
-.. image:: ./images/6_service_discovery_pool_members_standby_bigip.png
-  :scale: 50%
+  The example application reports which Availability Zone is serving up the content (pool member), *not* which Availability Zone is hosting the active Big-IP.
