@@ -8,7 +8,7 @@ Open a new tab in the web browser. Click on the "PC101 AS3 Template" URL bookmar
   - The Virtual Server Address is a "catch-all" wildcard address: 0.0.0.0/0.
   
 
-.. image:: ./images/4a_f5_aws_cloudformation_as3_declaration
+.. image:: ./images/4a_f5_aws_cloudformation_as3_declaration.png
   :scale: 50%
 
 Open another new tab in the web browser. Click on the "f5-aws-cloudformation" URL bookmark in the bookmark toolbar. Supported F5 CloudFormation templates are hosted on the official F5 GitHub repo: https://github.com/F5Networks/.
