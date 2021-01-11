@@ -52,10 +52,15 @@ For **Boot disk** setting. Click **Change** button.
    :alt: img3
 
 Go to **Custom images** tab. Choose the pre-loaded image named
-**bigip-byol-good**. |img4|
+**bigip-byol-good**.
+
+.. figure:: ./images/task1/instance3.png
+   :alt: img4
 
 Expand **Management, security, disks, networking, sole tenancy**
 setting. Go to **Networking** tab, under **Network interfaces**.
+
+.. image:: ./images/task1/instance4.png
 
 +-----------------------+-------------------------------------------------------+
 | Field                 | Value                                                 |
@@ -69,7 +74,9 @@ setting. Go to **Networking** tab, under **Network interfaces**.
 | IP Forwarding         | On                                                    |
 +-----------------------+-------------------------------------------------------+
 
-|img5| |img6|
+.. image:: ./images/task1/instance5.png
+
+.. image:: ./images/task1/instance6.png
 
 1.6 Click **Create**. It will take at least 10 minutes for the BIG-IP to boot up fully before you can SSH into it.
 
@@ -126,8 +133,11 @@ and the password is the one you set previously.
 2.9 Click **Activate** and license the BIG-IP with one of the evaluation
 keys provided to you.
 
-.. figure:: ./images/task1/licensing2.png
-   :alt: img6
+.. image:: ./images/task1/licensing1.png
+
+.. image:: ./images/task1/licensing2.png
+   
+.. image:: ./images/task1/licensing3.png
 
 2.10 Choose **Resource Provisioning** screen. Default is fine. Click
 submit.
@@ -190,7 +200,12 @@ destined for BIGIP's IP address. In BIG-IP Configuration utility,
 | Default Pool                 | web\_pool     |
 +------------------------------+---------------+
 
-|img10| |img11| |img12|
+
+.. image:: ./images/task1/vs1.png
+
+.. image:: ./images/task1/vs2.png
+
+.. image:: ./images/task1/vs3.png
 
 3.6 You can test the application now. Open a browser
 **http://10.1.1.x**. You should see a webpage with **Web Server 1!** or
