@@ -75,7 +75,7 @@ We'll install the following iControl LX Extensions via the REST API using Postma
 
 
 Install F5 Declarative Onboarding Extension
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From Postman, "Lab 3.1 - Install ILX Packages" => "Upload and Install to BIG-IP1" => "Step 1: REST API - **Upload** DO iLX Package" => [Send]
 
@@ -89,7 +89,7 @@ From Postman, "Lab 3.1 - Install ILX Packages" => "Upload and Install to BIG-IP1
 
 
 Install the remaing iLX Extensions (Application Services 3, Service Discovery, Cloud Failover, and Telemetry Streaming)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Upload and and install the remaining extensions by running **Steps 3-8** in Postman "Lab 3.1 - Install ILX Packages" => "Upload and Install to BIG-IP1"
 
@@ -102,7 +102,7 @@ Once complete, install the iLX Extensions to BIG-IP2 by running **Steps 1-8** in
        :scale: 50%
 
 Confirm installation of the iLX Extensions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Big-IP1 => iApps => Package Management LX => confirm all five packages installed. Note: f5-service-discovery comes with the f5-appsvcs package.
 
 .. image:: ./images/11_bigip1_icontrol_lx_all.png
@@ -115,7 +115,7 @@ Do the same for Big-IP2.
 
 
 Validate Declarative Onboarding installation via REST API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 From Postman, select "Lab 4.1 - Declarative Onboarding - Basic Plumbing" =>"Step 1: Check DO - BIGIP1" request and Click "Send".
 The Status is 200 OK and the Body response will indicate the DO version.
 
