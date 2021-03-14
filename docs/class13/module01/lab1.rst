@@ -41,11 +41,11 @@ Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner
 Login to AWS Console
 ====================
 
-A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In".
+A URL shortcut has been auto-generated on the Windows desktop: "**{AWS Account ID}** AWS Sign-In".
 
-First, launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
+First, launch Firefox from the taskbar, then click on the "**{AWS Account ID}** AWS Sign-In" URL shortcut on the Desktop.
 
-If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
+If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "**{AWS Account ID}** AWS Sign-In" URL shortcut on the Desktop. 
 
 Alternatively, you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
 
