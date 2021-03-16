@@ -20,6 +20,10 @@ From the Visual Studio Code Terminal, invoke `terraform destroy`.
 
 .. code-block:: bash
 
+   mv f5-cft-outputs.tf f5-cft-outputs.tf.zzz
+
+.. code-block:: bash
+
    terraform destroy --force -var 'bigip_admin_password=f5letme1n'
 
 .. image:: ./images/3_terraform_destroy.png
