@@ -8,21 +8,21 @@ Do the same for Big-IP2.
 .. image:: ./images/1_bigip1_telemetry_streaming_icontrol_lx_installed.png
 	   :scale: 50%
 
-From Postman, “Lab - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
+From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
 
 "Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
 
 .. image:: ./images/2_postman_telemetry_streaming_status_bigip1.png
 	   :scale: 50%
 
-From Postman, “Lab - Telemetry Streaming” => “Step 2: Confirm Telemetry Streaming REST API - BIGIP2” => [Send].
+From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 2: Confirm Telemetry Streaming REST API - BIGIP2” => [Send].
 
 "Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP2.
 
 .. image:: ./images/3_postman_telemetry_streaming_status_bigip2.png
 	   :scale: 50%
 
-From Postman, “Lab - Telemetry Streaming” => “Step 3: Telemetry Streaming AWS - BIGIP1” => [Send].
+From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 3: Telemetry Streaming AWS - BIGIP1” => [Send].
 
 .. image:: ./images/4_postman_telemetry_streaming_body_bigip1.png
 	   :scale: 50%
@@ -32,7 +32,7 @@ From Postman, “Lab - Telemetry Streaming” => “Step 3: Telemetry Streaming 
 .. image:: ./images/5_postman_telemetry_streaming_completed_bigip1.png
 	   :scale: 50%
 
-Do the same for Big-IP2. From Postman, “Lab - Telemetry Streaming” => “Step 4: Telemetry Streaming AWS - BIGIP2” => [Send].
+Do the same for Big-IP2. From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 4: Telemetry Streaming AWS - BIGIP2” => [Send].
 
 "Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP2.
 

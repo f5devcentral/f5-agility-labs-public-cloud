@@ -2,7 +2,7 @@ Provision the Application Visibility and Reporting (AVR) Module
 ---------------------------------------------------------------
 
 
-From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery - Advanced” => “Step 1: Create AS3 - Example01/example01 - HA Analytics” => [Send].
+From Postman, “Lab 4.5 - AS3 Declarations with Pool Member AutoDiscovery - Advanced” => “Step 1: Create AS3 - Example01/example01 - HA Analytics” => [Send].
 
 .. image:: ./images/1_postman_analytics_sending.png
 	   :scale: 50%
@@ -36,7 +36,7 @@ Scroll down and click [Submit].
 F5 AS3 Declaration for HTTP Analytics
 -------------------------------------
 
-From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery - Advanced” => “Step 1: Create AS3 - Example01/example01 - HA Analytics” => [Send].
+From Postman, “Lab 4.5 - AS3 Declarations with Pool Member AutoDiscovery - Advanced” => “Step 1: Create AS3 - Example01/example01 - HA Analytics” => [Send].
 
 "Status: 200 OK" response signals that the Application Services 3 Extension (AS3) declaration was processed and completed successfully.
 
