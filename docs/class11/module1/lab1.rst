@@ -67,9 +67,15 @@ In the upper-right-hand corner, choose US-West (Oregon) us-west-2 region.
 
 "Services" => type "marketplace" in the search window. Select "AWS Marketplace Subscriptions" from the search results. Right-click on "Manage subscriptions" to open a new tab.
 => "Discover products"
-Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
+Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF with LTM, IPI, and Threat Campaigns (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
 
 .. image:: ./images/6_aws_marketplace_accept_terms_f5.png
+  :scale: 50%
+
+.. image:: ./images/6a_aws_marketplace_accept_terms_f5.png
+  :scale: 50%
+
+.. image:: ./images/6b_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
 Track "Effective date" and "Expiration date". When they are no longer "Pending" you can proceed.
