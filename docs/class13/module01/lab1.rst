@@ -63,23 +63,21 @@ Login to the AWS web console with the credentials shown in your terminal.
 
 "Services" => type "marketplace" in the search window. Select "AWS Marketplace Subscriptions" from the search results. Right-click on "Manage subscriptions" to open a new tab.
 => "Discover products"
+Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF with LTM, IPI, and Threat Campaigns (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
 
-.. image:: ./images/4_aws_console_marketplace.png
+.. image:: ./images/6_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
-Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
-
-.. image:: ./images/6_aws_console_marketplace_subscribe.png
+.. image:: ./images/6a_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
-.. image:: ./images/7_aws_console_marketplace_accept_terms.png
-  :scale: 50%
-
-.. image:: ./images/8_aws_console_marketplace_accept_terms_pending.png
+.. image:: ./images/6b_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
 Track "Effective date" and "Expiration date". When they are no longer "Pending" you can proceed.
 
+.. image:: ./images/7_aws_marketplace_subscribe_to_f5.png
+  :scale: 50%
 
 Deploy F5 Virtual Editions and a complete application environment to AWS with Terraform
 =======================================================================================
