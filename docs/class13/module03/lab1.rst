@@ -23,7 +23,7 @@ Open Postman. Click the gear icon in the upper-right-hand corner to review Setti
 	   :scale: 50%
 
 
-In the right-pane tab, select "Collections" and click "Import" above. Choose "Link" as the source to import from and Import the collection using the URL below:
+In the left-pane tab, select "Collections" and click "Import" above. Choose "Link" as the source to import from and Import the collection using the URL below:
 
 .. code-block:: bash
 
