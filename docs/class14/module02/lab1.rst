@@ -1,7 +1,7 @@
 Check status of F5 instances before proceeding.
 -----------------------------------------------
 
-From the AWS Web Console => Services => EC2 => INSTANCES => Instances. Select "Big-IP1...". Select the "Status Check" tab below.
+From the GCP Web Console => Compute Engine => VM Instances . Select "Big-IP1...". Select the "Status Check" tab below.
 
 .. image:: ./images/1_aws_console_bigip1_status_check.png
 	   :scale: 50%
