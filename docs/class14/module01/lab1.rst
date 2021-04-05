@@ -130,61 +130,53 @@ Initialize Terraform modules.
 .. image:: ./images/11_vscode_terraform_init.png
   :scale: 50%
 
-Validate Terraform files.
+.. image:: ./images/11_vscode_init.png
+  :scale: 50%
+
+Plan Terraform files.
 
 .. code-block:: bash
 
-    terraform validate
+    terraform plan
 
-.. image:: ./images/12_vscode_terraform_validate.png
+.. image:: ./images/12_vscode_terraform_plan.png
   :scale: 50%
 
-Create a terraform dependency graph.
-
-.. code-block:: bash
-
-    create-terraform-dependency-graph.sh
-
-.. image:: ./images/13_vscode_create_terraform_dependency_graph.png
-  :scale: 50%
-
-From the Windows desktop, click on the "terraform_dependency_graph" URL shortcut. Review in your browser. Terraform tracks the dependencies of all of the objects in your environment. This is one of the major advantages to using a declarative tool for building infrastructure and services.
-
-.. image:: ./images/14_vscode_terraform_dependency_graph_desktop_link.png
-  :scale: 50%
-
-.. image:: ./images/15_terraform_dependency_graph.png
+.. image:: ./images/12_vscode_terraform_plan_complete.png
   :scale: 50%
 
 From the Visual Studio Code Terminal
 
 .. code-block:: bash
 
-   terraform plan -var 'bigip_admin_password=f5letme1n'
-   terraform apply -var 'bigip_admin_password=f5letme1n' -auto-approve
+   terraform apply -auto-approve
 
-.. image:: ./images/16_vscode_terraform_plan.png
+.. image:: ./images/13_vscode_terraform_apply.png
   :scale: 50%
 
-.. image:: ./images/16_vscode_terraform_plan_complete.png
+.. image:: ./images/13_vscode_terraform_apply_complete.png
   :scale: 50%
 
-.. image:: ./images/17_vscode_terraform_apply.png
-  :scale: 50%
-
-.. image:: ./images/17_vscode_terraform_apply_complete.png
-  :scale: 50%
-
-You can always get the `terraform output` values again by invoking from the terminal:
+You can always get the `terraform output` values again by invoking from the terminal, make sure to have bash toggled:
 
 .. code-block:: bash
 
    terraform output
 
-From the AWS Console, Services => INSTANCES => Instances. Select the Big-IP1 instance.
+.. image:: ./images/14_bash.png
+  :scale: 50%
+
+TODO Change
+
+From the GCP Console, Services => INSTANCES => Instances. Select the Big-IP1 instance.
+
+TODO
 
 .. image:: ./images/19_aws_console_ec2.png
   :scale: 50%
+  
+
+TODO
   
 Select the [Status Checks] tab below. Note the System Status Checks and Instance Status Checks are both "initializing".
 
@@ -193,8 +185,12 @@ Select the [Status Checks] tab below. Note the System Status Checks and Instance
 
 Do the same for Big-IP2.
 
+TODO
+
 .. image:: ./images/21_aws_console_bigip2_status_check.png
   :scale: 50%
+
+Change
 
 .. attention::
 

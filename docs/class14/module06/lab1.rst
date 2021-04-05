@@ -1,10 +1,22 @@
+TODO add image
+Click the bottom blue bar where it says AS3(3.26.0)
+This will open separate window with status is 200 OK and the Body response will indicate the AS3 version.
+The Status is 200 OK and the Body response will indicate the AS3 version.
+
+.. .. image:: ./images/14_postman_bigip2_get_do.png
+.. 	   :scale: 50%
+
 Clean config - No Partitions or Virtual Servers
 -----------------------------------------------
 
 Big-IP1 => Local Traffic => Virtual Servers. There are no Virtual Servers configured in any partition.
 
+TODO change image
+
 .. image:: ./images/1_bigip1_no_example_partition.png
 	   :scale: 50%
+
+TODO change image
 
 Big-IP2 => Local Traffic => Virtual Servers. There are no Virtual Servers configured in any partition.
 
@@ -14,11 +26,24 @@ Big-IP2 => Local Traffic => Virtual Servers. There are no Virtual Servers config
 Check AS3 is ready
 ------------------
 
+Click on Lab4.3-AS3 under the drop down menu, select "as3.json" request.
+Right Click "Post as AS3 Declaration".
+
+.. image:: ./images/21_as3.png
+	   :scale: 50%
+
+Status 200 OK response signals that Application Services 3 Extension (AS3) is ready on Big-IP 1.
+
+.. image:: ./images/22_as3.png
+	   :scale: 50%
+
+TODO change 
+		 
 From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 1: Check AS3 - BIGIP1” => [Send].
 
 Status 200 OK response signals that Application Services 3 Extension (AS3) is ready on Big-IP1.
 
-.. image:: ./images/3_postman_bigip1_check_as3.png
+.. image:: ./images/as3.png
 	   :scale: 50%
 
 From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 2: Check AS3 - BIGIP2” => [Send].
@@ -27,6 +52,8 @@ Status 200 OK response signals that Application Services 3 Extension (AS3) is re
 
 .. image:: ./images/4_postman_bigip2_check_as3.png
 	   :scale: 50%
+
+TODO change 
 
 Create HTTP Virtual Servers with AS3 and Service Discovery
 ----------------------------------------------------------
@@ -73,6 +100,8 @@ Open a new browser tab. Connect via HTTP to ``virtual_server01_elastic_ip``.
 
 .. image:: ./images/11_elastic_ip_example_app.png
 	   :scale: 50%
+
+TODO change 		 
 
 Enable modern protocols such as HTTP/2 and TLS 1.3 with AS3 and Service Discovery
 ---------------------------------------------------------------------------------
