@@ -1,5 +1,5 @@
-Check status of F5 instances before proceeding.
------------------------------------------------
+(TODO CHANGE)Check status of F5 instances before proceeding.
+------------------------------------------------------------
 
 From the GCP Web Console => Compute Engine => VM Instances . Select "Big-IP1...". Select the "Status Check" tab below.
 
@@ -15,61 +15,35 @@ From the AWS Web Console => Services => EC2 => INSTANCES => Instances. Select "B
 
   Do not proceed until both the System Status Checks and Instance Status Checks for both Big-IP1 and Big-IP2 announce **...reachability check passed** in green!
 
-SSH to Big-IP1 and Big-IP2
---------------------------
-
-Confirm the bigip1 and bigip2 aliases were created.
-
-.. code-block:: bash
-
-   type bigip1
-   type bigip2
-
-SSH to Big-IP1 to confirm state and change the admin password.
-
-.. attention::
-
-   Ensure the system status prompt is either Active or Standby before proceeding. All other status prompts indicate the system is not ready. Use the screenshots as a guide.
+(Name Change?)Login to Big-IP1 and Big-IP2
+------------------------------------------
 
 .. code-block:: bash
 
    bigip1
 
-Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?"
+.. image:: ./images/3_bigip1host.png
+	   :scale: 50%
 
-.. code-block:: bash
+.. image:: ./images/3_bigip1password.png
+	   :scale: 50%
 
-   yes
-   modify auth user admin password f5letme1n
-   modify /sys global-settings gui-setup disabled
-   save /sys config
-   quit
+Click on F5 extension icon then add host, copy output of bigip_1_host, enter text. Then copy bigip_password and enter text.
 
-SSH to Big-IP2 to confirm state and change the admin password.
-
-.. attention::
-
-   Ensure the system status is either Active or Standby before proceeding. All other status prompts indicate the system is not ready. Use the screenshots as a guide.
 
 .. code-block:: bash
 
    bigip2
 
-Acknowledge the ssh remote host when prompted "Are you sure you want to continue connecting (yes/no)?"
 
-.. code-block:: bash
-
-   yes
-   modify auth user admin password f5letme1n
-   modify /sys global-settings gui-setup disabled
-   save /sys config
-   quit
-
-.. image:: ./images/3_bigip_modify_auth.png
+.. image:: ./images/3_bigip2host.png
 	   :scale: 50%
 
-Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
------------------------------------------------------------------
+.. image:: ./images/3_bigip2password.png
+	   :scale: 50%
+
+(TODO) Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
+-------------------------------------------------------------------------
 
 From the Visual Studio Code Terminal, invoke `Terraform output`. Note the Bigip1ManagementEipAddress and Bigip2ManagementEipAddress values.
 
