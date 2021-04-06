@@ -1,58 +1,7 @@
-(TODO CHANGE)Check status of F5 instances before proceeding.
+Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
 ------------------------------------------------------------
 
-From the GCP Web Console => Compute Engine => VM Instances . Select "Big-IP1...". Select the "Status Check" tab below.
-
-.. image:: ./images/1_aws_console_bigip1_status_check.png
-	   :scale: 50%
-
-From the AWS Web Console => Services => EC2 => INSTANCES => Instances. Select "Big-IP2...". Select the "Status Check" tab below.
-
-.. image:: ./images/2_aws_console_bigip2_status_check.png
-	   :scale: 50%
-
-.. attention::
-
-  Do not proceed until both the System Status Checks and Instance Status Checks for both Big-IP1 and Big-IP2 announce **...reachability check passed** in green!
-
-(Name Change?)Login to Big-IP1 and Big-IP2
-------------------------------------------
-
-.. code-block:: bash
-
-   bigip1
-
-.. image:: ./images/3_bigip1host.png
-	   :scale: 50%
-
-.. image:: ./images/3_bigip1password.png
-	   :scale: 50%
-
-Click on F5 extension icon then add host, copy output of bigip_1_host, enter text. Then copy bigip_password and enter text.
-
-
-.. code-block:: bash
-
-   bigip2
-
-
-.. image:: ./images/3_bigip2host.png
-	   :scale: 50%
-
-.. image:: ./images/3_bigip2password.png
-	   :scale: 50%
-
-(TODO) Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
--------------------------------------------------------------------------
-
-From the Visual Studio Code Terminal, invoke `Terraform output`. Note the Bigip1ManagementEipAddress and Bigip2ManagementEipAddress values.
-
-.. code-block:: bash
-
-   terraform output
-
-.. image:: ./images/4_terraform_output.png
-	   :scale: 50%
+From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI for each BIG-IP.  From the VS Code terminal, you can type "terraform output" to see the outputs again.
 
 Open a new browser tab and HTTPS to Bigip1ManagementEipAddress. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
 
@@ -62,11 +11,7 @@ Open a new browser tab and HTTPS to Bigip1ManagementEipAddress. We are using sel
 .. image:: ./images/6_bigip1_mgmt_bypass_warning.png
 	   :scale: 50%
 
-Login to the Big-IP1 Configuration Utility (WebUI):
-
-  Username: admin
-
-  Password: f5letme1n
+Login to the Big-IP1 Configuration Utility (WebUI) using the values found in "terraform output"
 
 ...note the system has not been configured with anything other than a management IP address and admin account.
 
@@ -99,3 +44,13 @@ Do the same for Big-IP2.
 
 .. image:: ./images/7_bigip2_mgmt_bypass_warning.png
 	   :scale: 50%
+
+
+
+
+
+
+
+
+
+
