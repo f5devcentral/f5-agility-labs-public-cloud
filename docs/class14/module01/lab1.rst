@@ -3,7 +3,7 @@ Login to F5's lab platform (Unified Demo Framework) and launch a remote desktop 
 
 Follow the link in your email invite and login to the lab environment.
 
-Your Deployment => Systems => win2019 => DETAILS. Copy the Administrator password to your clipboard. The password starts immediately after Administrator:
+Your Deployment => Systems => Client => VS Code.
 
 .. image:: ./images/00_admin_pass.png
   :scale: 50%
@@ -15,73 +15,13 @@ Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab loo
 .. image:: ./images/01_rdp.png
   :scale: 50%
 
-When prompted with the blue "Networks" message click "Yes".
+### Clone github repository to VS Code
 
-.. image:: ./images/02_networks.png
-  :scale: 50%
-
-.. attention::
-
-  Before proceeding, wait 30 seconds for the Visual Studio Code and Postman applications to start automatically.
-
-You can run the entire lab from within the Windows jump host.
-
-Visual Studio Code => View => Terminal
-
-You will see:
-  - AWS Console URL
-  - AWS Console Username
-  - AWS Console Password
-
-.. image:: ./images/1_vscode_terminal.png
-  :scale: 50%
-
-Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner of the Terminal.
-
-Login to AWS Console
-====================
-
-A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In".
-
-First, launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
-
-If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
-
-Alternatively, you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
-
-.. image:: ./images/3_aws_console_desktop_link.png
-  :scale: 50%
-
-Login to the AWS web console with the credentials shown in your terminal.
-
-.. image:: ./images/4_aws_console_login.png
-  :scale: 50%
-
-.. attention::
-
-  In the upper-right-hand corner, choose US-West (Oregon) us-west-2 region.
-
-"Services" => type "marketplace" in the search window. Select "AWS Marketplace Subscriptions" from the search results. Right-click on "Manage subscriptions" to open a new tab.
-=> "Discover products"
-
-.. image:: ./images/4_aws_console_marketplace.png
-  :scale: 50%
-
-Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
-
-.. image:: ./images/6_aws_console_marketplace_subscribe.png
-  :scale: 50%
-
-.. image:: ./images/7_aws_console_marketplace_accept_terms.png
-  :scale: 50%
-
-.. image:: ./images/8_aws_console_marketplace_accept_terms_pending.png
-  :scale: 50%
-
-Track "Effective date" and "Expiration date". When they are no longer "Pending" you can proceed.
+### Authenticate 'gcloud' command line utility - must be the same user you signed up for Agility with and _must_ be a Google Account.
 
 
-Deploy F5 Virtual Editions and a complete application environment to AWS with Terraform
+
+Deploy F5 Virtual Editions and a complete application environment to GCP with Terraform
 =======================================================================================
 
 From the Visual Studio Code Terminal, clone the github repository for this lab and change to the working directory.
@@ -92,70 +32,17 @@ From the Visual Studio Code Terminal, clone the github repository for this lab a
 
 .. code-block:: bash
 
-   git clone https://github.com/TonyMarfil/f5agility2020-pc201.git
-   cd f5agility2020-pc201/
+   git clone https://github.com/jtylershaw/Agility2021_GCP_Terraform_ATC.git
+   cd Agility2021_GCP_Terraform_ATC/
 
 .. image:: ./images/9_vscode_git_clone.png
   :scale: 50%
 
-Run the start.sh script to set environment variables and make the ./scripts directory executable
 
-.. code-block:: bash
 
-    source ./start.sh
-
-.. image:: ./images/9_vscode_git_clone_source_start.png
-  :scale: 50%
-
-Create an SSH key and upload to your AWS account. We'll later use this key to connect to our F5 instances.
-
-.. code-block:: bash
-
-  create-ssh-keys.sh
-
-.. image:: ./images/10_vscode_create_ssh_key.png
-  :scale: 50%
-
-From the AWS Console => Services => EC2 => Key pairs. Confirm your ssh key was created.
-
-.. image:: ./images/14_confirm_ssh_keys.png
-  :scale: 50%
-
-Initialize Terraform modules.
-
-.. code-block:: bash
-
-    terraform init
-
-.. image:: ./images/11_vscode_terraform_init.png
-  :scale: 50%
-
-.. image:: ./images/11_vscode_init.png
-  :scale: 50%
-
-Plan Terraform files.
-
-.. code-block:: bash
-
-    terraform plan
-
-.. image:: ./images/12_vscode_terraform_plan.png
-  :scale: 50%
-
-.. image:: ./images/12_vscode_terraform_plan_complete.png
-  :scale: 50%
-
-From the Visual Studio Code Terminal
-
-.. code-block:: bash
-
-   terraform apply -auto-approve
-
-.. image:: ./images/13_vscode_terraform_apply.png
-  :scale: 50%
-
-.. image:: ./images/13_vscode_terraform_apply_complete.png
-  :scale: 50%
+### terraform init
+### terraform plan
+### terraform apply
 
 You can always get the `terraform output` values again by invoking from the terminal, make sure to have bash toggled:
 
@@ -166,32 +53,21 @@ You can always get the `terraform output` values again by invoking from the term
 .. image:: ./images/14_bash.png
   :scale: 50%
 
-TODO Change
 
-From the GCP Console, Services => INSTANCES => Instances. Select the Big-IP1 instance.
 
-TODO
+Login to GCP Console
+====================
 
-.. image:: ./images/19_aws_console_ec2.png
-  :scale: 50%
-  
+Click on "Firefox" under access methods (or use your own local browser if able) and navigate to https://console.cloud.google.com with the e-mail address that you signed up for Agility with, and you just signed in to authenticate with 'gcloud.'
 
-TODO
-  
-Select the [Status Checks] tab below. Note the System Status Checks and Instance Status Checks are both "initializing".
+Once your terraform apply has finished, navigate to "Compute Engine" -> "VM Instances" and locate your BIG-IP instances denoted by "studentX-Y-YYYY-f5vm0[1,2]."  These are your BIG-IP units running within GCP
 
-.. image:: ./images/20_aws_console_bigip1_status_check.png
-  :scale: 50%
 
-Do the same for Big-IP2.
 
-TODO
 
-.. image:: ./images/21_aws_console_bigip2_status_check.png
-  :scale: 50%
 
 Change
 
 .. attention::
 
-  Do not proceed until both the System Status Checks and Instance Status Checks for both Big-IP1 and Big-IP2 announce **...reachability check passed** in green!
+  We will be returning to lecture at this point of the lab.  We will allow the BIG-IPs to start up for all students during the lecture.
