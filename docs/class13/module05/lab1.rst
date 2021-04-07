@@ -10,7 +10,7 @@ Once the task completes, the Device trust between BIG-IP1 and BIG-IP2 should be 
 
 Confirm this by going to the Configuration Utility (WebUI) on each BIG-IP device and navigate to "Device Management" => "Device Trust" => Under the "Device Trust Members" tab => Confirm that the peer BIG-IP is listed under "Peer and Subordinate Devices".
 
-.. image:: ./images/2_bigip1_device_trust1.png
+.. image:: ./images/3_bigip1_device_trust2.png
 	   :scale: 50%
 
 Create a Config Sync Group between Big-IPs
