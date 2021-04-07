@@ -1,4 +1,4 @@
-PC201 - Deploying F5 Solutions to AWS with Terraform and iControl LX Extensions
+PC201 - Deploying F5 Solutions to GCP with Terraform and The F5 Automation Toolchain
 ===============================================================================
 
 This is a proctor led intermediate level lab.

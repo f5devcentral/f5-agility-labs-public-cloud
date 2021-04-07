@@ -1,5 +1,5 @@
 TODO add image
-Click the bottom blue bar where it says AS3(3.26.0)
+Click the bottom blue bar where it says AS3(3.25.0)
 This will open separate window with status is 200 OK and the Body response will indicate the AS3 version.
 The Status is 200 OK and the Body response will indicate the AS3 version.
 
@@ -58,7 +58,7 @@ TODO change
 Create HTTP Virtual Servers with AS3 and Service Discovery
 ----------------------------------------------------------
 
-From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 3: Example01/example01 with AutoDiscover pool members”. Review the Body of the declaration. The AS3 declaration is configured to discover pool members based on AWS tags.
+From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 3: Example01/example01 with AutoDiscover pool members”. Review the Body of the declaration. The AS3 declaration is configured to discover pool members based on GCP labels.
 
 .. image:: ./images/5_postman_bigip1_autodiscover_pool_as3.png
 	   :scale: 50%
@@ -92,6 +92,7 @@ Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01" Partition fr
 
 From the Visual Studio Code Terminal, note the value of ``virtual_server01_elastic_ip``.
 
+
 .. code-block:: bash
 
    terraform output virtual_server01_elastic_ip
@@ -101,7 +102,7 @@ Open a new browser tab. Connect via HTTP to ``virtual_server01_elastic_ip``.
 .. image:: ./images/11_elastic_ip_example_app.png
 	   :scale: 50%
 
-TODO change 		 
+TODO change - Do we need this?  Need to update the Elastic IP to FWD Rule
 
 Enable modern protocols such as HTTP/2 and TLS 1.3 with AS3 and Service Discovery
 ---------------------------------------------------------------------------------

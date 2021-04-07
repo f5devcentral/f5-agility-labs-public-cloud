@@ -37,34 +37,3 @@ On Big-IP2, Network. => Routes. No routes.
 .. image:: ./images/13_postman_bigip2_get_do_status.png
 	   :scale: 50%
 
-Default route in LOCAL_ONLY partition for Cloud Failover
---------------------------------------------------------
-
-For cloud fail-over we need to create routes in a dedicated "LOCAL_ONLY" partition.
-
-From Postman, "Lab - Declarative Onboarding - Basic Plumbing" => "Step 5: REST API - Create LOCAL_ONLY Partition - BIGIP1" => [Send].
-
-.. image:: ./images/15_postman_bigip1_create_local_only_partition.png
-	   :scale: 50%
-
-From Postman, "Lab - Declarative Onboarding - Basic Plumbing" => "Step 6: REST API - Create default route - BIGIP1" => [Send].
-
-.. image:: ./images/16_postman_bigip1_create_default_route.png
-	   :scale: 50%
-
-From Postman, "Lab - Declarative Onboarding - Basic Plumbing" => "Step 7: REST API - Create LOCAL_ONLY Partition - BIGIP2" => [Send].
-
-.. image:: ./images/18_postman_bigip2_create_local_only_partition.png
-	   :scale: 50%
-
-From Postman, "Lab - Declarative Onboarding - Basic Plumbing" => "Step 8: REST API - Create default route - BIGIP2" => [Send].
-
-.. image:: ./images/19_postman_bigip2_create_default_route.png
-	   :scale: 50%
-
-On Big-IP1, Network => Routes => Select the "LOCAL_ONLY" partition from the drop down in the upper-right-hand corner. The Default route was created.
-
-.. image:: ./images/17_bigip1_default_route.png
-	   :scale: 50%
-
-Confirm the a default route was created in the LOCAL_ONLY partition of Big-IP2 as well.
