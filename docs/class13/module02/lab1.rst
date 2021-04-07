@@ -18,14 +18,14 @@ From the AWS Web Console => Services => EC2 => INSTANCES => Instances. Select "B
 SSH to Big-IP1 and Big-IP2
 --------------------------
 
-Confirm the bigip1 and bigip2 aliases were created.
+Confirm the bigip1 and bigip2 aliases were created by running the following commands in the vscode terminal.
 
 .. code-block:: bash
 
    type bigip1
    type bigip2
 
-SSH to Big-IP1 to confirm state and change the admin password.
+From the vscode terminal, SSH to Big-IP1 using the alias below to confirm state and change the admin password.
 
 .. attention::
 
@@ -45,7 +45,7 @@ Acknowledge the ssh remote host when prompted "Are you sure you want to continue
    save /sys config
    quit
 
-SSH to Big-IP2 to confirm state and change the admin password.
+From the vscode terminal, SSH to Big-IP2 using the alias below to confirm state and change the admin password.
 
 .. attention::
 

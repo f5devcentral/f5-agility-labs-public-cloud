@@ -114,6 +114,12 @@ Create an SSH key and upload to your AWS account. We'll later use this key to co
 .. image:: ./images/10_vscode_create_ssh_key.png
   :scale: 50%
 
+
+From the AWS Console, make sure you are in the us-west-2 (Orgeon) region.
+
+.. image:: ./images/14_verify_us-west-2_region.png
+  :scale: 50%
+
 From the AWS Console => Services => EC2 => Key pairs. Confirm your ssh key was created.
 
 .. image:: ./images/14_confirm_ssh_keys.png
