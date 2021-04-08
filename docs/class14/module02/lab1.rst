@@ -1,49 +1,30 @@
 Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
 ------------------------------------------------------------
 
-From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI for each BIG-IP.  From the VS Code terminal, you can type "terraform output" to see the outputs again.
+From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI for each BIG-IP using the provided username and password.  From the VS Code terminal, you can type "terraform output" to see the outputs again.
 
-Open a new browser tab and HTTPS to Bigip1ManagementEipAddress. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
+ We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
 
-.. image:: ./images/5_bigip1_mgmt_ip.png
-	   :scale: 50%
-
-.. image:: ./images/6_bigip1_mgmt_bypass_warning.png
-	   :scale: 50%
+ .. note::  If you are using Chrome and are not given the option to bypass the certificate warning you can either use a different browser, or type 'thisisunsafe' on that tab and you'll bypass the warning.
+ 
+.. image:: ./images/00_thisisunsafe.png
 
 Login to the Big-IP1 Configuration Utility (WebUI) using the values found in "terraform output"
 
-...note the system has not been configured with anything other than a management IP address and admin account.
+...note the system has not been configured with anything other than a management IP address and admin account.  Here are some things to check to show you within the GUI:
 
-No self-IP.
+Network -> Self-IP addresses
 
-.. image:: ./images/8_bigip_no_config1.png
-	   :scale: 50%
+Network -> Routes
 
-No Routes.
+Network -> Interfaces
 
-.. image:: ./images/9_bigip_no_config2.png
-	   :scale: 50%
+LTM -> Virtual Servers
 
-Traffic interface in uninitialized state.
+Device Management -> Devices
 
-.. image:: ./images/10_bigip_no_config3.png
-	   :scale: 50%
+Verify the same for Big-IP2.
 
-No Virtual Servers.
-
-.. image:: ./images/11_bigip_no_config4.png
-	   :scale: 50%
-
-No Device Groups.
-
-.. image:: ./images/12_bigip_no_config5.png
-	   :scale: 50%
-
-Do the same for Big-IP2.
-
-.. image:: ./images/7_bigip2_mgmt_bypass_warning.png
-	   :scale: 50%
 
 
 

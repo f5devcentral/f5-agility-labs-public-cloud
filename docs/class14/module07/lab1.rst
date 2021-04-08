@@ -8,47 +8,30 @@ Big-IP1 => iApps => Package Management LX => note "f5-cloud_failover" package ha
 
 Do the same for Big-IP2.
 
-From Postman, “Lab - F5 Cloud Failover" => “Step 1: Check f5-cloud-failover - BIGIP1”. => [Send].
+From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json”. => [Send].
 
 A "200 OK" response indicates the f5-cloud-failover extension is ready.
 
 .. image:: ./images/2_postman_check_cloud_failover_status_bigip1.png
 	   :scale: 50%
 
-From Postman, “Lab - F5 Cloud Failover" => “Step 2: Check f5-cloud-failover - BIGIP2”. => [Send].
+From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json”. => [Send].
 
 A "200 OK" response indicates the f5-cloud-failover extension is ready.
 
 .. image:: ./images/3_postman_check_cloud_failover_status_bigip2.png
 	   :scale: 50%
 
-AWS Tags to Track Cloud Failover Objects
-----------------------------------------
-
-From the AWS Console, Services => EC2 => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the “Tags” tab below. Note the Elastic IP has been tagged for use by the f5-cloud-failover extension
-
-.. image:: ./images/4_aws_console_elastic_ip.png
-	   :scale: 50%
-
-From the AWS Console, Services => VPC => Route Tables. Select the Default route table. Select the "Tags" tab below. Note the route table has been tagged for use by the f5-cloud-failover extension.
-
-.. image:: ./images/5_aws_console_route_table_tag.png
-	   :scale: 50%
-
-From the AWS Console, Services => S3. Note the S3 bucket has been tagged for use by the f5-cloud-failover extension.
-
-.. image:: ./images/6_aws_console_s3_bucket_tag.png
-	   :scale: 50%
 
 POST F5 Cloud Failover Declaration
 ----------------------------------
 
-From Postman, “Lab - F5 Cloud Failover" => “Step 3: POST f5-cloud-failover - BIGIP1”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
+From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json" => “Step 3: POST f5-cloud-failover - BIGIP1”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
 
 .. image:: ./images/7_postman_cloud_failover_post_bigip1.png
 	   :scale: 50%
 
-From Postman, “Lab - F5 Cloud Failover" => “Step 4: POST f5-cloud-failover - BIGIP2”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
+From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json" => “Step 4: POST f5-cloud-failover - BIGIP2”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
 
 .. image:: ./images/8_postman_cloud_failover_post_bigip2.png
 	   :scale: 50%
@@ -56,7 +39,7 @@ From Postman, “Lab - F5 Cloud Failover" => “Step 4: POST f5-cloud-failover -
 Test Failover
 -------------
 
-From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the "Tags" tab below.
+From the GCP Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the "Tags" tab below.
 
 .. image:: ./images/9_aws_console_elastic_ip.png
 	   :scale: 50%

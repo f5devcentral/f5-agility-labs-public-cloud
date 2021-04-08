@@ -8,16 +8,21 @@ Your Deployment => Systems => Client => VS Code.
 .. image:: ./images/00_admin_pass.png
   :scale: 50%
 
-Click [Done] in the lower right-hand corner.
+Visual Studio Code will launch as a tab in your current browser.  VS Code is running from a remote machine in your UDF environment.  As VS Code launches, in the lower portion of the screen you will have four tabs "Problems," "Output," "Debug Console," and "Terminal".  Select "Terminal" and you will have a bash prompt.
 
-Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the Administrator credentials. Copy and paste credentials from your clipboard.
-
-.. image:: ./images/01_rdp.png
+.. image:: ./images/14_bash.png
   :scale: 50%
 
-### Clone github repository to VS Code
+Authenticate the 'gcloud' command line utility
+=======================================================================================
+From the VS Code terminal run the following command:
 
-### Authenticate 'gcloud' command line utility - must be the same user you signed up for Agility with and _must_ be a Google Account.
+.. code-block:: bash
+  gcloud auth application-default login
+
+This will give you a link you can click on (or CMD-click) to open up a browser, prompting you to associate your GCP account with the gcloud command utility.  The browser will give you an authentication token to copy and paste back into the VS Code Terminal.  Paste into the terminal and gcloud will be successfully authenticated and will work for Terraform.
+
+.. note::  The GCP account you use must be identical to the user you signed up for Agility and signed into this account with.  Otherwise you will not have access to the F5 GCP Account built for this class
 
 
 
@@ -28,7 +33,7 @@ From the Visual Studio Code Terminal, clone the github repository for this lab a
 
 .. attention::
 
-  For a smooth ride, always invoke commands from inside the cloned git repository (f5agility2020-pc201). To check you're in the right place, you can run the command ``pwd`` and the output should read ``/home/f5admin/f5agility2020-pc201``
+  For a smooth ride, always invoke commands from inside the cloned git repository (Agility2021_GCP_Terraform_ATC). To check you're in the right place, you can run the command ``pwd`` and the output should read ``/home/ubuntu/projects/Agility2021_GCP_Terraform_ATC``
 
 .. code-block:: bash
 
@@ -38,22 +43,33 @@ From the Visual Studio Code Terminal, clone the github repository for this lab a
 .. image:: ./images/9_vscode_git_clone.png
   :scale: 50%
 
+Build two BIG-IPs using Terraform
+=======================================================================================
+
+The first step that needs to be done is update the variable "student_id" in the terraform.tfvars file.  Please use the assigned Student ID.
+
+. warning:: A failure to change the value of 'student_id' on line two of terraform.tfvars to your assigned ID will result in your lab failing, or colliding with another student's lab.
+
+You will need to initialize Terraform and allow it to download all required modules.  Do so by running 
+.. code-block:: bash
+  terraform init
 
 
-### terraform init
-### terraform plan
-### terraform apply
+Once initialized, We will run a terraform plan which will let terraform identify the resources that it will be creating.  Please run the following:
 
-You can always get the `terraform output` values again by invoking from the terminal, make sure to have bash toggled:
+.. code-block:: bash
+  terraform plan
+
+The last step of launching terraform is to "apply."  Note that this will take some time and will prompt you (by default) to proceed.  Please run the following and respond with 'yes' when prompted.Terraform
+
+.. code-block:: bash
+  terraform apply
+
+At the end of the 'terraform apply' you will receive what terraform calls outputs.  These are defined in the terraform variables.  You can always get the `terraform output` values again by invoking from the terminal, make sure to have bash toggled:
 
 .. code-block:: bash
 
    terraform output
-
-.. image:: ./images/14_bash.png
-  :scale: 50%
-
-
 
 Login to GCP Console
 ====================
@@ -62,11 +78,6 @@ Click on "Firefox" under access methods (or use your own local browser if able) 
 
 Once your terraform apply has finished, navigate to "Compute Engine" -> "VM Instances" and locate your BIG-IP instances denoted by "studentX-Y-YYYY-f5vm0[1,2]."  These are your BIG-IP units running within GCP
 
-
-
-
-
-Change
 
 .. attention::
 

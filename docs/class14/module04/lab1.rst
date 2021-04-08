@@ -1,6 +1,6 @@
 Basic network plumbing and services
 -----------------------------------
-TODO change images 
+In this step you will be validating that the BIG-IPs are configured as specified in the Declarative Onboarding declarattions posted in the last step.
 
 On Big-IP1, Network => VLANs. traffic VLAN was created via DO.
 
@@ -27,13 +27,5 @@ On Big-IP1, System => Configuration => Device => DNS was configured.
 .. image:: ./images/10_bigip1_do_dns.png
 	   :scale: 50%
 
-On Big-IP1, Network => Routes. No routes.
 
-.. image:: ./images/11_bigip1_do_no_route.png
-	   :scale: 50%
-
-On Big-IP2, Network. => Routes. No routes.
-
-.. image:: ./images/13_postman_bigip2_get_do_status.png
-	   :scale: 50%
-
+TODO - Routes - why do we need /32 routes, why are there 5 routes where other clouds or on-prem needs only 3 routes?  

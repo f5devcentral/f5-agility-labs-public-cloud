@@ -1,29 +1,13 @@
-TODO add image
-Click the bottom blue bar where it says AS3(3.25.0)
-This will open separate window with status is 200 OK and the Body response will indicate the AS3 version.
-The Status is 200 OK and the Body response will indicate the AS3 version.
-
-.. .. image:: ./images/14_postman_bigip2_get_do.png
-.. 	   :scale: 50%
-
-Clean config - No Partitions or Virtual Servers
+Using AS3 to create services
 -----------------------------------------------
 
-Big-IP1 => Local Traffic => Virtual Servers. There are no Virtual Servers configured in any partition.
+Navigate to whichever device you want to post the AS3 declarations to.  The BIG-IPs in this lab are in a sync-failover group, with auto-sync enabled.  A change to one BIG-IP will be automatically be replicated to the other
 
-TODO change image
 
-.. image:: ./images/1_bigip1_no_example_partition.png
-	   :scale: 50%
 
-TODO change image
+In the previous steps in module 2 you validated that there were no virtual servers on the BIG-IPs.  You can validate this again, but up until this point we have not modified the BIG-IPs to have any virtual servers.
 
-Big-IP2 => Local Traffic => Virtual Servers. There are no Virtual Servers configured in any partition.
-
-.. image:: ./images/2_bigip2_no_example_partition.png
-	   :scale: 50%
-
-Check AS3 is ready
+Post AS3 declarations
 ------------------
 
 Click on Lab4.3-AS3 under the drop down menu, select "as3.json" request.
@@ -32,28 +16,12 @@ Right Click "Post as AS3 Declaration".
 .. image:: ./images/21_as3.png
 	   :scale: 50%
 
-Status 200 OK response signals that Application Services 3 Extension (AS3) is ready on Big-IP 1.
+Status 200 OK response signals that Application Services 3 Extension (AS3) is completed on Big-IP 1.
 
 .. image:: ./images/22_as3.png
 	   :scale: 50%
 
-TODO change 
-		 
-From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 1: Check AS3 - BIGIP1” => [Send].
 
-Status 200 OK response signals that Application Services 3 Extension (AS3) is ready on Big-IP1.
-
-.. image:: ./images/as3.png
-	   :scale: 50%
-
-From Postman, “Lab - AS3 Declarations with Pool Member AutoDiscovery” => “Step 2: Check AS3 - BIGIP2” => [Send].
-
-Status 200 OK response signals that Application Services 3 Extension (AS3) is ready on Big-IP2.
-
-.. image:: ./images/4_postman_bigip2_check_as3.png
-	   :scale: 50%
-
-TODO change 
 
 Create HTTP Virtual Servers with AS3 and Service Discovery
 ----------------------------------------------------------
@@ -90,17 +58,7 @@ Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01" Partition fr
 .. image:: ./images/10_bigip2_virtual_servers_created.png
 	   :scale: 50%
 
-From the Visual Studio Code Terminal, note the value of ``virtual_server01_elastic_ip``.
 
-
-.. code-block:: bash
-
-   terraform output virtual_server01_elastic_ip
-
-Open a new browser tab. Connect via HTTP to ``virtual_server01_elastic_ip``.
-
-.. image:: ./images/11_elastic_ip_example_app.png
-	   :scale: 50%
 
 TODO change - Do we need this?  Need to update the Elastic IP to FWD Rule
 
