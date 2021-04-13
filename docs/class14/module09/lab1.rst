@@ -2,6 +2,7 @@ Terraform Destroy
 -----------------
 
 Now delete the BIG-IP infrastructure 
+
 .. code-block:: bash
 
    terraform destroy --force 
@@ -13,8 +14,5 @@ Now delete the BIG-IP infrastructure
 	   :scale: 50%
 
 Confirm it's all gone.
-
-.. image:: ./images/5_aws_console_ec2_clean.png
-	   :scale: 50%
 
 Fin.  

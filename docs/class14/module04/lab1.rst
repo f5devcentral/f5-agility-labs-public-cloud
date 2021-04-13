@@ -27,5 +27,3 @@ On Big-IP1, System => Configuration => Device => DNS was configured.
 .. image:: ./images/10_bigip1_do_dns.png
 	   :scale: 50%
 
-
-TODO - Routes - why do we need /32 routes, why are there 5 routes where other clouds or on-prem needs only 3 routes?  

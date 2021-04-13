@@ -1,43 +1,54 @@
-F5 Telemetry Streaming (TS) to GCP Monitoring
----------------------------------------------
+F5 Telemetry Streaming (TS) to Google Cloud Operations Suite’s Cloud Monitoring
+-------------------------------------------------------------------------------
 
 The Telemetry Streaming package has been installed as part of the base image.  You can verify it is installed by going to iApps => Package Management LX, where you can note the version.
 
-From F5 VScode Extension, “Lab - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
+.. image:: ./images/00_bigip_ts_check.png
+	   :scale: 75%
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
+Make sure you are signed into BIG-IP 1, click on TS the bottom blue bar. 
 
-.. image:: ./images/2_postman_telemetry_streaming_status_bigip1.png
-	   :scale: 50%
+.. image:: ./images/01_vs_ts_validation.png
+	   :scale: 75%
 
-From F5 VScode Extension, “Lab4.5-TS” click on Lab4.5-TS under the drop down menu, select "ts.json" request.
+"message:Success" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
+
+From files tab click on Lab4.5-TS under the drop down menu, select "ts.json" request.
 Right Click "Post as TS Declaration".
 
 .. image:: ./images/1_ts1.png
-	   :scale: 50%
+	   :scale: 75%
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP1.
+"message:Success" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP1.
 
-.. image:: ./images/2_ts2.png
-	   :scale: 50%
+.. image:: ./images/03_ts_success.png
+	   :scale: 75%
 
-From the GCP Console, Services => type "Monitoring" in the search box, choose "Monitoring" from the drop-down results.
+Go to the ip address for both webapp_1 and webapp_2 and refresh the page 10 times.
+
+.. image:: ./images/9_example_app_bigip1.png
+	   :scale: 75%
+
+Now from the GCP Console, Services => type "Monitoring" in the search box, choose the first "Monitoring" option from the drop-down results.
 
 .. image:: ./images/3_ts3.png
-	   :scale: 50%
+	   :scale: 75%
 
-From the GCP Console, Monitoring => Metrics explorer 
-
-.. image:: ./images/4_ts4.png
-	   :scale: 50%
-
-Click on query editor in the editor type fetch generic_node :: custom/system/cpu. Then click Run Query
+From Monitoring on the side panel => Metrics explorer.
 
 .. image:: ./images/4_ts4.png
-	   :scale: 50%
+	   :scale: 75%
+
+Click on query editor in the editor type fetch generic_node :: custom/system/cpu. Then click Run Query.
+
+.. image:: ./images/10_gcp_monitoring_metrics_q_edit.png
+	   :scale: 75%
+
+.. image:: ./images/11_gcp_query_results.png
+	   :scale: 75%
 
 		
 
-Eventually you will see telemetry data 
+Eventually you will see telemetry data.
 
 

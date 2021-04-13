@@ -27,7 +27,7 @@ Wait a few minutes until status is 200 OK
 
 At the bottom of the VS Code window in the blue bar, you can click on the DO (1.18.0) to submit a "GET" request to get the status of the DO execution.
 
-TODO Change 
+
 .. attention::
 
   Make sure Big-IP1 is active and Big-IP2 is standby before proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" => bigip2.example.com => [Force to Standby].

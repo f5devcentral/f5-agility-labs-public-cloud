@@ -3,64 +3,34 @@ Check F5 Cloud Failover is Ready
 
 Big-IP1 => iApps => Package Management LX => note "f5-cloud_failover" package has been installed. 
 
-.. image:: ./images/1_cloud_failover_installed.png
+.. image:: ./images/00_service_discovery_check.png
 	   :scale: 50%
 
-Do the same for Big-IP2.
-
-From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json”. => [Send].
-
-A "200 OK" response indicates the f5-cloud-failover extension is ready.
-
-.. image:: ./images/2_postman_check_cloud_failover_status_bigip1.png
-	   :scale: 50%
-
-From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json”. => [Send].
-
-A "200 OK" response indicates the f5-cloud-failover extension is ready.
-
-.. image:: ./images/3_postman_check_cloud_failover_status_bigip2.png
-	   :scale: 50%
-
+Do the same for BIG-IP2
 
 POST F5 Cloud Failover Declaration
 ----------------------------------
 
-From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json" => “Step 3: POST f5-cloud-failover - BIGIP1”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
+From the files tab click on "Lab4.4-CFE" => highlight all of the text in "as3_cfe.json". => right click then select Make HTTP Request.
 
-.. image:: ./images/7_postman_cloud_failover_post_bigip1.png
+.. image:: ./images/01_Select_and_Make_HTTP_ Request.png
 	   :scale: 50%
 
-From F5 VSCode Extension, “Lab4.4-CFE" => “as3_cfe.json" => “Step 4: POST f5-cloud-failover - BIGIP2”. => [Send]. A "200 OK" response indicates the declaration was successfully posted.
+A "message:success" response indicates the f5-cloud-failover declaration was successfully posted.
 
-.. image:: ./images/8_postman_cloud_failover_post_bigip2.png
+.. image:: ./images/02_cfe_declaration_validation.png
 	   :scale: 50%
+
 
 Test Failover
 -------------
 
-From the GCP Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) mapped to 10.0.1.51. Select the "Tags" tab below.
-
-.. image:: ./images/9_aws_console_elastic_ip.png
-	   :scale: 50%
-
-From the Visual Studio Code Terminal, note the value of ``virtual_server01_elastic_ip``.
-
-.. code-block:: bash
-
-   terraform output virtual_server01_elastic_ip
-
-Open a new browser tab. Connect via HTTPS to ``virtual_server01_elastic_ip`` or if you already have a tab open to the example application from a previous section, use that.
-
-.. image:: ./images/9_example_app_bigip1.png
-	   :scale: 50%
-
-From Big-IP1, Device Management => Devices => bigip1.f5lab.dev.
+From Big-IP1, Device Management => Devices => bigip1(Self).
 
 .. image:: ./images/11_device_bigip1.png
 	   :scale: 50%
 
-Force bigip1.f5lab.dev to standby. Click [Force to Standby].
+Force bigip1 to standby. Click [Force to Standby].
 
 .. image:: ./images/12_device_bigip1_force_to_standby.png
 	   :scale: 50%

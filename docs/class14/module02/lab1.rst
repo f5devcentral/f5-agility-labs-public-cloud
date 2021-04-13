@@ -1,5 +1,5 @@
 Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
-------------------------------------------------------------
+------------------------------------------------------------------
 
 From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI for each BIG-IP using the provided username and password.  From the VS Code terminal, you can type "terraform output" to see the outputs again.
 
@@ -15,13 +15,23 @@ Login to the Big-IP1 Configuration Utility (WebUI) using the values found in "te
 
 Network -> Self-IP addresses
 
+.. image:: ./images/8_bigip_no_config1.png
+
 Network -> Routes
+
+.. image:: ./images/9_bigip_no_config2.png
 
 Network -> Interfaces
 
+.. image:: ./images/10_bigip_no_config3.png
+
 LTM -> Virtual Servers
 
+.. image:: ./images/11_bigip_no_config4.png
+
 Device Management -> Devices
+
+.. image:: ./images/12_bigip_no_config5.png
 
 Verify the same for Big-IP2.
 
