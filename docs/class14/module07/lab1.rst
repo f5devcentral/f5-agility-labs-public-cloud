@@ -45,22 +45,6 @@ From Big-IP2, in the upper-left-hand corner, note "ONLINE (ACTIVE)". Big-IP2 was
 .. image:: ./images/14_device_bigip2_active.png
 	   :scale: 50%
 
-From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) previously mapped to 10.0.1.51. Hit the refresh icon until you see the new mapping to 10.0.1.61 (Big-IP2).
-
-.. image:: ./images/15_aws_console_elastic_ip_moved_to_bigip2.png
-	   :scale: 50%
-
-Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
-
-.. image:: ./images/16_example_app_bigip2_bypass_warning.png
-	   :scale: 50%
-
-.. attention::
-
-  The example application reports which Availability Zone is serving up the content (pool member), *not* which Availability Zone is hosting the active Big-IP.
-
-.. image:: ./images/17_example_app_bigip2.png
-	   :scale: 50%
 
 From Big-IP2, Device Management => Devices => bigip2.f5lab.dev.
 
@@ -77,11 +61,6 @@ On Big-IP2, in the upper-left-hand corner, note "ONLINE (STANDBY)".
 From Big-IP1, in the upper-left-hand corner, note "ONLINE (ACTIVE)". Big-IP1 is now back to active.
 
 .. image:: ./images/20_device_bigip1_active.png
-	   :scale: 50%
-
-From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the Elastic IP (public IP) previously mapped to 10.0.1.61. Hit the refresh icon until you see the new mapping back to 10.0.1.51 (Big-IP1).
-
-.. image:: ./images/21_aws_console_elastic_ip_moved_to_bigip1.png
 	   :scale: 50%
 
 Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.

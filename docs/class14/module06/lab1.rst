@@ -40,6 +40,6 @@ Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used GCP tags to
 
 Log into Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01" Partition from the Drop-down in the upper-right-hand corner. Even though you only POSTED an AS3 declaration to Big-IP1, Config Sync replicated the Virtual Servers and all supporting configuration objects (pools, profiles, etc.) to Big-IP2.
 
-
-
+.. image:: ./images/25_as3_standby.png
+	   :scale: 75%
 

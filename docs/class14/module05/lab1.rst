@@ -32,12 +32,15 @@ At the bottom of the VS Code window in the blue bar, you can click on the DO (1.
 
   Make sure Big-IP1 is active and Big-IP2 is standby before proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" => bigip2.example.com => [Force to Standby].
 
+.. image:: ./images/12_device_bigip1_force_to_standby.png
+	   :scale: 50%
+
 From the Big-IP1 Configuration Utility (WebUI), note that bigip1.example.com is the "ONLINE (ACTIVE)" device and "In Sync".
 
-.. image:: ./images/9_bigip1_active.png
+.. image:: ./images/17_do_active.png
 	   :scale: 50%
 
 From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is the "ONLINE (STANDBY)" device and "In Sync".
 
-.. image:: ./images/10_bigip2_standby.png
+.. image:: ./images/16_do_standby.png
 	   :scale: 50%
