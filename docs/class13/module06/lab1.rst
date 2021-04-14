@@ -74,7 +74,7 @@ Open a new browser tab. Connect via HTTP to ``virtual_server01_elastic_ip``.
 .. image:: ./images/11_elastic_ip_example_app.png
 	   :scale: 50%
 
-Enable modern protocols such as HTTP/2 and TLS 1.3 with AS3 and Service Discovery
+Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 ---------------------------------------------------------------------------------
 
 From Postman, “Lab 4.3 - AS3 Declarations with Pool Member AutoDiscovery” => “Step 4: Create AS3 - Example01/example01 HA Modern Protocols”. => [Send].
@@ -95,7 +95,7 @@ Open a new browser tab. Connect via HTTPS to ``virtual_server01_elastic_ip``. We
 .. image:: ./images/16_example_app_https.png
 	   :scale: 50%
 
-From the browser, note the ciphers used: TLS 1.2. We'll upgrade to TLS 1.3 with ECDSA certs shortly.
+From the browser, note the ciphers used: We'll upgrade to an ECDSA cert and key shortly.
 
 .. image:: ./images/17_example_app_https_tls_1.2.png
 	   :scale: 50%
@@ -134,8 +134,8 @@ From the browser, in the tab with the example HTTPS application, hit [CTRL] + [F
 .. image:: ./images/23_example_app_https_bypass_warning.png
 	   :scale: 50%
 
-Click on the padlock icon on the left-hand side of the URL bar and note the ciphers used: ECDSA enabled and protocol is now TLS1.3
+Click on the padlock icon on the left-hand side of the URL bar and note the ciphers used: the cipher used is now ECDSA enabled
 
-.. image:: ./images/28_example_app_https_tls_1.3.png
+.. image:: ./images/24_example_app_https_tls_1.2_ecdsa.png
 	   :scale: 50%
 

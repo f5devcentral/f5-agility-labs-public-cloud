@@ -41,11 +41,11 @@ Maximize the Terminal Window by clicking on the ^ in the upper-right-hand corner
 Login to AWS Console
 ====================
 
-A URL shortcut has been auto-generated on the Windows desktop: "Amazon Web Services Sign-In".
+A URL shortcut has been auto-generated on the Windows desktop: "**{AWS Account ID}** AWS Sign-In".
 
-First, launch Firefox from the taskbar, then click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop.
+First, launch Firefox from the taskbar, then click on the "**{AWS Account ID}** AWS Sign-In" URL shortcut on the Desktop.
 
-If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "Amazon Web Services Sign-In" URL shortcut on the Desktop. 
+If the Firefox resolution in your RDP session renders components off-screen, try to first launch Firefox from the taskbar *before* you click on the "**{AWS Account ID}** AWS Sign-In" URL shortcut on the Desktop. 
 
 Alternatively, you can CTRL+click the "AWS Console URL:" https shortcut in the Visual Studio Code terminal.
 
@@ -63,23 +63,21 @@ Login to the AWS web console with the credentials shown in your terminal.
 
 "Services" => type "marketplace" in the search window. Select "AWS Marketplace Subscriptions" from the search results. Right-click on "Manage subscriptions" to open a new tab.
 => "Discover products"
+Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF with LTM, IPI, and Threat Campaigns (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
 
-.. image:: ./images/4_aws_console_marketplace.png
+.. image:: ./images/6_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
-Type "f5 advanced 25mbps" in the search box. => "F5 Advanced WAF (PAYG, 25Mbps)" => "Continue to Subscribe" => "Accept Terms"
-
-.. image:: ./images/6_aws_console_marketplace_subscribe.png
+.. image:: ./images/6a_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
-.. image:: ./images/7_aws_console_marketplace_accept_terms.png
-  :scale: 50%
-
-.. image:: ./images/8_aws_console_marketplace_accept_terms_pending.png
+.. image:: ./images/6b_aws_marketplace_accept_terms_f5.png
   :scale: 50%
 
 Track "Effective date" and "Expiration date". When they are no longer "Pending" you can proceed.
 
+.. image:: ./images/7_aws_marketplace_subscribe_to_f5.png
+  :scale: 50%
 
 Deploy F5 Virtual Editions and a complete application environment to AWS with Terraform
 =======================================================================================
@@ -114,6 +112,12 @@ Create an SSH key and upload to your AWS account. We'll later use this key to co
   create-ssh-keys.sh
 
 .. image:: ./images/10_vscode_create_ssh_key.png
+  :scale: 50%
+
+
+From the AWS Console, make sure you are in the us-west-2 (Orgeon) region.
+
+.. image:: ./images/14_verify_us-west-2_region.png
   :scale: 50%
 
 From the AWS Console => Services => EC2 => Key pairs. Confirm your ssh key was created.

@@ -48,6 +48,10 @@ Eventually, the status will be 200 OK. Our DO declaration has successfully creat
 .. image:: ./images/14_postman_bigip2_do_completed.png
 	   :scale: 50%
 
+.. note::
+  
+  The above steps will restart services on the BIG-IP instances. While services are restarted, the web UI may be momentarily unresponsive.
+
 On Big-IP1, Network => VLANs. traffic VLAN was created via DO.
 
 .. image:: ./images/6_bigip1_do_vlan.png
