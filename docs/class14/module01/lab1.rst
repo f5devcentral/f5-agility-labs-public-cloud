@@ -9,19 +9,7 @@ Your Deployment => Systems => Client => VS Code.
   :scale: 50%
   :alt: UDF Access
 
-Visual Studio Code will launch as a tab in your current browser.  VS Code is running from a remote machine in your UDF environment.  As VS Code launches, select "View" from the menu bar, then "Terminal" from the menu.
-
-.. image:: ./images/1_vscode_terminal.png
-  :scale: 50%
-  :alt: View Terminal
-
-A terminal window will appear at the bottom of the VS Code screen.
-
-.. image:: ./images/2_vscode_terminal.png
-  :scale: 50%
-  :alt: bash terminal
-  
-Make sure the Terminal window indicates a "bash" shell
+Visual Studio Code will launch as a tab in your current browser.  VS Code is running from a remote machine in your UDF environment.  Once in this tab, there will be a terminal window at the bottom of the screen.  Make sure the Terminal window indicates a "bash" shell.
 
 .. image:: ./images/03_vscode_bash.png
   :scale: 50%
