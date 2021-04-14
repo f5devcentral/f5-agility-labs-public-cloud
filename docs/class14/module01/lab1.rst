@@ -59,7 +59,7 @@ The pasted token will look like this:
   :scale: 50%
   :alt: bash terminal
 
-
+Once you click "Enter," gcloud will now be able to operate against the Agility GCP account.  The gcloud authorization will also allow Terraform to use the gcloud credentials to operate against GCP.
 
 
 Deploy F5 Virtual Editions and a complete application environment to GCP with Terraform
