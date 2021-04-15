@@ -8,13 +8,12 @@ Secure Azure Computing Architecture (SACA). One of many Secure Cloud
 Architectures available from F5. This lab will use Azure Resource
 Manager (ARM) Templates to deploy a Highly Available Pair of BIG-IPs.
 
-0.1 General information 
+0.1 General information
 -----------------------
 
 This lab is hosted directly in Microsoft Azure. Each student should
 receive an email sent to their agility registration address before the
 lab begins. This email will contain the following information:
-
 
 Logon URL: https://portal.azure.com
 
@@ -27,11 +26,15 @@ You will have the ability to deploy Virtual Resources, that is the point
 of the lab. Please only deploy the resources you are directed to deploy
 in the lab guide.
 
-In addition, you should receive an email from UDF that looks something like this:
- |image1| 
+In addition, you should receive an email from UDF that looks something like
+this:
 
-And if you have never registered for UDF before, also an email like this providing you with your username and temporary password:
- |image2| 
+image1|
+
+And if you have never registered for UDF before, also an email like this
+providing you with your username and temporary password:
+
+|image2|
 
 0.2 Lab Topology
 ----------------
@@ -46,7 +49,7 @@ will explore as part of Module 3.
 0.3 Lab Module Overview
 -----------------------
 
-Lab Module 1 
+Lab Module 1
 ~~~~~~~~~~~~
 
 Module 1 is done together with the Lab Instructor. It is an exploration

@@ -333,9 +333,6 @@ group will be deleted.
 
 |image34| **Stop, this is the end of Module 1.**
 
-
-
-
 .. |image4| image:: media/image4.png
 .. |image5| image:: media/image5.png
 .. |image6| image:: media/image6.png

@@ -30,10 +30,11 @@ your browser.
 
 Then cut and paste the following
 
-$agreementTerms=Get-AzMarketplaceterms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly"
+$agreementTerms=Get-AzMarketplaceterms -Publisher "f5-networks"
+-Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly"
 
-Set-AzMarketplaceTerms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly" -Terms $agreementTerms -Accept
-
+Set-AzMarketplaceTerms -Publisher "f5-networks" -Product "f5-big-ip-best"
+ -Name "f5-bigip-virtual-edition-1g-best-hourly" -Terms $agreementTerms -Accept
 
 Once the commands run the output should look like this:
 
@@ -135,9 +136,10 @@ When completed the output should look like the below screenshot.
 
 Save this info in green for Lab 4.
 
-|image45| 
+|image45|
 
-|image34| 
+|image34|
+
 **Stop, this is the end of Module 3.**
 
 .. _lab-module-4-1:
