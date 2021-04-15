@@ -1,5 +1,5 @@
 Protecting Cloud Native Applications
-=============================================
+====================================
 
 This class covers the following topics:
 
