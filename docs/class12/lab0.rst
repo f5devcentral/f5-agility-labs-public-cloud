@@ -28,10 +28,10 @@ of the lab. Please only deploy the resources you are directed to deploy
 in the lab guide.
 
 In addition, you should receive an email from UDF that looks something like this:
-|image1|
+ |image1| 
 
 And if you have never registered for UDF before, also an email like this providing you with your username and temporary password:
-|image2|
+ |image2| 
 
 0.2 Lab Topology
 ----------------
