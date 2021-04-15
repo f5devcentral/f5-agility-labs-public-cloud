@@ -77,37 +77,10 @@ via the second public IP address deployed in the ARM Template. You will
 configure Azure Network Security Groups and Load Balancers to ensure
 traffic can reach a referenced web server iRule running on a VIP.
 
-0.4 Initial Login for Azure
----------------------------
-
-Go to https://portal.azure.com/
-
-You may need to log out of your existing Azure Account to log in with
-the test account. Using an incognito mode browser window should work as
-well.
-
-Enter the Username and password from the email. It should be similar to:
-SCAStudent##@f5custlabs.onmicrosoft.com where ## is your student number.
-
-|image1|
-
-Click Next.
-
-You will be prompted to change your password
-
-|image2|
-
-Enter your old password and a new password of your choice twice.
-
-Once completed you should be at the Azure Home Page for the F5 Customer
-Labs Subscription. It should say so in the upper right-hand corner:
-
-|image3|
-
-If you have an issue logging in, need a password reset, or are in the
-wrong subscription please let a lab assistant know immediately!
-
 .. _section-1:
 .. |image1| image:: media/image1.png
+  :scale: 75 %
 .. |image2| image:: media/image2.png
+  :scale: 75 %
 .. |image3| image:: media/image3.png
+  :scale: 70 %
