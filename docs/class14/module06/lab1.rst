@@ -1,8 +1,6 @@
 Using AS3 to create services
 -----------------------------
-Navigate to whichever device you want to post the AS3 declarations to.  The BIG-IPs in this lab are in a sync-failover group, with auto-sync enabled.  A change to one BIG-IP will be automatically be replicated to the other.
-
-
+Since your devices are now clustered in a sync-failover group and using auto-sync, you can post service declarations to whichever device you choose. A change to one BIG-IP will be automatically be replicated to the other.
 
 In the previous steps in module 2 you validated that there were no virtual servers on the BIG-IPs.  You can validate this again, but up until this point we have not modified the BIG-IPs to have any virtual servers.
 
@@ -25,7 +23,7 @@ Status code 200 response signals that Application Services 3 Extension (AS3) is 
 AS3 and Service Discovery
 --------------------------
 
-Review the Body of the declaration. The AS3 declaration is configured to discover pool members based on GCP labels.
+As part of AS3, you can now leverage service discovery to automatically parse the cloud environment to look for Metadata.  In GCP this is done via labels on instances, or items like forwarding rules.  Review the Body of the declaration. The AS3 declaration is configured to discover pool members based on GCP labels.
 
 
 Log into Big-IP1 => Local Traffic => Virtual Servers. Choose the "Example01" Partition from the Drop-down in the upper-right-hand corner. AS3 created two HTTP virtual servers: example01a and example01b.

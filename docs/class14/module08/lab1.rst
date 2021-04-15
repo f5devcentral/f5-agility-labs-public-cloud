@@ -1,6 +1,8 @@
 F5 Telemetry Streaming (TS) to Google Cloud Operations Suite’s Cloud Monitoring
 -------------------------------------------------------------------------------
 
+Telemetry Streaming was created to offload common metrics from the BIG-IP onto external monitoring/graphing utilities, including the major cloud-native monitoring programs.  In this lab we will be sending the some basic metrics from the BIG-IP to Cloud Monitoring - part of GCP.
+
 The Telemetry Streaming package has been installed as part of the base image.  You can verify it is installed by going to iApps => Package Management LX, where you can note the version.
 
 .. image:: ./images/00_bigip_ts_check.png
@@ -48,7 +50,6 @@ Click on query editor in the editor type fetch generic_node :: custom/system/cpu
 	   :scale: 75%
 
 		
-
-Eventually you will see telemetry data.
+This may take a few minutes, but eventually you will see telemetry data start to be shown.
 
 
