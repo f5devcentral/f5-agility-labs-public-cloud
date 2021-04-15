@@ -3,7 +3,7 @@ PC201 - Deploying F5 Solutions to GCP with Terraform and The F5 Automation Toolc
 
 This is a proctor led intermediate level lab.
 
-In this lab, we'll demystify how Terraform integrates with the F5 Automation and Orchestration toolchain to deploy and configure a dedicated AWS Security VPC. Topics covered include:
+In this lab, we'll demystify how Terraform integrates with the F5 Automation and Orchestration toolchain to deploy to a shared GCP environment. Topics covered include:
 
 - Terraform
 - F5 Cloud-init
