@@ -25,7 +25,8 @@ Authenticate the 'gcloud' command line utility
 From the VS Code terminal run the following command:
 
 .. code-block:: bash
-  gcloud auth application-default login
+
+   gcloud auth application-default login
 
 This will give you a link you can click on (or CMD-click) to open up a browser, prompting you to associate your GCP account with the gcloud command utility.  The browser will give you an authentication token to copy and paste back into the VS Code Terminal.  Paste into the terminal and gcloud will be successfully authenticated and will work for Terraform.
 
@@ -70,6 +71,7 @@ From the Visual Studio Code Terminal, clone the github repository for this lab a
 .. warning:: For a smooth ride, always invoke commands from inside the cloned git repository (Agility2021_GCP_Terraform_ATC). To check you're in the right place, you can run the command ``pwd`` and the output should read ``/home/ubuntu/projects/Agility2021_GCP_Terraform_ATC``
 
 .. code-block:: bash
+
    git clone https://github.com/jtylershaw/Agility2021_GCP_Terraform_ATC.git
    cd Agility2021_GCP_Terraform_ATC/
 
@@ -100,7 +102,8 @@ terraform init
 Once initialized, We will run a terraform plan which will let terraform identify the resources that it will be creating.  Please run the following:
 
 .. code-block:: bash
-  terraform plan
+
+   terraform plan
 
 .. image:: ./images/12_vscode_terraform_plan_complete.png
   :scale: 50%
@@ -110,7 +113,8 @@ Once initialized, We will run a terraform plan which will let terraform identify
 The last step of launching terraform is to "apply."  Note that this will take some time and will prompt you (by default) to proceed.  Please run the following and respond with 'yes' when prompted.
 
 .. code-block:: bash
-  terraform apply
+
+   terraform apply
 
 At the end of the 'terraform apply' you will receive what terraform calls outputs.  These are defined in the terraform variables.  You can always get the 'terraform output' values again by invoking from the terminal, make sure to have bash toggled:
 
@@ -119,6 +123,7 @@ At the end of the 'terraform apply' you will receive what terraform calls output
   :alt: tf apply
 
 .. code-block:: bash
+
    terraform output
 
   .. image:: ./images/14_terraform_output.png
