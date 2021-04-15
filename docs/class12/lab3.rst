@@ -1,221 +1,134 @@
-3.0 Lab Module 3 Exploring the SACA components
-==============================================
+3.0 Lab Module 3
+================
 
-(We will do this together so just follow along with the Instructor, the
-below info is for your later reference).
+In this module we are going to use **git** to clone a repository from
+**Github** to our workstation then modify it for our needs, then use
+**Terraform** to deploy it.
 
-**Go to**\ https://portal.azure.com/
+3.1 Clone SACA Repository
+-------------------------
 
-You may need to log out of your existing Azure Account to log in with
-the test account. Using an incognito mode browser window should work as
-well.
+Before we can automatically deploy BIG-IPs from the Marketplace, we need
+accept the terms and conditions associated with those products. This is
+a onetime operation and doesn’t need to be repeated. However, since
+these are brand new accounts they have not done this step yet.
 
-**Enter the Username and password** from the email. It should be similar
-to: **SCAStudent##@f5custlabs.onmicrosoft.com** where ## is your student
-number.
-
-|image19|
-
-**Click Next.**
-
-You should now be at the Azure Home Page. Find and **click on the
-Resource Groups Icon** at the top of the screen.
-
-|image20|
-
-Find and **click on the Resource Group that matches the name of the
-resource group you deployed in Lab 2**. It should be named RG## where ##
-is your student number.
-
-|image21|
-
-Inside the Resource group, you should see 30 objects. Then **click on
-“Deployments: 1 Succeeded”** at the top right, to validate that the
-deployment was successful.
-
-|image22|
-
-How long did it take for the deployment to finish?
-
-|image23|
-
-Deployments normal take between 10 and 15 minutes depending on how busy
-the cloud service provider is.
-
-**Click on overview** to go back to the list of objects.
-
-|image24|
-
-Next find and **click on RGXX-ext-pip0**
-
-|image25|
-
-This is the external IP address used for the management plane. Please
-record this for future use.
-
-|image26|
-
-You can copy the IP address to the clipboard by **clicking on the icon
-to the right of the IP address**, do this now.
-
-|image27|
-
-Open your RDP application. On windows this can be done by pressing the
-**Windows Key +** **R and** typing **mstsc,** then **clicking OK**
-
-|image28|
-
-Enter the IP address for **pip0** and **select connect**.
-
-|image29|
-
-**Enter the credentials from the ARM template**
-
-Username: **xadmin**
-
-Password: **Password11!!**
-
-Then **click ok**
-
-|image30|
-
-When prompted **select the checkbox next to “Don’t ask me again for
-connections to this computer”** then click **Yes.**
-
-|image31|
-
-Since this is the first time this windows server has been logged into
-you will be bombarded with dialog boxes. Manage them thusly:
-
-**Click yes or no**, it really does not matter, just make it go away.
-
-|image32|
-
-At the server manager prompt, **select the checkbox next to “Don’t show
-this message again”** and **close the message box.**
-
-|image33|
-
-**Exit out of server manager.**
-
-**Open internet explorer.**
-
-**Select Use recommended settings** and **click Ok.**
-
-|image34|
-
-Navigate to https://192.168.1.4
-
-**Click More information.**
-
-**Click Go on to the webpage.**
-
-|image35|
-
-When prompted you will need to add websites to the trusted sites zone.
-
-|image36|
-
-**Enter the credentials from the ARM template**
-
-Username: **xadmin**
-
-Password: **Password11!!**
-
-|image37|
-
-Verify that you are working on the active BIG-IP. By checking the status
-in the upper left-hand corner.
+Within the Azure Portal, locate the icon for **Azure Cloud Shell**, and
+click it.
 
 |image38|
 
-If this device is not the active device log into https://192.168.1.9 and
-repeat the logon process there.
+**If Prompted choose the PowerShell version.**
 
-**Go to Local Traffic…Virtual Servers**. How many Virtual Servers do you
-see?
+**You may get prompted to create a storage account, If you do accept the
+request.**
+
+When completed the Azure Cloud Shell will be active in the bottom of
+your browser.
 
 |image39|
 
-Remember that the AS3 Template deployed objects into the **mgmt
-partition.**
+Then cut and paste the following
 
-In the upper right-hand corner next to partition, **select mgmt.**
+Once the commands run the output should look like this:
 
 |image40|
 
-You should now see 3 virtual servers.
+Verify that **Accepted = True**
+
+You may now close the Azure Cloud Shell by clicking the **X** at the far
+right of the console.
 
 |image41|
 
-Feel free to explore some more. This is the end of Module3.
+.. _clone-saca-repository-1:
 
-.. |image19| image:: media/image2.png
-   :width: 2.86691in
-   :height: 2.83775in
-.. |image20| image:: media/image18.png
-   :width: 6.5in
-   :height: 0.86667in
-.. |image21| image:: media/image19.png
-   :width: 2.78358in
-   :height: 2.22936in
-.. |image22| image:: media/image20.png
-   :width: 6.5in
-   :height: 3.95417in
-.. |image23| image:: media/image21.png
-   :width: 5.69216in
-   :height: 1.07093in
-.. |image24| image:: media/image22.png
-   :width: 1.59597in
-   :height: 1.51263in
-.. |image25| image:: media/image23.png
-   :width: 1.1751in
-   :height: 0.55005in
-.. |image26| image:: media/image24.png
-   :width: 2.7419in
-   :height: 0.97925in
-.. |image27| image:: media/image25.png
-   :width: 3.72532in
-   :height: 0.46671in
-.. |image28| image:: media/image26.png
-   :width: 4.04618in
-   :height: 2.30437in
-.. |image29| image:: media/image27.png
-   :width: 4.51706in
-   :height: 2.50438in
-.. |image30| image:: media/image28.png
-   :width: 2.85025in
-   :height: 3.12944in
-.. |image31| image:: media/image29.png
-   :width: 4.35038in
-   :height: 3.97118in
-.. |image32| image:: media/image30.png
-   :width: 2.25853in
-   :height: 2.50438in
-.. |image33| image:: media/image31.png
-   :width: 3.46697in
-   :height: 1.41679in
-.. |image34| image:: media/image32.png
-   :width: 3.60865in
-   :height: 2.47938in
-.. |image35| image:: media/image33.png
-   :width: 3.25028in
-   :height: 3.24195in
-.. |image36| image:: media/image34.png
-   :width: 2.46271in
-   :height: 2.2877in
-.. |image37| image:: media/image35.png
-   :width: 1.57514in
-   :height: 2.20436in
-.. |image38| image:: media/image36.png
-   :width: 0.79174in
-   :height: 0.42087in
-.. |image39| image:: media/image37.png
-   :width: 1.48763in
-   :height: 0.61255in
-.. |image40| image:: media/image38.png
-   :width: 1.05009in
-   :height: 0.25836in
-.. |image41| image:: media/image39.png
-   :width: 6.5in
-   :height: 0.68333in
+3.2 Clone SACA Repository
+-------------------------
+
+Open **Git Bash**
+
+Navigate in the command line until your current directory is
+/c/Users/Administrator/terraform. You can validate this by running
+**pwd** from the command line.
+
+|image42|
+
+Clone the repository from its location at
+https://github.com/f5devcentral/f5-azure-saca to a new folder in your
+terraform directory.
+
+From the command line type:
+
+**git clone https://github.com/f5devcentral/f5-azure-saca**
+
+Since we did not specify a path or folder name it will clone it to a
+folder named **f5-azure-saca**
+
+Type **cd f5-azure-saca** to change to that directory.
+
+3.3 Create an admin.auto.tfvars
+-------------------------------
+
+Now open **vscode** and open the f5-azure-saca folder.
+
+Click **File…Open Folder…** and select the folder
+**c:\users\administrator\terraform\f5-azure-saca**
+
+Then Click **File…New File…**
+
+Now type the following text into the file:
+
+**location = "eastus2"**
+
+**region = "East US 2"**
+
+**projectPrefix = "student##" < - -(you have to change this to match
+your student number! It must also be lowercase.**
+
+**deploymentType = "three_tier"**
+
+**adminUserName = "xadmin"**
+
+**adminPassword = "pleaseUseVault123!!"**
+
+**bigip_version = "14.1.400000"**
+
+Then click **File...Save As…**
+
+Then type: **admin.auto** as the file name.
+
+And Choose **Terraform Variables (*.tfvars)** as the Save As Type.
+
+Then click **Save.**
+
+|image43|
+
+The completed file should look like the example below, minus the one
+line you need to change.
+
+.. _section-2:
+
+3.4 Deploy the solution with Terraform.
+---------------------------------------
+
+Open Git Bash and from the command line in the
+**/c/Users/Administrator/terraform/f5-azure-saca** folder type:
+
+**terraform init**
+
+**terraform validate**
+
+**terraform plan**
+
+**terraform apply --auto-approve**
+
+When completed the output should look like the below screenshot.
+
+|image44|
+
+Save this info in green for Lab 4.
+
+|image45| **Stop, this is the end of Module 3.**
+
+.. _lab-module-4-1:
