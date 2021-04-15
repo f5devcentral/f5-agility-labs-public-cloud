@@ -1,4 +1,4 @@
-Check F5 Cloud Failover is Ready
+Verify F5 Cloud Failover is Ready
 --------------------------------
 
 The Cloud Failover Extension is becoming the default mechanism for BIG-IPs to failover in the cloud.  This becomes a standard method and standard API to operate against so the configuration is similar amongst all clouds and lightens the complexity of understaning the underpinnings of HA Options pertaining to each cloud.
@@ -28,7 +28,7 @@ A "message:success" response indicates the f5-cloud-failover declaration was suc
 .. image:: ./images/02_cfe_declaration_validation.png
 	   :scale: 50%
 
-Post the declaration to BIG-IP2 as well.  The CFE configuration is not synchronized.
+Post the declaration to BIG-IP2 as well.  The CFE configuration is not synchronized as part of the DSC synchronization mechanism.
 
 Test Failover
 -------------

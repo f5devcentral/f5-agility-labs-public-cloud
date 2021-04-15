@@ -1,13 +1,13 @@
 Prepare F5 VSCode Extension
 ------------------------------------------------------
 
-The rest of the lab we will be working with the F5 Automation Toolchain.  This is a set of declarative API endpoints that you can install on top of TMOS to allow you to more simply manage BIG-IPs through an API.  As part of the upcoming GCP Terraform module, these modules will be installed by default.  Navigate in the TMUI to "iApps -> Package management LX" and you'll see four packages (The fifth is Service Discover and is now a subset of AS3):
+The rest of the lab we will be working with the F5 Automation Toolchain.  This is a set of declarative API endpoints that you can install on top of TMOS to allow you to more simply manage BIG-IPs through an API.  As part of the upcoming GCP Terraform module, these modules will be installed by default.  Navigate in the TMUI to "iApps -> Package management LX" and you'll see four packages (The fifth is Service Discovery and is now a subset of AS3):
 
 .. image:: ./images/00_service_discovery_check.png
 	:scale: 50%
 	:alt: Select F5
 
-After Terraform apply, Agility2021_GCP_Terraform_ATC folder will generate necessary declaration files for rest of the lab.
+The terraform apply you performed in the last step generated the necessary declaration files for rest of the lab.  They are located under the Agility2021_GCP_Terraform_ATC folder.
 
 The first step will be to configure the F5 VS Code Plugin to connect to the two BIG-IPs
 
@@ -29,7 +29,7 @@ Once the name loads on the side column click on the host and paste in the bigip_
 
 Do the same for big-ip 2.
 
-.. note:: Make sure you are signed into BIG-IP Host 1. Click the bottom blue bar where it says DO(1.18.0). This will open separate window with status is 200 OK and the Body response will indicate the DO version.
+.. note:: Make sure you are signed into BIG-IP Host 1 for the next step. Click the bottom blue bar where it says DO(1.18.0). This will open separate window with status is 200 OK and the Body response will indicate the DO version.
 
 Submit Declarative Onboarding declarations
 ------------------------------------------------------
