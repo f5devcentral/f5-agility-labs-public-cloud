@@ -16,7 +16,8 @@ We'll also explore common public cloud use cases such as:
 
 - Retrofit an application with modern protocols (TLS 1.3, HTTP/2, CSP)
 - Proxy your application with F5 for comprehensive analytics
-- Protect your application with a layered application security policy to defend against Automated Threats.
+- Protect your application with a layered application security policy to defend
+  against Automated Threats.
 
 .. toctree::
    :maxdepth: 1
