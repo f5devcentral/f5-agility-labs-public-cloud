@@ -15,6 +15,7 @@ This lab is hosted directly in Microsoft Azure. Each student should
 receive an email sent to their agility registration address before the
 lab begins. This email will contain the following information:
 
+
 Logon URL: https://portal.azure.com
 
 Username: SCAStudent______\_ (Example: SCAStudent37)
@@ -26,10 +27,16 @@ You will have the ability to deploy Virtual Resources, that is the point
 of the lab. Please only deploy the resources you are directed to deploy
 in the lab guide.
 
+In addition, you should receive an email from UDF that looks something like this:
+|image1|
+
+And if you have never registered for UDF before, also an email like this providing you with your username and temporary password:
+|image2|
+
 0.2 Lab Topology
 ----------------
 
-|A screenshot of a cell phone Description automatically generated|
+|image3|
 ------------------------------------------------------------------
 
 The lab when deployed will consist of an HA pair of 2 BIG-IPs, A Linux
@@ -101,16 +108,6 @@ If you have an issue logging in, need a password reset, or are in the
 wrong subscription please let a lab assistant know immediately!
 
 .. _section-1:
-
-.. |A screenshot of a cell phone Description automatically generated| image:: media/image1.png
-   :width: 6.5in
-   :height: 3.84514in
-.. |image1| image:: media/image2.png
-   :width: 2.86691in
-   :height: 2.83775in
-.. |image2| image:: media/image3.png
-   :width: 2.81274in
-   :height: 3.06693in
-.. |image3| image:: media/image4.png
-   :width: 2.36842in
-   :height: 0.57692in
+.. |image1| image:: media/image1.png
+.. |image2| image:: media/image2.png
+.. |image3| image:: media/image3.png

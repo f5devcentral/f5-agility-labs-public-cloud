@@ -1,95 +1,67 @@
-2.0 Lab Module 2
-================
+2.0 Lab Module 2 Exploring The SACA 
+====================================
 
-Ensure you are logged into the LF5 Customer Labs Azure Subscription. It
-should say so in the upper right-hand corner.
+**Lab 2** will focus on the GitHub page were the F5 Azure SACA Terraform
+scripts reside. There will no commands entered into GitBash or VS Code.
 
-|image9|
+Go to: https://github.com/f5devcentral/f5-azure-saca
 
-Open a second browser tab and navigate to
-https://github.com/f5devcentral/f5-azure-saca if you are not there
-already.
+You should see something like this:
 
-Scroll down the page until you get to the **Installation** Section.
+|image35|
 
-   Find the SACA v2 Azure Commercial Section (light blue not dark blue).
+Take a moment, scroll down and read the information available. Pay
+attention to the section where the inputs are documented:
 
-   Under that, find the 1 Tier 3-Nic use case
+|image36|
 
-   Under that Find the PAYG Option.
+Now let’s find and click on the **variables.tf** file:
 
-|image10|
+|image37|
 
-Click the PAYG option! A new tab should open containing an ARM template
-in Azure.
+This is where we defined variables for the root module. They are defined
+with a **variable** block:
+|image53|
 
-Ensure the subscription is **f5-AZR_4261_SALES_LAB_01**
+But they are referenced from within an object named **var**:
+|image54|
 
-Create a New Resource Group by clicking Create New.
+The variables.tf file has the definitions and default values of the
+variables used in the repository. If a variable is not defined via
+another method, then the default value specified here will be used.
 
-|image11|
+Other ways of defining variables:
 
-Then type “RG” and your student number, then click ok.
+From the command line using -var:
+|image55|
 
-|image12|
+Or in a file (.tfvars or .tfvars.json)
+|image56|
 
-Next enter the password: **Password11!!** For both the BIG-IP Admin and
-Windows Admin password. There are restricted password characters in
-Azure, so it is easier to use a password we know does not contain
-restricted characters.
+Or automatically with:
 
-|image13|
+-  Files named exactly **terraform.tfvars** or
+   **terraform.tfvars.json**.
 
-Change the **DNS label** to be RG\ *firstname*\ ## where ## matches your
-student number. Example: RGPaul60. **It is critical that this value is
-unique.**
+-  Any files with names ending in **.auto.tfvars** or
+   **.auto.tfvars.json.**
 
-|image14|
+In the next lab we will be creating and using an auto.admin.tfvars file.
 
-Change the **Number of External IPs** to 2.
+These types of variable files are useful for predefining multiple
+configurations. For example if you had a SACA stack in Azure Commercial
+and in Azure for Government you could have **saca.com.tfvars** and
+**saca.gov.tfvars** and use the same github repository with a different
+command line switch to deploy whichever one you wanted.
 
-|image15|
+|image34| 
+**Stop, this is the end of Module 2.**
 
-Change the **BIG-IP version** to **15.0.100000.**
-
-|image16|
-
-Change **STIG Device** to **False.**
-
-|image17|
-
-**Click the checkbox** next to **I agree to the terms and conditions
-stated above,** and then **click Purchase**
-
-|image18|
-
-.. |image9| image:: media/image4.png
-   :width: 2.36842in
-   :height: 0.57692in
-.. |image10| image:: media/image5.png
-   :width: 4.14619in
-   :height: 2.97526in
-.. |image11| image:: media/image10.png
-   :width: 4.45039in
-   :height: 0.89591in
-.. |image12| image:: media/image11.png
-   :width: 4.49622in
-   :height: 1.946in
-.. |image13| image:: media/image12.png
-   :width: 4.54623in
-   :height: 0.54171in
-.. |image14| image:: media/image13.png
-   :width: 4.46705in
-   :height: 0.30003in
-.. |image15| image:: media/image14.png
-   :width: 4.55873in
-   :height: 0.30419in
-.. |image16| image:: media/image15.png
-   :width: 4.46705in
-   :height: 0.25836in
-.. |image17| image:: media/image16.png
-   :width: 4.50872in
-   :height: 0.25836in
-.. |image18| image:: media/image17.png
-   :width: 2.08351in
-   :height: 1.90017in
+.. |image34| image:: media/image34.png
+.. |image35| image:: media/image35.png
+.. |image36| image:: media/image36.png
+.. |image37| image:: media/image37.png
+.. |image53| image:: media/image53.png
+.. |image54| image:: media/image54.png
+.. |image55| image:: media/image55.png
+.. |image56| image:: media/image56.png
