@@ -30,6 +30,11 @@ your browser.
 
 Then cut and paste the following
 
+$agreementTerms=Get-AzMarketplaceterms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly"
+
+Set-AzMarketplaceTerms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly" -Terms $agreementTerms -Accept
+
+
 Once the commands run the output should look like this:
 
 |image40|
@@ -106,6 +111,7 @@ Then click **Save.**
 
 The completed file should look like the example below, minus the one
 line you need to change.
+|image57|
 
 .. _section-2:
 
@@ -129,6 +135,20 @@ When completed the output should look like the below screenshot.
 
 Save this info in green for Lab 4.
 
-|image45| **Stop, this is the end of Module 3.**
+|image45| 
+
+|image34| 
+**Stop, this is the end of Module 3.**
 
 .. _lab-module-4-1:
+
+.. |image38| image:: media/image38.png
+.. |image39| image:: media/image39.png
+.. |image40| image:: media/image40.png
+.. |image41| image:: media/image41.png
+.. |image42| image:: media/image42.png
+.. |image43| image:: media/image43.png
+.. |image57| image:: media/image57.png
+.. |image44| image:: media/image44.png
+.. |image45| image:: media/image45.png
+.. |image34| image:: media/image34.png
