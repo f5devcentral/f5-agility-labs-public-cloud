@@ -333,44 +333,21 @@ group will be deleted.
 
 |image34| **Stop, this is the end of Module 1.**
 
-
-
-
 .. |image4| image:: media/image4.png
 .. |image5| image:: media/image5.png
 .. |image6| image:: media/image6.png
 .. |image7| image:: media/image7.png
 .. |image8| image:: media/image8.png
 .. |image9| image:: media/image9.png
-   :width: 2.36842in
-   :height: 0.57692in
 .. |image10| image:: media/image10.png
-   :width: 4.14619in
-   :height: 2.97526in
 .. |image11| image:: media/image11.png
-   :width: 4.45039in
-   :height: 0.89591in
 .. |image12| image:: media/image12.png
-   :width: 4.49622in
-   :height: 1.946in
 .. |image13| image:: media/image13.png
-   :width: 4.54623in
-   :height: 0.54171in
 .. |image14| image:: media/image14.png
-   :width: 4.46705in
-   :height: 0.30003in
 .. |image15| image:: media/image15.png
-   :width: 4.55873in
-   :height: 0.30419in
 .. |image16| image:: media/image16.png
-   :width: 4.46705in
-   :height: 0.25836in
 .. |image17| image:: media/image17.png
-   :width: 4.50872in
-   :height: 0.25836in
 .. |image18| image:: media/image18.png
-   :width: 2.08351in
-   :height: 1.90017in
 .. |image19| image:: media/image19.png
 .. |image20| image:: media/image20.png
 .. |image21| image:: media/image21.png

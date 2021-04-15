@@ -1,4 +1,4 @@
-2.0 Lab Module 2 Exploring The SACA 
+2.0 Lab Module 2 Exploring The SACA
 ====================================
 
 **Lab 2** will focus on the GitHub page were the F5 Azure SACA Terraform
@@ -54,7 +54,8 @@ and in Azure for Government you could have **saca.com.tfvars** and
 **saca.gov.tfvars** and use the same github repository with a different
 command line switch to deploy whichever one you wanted.
 
-|image34| 
+|image34|
+
 **Stop, this is the end of Module 2.**
 
 .. |image34| image:: media/image34.png
