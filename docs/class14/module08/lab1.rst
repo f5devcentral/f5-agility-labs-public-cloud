@@ -1,67 +1,55 @@
-F5 Telemetry Streaming (TS) to GCP Monitoring
----------------------------------------------
+F5 Telemetry Streaming (TS) to Google Cloud Operations Suite’s Cloud Monitoring
+-------------------------------------------------------------------------------
 
-From Big-IP1, iApps => Package Management LX. Note the f5-telemetry package is installed.
+Telemetry Streaming was created to offload common metrics from the BIG-IP onto external monitoring/graphing utilities, including the major cloud-native monitoring programs.  In this lab we will be sending the some basic metrics from the BIG-IP to Cloud Monitoring - part of GCP.
 
-Do the same for Big-IP2.
+The Telemetry Streaming package has been installed as part of the base image.  You can verify it is installed by going to iApps => Package Management LX, where you can note the version.
 
-.. image:: ./images/1_bigip1_telemetry_streaming_icontrol_lx_installed.png
-	   :scale: 50%
+.. image:: ./images/00_bigip_ts_check.png
+	   :scale: 75%
 
-From F5 VScode Extension, “Lab - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
+Make sure you are signed into BIG-IP 1, click on TS the bottom blue bar. 
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
+.. image:: ./images/01_vs_ts_validation.png
+	   :scale: 75%
 
-.. image:: ./images/2_postman_telemetry_streaming_status_bigip1.png
-	   :scale: 50%
+"message:Success" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
 
-From Postman, “Lab - Telemetry Streaming” => “Step 2: Confirm Telemetry Streaming REST API - BIGIP2” => [Send].
-
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP2.
-
-.. image:: ./images/3_postman_telemetry_streaming_status_bigip2.png
-	   :scale: 50%
-
-From F5 VScode Extension, “Lab - Telemetry Streaming” => “Step 3: Telemetry Streaming AWS - BIGIP1” => [Send].
-Click on Lab4.5-TS under the drop down menu, select "ts.json" request.
+From files tab click on Lab4.5-TS under the drop down menu, select "ts.json" request.
 Right Click "Post as TS Declaration".
 
 .. image:: ./images/1_ts1.png
-	   :scale: 50%
+	   :scale: 75%
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP1.
+"message:Success" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP1.
 
-.. image:: ./images/2_ts2.png
-	   :scale: 50%
+.. image:: ./images/03_ts_success.png
+	   :scale: 75%
 
-Do the same for Big-IP2. From Postman, “Lab - Telemetry Streaming” => “Step 4: Telemetry Streaming AWS - BIGIP2” => [Send].
+Go to the ip address for both webapp_1 and webapp_2 and refresh the page 10 times.
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP2.
+.. image:: ./images/9_example_app_bigip1.png
+	   :scale: 75%
 
-.. image:: ./images/6_postman_telemetry_streaming_completed_bigip2.png
-	   :scale: 50%
-
-From the GCP Console, Services => type "Monitoring" in the search box, choose "Monitoring" from the drop-down results.
+Now from the GCP Console, Services => type "Monitoring" in the search box, choose the first "Monitoring" option from the drop-down results.
 
 .. image:: ./images/3_ts3.png
-	   :scale: 50%
+	   :scale: 75%
 
-From the GCP Console, Monitoring => Metrics explorer 
-
-.. image:: ./images/4_ts4.png
-	   :scale: 50%
-
-Click on query editor in the editor type fetch generie_node :: custom/system/cpu. Then click Run Query
+From Monitoring on the side panel => Metrics explorer.
 
 .. image:: ./images/4_ts4.png
-	   :scale: 50%
+	   :scale: 75%
 
-TODO		
+Click on query editor in the editor type fetch generic_node :: custom/system/cpu. Then click Run Query.
 
-Eventually you will see telemetry data 
+.. image:: ./images/10_gcp_monitoring_metrics_q_edit.png
+	   :scale: 75%
 
-.. image:: ./images/9_aws_console_cloudwatch_telemetry_streaming.png
-	   :scale: 50%
+.. image:: ./images/11_gcp_query_results.png
+	   :scale: 75%
 
-.. image:: ./images/10_aws_console_cloudwatch_telemetry_streaming2.png
-	   :scale: 50%
+		
+This may take a few minutes, but eventually you will see telemetry data start to be shown.
+
+

@@ -113,18 +113,3 @@ Do the same for Big-IP2.
 .. image:: ./images/12_bigip2_icontrol_lx_all.png
 	   :scale: 50%
 
-
-Validate Declarative Onboarding installation via REST API
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-From Postman, select "Lab 4.1 - Declarative Onboarding - Basic Plumbing" =>"Step 1: Check DO - BIGIP1" request and Click "Send".
-The Status is 200 OK and the Body response will indicate the DO version.
-
-.. image:: ./images/13_postman_bigip1_get_do.png
-	   :scale: 50%
-
-From Postman, select "Lab 4.1 - Declarative Onboarding - Basic Plumbing" =>"Step 2: Check DO - BIGIP2" request and Click "Send".
-The Status is 200 OK and the Body response will indicate the DO version.
-
-.. image:: ./images/14_postman_bigip2_get_do.png
-	   :scale: 50%
-

@@ -1,49 +1,41 @@
 Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
-------------------------------------------------------------
+------------------------------------------------------------------
 
 From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI for each BIG-IP.  From the VS Code terminal, you can type "terraform output" to see the outputs again.
 
-Open a new browser tab and HTTPS to Bigip1ManagementEipAddress. We are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
+.. image:: ./images/3_bigip1host.png
+  :alt: unsafe
 
-.. image:: ./images/5_bigip1_mgmt_ip.png
-	   :scale: 50%
+.. image:: ./images/3_bigip2host.png
+  :alt: unsafe
 
-.. image:: ./images/6_bigip1_mgmt_bypass_warning.png
-	   :scale: 50%
+The username and password are part of the "terraform output" results.
+
+.. image:: ./images/3_bigip1password.png
+  :alt: unsafe
+
+.. image:: ./images/3_bigip2password.png
+  :alt: unsafe
+
+As is default in the BIG-IP, we are using self-signed certificates in the lab. Bypass the TLS warnings. "Accept the Risk and Continue".
+
+.. note::  If you are using Chrome and are not given the option to bypass the certificate warning you can either use a different browser, or type 'thisisunsafe' on that tab and you'll bypass the warning.
+ 
+.. image:: ./images/00_thisisunsafe.png
+  :alt: unsafe
 
 Login to the Big-IP1 Configuration Utility (WebUI) using the values found in "terraform output"
 
-...note the system has not been configured with anything other than a management IP address and admin account.
+...note the system has not been configured with anything other than a management IP address and admin account.  Here are some things to check to show you within the GUI that you will change later:
 
-No self-IP.
+Network -> Self-IP addresses
+Network -> Routes
+Network -> Interfaces
+LTM -> Virtual Servers
+Device Management -> Devices
 
-.. image:: ./images/8_bigip_no_config1.png
-	   :scale: 50%
+Verify the same for Big-IP2.
 
-No Routes.
-
-.. image:: ./images/9_bigip_no_config2.png
-	   :scale: 50%
-
-Traffic interface in uninitialized state.
-
-.. image:: ./images/10_bigip_no_config3.png
-	   :scale: 50%
-
-No Virtual Servers.
-
-.. image:: ./images/11_bigip_no_config4.png
-	   :scale: 50%
-
-No Device Groups.
-
-.. image:: ./images/12_bigip_no_config5.png
-	   :scale: 50%
-
-Do the same for Big-IP2.
-
-.. image:: ./images/7_bigip2_mgmt_bypass_warning.png
-	   :scale: 50%
 
 
 

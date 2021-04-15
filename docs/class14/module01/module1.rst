@@ -1,4 +1,4 @@
-Deploying F5 to AWS with Terraform
+Deploying F5 to GCP with Terraform
 ==================================
 
 .. toctree::

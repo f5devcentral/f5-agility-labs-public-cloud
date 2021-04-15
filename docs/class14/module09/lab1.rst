@@ -1,29 +1,20 @@
 Terraform Destroy
 -----------------
 
-Delete the S3 bucket.
-
-AWS => Services => S3 => f5-public-cloud-failover-...
-
-.. image:: ./images/1_aws_console_delete_s3_bucket_contents.png
-	   :scale: 50%
-
-.. image:: ./images/2_aws_console_delete_s3_bucket_contents2.png
-	   :scale: 50%
+This is the end of using the F5 Automation Toolchain.  In this step we will be removing all of the infrastructure that was created for your lab with Terraform.  To do that we'll run:
 
 .. code-block:: bash
 
-   terraform destroy --force -var 'bigip_admin_password=f5letme1n'
+   terraform destroy --force 
 
-.. image:: ./images/3_vscode_terraform_destroy.png
+.. image:: ./images/00_terraform_destroy.png
 	   :scale: 50%
 
-.. image:: ./images/4_vscode_terraform_destroy_complete.png
+.. image:: ./images/01_terraform_done.png
 	   :scale: 50%
 
-Confirm it's all gone.
+Go into the GCP console.  You'll find that there should be no resources for your student ID.  A terraform destroy command should clean up all resources that are maintained in the state file.
 
-.. image:: ./images/5_aws_console_ec2_clean.png
-	   :scale: 50%
+We hope you enjoyed this lab.  Please make sure to fill out a survey before leaving!
 
-Fin.
+Fin.  
