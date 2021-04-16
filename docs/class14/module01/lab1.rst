@@ -5,7 +5,7 @@ Follow the link in your email invite and login to the lab environment.
 
 Your Deployment => Systems => Client => VS Code.
 
-.. image:: ./images/00_admin_pass.png
+.. image:: ./images/00_VSCODE_Access.png
    :scale: 50%
    :alt: UDF Access
 
