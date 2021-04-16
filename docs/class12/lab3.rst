@@ -30,11 +30,9 @@ your browser.
 
 Then cut and paste the following
 
-$agreementTerms=Get-AzMarketplaceterms -Publisher "f5-networks"
--Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly"
+$agreementTerms=Get-AzMarketplaceterms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly"
 
-Set-AzMarketplaceTerms -Publisher "f5-networks" -Product "f5-big-ip-best"
- -Name "f5-bigip-virtual-edition-1g-best-hourly" -Terms $agreementTerms -Accept
+Set-AzMarketplaceTerms -Publisher "f5-networks" -Product "f5-big-ip-best" -Name "f5-bigip-virtual-edition-1g-best-hourly" -Terms $agreementTerms -Accept
 
 Once the commands run the output should look like this:
 
