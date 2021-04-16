@@ -1,26 +1,29 @@
 Login to F5's lab platform (Unified Demo Framework)
-=======================================================================================
+===================================================
 
 Follow the link in your email invite and login to the lab environment.
 
 Your Deployment => Systems => Client => VS Code.
 
 .. image:: ./images/00_admin_pass.png
-  :scale: 50%
-  :alt: UDF Access
+   :scale: 50%
+   :alt: UDF Access
 
-Visual Studio Code will launch as a tab in your current browser.  VS Code is running from a remote machine in your UDF environment.  Once in this tab, there will be a terminal window at the bottom of the screen.  Make sure the Terminal window indicates a "bash" shell.
+Visual Studio Code will launch as a tab in your current browser. VS Code is
+running from a remote machine in your UDF environment.  Once in this tab, there
+will be a terminal window at the bottom of the screen.  Make sure the Terminal
+window indicates a "bash" shell.
 
 .. image:: ./images/03_vscode_bash.png
-  :scale: 50%
-  :alt: bash terminal
+   :scale: 50%
+   :alt: bash terminal
 
 .. image:: ./images/14_bash.png
-  :scale: 50%
-  :alt: bash terminal
+   :scale: 50%
+   :alt: bash terminal
 
 Authenticate the 'gcloud' command line utility
-=======================================================================================
+----------------------------------------------
 
 From the VS Code terminal run the following command:
 
@@ -43,7 +46,7 @@ authenticated and will work for Terraform.
    have access to the F5 GCP Account built for this class.
 
 Select "Allow" in order to trust this gcloud instance
- 
+
 .. image:: ./images/05_google_authorization.png
    :scale: 50%
    :alt: bash terminal
@@ -51,8 +54,8 @@ Select "Allow" in order to trust this gcloud instance
 You will be given a token as a response.
 
 .. image:: ./images/06_google_authorization_copy.png
-  :scale: 50%
-  :alt: bash terminal
+   :scale: 50%
+   :alt: bash terminal
 
 Copy the token back into the VS Code terminal window, you may get a warning to
 have the VS Code browser implementation to see your clipboard. Please select
@@ -72,8 +75,8 @@ Once you click "Enter," gcloud will now be able to operate against the Agility
 GCP account. The gcloud authorization will also allow Terraform to use the
 gcloud credentials to operate against GCP.
 
-Deploy F5 Virtual Editions and a complete application environment to GCP with Terraform
-=======================================================================================
+Deploy F5 VE and a complete application environment to GCP with Terraform
+-------------------------------------------------------------------------
 
 From the Visual Studio Code Terminal, clone the github repository for this lab
 and change to the working directory.
@@ -93,7 +96,7 @@ and change to the working directory.
    :alt: git clone results
 
 Build two BIG-IPs using Terraform
-=================================
+---------------------------------
 
 The first step that needs to be done is update the variable "student_id" in the
 terraform.tfvars file.  Please use the assigned Student ID.
@@ -128,7 +131,6 @@ identify the resources that it will be creating. Please run the following:
    :scale: 50%
    :alt: tf plan
 
-
 The last step of launching terraform is to "apply." Note that this will take
 some time and will prompt you (by default) to proceed. Please run the following
 and respond with 'yes' when prompted.
@@ -153,9 +155,9 @@ have bash toggled:
 .. image:: ./images/14_terraform_output.png
    :scale: 50%
    :alt: tf output
-   
+
 Login to GCP Console
-====================
+--------------------
 
 Click on "Firefox" under access methods (or use your own local browser if able)
 and navigate to https://console.cloud.google.com with the e-mail address that

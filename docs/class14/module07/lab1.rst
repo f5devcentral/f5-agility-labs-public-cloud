@@ -1,5 +1,5 @@
 Verify F5 Cloud Failover is Ready
----------------------------------
+=================================
 
 The Cloud Failover Extension is becoming the default mechanism for BIG-IPs to
 failover in the cloud. This becomes a standard method and standard API to

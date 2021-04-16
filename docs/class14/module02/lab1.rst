@@ -1,8 +1,8 @@
 Configuration Utility (WebUI) HTTPS access to Big-IP1 and Big-IP2
-------------------------------------------------------------------
+=================================================================
 
 From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI
-for each BIG-IP.  From the VS Code terminal, you can type "terraform output" t
+for each BIG-IP.  From the VS Code terminal, you can type "terraform output" to
 see the outputs again.
 
 .. image:: ./images/3_bigip1host.png

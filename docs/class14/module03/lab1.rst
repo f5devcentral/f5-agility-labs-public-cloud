@@ -1,5 +1,5 @@
 Prepare F5 VSCode Extension
-------------------------------------------------------
+===========================
 
 The rest of the lab we will be working with the F5 Automation Toolchain. This
 is a set of declarative API endpoints that you can install on top of TMOS to
