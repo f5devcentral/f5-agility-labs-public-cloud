@@ -11,9 +11,6 @@ From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI 
 
 The username and password are part of the "terraform output" results.
 
-.. image:: ./images/3_bigip1password.png
-  :alt: unsafe
-
 .. image:: ./images/3_bigip2password.png
   :alt: unsafe
 
@@ -26,15 +23,15 @@ As is default in the BIG-IP, we are using self-signed certificates in the lab. B
 
 Login to the Big-IP1 Configuration Utility (WebUI) using the values found in "terraform output"
 
-...note the system has not been configured with anything other than a management IP address and admin account.  Here are some things to check to show you within the GUI that you will change later:
+The system has not been configured with anything other than a management IP address and admin account.  Here are some things to check to show you within the GUI that you will change later:
 
-Network -> Self-IP addresses
-Network -> Routes
-Network -> Interfaces
-LTM -> Virtual Servers
-Device Management -> Devices
+*Network -> Self-IP addresses
+*Network -> Routes
+*Network -> Interfaces
+*LTM -> Virtual Servers
+*Device Management -> Devices
 
-Verify the same for Big-IP2.
+Verify the same items for Big-IP2.
 
 
 
