@@ -1,5 +1,5 @@
 Terraform Destroy
------------------
+=================
 
 This is the end of using the F5 Automation Toolchain.  In this step we will be
 removing all of the infrastructure that was created for your lab with

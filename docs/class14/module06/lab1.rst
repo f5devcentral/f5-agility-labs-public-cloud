@@ -1,5 +1,6 @@
 Using AS3 to create services
------------------------------
+============================
+
 Since your devices are now clustered in a sync-failover group and using
 auto-sync, you can post service declarations to whichever device you choose.
 A change to one BIG-IP will be automatically be replicated to the other.

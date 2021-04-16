@@ -1,8 +1,8 @@
-Establish Device Trust between Big-IPs.
----------------------------------------
+Establish Device Trust between Big-IPs
+======================================
 
 From Agility2021_GCP_Terraform_ATC click on Lab4.2-DO_HA under the drop down
-menu, select "do_step1.json" request. 
+menu, select "do_step1.json" request.
 Right Click "Post as DO Declaration".
 The Status will be 202 RUNNING.
 

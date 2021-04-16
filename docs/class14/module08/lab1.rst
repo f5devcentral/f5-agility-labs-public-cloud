@@ -1,5 +1,5 @@
-F5 Telemetry Streaming (TS) to Google Cloud Operations Suite’s Cloud Monitoring
--------------------------------------------------------------------------------
+F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
+============================================================================
 
 Telemetry Streaming was created to offload common metrics from the BIG-IP onto
 external monitoring/graphing utilities, including the major cloud-native
