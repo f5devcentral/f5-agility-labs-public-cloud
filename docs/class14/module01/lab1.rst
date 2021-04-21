@@ -3,7 +3,7 @@ Login to F5's lab platform (Unified Demo Framework)
 
 Follow the link in your email invite and login to the lab environment.
 
-Your Deployment => Systems => Client => VS Code.
+Your Deployment => Systems => Client => Access => VS Code.
 
 .. image:: ./images/00_VSCODE_Access.png
    :scale: 50%
