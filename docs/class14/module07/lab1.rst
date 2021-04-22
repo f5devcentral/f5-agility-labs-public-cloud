@@ -56,6 +56,8 @@ Force bigip1 to standby. Click [Force to Standby].
 .. image:: ./images/12_device_bigip1_force_to_standby.png
    :scale: 50%
 
+.. warning:: If you are not in the "Common" partition, the [Force to Standby] button will be greyed out.  Select /Common and it will now be active.
+
 On Big-IP1, in the upper-left-hand corner, note "ONLINE (STANDBY)".
 
 .. image:: ./images/13_device_bigip1_standby.png
