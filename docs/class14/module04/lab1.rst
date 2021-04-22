@@ -10,8 +10,9 @@ items are configured:
 * Network -> Self-IP addresses
 * Network -> Routes
 * Network -> Interfaces
-* LTM -> Virtual Servers
 * Device Management -> Devices
+
+.. note:: LTM -> Virtual Servers will still show nothing configured.  Declarative Onboarding configures device specific details, not services.  Services will be handled in your later lab modules.
 
 Now that you see both BIG-IPs have their base configuration, you'll move on to
 building a Device Service Cluster (DSC) that is active/standby.
