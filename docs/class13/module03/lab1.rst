@@ -5,7 +5,7 @@ From the Visual Studio Code Terminal, copy the postman_rendered.json file to the
 
 .. code-block:: bash
 
-   cp ./postman_rendered.json /mnt/c/Users/Administrator/Desktop/
+   cp ./postman_rendered.json /mnt/c/Users/user/Desktop/
 
 .. image:: ./images/1_postman_rendered.png
 	   :scale: 50%
@@ -27,7 +27,7 @@ In the left-pane tab, select "Collections" and click "Import" above. Choose "Lin
 
 .. code-block:: bash
 
-   https://raw.githubusercontent.com/TonyMarfil/f5agility2020-pc201/master/postman/f5agility2021-pc201-postman-collection.json
+   https://raw.githubusercontent.com/tmarfil/f5agility2022-pc201/master/postman/f5agility2022-pc201-postman-collection.json
 .. image:: ./images/3_postman_import_collection.png
 	   :scale: 50%
 
