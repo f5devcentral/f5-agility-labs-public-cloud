@@ -72,6 +72,54 @@ Open a new browser tab. Connect via HTTPS to ``virtual_server01_elastic_ip`` or 
 .. image:: ./images/9_example_app_bigip1.png
 	   :scale: 50%
 
+From the vscode terminal, SSH to the active BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
+
+.. code-block:: bash
+
+   bigip1
+
+.. code-block:: bash
+
+   bash
+   curl -su admin: http://localhost:8100/mgmt/shared/cloud-failover/inspect | jq .
+   exit
+   quit
+
+.. image:: ./images/active_cfe_inspect.png
+	   :scale: 50%
+
+From the vscode terminal, SSH to the standby BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
+
+.. code-block:: bash
+
+   bigip2
+
+.. code-block:: bash
+
+   bash
+   curl -su admin: http://localhost:8100/mgmt/shared/cloud-failover/inspect | jq .
+
+.. image:: ./images/standby_cfe_info_inspect.png
+	   :scale: 50%
+
+On the same standby BIG-IP, perform a failover 'dry-run' to see what you can expect to happen during a failover event. Notice the "current" and "target" address mappings.
+
+.. code-block:: bash
+
+   curl -su admin: -X POST -d '{"action":"dry-run"}' http://localhost:8100/mgmt/shared/cloud-failover/trigger | jq .
+
+.. image:: ./images/standby_cfe_trigger.png
+	   :scale: 50%
+
+On the same standby BIG-IP, we'll watch the logs before triggering a failover event.
+
+.. code-block:: bash
+
+   tail -f /var/log/restnoded/restnoded.log
+
+.. image:: ./images/standby_cfe_restnoded_log.png
+	   :scale: 50%
+
 From Big-IP1, Device Management => Devices => bigip1.f5lab.dev.
 
 .. image:: ./images/11_device_bigip1.png
