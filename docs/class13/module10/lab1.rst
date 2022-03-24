@@ -13,7 +13,7 @@ AWS => Services => S3 => f5-public-cloud-failover-...
 
 .. code-block:: bash
 
-   terraform destroy --force -var 'bigip_admin_password=f5letme1n'
+   terraform apply -destroy -auto-approve -var 'bigip_admin_password=f5letme1n'
 
 .. image:: ./images/3_vscode_terraform_destroy.png
 	   :scale: 50%

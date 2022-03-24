@@ -3,14 +3,13 @@ Login to F5's lab platform (Unified Demo Framework) and launch a remote desktop 
 
 Follow the link in your email invite and login to the lab environment.
 
-Your Deployment => Systems => win2019 => DETAILS. Copy the Administrator password to your clipboard. The password starts immediately after Administrator:
+Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the credentials below.
 
-.. image:: ./images/00_admin_pass.png
-  :scale: 50%
-
-Click [Done] in the lower right-hand corner.
-
-Under win2019, from the ACCESS drop-down, select RDP and resolution. The lab looks best in FHD (1920 x 1080). This will download the rdp file to your computer. Launch the RDP file and login via RDP using the Administrator credentials. Copy and paste credentials from your clipboard.
++-----------+------+
+| Username: | user |
++-----------+------+
+| Password: | user |
++-----------+------+
 
 .. image:: ./images/01_rdp.png
   :scale: 50%
@@ -59,7 +58,7 @@ Login to the AWS web console with the credentials shown in your terminal.
 
 .. attention::
 
-  In the upper-right-hand corner, choose US-West (Oregon) us-west-2 region.
+  In the upper-right-hand corner, confirm you are in the correct region (lab will run in US-West (Oregon) / us-west 2 region by default)
 
 "Services" => type "marketplace" in the search window. Select "AWS Marketplace Subscriptions" from the search results. Right-click on "Manage subscriptions" to open a new tab.
 => "Discover products"
@@ -86,12 +85,12 @@ From the Visual Studio Code Terminal, clone the github repository for this lab a
 
 .. attention::
 
-  For a smooth ride, always invoke commands from inside the cloned git repository (f5agility2020-pc201). To check you're in the right place, you can run the command ``pwd`` and the output should read ``/home/f5admin/f5agility2020-pc201``
+  For a smooth ride, always invoke commands from inside the cloned git repository (f5agility2022-pc201). To check you're in the right place, you can run the command ``pwd`` and the output should read ``/home/f5admin/f5agility2022-pc201``
 
 .. code-block:: bash
 
-   git clone https://github.com/TonyMarfil/f5agility2020-pc201.git
-   cd f5agility2020-pc201/
+   git clone https://github.com/tmarfil/f5agility2022-pc201.git
+   cd f5agility2022-pc201/
 
 .. image:: ./images/9_vscode_git_clone.png
   :scale: 50%
