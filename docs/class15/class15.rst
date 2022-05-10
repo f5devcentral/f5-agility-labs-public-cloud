@@ -1,4 +1,4 @@
-F5 Automation Toolchain by using F5 AS3 Service Discovery & Consul-Terraform-Sync
+Explore the F5 Automation Toolchain by F5 AS3 Service Discovery & Consul-Terraform-Sync
 =================================================================================
 
 This is a proctor led intermediate level lab.
@@ -17,4 +17,4 @@ objects on BIG-IP. We will learn
    :maxdepth: 1
    :glob:
 
-   module*/module*
+#   module*/module*
