@@ -1,5 +1,5 @@
 Access Ubuntu Shell 
-===================================================
+=====================
 
 7. Access your Ubunutu webshell by clicking on Components TAB & then click on Ubuntu –> Access –> WEB SHELL.
 
