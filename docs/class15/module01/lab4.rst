@@ -18,7 +18,4 @@ we can use the terraform TF files to create infrastructure on AWS
 
 Once you are IN, Change Directory to as shown below, this we need to do inorder to run the terraform scripts for infra deployment.
 
-````
-cd f5-terraform-consul-sd-webinar/ 
-
-````
+```cd f5-terraform-consul-sd-webinar/ ```
