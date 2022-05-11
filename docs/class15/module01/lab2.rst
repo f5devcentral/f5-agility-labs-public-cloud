@@ -19,11 +19,11 @@ Access Ubuntu Shell
 
 .. code-block:: bash
 
-aws configure
+   aws configure
 
-    AWS Access Key ID [****************CGGT]:XXXXXXXXXXXXX
+   AWS Access Key ID [****************CGGT]:XXXXXXXXXXXXX
 
-    AWS Secret Access Key [****************QmTY]:XXXXXXXXXXX
+   AWS Secret Access Key [****************QmTY]:XXXXXXXXXXX
 
 
 .. warning:: We will be returning to lecture at this point of the lab. We will
