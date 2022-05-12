@@ -20,7 +20,7 @@ is produced automatically for you under the ``nia`` folder.
 
 .. code-block:: bash
    
-      config.hcl 
+    config.hcl 
 
     driver "terraform" {
     log = true
@@ -52,7 +52,7 @@ is produced automatically for you under the ``nia`` folder.
 - Finally, you can start Consul-Terraform-Sync.
 
 .. code-block:: bash
-  
+
    $ consul-terraform-sync -config-file config.hcl
 
     ...
