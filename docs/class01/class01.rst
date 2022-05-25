@@ -7,7 +7,7 @@ This class covers the following topics:
 - Service Discovery iApp for dynamically populating pool members using instance tags
 - Cross Availability Zone HA with F5
 - Autoscale WAF
-- Logging to Cloudwatch
+- Logging to Cloudwatch 
 
 .. toctree::
    :maxdepth: 1
