@@ -2,6 +2,7 @@ Use Terraform scripts to deploy AS3 FAST template
 ===================================================
 
 - Change directory to 
+
 .. code-block:: bash
 
    $ cd ../fast
@@ -11,6 +12,8 @@ Use Terraform scripts to deploy AS3 FAST template
 .. code-block:: bash
 
    $ terraform init
+
+::
 
    Initializing the backend...
 
@@ -52,6 +55,9 @@ Use Terraform scripts to deploy AS3 FAST template
 .. code-block:: bash
 
    $ terraform plan 
+
+.. code-block:: bash
+
     ...
     Plan: 2 to add, 0 to change, 0 to destroy.
     ...
@@ -61,7 +67,9 @@ Use Terraform scripts to deploy AS3 FAST template
 .. code-block:: bash
 
    $ terraform apply -auto-approve
-  
+
+.. code-block:: bash
+
     data.archive_file.template_zip: Refreshing state...
     bigip_fast_template.consul-webinar: Creating...
     bigip_fast_template.consul-webinar: Still creating... [10s elapsed]
@@ -77,3 +85,4 @@ Use Terraform scripts to deploy AS3 FAST template
     app_url = http://52.44.244.96:8080
 
 
+**Note:** Please make note of the above app_url link you will need later

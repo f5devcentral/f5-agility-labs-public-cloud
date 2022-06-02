@@ -55,7 +55,9 @@ is produced automatically for you under the ``nia`` folder.
 
    $ consul-terraform-sync -config-file config.hcl
 
-    ...
+.. code-block:: bash
+
+   ...
     [INFO] (cli) running controller in daemon mode
     [INFO] (cli) setting up controller: readwrite
     [INFO] (ctrl) initializing Consul client and testing connection

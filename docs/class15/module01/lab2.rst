@@ -11,7 +11,7 @@ Access Ubuntu Shell
    Our username for the ubuntu server  is ```udf``` we will use this account to create resources on AWS
 
 .. image:: ./images/8_less1-4.png
-   :scale: 100%
+   :scale: 50%
    :alt: UDF Access
 
 9. Configure your API key and API secret key using the below commands. 

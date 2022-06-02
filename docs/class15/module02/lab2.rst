@@ -4,7 +4,7 @@ Verify Services on Consul and BIG-IP
 - Using the ``Consul_UI`` IP address access the Consul
 
 .. image:: ./images/assets.png
-   :scale: 100%
+   :scale: 50%
    :alt: UDF Access
 
 - From the Consul UI you can verify the datacenter contains two instances of NGINX running on two different nodes.
@@ -12,7 +12,7 @@ Verify Services on Consul and BIG-IP
 - By opening your browser at the URL specified by the ``F5_UI`` variable, you can access your F5 BIG-IP instance GUI.
 
 .. image:: ./images/bigip.png
-   :scale: 100%
+   :scale: 50%
    :alt: UDF Access
 
 
