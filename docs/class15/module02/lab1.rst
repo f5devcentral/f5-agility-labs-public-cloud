@@ -27,9 +27,9 @@ Edit file ``terraform.tfvars`` to specify a prefix for the resources being creat
 
    $ terraform.tfvars 
 
-`prefix = "your-prefix"   ---> This can be your initials``
+**prefix = "your-prefix"   ---> This can be your initials**
 
-`allow_from = "0.0.0.0/0"  ---> You can give your Labtop IP also instead of 0.0.0.0/0`
+**allow_from = "0.0.0.0/0"  ---> You can give your Labtop IP also instead of 0.0.0.0/0**
 
 Once the configuration is complete, you can deploy the infrastructure with Terraform.
 
@@ -47,11 +47,14 @@ Then, use ``terraform plan`` to check the resources that are going to be created
 
    $ terraform plan
 
-.. glossary::
+
+You will see below 30 resources plan to be configured::
 
    ...
+
    Plan: 30 to add, 0 to change, 0 to destroy.
-   ...
+
+   ....
 
 Finally, apply the changes.
 
@@ -60,20 +63,24 @@ Finally, apply the changes.
    $ terraform apply -auto-approve
 
 
-.. glossary::
+
+Now you can see below 30 resources were configured::
 
    ...
-   Apply complete! Resources: 30 added, 0 changed, 0 destroyed.
 
-   Outputs:
+   Apply complete! Resources: 30 added, 0 changed, 0 destroyed.
    
+   Outputs:
+  
    Consul_UI = http://3.86.229.209:8500
    F5_IP = 52.44.244.96
    F5_Password = L5l81KPsxv
    F5_UI = https://52.44.244.96:8443
    F5_Username = admin
    F5_ssh = ssh -i terraform-20210803123725302700000001.pem admin@52.44.244.96
-   ...
+  
+   ....
+
 
 
 
@@ -83,5 +90,5 @@ Finally, apply the changes.
   You can access your Consul datacenter UI using the address specified by the ``Consul_UI`` value.
 
 .. image:: ./images/assets.png
-   :scale: 100%
+   :scale: 50%
    :alt: UDF Access

@@ -28,7 +28,9 @@ Before stopping, the daemon will log the requested shutdown.
 
 .. code-block:: bash
   
-    $ terraform destroy -auto-approve
+    $ terraform destroy 
+
+.. code-block:: bash
 
     ...
     Destroy complete! Resources: 2 destroyed.
@@ -40,7 +42,9 @@ Before stopping, the daemon will log the requested shutdown.
 
 .. code-block:: bash
 
-    $ terraform destroy -auto-approve
+    $ terraform destroy 
+
+.. code-block:: bash
 
     ...
     Destroy complete! Resources: 29 destroyed.

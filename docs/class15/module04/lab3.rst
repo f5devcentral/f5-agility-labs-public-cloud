@@ -44,6 +44,8 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
     $ terrform plan
 
+.. code-block:: bash
+
     Refreshing Terraform state in-memory prior to plan...
     The refreshed state will be used to calculate this plan, but will not be
     persisted to local or remote state storage.
@@ -76,6 +78,8 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
     $ terraform apply -auto-approve
 
+.. code-block:: bash
+    
     ...
     Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
     ...
@@ -83,7 +87,7 @@ To verify the integration is working, add more NGINX instances by editing the AW
 - Once the changes are applied on AWS, Consul will show the new instances on the Services tab.
 
  .. image:: ./images/consul-service.png
-    :scale: 100%
+    :scale: 50%
     :alt: UDF Access
    
 - Consul-Terraform-Sync will pick the change from the Consul catalog and modify the BIG-IP configuration to reflect the new NGINX instances.
@@ -137,7 +141,8 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
 
 .. image:: ./images/nginx-as.png
-    :scale: 100%
+    :scale: 50%
     :alt: UDF Access
 
-    
+
+**Note:** Check Mark the Auto refresh button to see all the servers
