@@ -49,6 +49,6 @@ the GUI that you will change later:
 * LTM -> Virtual Servers
 * Device Management -> Devices
 
-Verify the same items for Big-IP2.
+Repeat these steps and verify the same items for Big-IP2.
 
 .. note::  it is normal that bigip2 is also named bigip1.example.com at this time, because it is not yet configured
