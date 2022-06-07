@@ -59,13 +59,13 @@ prompting you to associate your GCP account with the gcloud command utility.
    have access to the F5 GCP Account built for this class.
 
 .. image:: ./images/GcloudAuth_accountselection.png
-   :scale: 50%
+   :scale: 75%
    :alt: Choose your Google account
 
 Select "Allow" in order to trust this gcloud instance
 
 .. image:: ./images/GcloudAuth_allow.png
-   :scale: 50%
+   :scale: 75%
    :alt: Gcloud Allow
 
 The browser will give you an authentication token to copy and paste back into
@@ -73,7 +73,7 @@ the VS Code Terminal.  Paste into the terminal and gcloud will be successfully
 authenticated and will work for Terraform.
 
 .. image:: ./images/GcloudAuth_tokenCopy.png
-   :scale: 50%
+   :scale: 75%
    :alt: Gcloud copy the token
 
 Copy the token back into the VS Code terminal window, you may get a warning to
@@ -87,7 +87,7 @@ have the VS Code browser implementation to see your clipboard. Please select
 The pasted token will look like this:
 
 .. image:: ./images/GcloudAuth_tokenCopyVSCode.png
-   :scale: 50%
+   :scale: 75%
    :alt: Gcloud token copied into VSCode
 
 Once you click "Enter," gcloud will now be able to operate against the Agility
