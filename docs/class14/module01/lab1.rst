@@ -111,7 +111,7 @@ and change to the working directory.
    cd f5-agility_GCP_Terraform_ATC/
 
 .. image:: ./images/gitCloneRepoResults.png
-   :scale: 50%
+   :scale: 75%
    :alt: git clone results
 
 Build two BIG-IPs using Terraform
@@ -136,11 +136,11 @@ modules. Do so by running:
    terraform init
 
 .. image:: ./images/module1_terraform_Init1.png
-   :scale: 50%
+   :scale: 75%
    :alt: tf init
 
 .. image:: ./images/module1_terraform_Init2.png
-   :scale: 50%
+   :scale: 75%
    :alt: tf init
 
 Once initialized, We will run a terraform plan which will let terraform
@@ -168,7 +168,7 @@ outputs. These are defined in the terraform variables. You can always get the
 have bash toggled:
 
 .. image:: ./images/module1_terraform_ApplyComplete.png
-   :scale: 50%
+   :scale: 75%
    :alt: tf apply
 
 .. code-block:: bash
@@ -181,7 +181,7 @@ general output command, however if you specify the sensitive output value
 name, it will return that value.
 
 .. image:: ./images/Module1_terraform_Output.png
-   :scale: 50%
+   :scale: 75%
    :alt: tf output
 
 Login to GCP Console
