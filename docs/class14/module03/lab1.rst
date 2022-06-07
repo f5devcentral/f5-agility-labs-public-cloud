@@ -8,13 +8,13 @@ GCP Terraform module, these modules will be installed by default. Navigate in
 the TMUI to "iApps -> Package management LX" and you'll see four packages (The
 fifth is Service Discovery and is now a subset of AS3):
 
-.. image:: ./images/00_service_discovery_check.png
+.. image:: ./images/TMUI_ATCCheck.png
    :scale: 50%
    :alt: Select F5
 
 The terraform apply you performed in the last step generated the necessary
 declaration files for rest of the lab. They are located under the
-Agility2021_GCP_Terraform_ATC folder.
+f5-agility_GCP_Terraform_ATC folder.
 
 The first step will be to configure the F5 VS Code Plugin to connect to the two
 BIG-IPs
@@ -45,8 +45,8 @@ Do the same for big-ip 2.
 Submit Declarative Onboarding declarations
 ------------------------------------------
 
-From Agility2021_GCP_Terraform_ATC click on Lab4.1-DO under the drop down menu,
-select "do_step1.json" request.
+From f5-agility_GCP_Terraform_ATC click on Lab4.1-DO under the drop down menu,
+select "do_BIGIP1.json" request.
 
 .. image:: ./images/05_select_DO_step1.png
    :scale: 50%
