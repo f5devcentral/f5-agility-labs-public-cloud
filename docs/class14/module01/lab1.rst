@@ -49,44 +49,46 @@ If you copied this command and tried to paste it into the terminal window, you w
 
 This will give you a link you can click on (or CMD-click) to open up a browser,
 prompting you to associate your GCP account with the gcloud command utility.
-The browser will give you an authentication token to copy and paste back into
-the VS Code Terminal.  Paste into the terminal and gcloud will be successfully
-authenticated and will work for Terraform.
-.. image:: ./images/
 
-.. image:: ./images/GcloudAuth_accountselection.png
-   :scale: 50%
-   :alt: Choose your Google account
+.. image:: ./images/GcloudAuth_tokenRequestVSCode.png
+   :scale: 100%
+   :alt: Gcloud auth token request 
 
 .. warning:: The GCP account you use must be identical to the user you signed
    up for Agility and signed into this account with. Otherwise you will not
    have access to the F5 GCP Account built for this class.
 
+.. image:: ./images/GcloudAuth_accountselection.png
+   :scale: 50%
+   :alt: Choose your Google account
+
 Select "Allow" in order to trust this gcloud instance
 
-.. image:: ./images/05_google_authorization.png
+.. image:: ./images/GcloudAuth_allow.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: Gcloud Allow
 
-You will be given a token as a response.
+The browser will give you an authentication token to copy and paste back into
+the VS Code Terminal.  Paste into the terminal and gcloud will be successfully
+authenticated and will work for Terraform.
 
-.. image:: ./images/06_google_authorization_copy.png
+.. image:: ./images/GcloudAuth_tokenCopy.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: Gcloud copy the token
 
 Copy the token back into the VS Code terminal window, you may get a warning to
 have the VS Code browser implementation to see your clipboard. Please select
 "Allow" or you will have a lot of intricate typing to do.
 
-.. image:: ./images/07_allow_paste.png
-   :scale: 50%
-   :alt: bash terminal
+.. image:: ./images/VSCode_allowClipboard.png
+   :scale: 100%
+   :alt: Allow access to the clipboard
 
 The pasted token will look like this:
 
-.. image:: ./images/08_pasted_token.png
+.. image:: ./images/GcloudAuth_tokenCopyVSCode.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: Gcloud token copied into VSCode
 
 Once you click "Enter," gcloud will now be able to operate against the Agility
 GCP account. The gcloud authorization will also allow Terraform to use the
@@ -101,14 +103,14 @@ and change to the working directory.
 .. warning:: For a smooth ride, always invoke commands from inside the cloned
    git repository (Agility2021_GCP_Terraform_ATC). To check you're in the right
    place, you can run the command ``pwd`` and the output should read
-   ``/home/ubuntu/projects/Agility2021_GCP_Terraform_ATC``
+   ``/home/ubuntu/projects/f5-agility_GCP_Terraform_ATC`
 
 .. code-block:: bash
 
-   git clone https://github.com/jtylershaw/Agility2021_GCP_Terraform_ATC.git
-   cd Agility2021_GCP_Terraform_ATC/
+   git clone https://github.com/f5devcentral/f5-agility_GCP_Terraform_ATC.git
+   cd f5-agility_GCP_Terraform_ATC/
 
-.. image:: ./images/08_git_clone_results.png
+.. image:: ./images/gitCloneRepoResults.png
    :scale: 50%
    :alt: git clone results
 
