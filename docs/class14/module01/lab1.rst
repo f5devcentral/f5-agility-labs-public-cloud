@@ -5,22 +5,27 @@ Follow the link in your email invite and login to the lab environment.
 
 Your Deployment => Systems => Client => Access => VS Code.
 
-.. image:: ./images/00_VSCODE_Access.png
+.. image:: ./images/01_StartClass_VSCODELaunch.png
    :scale: 50%
    :alt: UDF Access
 
 Visual Studio Code will launch as a tab in your current browser. VS Code is
-running from a remote machine in your UDF environment.  Once in this tab, there
-will be a terminal window at the bottom of the screen.  Make sure the Terminal
+running from a remote machine in your UDF environment.  Once in this tab, you 
+will need to open a new terminal window. 
+
+
+.. image:: ./images/02_VSCode_NewTerminal.png
+   :scale: 50%
+   :alt: launch new terminal
+
+
+The terminal window will be at the bottom of the screen.  Make sure the Terminal
 window indicates a "bash" shell.
 
-.. image:: ./images/03_vscode_bash.png
+.. image:: ./images/03_VSCode_Terminal_Confirm.png
    :scale: 50%
    :alt: bash terminal
 
-.. image:: ./images/14_bash.png
-   :scale: 50%
-   :alt: bash terminal
 
 Authenticate the 'gcloud' command line utility
 ----------------------------------------------
