@@ -9,7 +9,7 @@ the TMUI to "iApps -> Package management LX" and you'll see four packages (The
 fifth is Service Discovery and is now a subset of AS3):
 
 .. image:: ./images/TMUI_ATCCheck.png
-   :scale: 50%
+   :scale: 75%
    :alt: Select F5
 
 The terraform apply you performed in the last step generated the necessary
