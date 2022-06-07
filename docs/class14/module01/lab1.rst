@@ -52,10 +52,11 @@ prompting you to associate your GCP account with the gcloud command utility.
 The browser will give you an authentication token to copy and paste back into
 the VS Code Terminal.  Paste into the terminal and gcloud will be successfully
 authenticated and will work for Terraform.
+.. image:: ./images/
 
-.. image:: ./images/04_google_login.png
+.. image:: ./images/GcloudAuth_accountselection.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: Choose your Google account
 
 .. warning:: The GCP account you use must be identical to the user you signed
    up for Agility and signed into this account with. Otherwise you will not
