@@ -120,7 +120,7 @@ Build two BIG-IPs using Terraform
 The first step that needs to be done is update the variable "student_id" in the
 terraform.tfvars file.  Please use the assigned Student ID.
 
-.. image:: ./images/09_tfvars.png
+.. image:: ./images/module1_terraform_Set_tfvars.png
    :scale: 50%
    :alt: tfvars
 
@@ -135,7 +135,11 @@ modules. Do so by running:
 
    terraform init
 
-.. image:: ./images/10_terraform_init.png
+.. image:: ./images/module1_terraform_Init1.png
+   :scale: 50%
+   :alt: tf init
+
+.. image:: ./images/module1_terraform_Init2.png
    :scale: 50%
    :alt: tf init
 
@@ -146,7 +150,7 @@ identify the resources that it will be creating. Please run the following:
 
    terraform plan
 
-.. image:: ./images/12_vscode_terraform_plan_complete.png
+.. image:: ./images/module1_terraform_Plan.png
    :scale: 50%
    :alt: tf plan
 
@@ -163,15 +167,20 @@ outputs. These are defined in the terraform variables. You can always get the
 'terraform output' values again by invoking from the terminal, make sure to
 have bash toggled:
 
-.. image:: ./images/13_terraform_apply_output.png
+.. image:: ./images/module1_terraform_ApplyComplete.png
    :scale: 50%
    :alt: tf apply
 
 .. code-block:: bash
 
+   terraform output bigip_password
    terraform output
 
-.. image:: ./images/14_terraform_output.png
+Due to changes in terraform 1.x, the sensitive values are not output with the 
+general output command, however if you specify the sensitive output value 
+name, it will return that value.
+
+.. image:: ./images/Module1_terraform_Output.png
    :scale: 50%
    :alt: tf output
 
