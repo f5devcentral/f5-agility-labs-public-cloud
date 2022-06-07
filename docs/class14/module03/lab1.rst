@@ -20,13 +20,13 @@ The first step will be to configure the F5 VS Code Plugin to connect to the two
 BIG-IPs
 
 .. image:: ./images/Lab4.1-DO-SelectF5Extension.png
-   :scale: 50%
+   :scale: 60%
    :alt: Select F5
 
 Copy bigip_1_host information then click on add host then paste and enter.
 
 .. image:: ./images/Lab4.1-DO-F5ExtensionAddHost_entername.png
-   :scale: 50%
+   :scale: 60%
    :alt: Add BIG-IP1
 
 .. warning:: There is a bug that when you use the mouse buttons in the password 
@@ -38,7 +38,7 @@ Once the name loads on the side column click on the host and paste in the
 bigip_password.
 
 .. image:: ./images/Lab4.1-DO-F5Extension_enterpassword.png
-   :scale: 50%
+   :scale: 60%
    :alt: BIG-IP1 Password
 
 Do the same for big-ip 2.
