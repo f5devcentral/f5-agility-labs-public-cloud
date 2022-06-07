@@ -19,20 +19,25 @@ f5-agility_GCP_Terraform_ATC folder.
 The first step will be to configure the F5 VS Code Plugin to connect to the two
 BIG-IPs
 
-.. image:: ./images/01_select_F5.png
+.. image:: ./images/Lab4.1-DO-SelectF5Extension.png
    :scale: 50%
    :alt: Select F5
 
 Copy bigip_1_host information then click on add host then paste and enter.
 
-.. image:: ./images/03_add_first_host.png
+.. image:: ./images/Lab4.1-DO-F5ExtensionAddHost_entername.png
    :scale: 50%
    :alt: Add BIG-IP1
+
+.. warning:: There is a bug that when you use the mouse buttons in the password 
+   input, it will disappear without taking any information.  Should you overlook 
+   this warning, simply refresh the browser window that vscode is running in and 
+   you can enter it by using the keyboard. 
 
 Once the name loads on the side column click on the host and paste in the
 bigip_password.
 
-.. image:: ./images/04_double_click_pwd.png
+.. image:: ./images/Lab4.1-DO-F5Extension_enterpassword.png
    :scale: 50%
    :alt: BIG-IP1 Password
 
