@@ -15,7 +15,7 @@ see the outputs again.
 
 The username and password are part of the "terraform output" results.
 
-.. image:: ./images/3_bigip2passwordModule1_terraform_Output.png
+.. image:: ./images/Module1_terraform_Output.png
    :scale: 75%
    :alt: Terraform Output Password
 
@@ -35,7 +35,7 @@ Login to the Big-IP1 Configuration Utility (WebUI) using the values found in
 
 Due to new security settings you will be prompted to change your password.  Simply add your student number to the end of the pasword the system provided earlier.
 
-.. image:: ./TMUI_PasswordChange.png
+.. image:: ./images/TMUI_PasswordChange.png
    :scale: 75%
    :alt: Password change
 
