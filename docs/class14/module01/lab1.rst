@@ -6,7 +6,7 @@ Follow the link in your email invite and login to the lab environment.
 Your Deployment => Systems => Client => Access => VS Code.
 
 .. image:: ./images/01_StartClass_VSCODELaunch.png
-   :scale: 50%
+   :scale: 60%
    :alt: UDF Access
 
 Visual Studio Code will launch as a tab in your current browser. VS Code is
