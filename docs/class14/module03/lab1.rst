@@ -44,7 +44,7 @@ bigip_password.
 Do the same for big-ip 2.
 
 .. note:: Make sure you are signed into BIG-IP Host 1 for the next step. Click
-   the bottom blue bar where it says DO(1.18.0). This will open separate window
+   the bottom white bar where it says DO(1.30.0). This will open separate window
    with status is 200 OK and the Body response will indicate the DO version.
 
 Submit Declarative Onboarding declarations
@@ -53,30 +53,30 @@ Submit Declarative Onboarding declarations
 From f5-agility_GCP_Terraform_ATC click on Lab4.1-DO under the drop down menu,
 select "do_BIGIP1.json" request.
 
-.. image:: ./images/05_select_DO_step1.png
-   :scale: 50%
+.. image:: ./images/Lab4.1-DO-BIGIP1.png
+   :scale: 60%
    :alt: Add BIG-IP1
 
 Make sure that your "target" is BIG-IP1:
 
-.. image:: ./images/06_check_target_BIGIP.png
-   :scale: 50%
+.. image:: ./images/Lab4.1-DO-BIGIP1_Verification.png
+   :scale: 60%
    :alt: BIG-IP1 target
 
-Right Click "Post as DO Declaration". The Status will return as "202 RUNNING."
+Right Click "Post as DO Declaration". The Status will return as "200 success" or "2 RUNNING".
 
-.. image:: ./images/07_post_as_DO.png
+.. image:: ./images/Lab4.1-DO-BIGIP1PostasDO.png
    :scale: 50%
    :alt: Post DO
 
-.. image:: ./images/08_DO_progress.png
+.. image:: ./images/PostingDO_Message.png
    :scale: 50%
    :alt: Post DO
 
-Check the status of DO by ckicking on the DO(1.18.0) in the blue bar at the
+Check the status of DO by ckicking on the DO(1.30.0) in the white bar at the
 bottom.
 
-.. image:: ./images/09_DO_refresh_status.png
+.. image:: ./images/Lab4.1-DO-BIGIP1_VerificationDOCheck.png
    :scale: 50%
    :alt: Add BIG-IP1
 
