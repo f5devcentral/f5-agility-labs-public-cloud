@@ -10,21 +10,25 @@ Your Deployment => Systems => Client => Access => VS Code.
    :alt: UDF Access
 
 Visual Studio Code will launch as a tab in your current browser. VS Code is
-running from a remote machine in your UDF environment.  Once in this tab, you 
-will need to open a new terminal window. 
+running from a remote machine in your UDF environment.  When the window loads, it 
+will prompt you to trust the files in the folder.  Check the box and click yes.
 
+.. image:: ./images/Trustfolder_LaunchVSCODE.png
+   :scale: 50%
+   :alt: Trust folder dialog
+
+Now you will need to open a new terminal window. 
 
 .. image:: ./images/02_VSCode_NewTerminal.png
    :scale: 50%
-   :alt: launch new terminal
-
+   :alt: Launch new terminal
 
 The terminal window will be at the bottom of the screen.  Make sure the Terminal
 window indicates a "bash" shell.
 
 .. image:: ./images/03_VSCode_Terminal_Confirm.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: Bash terminal
 
 
 Authenticate the 'gcloud' command line utility
@@ -35,6 +39,13 @@ From the VS Code terminal run the following command:
 .. code-block:: bash
 
    gcloud auth application-default login
+
+If you copied this command and tried to paste it into the terminal window, you will be prompted to allow access to the clipboard.
+
+.. image:: ./images/VSCode_allowClipboard.png
+   :scale: 100%
+   :alt: Allow Clipboard Access
+
 
 This will give you a link you can click on (or CMD-click) to open up a browser,
 prompting you to associate your GCP account with the gcloud command utility.
