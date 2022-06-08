@@ -16,6 +16,9 @@ The terraform apply you performed in the last step generated the necessary
 declaration files for rest of the lab. They are located under the
 f5-agility_GCP_Terraform_ATC folder.
 
+Connect the F5 extension to the BIG-IPs
+------------------------------------------
+
 The first step will be to configure the F5 VS Code Plugin to connect to the two
 BIG-IPs
 
