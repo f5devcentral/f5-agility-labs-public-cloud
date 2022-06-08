@@ -124,7 +124,7 @@ The first step that needs to be done is update the variable "student_id" in the
 terraform.tfvars file.  Please use the assigned Student ID.
 
 .. image:: ./images/module1_terraform_Set_tfvars.png
-   :scale: 50%
+   :scale: 60%
    :alt: tfvars
 
 .. warning:: A failure to change the value of 'student_id' on line two of
@@ -140,11 +140,11 @@ modules. Do so by running:
 
 .. image:: ./images/module1_terraform_Init1.png
    :scale: 75%
-   :alt: tf init
+   :alt: Terraform init part1
 
 .. image:: ./images/module1_terraform_Init2.png
    :scale: 75%
-   :alt: tf init
+   :alt: Terraform init part1
 
 Once initialized, We will run a terraform plan which will let terraform
 identify the resources that it will be creating. Please run the following:
@@ -154,8 +154,8 @@ identify the resources that it will be creating. Please run the following:
    terraform plan
 
 .. image:: ./images/module1_terraform_Plan.png
-   :scale: 50%
-   :alt: tf plan
+   :scale: 60%
+   :alt: Terraform plan
 
 The last step of launching terraform is to "apply." Note that this will take
 some time and will prompt you (by default) to proceed. Please run the following
