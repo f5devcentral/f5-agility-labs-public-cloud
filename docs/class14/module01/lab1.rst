@@ -9,6 +9,9 @@ Your Deployment => Systems => Client => Access => VS Code.
    :scale: 60%
    :alt: UDF Access
 
+Prepare the VSCode environment
+===================================================
+
 Visual Studio Code will launch as a tab in your current browser. VS Code is
 running from a remote machine in your UDF environment.  When the window loads, it 
 will prompt you to trust the files in the folder.  Check the box and click yes.
