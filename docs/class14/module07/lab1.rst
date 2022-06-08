@@ -31,6 +31,7 @@ installed on both devices.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_verifyExtension.png
    :scale: 60%
+   :alt: Verify the CFE extension is loaded in TMUI
 
 
 POST F5 Cloud Failover Declaration
@@ -41,15 +42,42 @@ From the files tab click on "Lab4.4-CFE" => highlight all of the text in
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_Make_HTTPRequest.png
    :scale: 60%
+   :alt: Make HTTP request
 
 A "message:success" response indicates the f5-cloud-failover declaration was
 successfully posted.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_Make_HTTPRequest_success.png
    :scale: 60%
+   :alt: Make HTTP request success
 
 Post the declaration to BIG-IP2 as well.  The CFE configuration is not
 synchronized as part of the DSC synchronization mechanism.
+
+Review GCP specific configurations that Cloud Failover Extension can use
+--------------------------------------------------------------------------
+
+In your tab that has the Google CLoud Console open, in the Compute Engine,
+select the VM that is BIG-IP1 and then click the three dots.  Select "View network details".
+
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleNetworkDetails.png
+   :scale: 60%
+   :alt: Google Console Network details
+
+On this screen you should see that BIG-IP1 has Alias IP ranges assigned.
+
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleAliasIPRanges.png
+   :scale: 60%
+   :alt: Google Console Network details Alias IP ranges
+
+When we had terraform build BIG-IP1 (this was done in the main.tf file), we defined a secondary private ip 
+on the external interface, which Google translates into Alias IP Ranges.
+
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_HowAliasIPRanges.png
+   :scale: 60%
+   :alt: Google Console Network details Alias IP ranges
+
+
 
 Test Failover
 -------------
