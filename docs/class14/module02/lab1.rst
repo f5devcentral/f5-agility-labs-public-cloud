@@ -51,4 +51,4 @@ the GUI that you will change later:
 
 Repeat these steps and verify the same items for Big-IP2.
 
-.. note::  it is normal that bigip2 is also named bigip1.example.com at this time, because it is not yet configured
+.. note::  It is normal that bigip2 is also named bigip1.example.com at this time, because it is not yet configured
