@@ -82,15 +82,15 @@ From Big-IP2, Device Management => Traffic Groups => traffic-group-1.
 Force bigip2.f5lab.dev to standby. Click [Force to Standby].
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP2_TMUITrafficGroupForcetoStandby.png
-   :scale: 50%
+   :scale: 60%
 
 On Big-IP2, in the upper-left-hand corner, note "ONLINE (STANDBY)".
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP2_TMUIStandby.png
-   :scale: 50%
+   :scale: 60%
 
 From Big-IP1, in the upper-left-hand corner, note "ONLINE (ACTIVE)". Big-IP1 is
 now back to active.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_TMUIActive.png
-   :scale: 50%
+   :scale: 60%
