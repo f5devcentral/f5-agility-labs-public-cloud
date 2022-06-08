@@ -66,40 +66,40 @@ Make sure that your "target" is BIG-IP1:
 Right Click "Post as DO Declaration". The Status will return as "200 success" or "2 RUNNING".
 
 .. image:: ./images/Lab4.1-DO-BIGIP1PostasDO.png
-   :scale: 50%
-   :alt: Post DO
+   :scale: 60%
+   :alt: Post as DO
 
 .. image:: ./images/PostingDO_Message.png
-   :scale: 50%
+   :scale: 100%
    :alt: Post DO
 
 Check the status of DO by ckicking on the DO(1.30.0) in the white bar at the
 bottom.
 
 .. image:: ./images/Lab4.1-DO-BIGIP1_VerificationDOCheck.png
-   :scale: 50%
+   :scale: 60%
    :alt: Add BIG-IP1
 
 Wait a few minutes until status is 200 OK
 
-.. image:: ./images/15_do2_complete.png
+.. image:: ./images/Lab4.1-DO-BIGIP1_Success.png
    :scale: 50%
    :alt: Add BIG-IP1
 
-At the bottom of the VS Code window in the blue bar, you can click on the DO
-(1.18.0) to submit a "GET" request to get the status of the DO execution as you
+At the bottom of the VS Code window in the white bar, you can click on the DO
+(1.30.0) to submit a "GET" request to get the status of the DO execution as you
 did above. Wait until you get a status of "200 OK."
 
 Now sign into BIG-IP Host 2 by clicking on the F5 Plugin and left clicking on
 the second BIG-IP. Click on Lab4.1-DO under the drop down menu, select
 "do_step2.json" request. Right Click "Post as DO Declaration".
 
-.. image:: ./images/15_do2.png
+.. image:: ./images/Lab4.1-DO-BIGIP2PostasDO.png
    :scale: 50%
-   :alt: Add BIG-IP1
+   :alt: Add BIG-IP2
 
 Wait a few minutes until status is 200 OK
 
-.. image:: ./images/15_do2_complete.png
-   :scale: 50%
-   :alt: Add BIG-IP1
+.. image:: ./images/Lab4.1-DO-BIGIP2_Success.png
+   :scale: 60%
+   :alt: Add BIG-IP2
