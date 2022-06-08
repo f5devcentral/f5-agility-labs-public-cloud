@@ -1,25 +1,71 @@
-Terraform Destroy
-=================
+F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
+============================================================================
 
-This is the end of using the F5 Automation Toolchain.  In this step we will be
-removing all of the infrastructure that was created for your lab with
-Terraform. To do that we'll run:
+Telemetry Streaming was created to offload common metrics from the BIG-IP onto
+external monitoring/graphing utilities, including the major cloud-native
+monitoring programs. In this lab we will be sending the some basic metrics from
+the BIG-IP to Cloud Monitoring - part of GCP.
 
-.. code-block:: bash
+The Telemetry Streaming package has been installed as part of the base image.
+You can verify it is installed by going to iApps => Package Management LX where
+you can note the version.
 
-   terraform destroy --force
+.. image:: ./images/00_bigip_ts_check.png
+   :scale: 75%
+   :alt: image
 
-.. image:: ./images/00_terraform_destroy.png
-   :scale: 50%
+Make sure you are signed into BIG-IP 1, click on TS the bottom white bar.
 
-.. image:: ./images/01_terraform_done.png
-   :scale: 50%
+.. image:: ./images/01_vs_ts_validation.png
+   :scale: 75%
+   :alt: image
 
-Go into the GCP console. You'll find that there should be no resources for your
-student ID. A terraform destroy command should clean up all resources that are
-maintained in the state file.
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+is ready on Big-IP1.
 
-We hope you enjoyed this lab. Please make sure to fill out a survey before
-leaving!
+From files tab click on Lab4.2-TS under the drop down menu, select "ts.json"
+request. Right Click "Post as TS Declaration".
 
-Fin.
+.. image:: ./images/1_ts1.png
+   :scale: 75%
+   :alt: image
+
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+declaration successfully completed processing on Big-IP1.
+
+.. image:: ./images/03_ts_success.png
+   :scale: 75%
+   :alt: image
+
+In two browser tabs, go to the ip address for both webapp_1 and webapp_2 and refresh the page 10 or more times.  The intent is to create some utilization on the BIG-IP that will then be sent to the GCP monitoring infrastructure.
+
+.. image:: ./images/9_example_app_bigip1.png
+   :scale: 75%
+   :alt: image
+
+Now from the GCP Console, Services => type "Monitoring" in the search box,
+choose the first "Monitoring" option from the drop-down results.
+
+.. image:: ./images/3_ts3.png
+   :scale: 75%
+   :alt: image
+
+From Monitoring on the side panel => Metrics explorer.
+
+.. image:: ./images/4_ts4.png
+   :scale: 75%
+   :alt: image
+
+Click on query editor in the editor type fetch generic_node ::
+custom/system/cpu. Then click Run Query.
+
+.. image:: ./images/10_gcp_monitoring_metrics_q_edit.png
+   :scale: 75%
+   :alt: image
+
+.. image:: ./images/11_gcp_query_results.png
+   :scale: 75%
+   :alt: image
+
+This may take a few minutes, but eventually you will see telemetry data start
+to be shown.

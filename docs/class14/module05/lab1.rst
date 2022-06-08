@@ -1,61 +1,71 @@
-Establish Device Trust between Big-IPs
-======================================
+F5 Telemetry Streaming Initial Setup 
+============================================================================
 
-Please click on the F5 plugin item at the left of the screen, and select bigip1.example.com.
+Telemetry Streaming was created to offload common metrics from the BIG-IP onto
+external monitoring/graphing utilities, including the major cloud-native
+monitoring programs. In this lab we will be sending the some basic metrics from
+the BIG-IP to Cloud Monitoring - part of GCP.
 
-.. warning:: Please ensure you are connected to the correct device with the F5 Plugin before posting a declaration.  A failure to do so may result in an error.
+The Telemetry Streaming package has been installed as part of the base image.
+You can verify it is installed by going to iApps => Package Management LX where
+you can note the version.
 
-From Agility2021_GCP_Terraform_ATC click on Lab4.2-DO_HA under the drop down
-menu, select "do_step1.json" request.
-Right Click "Post as DO Declaration".
-The Status will be 202 RUNNING.
-
-.. image:: ./images/15_do_ha.png
-   :scale: 50%
+.. image:: ./images/00_bigip_ts_check.png
+   :scale: 75%
    :alt: image
 
-Wait a few minutes until status is 200 OK.  Use the DO verification in the blue
-bar at the bottom of VS Code to refresh the status.
+Make sure you are signed into BIG-IP 1, click on TS the bottom white bar.
 
-.. image:: ./images/15_do_ha_complete.png
-   :scale: 50%
+.. image:: ./images/01_vs_ts_validation.png
+   :scale: 75%
    :alt: image
 
-.. warning:: If the DO returns anything other than a "202 Accepted" or a "200 OK" then it is suggested to ssh as admin@<ip address> to the BIG-IP in question, and issue the command "bigstart restart restnoded" and once done, re-submit the DO declaration.
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+is ready on Big-IP1.
 
+From files tab click on Lab4.2-TS under the drop down menu, select "ts.json"
+request. Right Click "Post as TS Declaration".
 
-Now sign into BIG-IP Host 2 via the F5 VS Code extension. Click on Lab4.2-DO_HA
-under the drop down menu, select "do_step2.json" request.
-Right Click "Post as DO Declaration".
-The Status will be 202 RUNNING.
-
-.. image:: ./images/15_do2_ha.png
-   :scale: 50%
+.. image:: ./images/1_ts1.png
+   :scale: 75%
    :alt: image
 
-Wait a few minutes until status is 200 OK
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+declaration successfully completed processing on Big-IP1.
 
-.. image:: ./images/15_do_ha_complete.png
-   :scale: 50%
+.. image:: ./images/03_ts_success.png
+   :scale: 75%
    :alt: image
 
-At the bottom of the VS Code window in the blue bar, you can click on the DO
-(1.18.0) to submit a "GET" request to get the status of the DO execution.
+In two browser tabs, go to the ip address for both webapp_1 and webapp_2 and refresh the page 10 or more times.  The intent is to create some utilization on the BIG-IP that will then be sent to the GCP monitoring infrastructure.
 
-.. warning:: Make sure Big-IP1 is active and Big-IP2 is standby before
-   proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" =>
-   bigip2.example.com => [Force to Standby].
-
-From the Big-IP1 Configuration Utility (WebUI), note that bigip1.example.com is
-the "ONLINE (ACTIVE)" device and "In Sync".
-
-.. image:: ./images/17_do_active.png
-   :scale: 50%
+.. image:: ./images/9_example_app_bigip1.png
+   :scale: 75%
    :alt: image
 
-From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is
-the "ONLINE (STANDBY)" device and "In Sync".
+Now from the GCP Console, Services => type "Monitoring" in the search box,
+choose the first "Monitoring" option from the drop-down results.
 
-.. image:: ./images/16_do_standby.png
-   :scale: 50%
+.. image:: ./images/3_ts3.png
+   :scale: 75%
    :alt: image
+
+From Monitoring on the side panel => Metrics explorer.
+
+.. image:: ./images/4_ts4.png
+   :scale: 75%
+   :alt: image
+
+Click on query editor in the editor type fetch generic_node ::
+custom/system/cpu. Then click Run Query.
+
+.. image:: ./images/10_gcp_monitoring_metrics_q_edit.png
+   :scale: 75%
+   :alt: image
+
+.. image:: ./images/11_gcp_query_results.png
+   :scale: 75%
+   :alt: image
+
+This may take a few minutes, but eventually you will see telemetry data start
+to be shown.

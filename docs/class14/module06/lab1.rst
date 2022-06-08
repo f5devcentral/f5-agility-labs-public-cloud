@@ -1,60 +1,61 @@
-Using AS3 to create services
-============================
+Establish Device Trust between Big-IPs
+======================================
 
-Since your devices are now clustered in a sync-failover group and using
-auto-sync, you can post service declarations to whichever device you choose.
-A change to one BIG-IP will be automatically be replicated to the other.
+Please click on the F5 plugin item at the left of the screen, and select bigip1.example.com.
 
-In the previous steps in module 2 you validated that there were no virtual
-servers on the BIG-IPs.  You can validate this again, but up until this point
-we have not modified the BIG-IPs to have any virtual servers.
+.. warning:: Please ensure you are connected to the correct device with the F5 Plugin before posting a declaration.  A failure to do so may result in an error.
 
-Post AS3 declarations
----------------------
+From Agility2021_GCP_Terraform_ATC click on Lab4.2-DO_HA under the drop down
+menu, select "do_step1.json" request.
+Right Click "Post as DO Declaration".
+The Status will be 202 RUNNING.
 
-Click on Lab4.3-AS3 under the drop down menu, select "as3.json" request.
-Right Click "Post as AS3 Declaration".
-
-.. image:: ./images/21_as3.png
+.. image:: ./images/15_do_ha.png
    :scale: 50%
    :alt: image
 
-Status code 200 response signals that Application Services 3 Extension (AS3) is
-completed on Big-IP 1.
+Wait a few minutes until status is 200 OK.  Use the DO verification in the blue
+bar at the bottom of VS Code to refresh the status.
 
-.. image:: ./images/22_as3.png
+.. image:: ./images/15_do_ha_complete.png
    :scale: 50%
    :alt: image
 
-AS3 and Service Discovery
---------------------------
+.. warning:: If the DO returns anything other than a "202 Accepted" or a "200 OK" then it is suggested to ssh as admin@<ip address> to the BIG-IP in question, and issue the command "bigstart restart restnoded" and once done, re-submit the DO declaration.
 
-As part of AS3, you can now leverage service discovery to automatically parse
-the cloud environment to look for Metadata.  In GCP this is done via labels on
-instances, or items like forwarding rules.  Review the Body of the declaration.
-The AS3 declaration is configured to discover pool members based on GCP labels.
 
-Log into Big-IP1 => Local Traffic => Virtual Servers. Choose the "Example01"
-Partition from the Drop-down in the upper-right-hand corner. AS3 created two
-HTTP virtual servers: example01a and example01b.
+Now sign into BIG-IP Host 2 via the F5 VS Code extension. Click on Lab4.2-DO_HA
+under the drop down menu, select "do_step2.json" request.
+Right Click "Post as DO Declaration".
+The Status will be 202 RUNNING.
 
-.. image:: ./images/23_as3_vs.png
-   :scale: 75%
+.. image:: ./images/15_do2_ha.png
+   :scale: 50%
    :alt: image
 
-Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used GCP tags
-to discover and auto-populate pool1 with two web servers.
+Wait a few minutes until status is 200 OK
 
-.. image:: ./images/24_as3_pool.png
-   :scale: 75%
+.. image:: ./images/15_do_ha_complete.png
+   :scale: 50%
    :alt: image
 
-Log into Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01"
-Partition from the Drop-down in the upper-right-hand corner. Even though you
-only POSTED an AS3 declaration to Big-IP1, Config Sync replicated the Virtual
-Servers and all supporting configuration objects (pools, profiles, etc.) to
-Big-IP2.
+At the bottom of the VS Code window in the blue bar, you can click on the DO
+(1.18.0) to submit a "GET" request to get the status of the DO execution.
 
-.. image:: ./images/25_as3_standby.png
-   :scale: 75%
+.. warning:: Make sure Big-IP1 is active and Big-IP2 is standby before
+   proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" =>
+   bigip2.example.com => [Force to Standby].
+
+From the Big-IP1 Configuration Utility (WebUI), note that bigip1.example.com is
+the "ONLINE (ACTIVE)" device and "In Sync".
+
+.. image:: ./images/17_do_active.png
+   :scale: 50%
+   :alt: image
+
+From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is
+the "ONLINE (STANDBY)" device and "In Sync".
+
+.. image:: ./images/16_do_standby.png
+   :scale: 50%
    :alt: image
