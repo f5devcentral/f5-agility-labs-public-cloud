@@ -14,7 +14,7 @@ fifth is Service Discovery and is now a subset of AS3):
 
 The terraform apply you performed in the last step generated the necessary
 declaration files for rest of the lab. They are located under the
-f5-agility_GCP_Terraform_ATC folder.
+f5-agility_GCP_Terraform_ATC/ATC_Declarations folder.
 
 Connect the F5 extension to the BIG-IPs
 ------------------------------------------
