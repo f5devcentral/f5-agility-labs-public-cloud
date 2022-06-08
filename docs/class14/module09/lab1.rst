@@ -14,24 +14,24 @@ choose the first "Monitoring" option from the drop-down results.
 
 .. image:: ./images/TS_GCP_MonitoringSearch.png
    :scale: 60%
-   :alt: Google COnsole Monitoring search
+   :alt: Google Console Monitoring search
 
 From Monitoring on the side panel => Metrics explorer.
 
 .. image:: ./images/Lab4.2_GCloudConsoleMetricsExplorer.png
    :scale: 60%
-   :alt: image
+   :alt: GCloud Metrics explorer
 
 Click on query editor in the editor type fetch generic_node ::
 custom/system/cpu. Then click Run Query.
 
 .. image:: ./images/Lab4.2_GCloudConsoleSelectMetric.png
    :scale: 60%
-   :alt: image
+   :alt: Gcloud Metrics Explorer select Metric
 
-.. image:: ./images/11_gcp_query_results.png
-   :scale: 75%
-   :alt: image
+.. image:: ./images/Lab4.2_GCloudConsoleMetricsExplorerGraph.png
+   :scale: 60%
+   :alt: Graph
 
 This may take a few minutes, but eventually you will see telemetry data start
 to be shown.
