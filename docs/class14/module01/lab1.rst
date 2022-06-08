@@ -10,7 +10,7 @@ Your Deployment => Systems => Client => Access => VS Code.
    :alt: UDF Access
 
 Prepare the VSCode environment
-===================================================
+----------------------------------------------
 
 Visual Studio Code will launch as a tab in your current browser. VS Code is
 running from a remote machine in your UDF environment.  When the window loads, it 
@@ -106,7 +106,7 @@ and change to the working directory.
 .. warning:: For a smooth ride, always invoke commands from inside the cloned
    git repository (Agility2021_GCP_Terraform_ATC). To check you're in the right
    place, you can run the command ``pwd`` and the output should read
-   ``/home/ubuntu/projects/f5-agility_GCP_Terraform_ATC`
+   ``/home/ubuntu/projects/f5-agility_GCP_Terraform_ATC``
 
 .. code-block:: bash
 
