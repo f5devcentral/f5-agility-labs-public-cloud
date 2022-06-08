@@ -74,10 +74,34 @@ When we had terraform build BIG-IP1 (this was done in the main.tf file), we defi
 on the external interface, which Google translates into Alias IP Ranges.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_HowAliasIPRanges.png
-   :scale: 60%
+   :scale: 100%
    :alt: Google Console Network details Alias IP ranges
 
+We have another Google Cloud Platform object that was created to facilitate moving traffic from one 
+device to another, a Forwarding Rule.  In your Google Console, search for load balancer.  
 
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLB_Navigate.png
+   :scale: 60%
+   :alt: Google Console Network Load Balancing search
+
+Now right click or command click and open the load balancing page in a new tab.  Once this is open, 
+click on the advanced menu option. 
+
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLB.png
+   :scale: 60%
+   :alt: Google Console Network Load Balancing landing page
+
+Find your student ID and you will see that there is an IP address and it is assigned to your BIGIP1.
+
+.. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLBAdvanced.png
+   :scale: 60%
+   :alt: Google Console Network Load Balancing advanced menu
+
+We used terraform (also done in the main.tf) to build this and also defined the targets for this forwarding rule.
+
+.. image:: ./images/Lab4.4-AS3_CFE-terraform_forwarding_rule.png
+   :scale: 80%
+   :alt: Google Console Network Load Balancing advanced menu
 
 Test Failover
 -------------
