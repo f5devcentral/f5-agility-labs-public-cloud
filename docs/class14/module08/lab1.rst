@@ -59,7 +59,7 @@ Big-IP2.
    :scale: 75%
    :alt: Virtual server list Standby Device
 
-View the websites we created
+View the websites you created
 ----------------------------
 
 In your terminal pane, CTL+Click on the webapp_external_IP link, twice.  
