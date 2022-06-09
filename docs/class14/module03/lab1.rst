@@ -112,3 +112,7 @@ Wait a few minutes until status is 200 OK
 .. image:: ./images/Lab4.1-DO-BIGIP2_Success.png
    :scale: 60%
    :alt: Add BIG-IP2
+
+.. note:: Even though you just sent a DO declaration to the device, the status bar from 
+   the F5 Extension still reflects the name set on initial start up. This will get updated 
+   the next time you connect to that device.
