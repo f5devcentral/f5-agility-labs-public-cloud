@@ -34,7 +34,7 @@ Copy bigip_1_host information then click on add host then paste and enter.
 
 .. warning:: There is a bug that when you use the mouse buttons in the password 
    input, it will disappear without taking any information.  Should you overlook 
-   this warning, simply refresh the browser window that vscode is running in and 
+   this warning block, simply refresh the browser window that vscode is running in and 
    you can enter it by using the keyboard. 
 
 Once the name loads on the side column click on the host and paste in the
@@ -47,7 +47,7 @@ bigip_password.
 Do the same for big-ip 2.
 
 .. note:: Make sure you are signed into BIG-IP Host 1 for the next step. Click
-   the bottom white bar where it says DO(1.30.0). This will open separate window
+   the bottom white bar where it says DO(1.30.0). This will open a separate window
    with status is 200 OK and the Body response will indicate the DO version.
 
 Submit Declarative Onboarding declarations
@@ -66,7 +66,7 @@ Make sure that your "target" is BIG-IP1:
    :scale: 60%
    :alt: BIG-IP1 target
 
-Right Click "Post as DO Declaration". The Status will return as "200 success" or "2 RUNNING".
+Right Click "Post as DO Declaration". The Status will return as "200 SUCCESS" or "202 RUNNING".
 
 .. image:: ./images/Lab4.1-DO-BIGIP1PostasDO.png
    :scale: 60%
@@ -93,8 +93,14 @@ At the bottom of the VS Code window in the white bar, you can click on the DO
 (1.30.0) to submit a "GET" request to get the status of the DO execution as you
 did above. Wait until you get a status of "200 OK."
 
-Now sign into BIG-IP Host 2 by clicking on the F5 Plugin and left clicking on
-the second BIG-IP. Click on Lab4.1-DO under the drop down menu, select
+Now sign into BIG-IP Host 2 by clicking on the F5 Extension icon and left clicking on
+the second BIG-IP. 
+
+.. image:: ./images/Lab4.1-DO-F5ExtensionSwitchunit.png
+   :scale: 50%
+   :alt: F5 Extension switch devices
+
+Now return to the folder explorer and click on Lab4.1-DO under the drop down menu, select
 "do_step2.json" request. Right Click "Post as DO Declaration".
 
 .. image:: ./images/Lab4.1-DO-BIGIP2PostasDO.png
