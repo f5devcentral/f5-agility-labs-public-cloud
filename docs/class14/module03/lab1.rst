@@ -46,10 +46,12 @@ bigip_password.
 
 Do the same for big-ip 2.
 
-.. note:: Make sure you are signed into BIG-IP Host 1 for the next step. Click
-   the bottom white bar where it says DO(1.30.0). This will open a separate window
-   with status is 200 OK and the Body response will indicate the DO version.
-
+.. note:: In both labs where you are making Declarative Onboarding (DO) posts, 
+   it is critical to make sure that you are connected to the correct BIG-IP 
+   based on the IP Addresses from the terraform output.  Keeping your terminal 
+   window with the terraform output visible can minimize the risk of selecting the 
+   wrong BIG-IP when moving between them in this lab.
+   
 Submit Declarative Onboarding declarations
 ------------------------------------------
 
