@@ -25,7 +25,7 @@ bar at the bottom of VS Code to refresh the status.
    :alt: Post as DO HA Json bigip1 Success
 
 .. warning:: If the DO returns anything other than a "202 Accepted" or a "200 OK" 
-   then it is suggested to ssh as admin@<ip address> to the BIG-IP in question, 
+   then it is suggested that you ssh in the terminal pane as admin@<ip address> to the BIG-IP in question, 
    and issue the command "bigstart restart restnoded" and once done, re-submit the DO declaration.
 
 Now sign into BIG-IP Host 2 via the F5 Extension. Click on Lab4.3-DO_HA
