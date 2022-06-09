@@ -85,7 +85,7 @@ on the external interface, which Google translates into Alias IP Ranges.
    :alt: Google Console Network details Alias IP ranges
 
 We have another Google Cloud Platform object that was created to facilitate moving traffic from one 
-device to another, a Forwarding Rule.  In your Google Console, search for load balancer.  
+device to another, a Forwarding Rule.  In your Google Console, search for load balancing.  
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLB_Navigate.png
    :scale: 60%
@@ -109,6 +109,9 @@ We used terraform (also done in the main.tf) to build this and also defined the 
 .. image:: ./images/Lab4.4-AS3_CFE-terraform_forwarding_rule.png
    :scale: 80%
    :alt: Google Console Network Load Balancing advanced menu
+
+.. note:: Keep the two tabs with the Google console open as we will use these later.
+
 
 Test Failover
 -------------
