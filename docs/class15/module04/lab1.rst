@@ -8,7 +8,7 @@ First, move into the ``nia`` directory in the repository.
  
 .. code-block:: bash
    
-   $ cd ../nia/
+   cd ../nia/
 
 - Next, you will configure Consul-Terraform-Sync.
 
@@ -53,7 +53,7 @@ is produced automatically for you under the ``nia`` folder.
 
 .. code-block:: bash
 
-   $ consul-terraform-sync -config-file config.hcl
+   consul-terraform-sync -config-file config.hcl
 
 .. code-block:: bash
 
