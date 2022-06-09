@@ -1,4 +1,4 @@
-Prepare F5 VSCode Extension
+Prepare the F5 Extension
 ===========================
 
 The rest of the lab we will be working with the F5 Automation Toolchain. This
@@ -16,10 +16,10 @@ The terraform apply you performed in the last step generated the necessary
 declaration files for rest of the lab. They are located under the
 f5-agility_GCP_Terraform_ATC/ATC_Declarations folder.
 
-Connect the F5 extension to the BIG-IPs
+Connect the F5 Extension to the BIG-IPs
 ------------------------------------------
 
-The first step will be to configure the F5 VS Code Plugin to connect to the two
+The first step will be to configure the F5 Extension to connect to the two
 BIG-IPs
 
 .. image:: ./images/Lab4.1-DO-SelectF5Extension.png
