@@ -40,6 +40,10 @@ POST F5 Cloud Failover Declaration
 From the files tab click on "Lab4.4-CFE" => highlight all of the text in
 "as3_cfe.json". => right click then select Make HTTP Request.
 
+.. note:: While the F5 Extension does have the Post as CF option, we will not use it.
+   Instead we have added the URL, Method, and defined the JSON declaration as the Body. 
+   This is done to work around a bug in the F5 Extension's Post as CF functionality.
+
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_Make_HTTPRequest.png
    :scale: 60%
    :alt: Make HTTP request
