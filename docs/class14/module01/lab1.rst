@@ -157,6 +157,10 @@ identify the resources that it will be creating. Please run the following:
    :scale: 60%
    :alt: Terraform plan
 
+.. note:: You will see a warning about line 106 in the main.tf file.  This is due to our 
+   choice to have the system generate the password and use that in the build out 
+   for the sake of time and reducing steps in the lab.
+
 The last step of launching terraform is to "apply." Note that this will take
 some time and will prompt you (by default) to proceed. Please run the following
 and respond with 'yes' when prompted.
