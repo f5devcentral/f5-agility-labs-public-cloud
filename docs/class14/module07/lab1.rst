@@ -44,6 +44,10 @@ From the files tab click on "Lab4.4-CFE" => highlight all of the text in
    Instead we have added the URL, Method, and defined the JSON declaration as the Body. 
    This is done to work around a bug in the F5 Extension's Post as CF functionality.
 
+Because the CFE configuration is not synchronized as part of the DSC synchronization mechanism, 
+it has to be made to both devices in the cluster. Below you will see it posted to BIG-IP1 first.  
+The order does not matter as long as both devices have received this API request.
+
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_Make_HTTPRequest.png
    :scale: 60%
    :alt: Make HTTP request
@@ -55,8 +59,7 @@ successfully posted.
    :scale: 60%
    :alt: Make HTTP request success
 
-Post the declaration to BIG-IP2 as well.  The CFE configuration is not
-synchronized as part of the DSC synchronization mechanism.
+Post the declaration to BIG-IP2 as well.  
 
 Review GCP specific configurations that Cloud Failover Extension can use
 --------------------------------------------------------------------------
