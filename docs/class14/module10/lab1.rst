@@ -7,7 +7,7 @@ Terraform. To do that we'll run:
 
 .. code-block:: bash
 
-   terraform destroy --force
+   terraform destroy 
 
 .. image:: ./images/00_terraform_destroy.png
    :scale: 50%
