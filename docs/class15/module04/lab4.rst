@@ -23,12 +23,12 @@ Before stopping, the daemon will log the requested shutdown.
 
 .. code-block:: bash
 
-   $ cd ../fast
+   cd ../fast
 
 
 .. code-block:: bash
   
-    $ terraform destroy 
+    terraform destroy 
 
 .. code-block:: bash
 
@@ -37,12 +37,12 @@ Before stopping, the daemon will log the requested shutdown.
 
 .. code-block:: bash
 
-    $ cd ../terraform
+    cd ../terraform
 
 
 .. code-block:: bash
 
-    $ terraform destroy 
+    terraform destroy 
 
 .. code-block:: bash
 

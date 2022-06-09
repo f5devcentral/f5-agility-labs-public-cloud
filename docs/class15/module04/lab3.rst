@@ -42,7 +42,7 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
 .. code-block:: bash
 
-    $ terrform plan
+    terraform plan
 
 .. code-block:: bash
 
@@ -76,7 +76,7 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
 .. code-block:: bash
 
-    $ terraform apply -auto-approve
+    terraform apply -auto-approve
 
 .. code-block:: bash
     

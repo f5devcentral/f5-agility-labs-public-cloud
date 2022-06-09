@@ -3,14 +3,14 @@ Deploy Consul Data Center BIG-IP and Backend application
 
 .. code-block:: bash
    
-   $ cd terraform/
+   cd terraform/
 
     
 Generate a random password for your F5 BIG-IP instance.
 
 .. code-block:: bash
 
-   $ ./admin-shadow.sh
+   ./admin-shadow.sh
 
 
 Use the ``terraform.tfvars.example`` template file to create a ``terraform.tfvars`` file. 
@@ -18,18 +18,19 @@ The example file is in the terraform folder.
 
 .. code-block:: bash
 
-   $ cp terraform.tfvars.example terraform.tfvars
+   cp terraform.tfvars.example terraform.tfvars
 
 
 Edit file ``terraform.tfvars`` to specify a prefix for the resources being created and an IP address to access the environment once deployed.
 
 .. code-block:: bash
 
-   $ terraform.tfvars 
+   nano terraform.tfvars 
 
 **prefix = "your-prefix"   ---> This can be your initials**
 
-**allow_from = "0.0.0.0/0"  ---> You can give your Labtop IP also instead of 0.0.0.0/0**
+**Then Save file and come out of Nano editor by pressing Control O --> Save --> Control X**
+   
 
 Once the configuration is complete, you can deploy the infrastructure with Terraform.
 
@@ -37,7 +38,7 @@ First, initialize Terraform.
 
 .. code-block:: bash
 
-   $ terraform init
+   terraform init
 
 **Note:** If ``terraform init`` fails with Error: Failed to install provider issue the command again.
 
@@ -45,7 +46,7 @@ Then, use ``terraform plan`` to check the resources that are going to be created
 
 .. code-block:: bash
 
-   $ terraform plan
+   terraform plan
 
 
 You will see below 30 resources plan to be configured::
@@ -60,7 +61,7 @@ Finally, apply the changes.
 
 .. code-block:: bash
    
-   $ terraform apply -auto-approve
+   terraform apply -auto-approve
 
 
 

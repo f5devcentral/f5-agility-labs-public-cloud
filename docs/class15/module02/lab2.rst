@@ -15,5 +15,13 @@ Verify Services on Consul and BIG-IP
    :scale: 50%
    :alt: UDF Access
 
+- You might get a screen as shown below, to overcome this problem just enter ***thisisunsafe*** on your keyboard
+
+.. image:: ./images/thisisunsafe.png
+   :scale: 50%
+   :alt: UDF Access
+
+
 
 - After the device finishes booting, use the ``F5_Username`` and ``F5_Password`` values to login.
+
