@@ -66,21 +66,32 @@ In your terminal pane, CTL+Click on the webapp_external_IP link, twice.
 
 .. image:: ./images/Lab4.5-AS3-ClickExternalIP.png
    :scale: 100%
-   :alt: Virtual server list Standby Device
+   :alt: terraform output link
 
 .. image:: ./images/Lab4.5-AS3-ExternalIP_http.png
    :scale: 60%
-   :alt: Virtual server list Standby Device
+   :alt: web app on port 80
 
 In the second tab, add the port of the second service, 6514 to the web address.
 
 .. image:: ./images/Lab4.5-AS3-ExternalIP_http6514.png
    :scale: 60%
-   :alt: Virtual server list Standby Device
+   :alt: Web app port 6514
 
 Verify which BIG-IP is receiving the traffic
 --------------------------------------------
 
+On each BIG-IP, navigate the the statistics page for the virtual servers. 
+Verify that you are in the partition that the AS3 declara
+Local Traffic --> Virtual Servers --> Statistics tab --> seleect Virtual Servers 
+
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statLink.png
+   :scale: 60%
+   :alt: Virtual server statistics link
+
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statPage.png
+   :scale: 60%
+   :alt: Virtual server statistics page
 
 
 Fail over traffic from BIG-IP1 to BIG-IP2
