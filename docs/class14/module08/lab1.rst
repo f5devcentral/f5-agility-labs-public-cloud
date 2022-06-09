@@ -58,3 +58,34 @@ Big-IP2.
 .. image:: ./images/Lab4.5-AS3-BIGIP2_VS_TMUI.png
    :scale: 75%
    :alt: Virtual server list Standby Device
+
+View the websites we created
+----------------------------
+
+In your terminal pane, CTL+Click on the webapp_external_IP link, twice.  
+
+.. image:: ./images/Lab4.5-AS3-ClickExternalIP.png
+   :scale: 100%
+   :alt: Virtual server list Standby Device
+
+.. image:: ./images/Lab4.5-AS3-ExternalIP_http.png
+   :scale: 60%
+   :alt: Virtual server list Standby Device
+
+In the second tab, add the port of the second service, 6514 to the web address.
+
+.. image:: ./images/Lab4.5-AS3-ExternalIP_http6514.png
+   :scale: 60%
+   :alt: Virtual server list Standby Device
+
+Verify which BIG-IP is receiving the traffic
+--------------------------------------------
+
+
+
+Fail over traffic from BIG-IP1 to BIG-IP2
+
+
+
+
+
