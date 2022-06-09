@@ -5,6 +5,10 @@ From the terraform outputs, take the link for bigip_X_mgmtIP and open the WebUI
 for each BIG-IP.  From the VS Code terminal, you can type "terraform output" to
 see the outputs again.
 
+.. note:: Below we show how to easily get the link to open the TMUI for the devices you just created.
+As you proceed through the initial lab, you may want to keep the terminal output displayed so 
+you know which device you are actually on as the names have not been set and are the same.
+
 .. image:: ./images/module2_bigipHost1.png
    :scale: 75%
    :alt: Terraform Output CTL + CLick on management link
