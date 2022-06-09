@@ -47,11 +47,11 @@ bigip_password.
 Do the same for big-ip 2.
 
 .. note:: In both labs where you are making Declarative Onboarding (DO) posts, 
-   it is critical to make sure that you are connected to the correct BIG-IP 
+   it is critical to verify that you are connected to the correct BIG-IP 
    based on the IP Addresses from the terraform output.  Keeping your terminal 
    window with the terraform output visible can minimize the risk of selecting the 
    wrong BIG-IP when moving between them in this lab.
-   
+
 Submit Declarative Onboarding declarations
 ------------------------------------------
 
