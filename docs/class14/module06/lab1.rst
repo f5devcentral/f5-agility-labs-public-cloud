@@ -3,8 +3,12 @@ Establish Device Trust between Big-IPs
 
 Please click on the F5 Extension icon on the left of the screen, and select bigip1.example.com.
 
-.. warning:: Please ensure you are connected to the correct device with the F5 Extension before 
-   posting a declaration.  A failure to do so may result in an error.
+.. warning:: It is critical to verify that you are connected to the correct BIG-IP 
+   based on the IP Addresses from the terraform output.  Keeping your terminal 
+   window with the terraform output visible can minimize the risk of selecting the 
+   wrong BIG-IP when moving between them in this lab. The first DO lab should have assigned 
+   host names that will be displayed in the status bar at the bottom of the screen. Posting 
+   these declarations to the wrong BIG-IP will result in an error.
 
 .. warning:: When resetting the password during the initial device gui login, if you did not 
    simply add your student number to the password, then you will need to update the declarations 
