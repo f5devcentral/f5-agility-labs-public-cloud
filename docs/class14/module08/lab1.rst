@@ -93,6 +93,11 @@ Local Traffic --> Virtual Servers --> Statistics tab --> seleect Virtual Servers
    :scale: 60%
    :alt: Virtual server statistics page
 
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statPage_2.png
+   :scale: 60%
+   :alt: Virtual server statistics page
+
+
 
 Fail over traffic from BIG-IP1 to BIG-IP2
 
