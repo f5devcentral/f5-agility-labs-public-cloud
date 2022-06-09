@@ -86,7 +86,7 @@ bottom.
 Wait a few minutes until status is 200 OK
 
 .. image:: ./images/Lab4.1-DO-BIGIP1_Success.png
-   :scale: 50%
+   :scale: 60%
    :alt: Add BIG-IP1
 
 At the bottom of the VS Code window in the white bar, you can click on the DO
@@ -97,14 +97,14 @@ Now sign into BIG-IP Host 2 by clicking on the F5 Extension icon and left clicki
 the second BIG-IP. 
 
 .. image:: ./images/Lab4.1-DO-F5ExtensionSwitchunit.png
-   :scale: 50%
+   :scale: 60%
    :alt: F5 Extension switch devices
 
 Now return to the folder explorer and click on Lab4.1-DO under the drop down menu, select
 "do_step2.json" request. Right Click "Post as DO Declaration".
 
 .. image:: ./images/Lab4.1-DO-BIGIP2PostasDO.png
-   :scale: 50%
+   :scale: 60%
    :alt: Add BIG-IP2
 
 Wait a few minutes until status is 200 OK
