@@ -137,7 +137,8 @@ was immediately promoted to active and Big-IP1 demoted to standby.
    :scale: 60%
 
 Now in your Google Console tabs observe what happened to the objects that you 
-looked at earlier.  Did they change? We will revisit this later, once we have services configured.
+looked at earlier.  Did they change? Why or why not? We will revisit this 
+later, once we have services configured.
 
 From Big-IP2, Device Management => Traffic Groups => traffic-group-1.
 
