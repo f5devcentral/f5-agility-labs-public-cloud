@@ -5,13 +5,13 @@ Use Terraform scripts to deploy AS3 FAST template
 
 .. code-block:: bash
 
-   $ cd ../fast
+   cd ../fast
 
 - First, initialize Terraform.
 
 .. code-block:: bash
 
-   $ terraform init
+   terraform init
 
 ::
 
@@ -54,7 +54,7 @@ Use Terraform scripts to deploy AS3 FAST template
 
 .. code-block:: bash
 
-   $ terraform plan 
+   terraform plan 
 
 .. code-block:: bash
 
@@ -66,7 +66,7 @@ Use Terraform scripts to deploy AS3 FAST template
 
 .. code-block:: bash
 
-   $ terraform apply -auto-approve
+   terraform apply -auto-approve
 
 .. code-block:: bash
 
@@ -83,6 +83,12 @@ Use Terraform scripts to deploy AS3 FAST template
     Outputs:
 
     app_url = http://52.44.244.96:8080
+
+- If you get an error as shown below please run terraform apply again to overcome this problem.
+
+.. image:: ./images/error-fast.png
+   :scale: 50%
+   :alt: UDF Access
 
 
 **Note:** Please make note of the above app_url link you will need later
