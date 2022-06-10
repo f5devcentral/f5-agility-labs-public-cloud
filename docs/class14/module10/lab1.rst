@@ -6,14 +6,10 @@ removing all of the infrastructure that was created for your lab with
 Terraform. To do that we'll run:
 
 .. code-block:: bash
+   terraform destroy -auto-approve
 
-   terraform destroy 
-
-.. image:: ./images/00_terraform_destroy.png
-   :scale: 50%
-
-.. image:: ./images/01_terraform_done.png
-   :scale: 50%
+.. image:: ./images/terraformdestroy_done.png
+   :scale: 60%
 
 Go into the GCP console. You'll find that there should be no resources for your
 student ID. A terraform destroy command should clean up all resources that are

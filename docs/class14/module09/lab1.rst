@@ -1,9 +1,8 @@
 F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
 ============================================================================
 
-In two browser tabs, go to the ip address for webapp_external and refresh 
-the page 10 or more times.  The intent is to create some utilization on 
-the BIG-IP that will then be sent to the GCP monitoring infrastructure.
+In the previous lab, you should have generated some traffic that will 
+appear in the  GCP monitoring infrastructure.
 
 .. image:: ./images/webappexternal.png
    :scale: 60%

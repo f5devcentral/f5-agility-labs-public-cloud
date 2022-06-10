@@ -98,8 +98,13 @@ Local Traffic --> Virtual Servers --> Statistics tab --> seleect Virtual Servers
    :alt: Virtual server statistics page
 
 
+Now on both BIG-IPs, set the statistics to auto refresh every 10 seconds.
 
-Fail over traffic from BIG-IP1 to BIG-IP2
+Fail over traffic from BIG-IP1 to BIG-IP2 and refresh the web app tabs 5-10 times.
+
+Observe the statistics and how the numbers follow the active device.
+
+
 
 
 
