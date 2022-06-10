@@ -6,7 +6,9 @@ removing all of the infrastructure that was created for your lab with
 Terraform. To do that we'll run:
 
 .. code-block:: bash
+   
    terraform destroy -auto-approve
+
 
 .. image:: ./images/terraformdestroy_done.png
    :scale: 60%
