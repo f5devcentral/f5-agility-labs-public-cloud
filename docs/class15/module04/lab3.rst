@@ -3,11 +3,28 @@ Test Automation
 
 To verify the integration is working, add more NGINX instances by editing the AWS Auto Scaling group configuration.
 
+- Open a new WebShell on the ubuntu server as shown 
+
+.. image:: ./images/webshell.png
+    :scale: 50%
+    :alt: UDF Access
+
+
+- login to the server with login as ``udf`` and password as ``udf``
+
+
+.. image:: ./images/8_less1-4.png
+    :scale: 70%
+    :alt: UDF Access
+
 - Edit the ``nginx.tf`` file inside the terraform folder to change the desired capacity from 2 to 4.
 
 .. code-block:: bash
 
-    terraform/nginx.tf 
+   cd f5-terraform-consul-sd-webinar/terraform 
+   nano nginx.tf
+
+.. code-block:: bash 
 
 
         resource "aws_autoscaling_group" "nginx" {
@@ -137,11 +154,19 @@ To verify the integration is working, add more NGINX instances by editing the AW
     [INFO] (ctrl) task completed AS3
     ...
 
+- Login to BIG-IP and go to Virtual Server tab ---> Pool and check the new members added 
+
+**Note:Make sure the Partition selected is ``Consul_SD``**
+
+.. image:: ./images/bigipmembers.png
+    :scale: 70%
+    :alt: UDF Access
+
 - Refresh the page to verify the traffic is being balanced across the four NGINX instances.
 
 
 .. image:: ./images/nginx-as.png
-    :scale: 50%
+    :scale: 100%
     :alt: UDF Access
 
 
