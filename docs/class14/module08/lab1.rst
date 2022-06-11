@@ -60,7 +60,7 @@ Big-IP2.
    :alt: Virtual server list Standby Device
 
 View the websites you created
-----------------------------
+-----------------------------
 
 In your terminal pane, CTL+Click on the webapp_external_IP link, twice.  
 
