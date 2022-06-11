@@ -1,61 +1,57 @@
-Establish Device Trust between Big-IPs
-======================================
+F5 Telemetry Streaming Initial Setup 
+============================================================================
 
-Please click on the F5 plugin item at the left of the screen, and select bigip1.example.com.
+Telemetry Streaming was created to offload common metrics from the BIG-IP onto
+external monitoring/graphing utilities, including the major cloud-native
+monitoring programs. In this lab we will be sending the some basic metrics from
+the BIG-IP to Cloud Monitoring - part of GCP.
 
-.. warning:: Please ensure you are connected to the correct device with the F5 Plugin before posting a declaration.  A failure to do so may result in an error.
+The Telemetry Streaming package has been installed as part of the base image.
+You can verify it is installed by going to iApps => Package Management LX where
+you can note the version.
 
-From Agility2021_GCP_Terraform_ATC click on Lab4.2-DO_HA under the drop down
-menu, select "do_step1.json" request.
-Right Click "Post as DO Declaration".
-The Status will be 202 RUNNING.
+.. image:: ./images/Lab4.2-TS-BIGIP1_verifyExtension.png
+   :scale: 60%
+   :alt: Verify TS extension
 
-.. image:: ./images/15_do_ha.png
-   :scale: 50%
-   :alt: image
+Make sure you are signed into BIG-IP 1, click on TS the bottom white bar.
 
-Wait a few minutes until status is 200 OK.  Use the DO verification in the blue
-bar at the bottom of VS Code to refresh the status.
+.. image:: ./images/Lab4.2-TS-BIGIP1_verifyConnection.png
+   :scale: 60%
+   :alt: Verify connection to BIG-IP1
 
-.. image:: ./images/15_do_ha_complete.png
-   :scale: 50%
-   :alt: image
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+is ready on Big-IP1.
 
-.. warning:: If the DO returns anything other than a "202 Accepted" or a "200 OK" then it is suggested to ssh as admin@<ip address> to the BIG-IP in question, and issue the command "bigstart restart restnoded" and once done, re-submit the DO declaration.
+From files tab click on Lab4.2-TS under the drop down menu, select "ts.json"
+request. Right Click "Post as TS Declaration".
 
+.. image:: ./images/Lab4.2-TS-BIGIP1_PostasTS.png
+   :scale: 60%
+   :alt: Post as TS BIG-IP1
 
-Now sign into BIG-IP Host 2 via the F5 VS Code extension. Click on Lab4.2-DO_HA
-under the drop down menu, select "do_step2.json" request.
-Right Click "Post as DO Declaration".
-The Status will be 202 RUNNING.
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+declaration successfully completed processing on Big-IP1.
 
-.. image:: ./images/15_do2_ha.png
-   :scale: 50%
-   :alt: image
+.. image:: ./images/Lab4.2-TS-BIGIP1_PostasTS_Success.png
+   :scale: 60%
+   :alt: TS Declaration success BIG-IP1
 
-Wait a few minutes until status is 200 OK
+Switch the connection to BIG-IP 2.
 
-.. image:: ./images/15_do_ha_complete.png
-   :scale: 50%
-   :alt: image
+From files tab click on Lab4.2-TS under the drop down menu, select "ts.json"
+request. Right Click "Post as TS Declaration".
 
-At the bottom of the VS Code window in the blue bar, you can click on the DO
-(1.18.0) to submit a "GET" request to get the status of the DO execution.
+.. image:: ./images/Lab4.2-TS-BIGIP2_PostasTS.png
+   :scale: 60%
+   :alt: Post as TS BIG-IP2
 
-.. warning:: Make sure Big-IP1 is active and Big-IP2 is standby before
-   proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" =>
-   bigip2.example.com => [Force to Standby].
+"message:Success" response signals that the Telemetry Streaming Extension (TS)
+declaration successfully completed processing on Big-IP1.
 
-From the Big-IP1 Configuration Utility (WebUI), note that bigip1.example.com is
-the "ONLINE (ACTIVE)" device and "In Sync".
+.. image:: ./images/Lab4.2-TS-BIGIP2_PostasTS_Success.png
+   :scale: 60%
+   :alt: TS Declaration success BIG-IP2
 
-.. image:: ./images/17_do_active.png
-   :scale: 50%
-   :alt: image
-
-From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is
-the "ONLINE (STANDBY)" device and "In Sync".
-
-.. image:: ./images/16_do_standby.png
-   :scale: 50%
-   :alt: image
+This lab has been split into two parts to ensure that the systems begin to send 
+data to the Google Cloud Monitoring Solution which you can query and visualize.

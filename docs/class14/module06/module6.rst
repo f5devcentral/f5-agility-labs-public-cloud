@@ -1,5 +1,5 @@
-F5 Application Services 3 Extension (AS3)
-=========================================
+F5 Declarative Onboarding (DO) - HA Config Sync
+===============================================
 
 .. toctree::
    :maxdepth: 1
