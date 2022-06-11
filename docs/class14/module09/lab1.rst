@@ -21,8 +21,8 @@ From Monitoring on the side panel => Metrics explorer.
    :scale: 60%
    :alt: GCloud Metrics explorer
 
-Click on query editor in the editor type fetch generic_node ::
-custom/system/cpu. Then click Run Query.
+Click on box below Resource & Metric, select VM Instance --> Custom --> 
+custom/system/throughputPerformance/sysPerformanceThroughputClientBitsOut/average and press apply.
 
 .. image:: ./images/Lab4.2_GCloudConsoleSelectMetric.png
    :scale: 60%
