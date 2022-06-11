@@ -13,8 +13,8 @@ Verify Load balancing works
 
      terraform output 
 
-.. image:: ./images/nginx.png
-   :scale: 50%
+.. image:: ./images/nginx-as.png
+   :scale: 100%
    :alt: UDF Access
 
 

@@ -51,6 +51,9 @@ is produced automatically for you under the ``nia`` folder.
 
 - Finally, you can start Consul-Terraform-Sync.
 
+**Note:** Once you Start the Consul-Terraform-Sync open a new Web Shell for future excercise
+ let this Web Shell keep running in the background
+
 .. code-block:: bash
 
    consul-terraform-sync -config-file config.hcl
