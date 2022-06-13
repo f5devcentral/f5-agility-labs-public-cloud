@@ -91,5 +91,5 @@ Now you can see below 30 resources were configured::
   You can access your Consul datacenter UI using the address specified by the ``Consul_UI`` value.
 
 .. image:: ./images/assets.png
-   :scale: 50%
+   :scale: 70%
    :alt: UDF Access
