@@ -24,6 +24,9 @@ To verify the integration is working, add more NGINX instances by editing the AW
 .. code-block:: bash
 
    cd f5-terraform-consul-sd-webinar/terraform 
+
+.. code-block:: bash
+
    nano nginx.tf
 
 .. code-block:: bash 
