@@ -1,8 +1,8 @@
 Learn about AS3 FAST template
 ==============================
 
-Below is an example FAST template yaml we are using for this lab 
-The ``definations`` section lists out the objects which are templatized
+Below is an example FAST template yaml we are using for this lab. 
+The ``definitions`` section lists out the objects which are templatized
 for example `tenant`, `app`, `virtualAddress` and `virtualPort` are templatized 
 below and the values can be specified in the ``parameters`` as shown
 
