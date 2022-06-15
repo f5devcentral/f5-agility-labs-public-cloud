@@ -1,5 +1,8 @@
 Login to Ubuntu using Web Shell
 ===============================
+
+**Note:** You can go to Step 2 change directory  if you have the webshell open already
+
 Now we need to access the ubuntu server and do web shell login, this we are doing so that 
 we can use the terraform TF files to create infrastructure on AWS 
 
