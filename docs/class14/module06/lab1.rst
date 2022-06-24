@@ -14,7 +14,7 @@ Please click on the F5 Extension icon on the left of the screen, and select bigi
    simply add your student number to the password, then you will need to update the declarations 
    to use the password that you used.  A failure to do so may result in an error.
 
-From f5-agility_GCP_Terraform_ATC/ATC_Declarations click on Lab4.3-DO_HA under the drop down
+From f5-agility_GC_Terraform_ATC/ATC_Declarations click on Lab4.3-DO_HA under the drop down
 menu, select "do_HA_BIGIP1.json" request.
 
 .. image:: ./images/Lab4.3-DO_HA-BIGIP1_PostasDO.png

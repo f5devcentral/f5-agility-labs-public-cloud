@@ -13,7 +13,7 @@ Terraform. To do that we'll run:
 .. image:: ./images/terraformdestroy_done.png
    :scale: 60%
 
-Go into the GCP console. You'll find that there should be no resources for your
+Go into the Google Cloud App. You'll find that there should be no resources for your
 student ID. A terraform destroy command should clean up all resources that are
 maintained in the state file.
 

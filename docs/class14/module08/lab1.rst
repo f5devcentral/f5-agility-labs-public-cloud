@@ -30,9 +30,9 @@ AS3 and Service Discovery
 --------------------------
 
 As part of AS3, you can now leverage service discovery to automatically parse
-the cloud environment to look for Metadata.  In GCP this is done via labels on
+the cloud environment to look for Metadata.  In Google Cloud this is done via labels on
 instances, or items like forwarding rules.  Review the Body of the declaration.
-The AS3 declaration is configured to discover pool members based on GCP labels.
+The AS3 declaration is configured to discover pool members based on Google Cloud labels.
 
 Log into Big-IP1 => Local Traffic => Virtual Servers. Choose the "Example01"
 Partition from the Drop-down in the upper-right-hand corner. AS3 created two
@@ -42,7 +42,7 @@ HTTP virtual servers: example01a and example01b.
    :scale: 60%
    :alt: Virtual server list Active Device
 
-Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used GCP tags
+Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used Google Cloud tags
 to discover and auto-populate pool1 with two web servers.
 
 .. image:: ./images/Lab4.5-AS3-BIGIP1_PoolMembers_TMUI.png

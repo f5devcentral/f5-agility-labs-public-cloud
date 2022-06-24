@@ -2,13 +2,13 @@ F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
 ============================================================================
 
 In the previous lab, you should have generated some traffic that will 
-appear in the  GCP monitoring infrastructure.
+appear in the Google Cloud monitoring infrastructure.
 
 .. image:: ./images/webappexternal.png
    :scale: 60%
    :alt: Example app
 
-Now from the GCP Console, Services => type "Monitoring" in the search box,
+Now from the Google Cloud Console, Services => type "Monitoring" in the search box,
 choose the first "Monitoring" option from the drop-down results.
 
 .. image:: ./images/TS_GCP_MonitoringSearch.png

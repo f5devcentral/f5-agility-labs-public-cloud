@@ -8,7 +8,7 @@ using a single REST API call rather than a set of imperative commands. The
 declaration then configures the BIG-IP system with all the required settings 
 for cloud failover. 
 
-Navigate to the GCP Compute Engine console and search for your BIG-IP1 device. It will be
+Navigate to the Google Cloud App Compute Engine and search for your BIG-IP1 device. It will be
 named studentX-Y-ZZZZ - where X is the studentID you are using for this
 lab and Y is the BIG-IP number. Select the VM instance for BIG-IP1 and then in 
 the right hand panel, select the Labels tab.
@@ -64,53 +64,53 @@ Post the declaration to BIG-IP2 as well.
 Review GCP specific configurations that Cloud Failover Extension can use
 --------------------------------------------------------------------------
 
-In your tab that has the Google CLoud Console open, in the Compute Engine,
+In your tab that has the Google Cloud App open, in the Compute Engine,
 select the VM that is BIG-IP1 and then click the three dots.  Select "View network details".
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleNetworkDetails.png
    :scale: 60%
-   :alt: Google Console Network details
+   :alt: Google Cloud App Network details
 
 On this screen you should see that BIG-IP1 has Alias IP ranges assigned.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleAliasIPRanges.png
    :scale: 60%
-   :alt: Google Console Network details Alias IP ranges
+   :alt: Google Cloud App Network details Alias IP ranges
 
 When we had terraform build BIG-IP1 (this was done in the main.tf file), we defined a secondary private ip 
 on the external interface, which Google translates into Alias IP Ranges.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_HowAliasIPRanges.png
    :scale: 100%
-   :alt: Google Console Network details Alias IP ranges
+   :alt: Google Cloud App Network details Alias IP ranges
 
-We have another Google Cloud Platform object that was created to facilitate moving traffic from one 
+We have another Google Cloud object that was created to facilitate moving traffic from one 
 device to another, a Forwarding Rule.  In your Google Console, search for load balancing.  
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLB_Navigate.png
    :scale: 60%
-   :alt: Google Console Network Load Balancing search
+   :alt: Google Cloud App Network Load Balancing search
 
 Now right click or command click and open the load balancing page in a new tab.  Once this is open, 
 click on the advanced menu option. 
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLB.png
    :scale: 60%
-   :alt: Google Console Network Load Balancing landing page
+   :alt: Google Cloud App Network Load Balancing landing page
 
 Find your student ID and you will see that there is an IP address and it is assigned to your BIGIP1.
 
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP1_GCPConsoleLBAdvanced.png
    :scale: 60%
-   :alt: Google Console Network Load Balancing advanced menu
+   :alt: Google Cloud App Network Load Balancing advanced menu
 
 We used terraform (also done in the main.tf) to build this and also defined the targets for this forwarding rule.
 
 .. image:: ./images/Lab4.4-AS3_CFE-terraform_forwarding_rule.png
    :scale: 80%
-   :alt: Google Console Network Load Balancing advanced menu
+   :alt: Google Cloud App Network Load Balancing advanced menu
 
-.. note:: Keep the two tabs with the Google console open as we will use these later.
+.. note:: Keep the two tabs with the Google Cloud App open as we will use these later.
 
 
 Test Failover
@@ -139,7 +139,7 @@ was immediately promoted to active and Big-IP1 demoted to standby.
 .. image:: ./images/Lab4.4-AS3_CFE-BIGIP2_TMUIActive.png
    :scale: 60%
 
-Now in your Google Console tabs observe what happened to the objects that you 
+Now in your Google Cloud App tabs observe what happened to the objects that you 
 looked at earlier.  Did they change? Why or why not? We will revisit this 
 later, once we have services configured.
 
