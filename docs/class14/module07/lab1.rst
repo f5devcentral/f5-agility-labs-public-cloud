@@ -62,7 +62,7 @@ successfully posted.
 Post the declaration to BIG-IP2 as well.  
 
 Review GCP specific configurations that Cloud Failover Extension can use
---------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 In your tab that has the Google Cloud App open, in the Compute Engine,
 select the VM that is BIG-IP1 and then click the three dots.  Select "View network details".

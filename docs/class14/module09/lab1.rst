@@ -1,5 +1,5 @@
 F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
-============================================================================
+==========================================================================
 
 In the previous lab, you should have generated some traffic that will 
 appear in the Google Cloud monitoring infrastructure.
