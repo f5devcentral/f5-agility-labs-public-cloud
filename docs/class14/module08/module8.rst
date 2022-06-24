@@ -1,5 +1,5 @@
-F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
-============================================================================
+F5 Application Services 3 Extension (AS3)
+=========================================
 
 .. toctree::
    :maxdepth: 1

@@ -5,6 +5,8 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
 - Open a new WebShell on the ubuntu server as shown 
 
+  **Note:** Open a NEW webshell to edit the nginx.tf file (rather than ctrl-c out of the current shell).
+
 .. image:: ./images/webshell.png
     :scale: 50%
     :alt: UDF Access
@@ -14,7 +16,7 @@ To verify the integration is working, add more NGINX instances by editing the AW
 
 
 .. image:: ./images/8_less1-4.png
-    :scale: 70%
+    :scale: 100%
     :alt: UDF Access
 
 - Edit the ``nginx.tf`` file inside the terraform folder to change the desired capacity from 2 to 4.
@@ -22,6 +24,9 @@ To verify the integration is working, add more NGINX instances by editing the AW
 .. code-block:: bash
 
    cd f5-terraform-consul-sd-webinar/terraform 
+
+.. code-block:: bash
+
    nano nginx.tf
 
 .. code-block:: bash 

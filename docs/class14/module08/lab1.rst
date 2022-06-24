@@ -1,71 +1,112 @@
-F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
-============================================================================
+Using AS3 to create services
+============================
 
-Telemetry Streaming was created to offload common metrics from the BIG-IP onto
-external monitoring/graphing utilities, including the major cloud-native
-monitoring programs. In this lab we will be sending the some basic metrics from
-the BIG-IP to Cloud Monitoring - part of GCP.
+Since your devices are now clustered in a sync-failover group and using
+auto-sync, you can post service declarations to whichever device you choose.
+A change to one BIG-IP will be automatically be replicated to the other.
 
-The Telemetry Streaming package has been installed as part of the base image.
-You can verify it is installed by going to iApps => Package Management LX where
-you can note the version.
+In the previous modules you validated that there were no virtual
+servers on the BIG-IPs.  You can validate this again, but up until this point
+we have not modified the BIG-IPs to have any virtual servers.
 
-.. image:: ./images/00_bigip_ts_check.png
+Post AS3 declarations
+---------------------
+
+Click on Lab4.3-AS3 under the drop down menu, select "as3.json" request.
+Right Click "Post as AS3 Declaration".
+
+.. image:: ./images/Lab4.5-AS3-BIGIP1PostasAS3.png
+   :scale: 60%
+   :alt: Post as AS3 
+
+Status code 200 response signals that Application Services 3 Extension (AS3) is
+completed on Big-IP1.
+
+.. image:: ./images/Lab4.5-AS3-BIGIP1PostasAS3_Success.png
+   :scale: 60%
+   :alt: Post as AS3 Success
+
+AS3 and Service Discovery
+--------------------------
+
+As part of AS3, you can now leverage service discovery to automatically parse
+the cloud environment to look for Metadata.  In GCP this is done via labels on
+instances, or items like forwarding rules.  Review the Body of the declaration.
+The AS3 declaration is configured to discover pool members based on GCP labels.
+
+Log into Big-IP1 => Local Traffic => Virtual Servers. Choose the "Example01"
+Partition from the Drop-down in the upper-right-hand corner. AS3 created two
+HTTP virtual servers: example01a and example01b.
+
+.. image:: ./images/Lab4.5-AS3-BIGIP1_VS_TMUI.png
+   :scale: 60%
+   :alt: Virtual server list Active Device
+
+Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used GCP tags
+to discover and auto-populate pool1 with two web servers.
+
+.. image:: ./images/Lab4.5-AS3-BIGIP1_PoolMembers_TMUI.png
+   :scale: 60%
+   :alt: Pool member list - Service Discovery
+
+Log into Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01"
+Partition from the Drop-down in the upper-right-hand corner. Even though you
+only POSTED an AS3 declaration to Big-IP1, Config Sync replicated the Virtual
+Servers and all supporting configuration objects (pools, profiles, etc.) to
+Big-IP2.
+
+.. image:: ./images/Lab4.5-AS3-BIGIP2_VS_TMUI.png
    :scale: 75%
-   :alt: image
+   :alt: Virtual server list Standby Device
 
-Make sure you are signed into BIG-IP 1, click on TS the bottom blue bar.
+View the websites you created
+-----------------------------
 
-.. image:: ./images/01_vs_ts_validation.png
-   :scale: 75%
-   :alt: image
+In your terminal pane, CTL+Click on the webapp_external_IP link, twice.  
 
-"message:Success" response signals that the Telemetry Streaming Extension (TS)
-is ready on Big-IP1.
+.. image:: ./images/Lab4.5-AS3-ClickExternalIP.png
+   :scale: 100%
+   :alt: terraform output link
 
-From files tab click on Lab4.5-TS under the drop down menu, select "ts.json"
-request. Right Click "Post as TS Declaration".
+.. image:: ./images/Lab4.5-AS3-ExternalIP_http.png
+   :scale: 60%
+   :alt: web app on port 80
 
-.. image:: ./images/1_ts1.png
-   :scale: 75%
-   :alt: image
+In the second tab, add the port of the second service, 6514 to the web address.
 
-"message:Success" response signals that the Telemetry Streaming Extension (TS)
-declaration successfully completed processing on Big-IP1.
+.. image:: ./images/Lab4.5-AS3-ExternalIP_http6514.png
+   :scale: 60%
+   :alt: Web app port 6514
 
-.. image:: ./images/03_ts_success.png
-   :scale: 75%
-   :alt: image
+Verify which BIG-IP is receiving the traffic
+--------------------------------------------
 
-In two browser tabs, go to the ip address for both webapp_1 and webapp_2 and refresh the page 10 or more times.  The intent is to create some utilization on the BIG-IP that will then be sent to the GCP monitoring infrastructure.
+On each BIG-IP, navigate the the statistics page for the virtual servers. 
+Verify that you are in the partition that the AS3 declara
+Local Traffic --> Virtual Servers --> Statistics tab --> seleect Virtual Servers 
 
-.. image:: ./images/9_example_app_bigip1.png
-   :scale: 75%
-   :alt: image
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statLink.png
+   :scale: 60%
+   :alt: Virtual server statistics link
 
-Now from the GCP Console, Services => type "Monitoring" in the search box,
-choose the first "Monitoring" option from the drop-down results.
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statPage.png
+   :scale: 60%
+   :alt: Virtual server statistics page
 
-.. image:: ./images/3_ts3.png
-   :scale: 75%
-   :alt: image
+.. image:: ./images/Lab4.5-AS3-TMUI_VS_statPage_2.png
+   :scale: 60%
+   :alt: Virtual server statistics page
 
-From Monitoring on the side panel => Metrics explorer.
 
-.. image:: ./images/4_ts4.png
-   :scale: 75%
-   :alt: image
+Now on both BIG-IPs, set the statistics to auto refresh every 10 seconds.
 
-Click on query editor in the editor type fetch generic_node ::
-custom/system/cpu. Then click Run Query.
+Fail over traffic from BIG-IP1 to BIG-IP2 and refresh the web app tabs 5-10 times.
 
-.. image:: ./images/10_gcp_monitoring_metrics_q_edit.png
-   :scale: 75%
-   :alt: image
+Observe the statistics and how the numbers follow the active device.
 
-.. image:: ./images/11_gcp_query_results.png
-   :scale: 75%
-   :alt: image
 
-This may take a few minutes, but eventually you will see telemetry data start
-to be shown.
+
+
+
+
+

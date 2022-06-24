@@ -1,25 +1,36 @@
-Terraform Destroy
-=================
+F5 Telemetry Streaming to Google Cloud Operations Suite’s Cloud Monitoring
+============================================================================
 
-This is the end of using the F5 Automation Toolchain.  In this step we will be
-removing all of the infrastructure that was created for your lab with
-Terraform. To do that we'll run:
+In the previous lab, you should have generated some traffic that will 
+appear in the  GCP monitoring infrastructure.
 
-.. code-block:: bash
+.. image:: ./images/webappexternal.png
+   :scale: 60%
+   :alt: Example app
 
-   terraform destroy --force
+Now from the GCP Console, Services => type "Monitoring" in the search box,
+choose the first "Monitoring" option from the drop-down results.
 
-.. image:: ./images/00_terraform_destroy.png
-   :scale: 50%
+.. image:: ./images/TS_GCP_MonitoringSearch.png
+   :scale: 60%
+   :alt: Google Console Monitoring search
 
-.. image:: ./images/01_terraform_done.png
-   :scale: 50%
+From Monitoring on the side panel => Metrics explorer.
 
-Go into the GCP console. You'll find that there should be no resources for your
-student ID. A terraform destroy command should clean up all resources that are
-maintained in the state file.
+.. image:: ./images/Lab4.2_GCloudConsoleMetricsExplorer.png
+   :scale: 60%
+   :alt: GCloud Metrics explorer
 
-We hope you enjoyed this lab. Please make sure to fill out a survey before
-leaving!
+Click on box below Resource & Metric, select VM Instance --> Custom --> 
+custom/system/throughputPerformance/sysPerformanceThroughputClientBitsOut/average and press apply.
 
-Fin.
+.. image:: ./images/Lab4.2_GCloudConsoleSelectMetric.png
+   :scale: 60%
+   :alt: Gcloud Metrics Explorer select Metric
+
+.. image:: ./images/Lab4.2_GCloudConsoleMetricsExplorerGraph.png
+   :scale: 60%
+   :alt: Graph
+
+This may take a few minutes, but eventually you will see telemetry data start
+to be shown.

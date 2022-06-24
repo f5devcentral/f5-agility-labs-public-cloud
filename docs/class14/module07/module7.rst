@@ -1,5 +1,5 @@
-F5 Cloud-Failover
-=================
+F5 Cloud-Failover Extension (CFE)
+=================================
 
 .. toctree::
    :maxdepth: 1

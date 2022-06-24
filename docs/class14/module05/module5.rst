@@ -1,5 +1,5 @@
-F5 Declarative Onboarding (DO) - HA Config Sync
-===============================================
+F5 Telemetry Streaming Initial Setup
+============================================================================
 
 .. toctree::
    :maxdepth: 1

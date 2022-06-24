@@ -1,60 +1,75 @@
-Using AS3 to create services
-============================
+Establish Device Trust between Big-IPs
+======================================
 
-Since your devices are now clustered in a sync-failover group and using
-auto-sync, you can post service declarations to whichever device you choose.
-A change to one BIG-IP will be automatically be replicated to the other.
+Please click on the F5 Extension icon on the left of the screen, and select bigip1.example.com.
 
-In the previous steps in module 2 you validated that there were no virtual
-servers on the BIG-IPs.  You can validate this again, but up until this point
-we have not modified the BIG-IPs to have any virtual servers.
+.. warning:: It is critical to verify that you are connected to the correct BIG-IP 
+   based on the IP Addresses from the terraform output.  Keeping your terminal 
+   window with the terraform output visible can minimize the risk of selecting the 
+   wrong BIG-IP when moving between them in this lab. The first DO lab should have assigned 
+   host names that will be displayed in the status bar at the bottom of the screen. Posting 
+   these declarations to the wrong BIG-IP will result in an error.
 
-Post AS3 declarations
----------------------
+.. warning:: When resetting the password during the initial device gui login, if you did not 
+   simply add your student number to the password, then you will need to update the declarations 
+   to use the password that you used.  A failure to do so may result in an error.
 
-Click on Lab4.3-AS3 under the drop down menu, select "as3.json" request.
-Right Click "Post as AS3 Declaration".
+From f5-agility_GCP_Terraform_ATC/ATC_Declarations click on Lab4.3-DO_HA under the drop down
+menu, select "do_HA_BIGIP1.json" request.
 
-.. image:: ./images/21_as3.png
-   :scale: 50%
-   :alt: image
+.. image:: ./images/Lab4.3-DO_HA-BIGIP1_PostasDO.png
+   :scale: 60%
+   :alt: Post as DO HA Json bigip1
 
-Status code 200 response signals that Application Services 3 Extension (AS3) is
-completed on Big-IP 1.
+Wait a few minutes until status returns.  A 200 or a 202 status is OK.  Use the DO verification in the white status
+bar at the bottom of VS Code to refresh the status.
 
-.. image:: ./images/22_as3.png
-   :scale: 50%
-   :alt: image
+.. image:: ./images/Lab4.3-DO_HA-BIGIP1_PostasDO_sucess.png
+   :scale: 60%
+   :alt: Post as DO HA Json bigip1 Success
 
-AS3 and Service Discovery
---------------------------
+.. warning:: If the DO returns anything other than a "202 Accepted" or a "200 OK" 
+   then it is suggested that you ssh in the terminal pane as admin@<ip address> to the BIG-IP in question, 
+   and issue the command "bigstart restart restnoded" and once done, re-submit the DO declaration.
 
-As part of AS3, you can now leverage service discovery to automatically parse
-the cloud environment to look for Metadata.  In GCP this is done via labels on
-instances, or items like forwarding rules.  Review the Body of the declaration.
-The AS3 declaration is configured to discover pool members based on GCP labels.
+Now sign into BIG-IP Host 2 via the F5 Extension. Click on Lab4.3-DO_HA
+under the drop down menu, select "do_HA_BIGIP2.json" request.
 
-Log into Big-IP1 => Local Traffic => Virtual Servers. Choose the "Example01"
-Partition from the Drop-down in the upper-right-hand corner. AS3 created two
-HTTP virtual servers: example01a and example01b.
+.. image:: ./images/Lab4.3-DO_HA-BIGIP2_PostasDO.png
+   :scale: 60%
+   :alt: Post as DO HA Json bigip2
 
-.. image:: ./images/23_as3_vs.png
-   :scale: 75%
-   :alt: image
+Wait a few minutes until status is 200 OK
 
-Now within Big-IP1 => Local Traffic => Pools. Note "pool1". AS3 used GCP tags
-to discover and auto-populate pool1 with two web servers.
+.. image:: ./images/Lab4.3-DO_HA-BIGIP2_PostasDO_success.png
+   :scale: 60%
+   :alt: Post as DO HA Json bigip2 success
 
-.. image:: ./images/24_as3_pool.png
-   :scale: 75%
-   :alt: image
+At the bottom of the VS Code window in the white bar, you can click on the DO
+(1.30.0) to submit a "GET" request to get the status of the DO execution.
 
-Log into Big-IP2 => Local Traffic => Virtual Servers. Choose the "Example01"
-Partition from the Drop-down in the upper-right-hand corner. Even though you
-only POSTED an AS3 declaration to Big-IP1, Config Sync replicated the Virtual
-Servers and all supporting configuration objects (pools, profiles, etc.) to
-Big-IP2.
+.. warning:: Make sure Big-IP1 is active and Big-IP2 is standby before
+   proceeding. To force Big-IP2 to standby: "Device Management" => "Devices" =>
+   bigip2.example.com => [Force to Standby].
 
-.. image:: ./images/25_as3_standby.png
-   :scale: 75%
-   :alt: image
+From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is
+the "ONLINE (ACTIVE)" device and "In Sync".
+
+.. image:: ./images/Lab4.3-DO_HA-BIGIP2_HA_ActiveTMUI.png
+   :scale: 60%
+   :alt: BIGIP2 GUI - Online Active
+
+From the Big-IP2 Configuration Utility (WebUI), Click the word Active
+in the upper left corner.  Scroll to the bottom of the page and click the 
+"Force to Standby" button.  The gui will ask you to confirm this action.
+
+.. image:: ./images/Lab4.3-DO_HA-BIGIP2_HA_ForceStandbyDialogTMUI.png
+   :scale: 100%
+   :alt: Standby confirmation dialog
+
+From the Big-IP2 Configuration Utility (WebUI), note that bigip2.example.com is
+the "ONLINE (STANDBY)" device and "In Sync".
+
+.. image:: ./images/Lab4.3-DO_HA-BIGIP2_HA_StandbyTMUI.png
+   :scale: 60%
+   :alt: BIGIP2 GUI - Online Standby
