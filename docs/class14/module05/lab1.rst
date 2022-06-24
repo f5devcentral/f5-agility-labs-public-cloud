@@ -4,7 +4,7 @@ F5 Telemetry Streaming Initial Setup
 Telemetry Streaming was created to offload common metrics from the BIG-IP onto
 external monitoring/graphing utilities, including the major cloud-native
 monitoring programs. In this lab we will be sending the some basic metrics from
-the BIG-IP to Cloud Monitoring - part of GCP.
+the BIG-IP to Cloud Monitoring - part of Google Cloud.
 
 The Telemetry Streaming package has been installed as part of the base image.
 You can verify it is installed by going to iApps => Package Management LX where

@@ -51,15 +51,15 @@ If you copied this command and tried to paste it into the terminal window, you w
 
 
 This will give you a link you can click on (or CMD-click) to open up a browser,
-prompting you to associate your GCP account with the gcloud command utility.
+prompting you to associate your Google account with the gcloud command utility.
 
 .. image:: ./images/GcloudAuth_tokenRequestVSCode.png
    :scale: 100%
    :alt: Gcloud auth token request 
 
-.. warning:: The GCP account you use must be identical to the user you signed
+.. warning:: The Google account you use must be identical to the user you signed
    up for Agility and signed into this account with. Otherwise you will not
-   have access to the F5 GCP Account built for this class.
+   have access to the F5 Google Cloud Account built for this class.
 
 .. image:: ./images/GcloudAuth_accountselection.png
    :scale: 75%
@@ -94,24 +94,24 @@ The pasted token will look like this:
    :alt: Gcloud token copied into VSCode
 
 Once you click "Enter," gcloud will now be able to operate against the Agility
-GCP account. The gcloud authorization will also allow Terraform to use the
-gcloud credentials to operate against GCP.
+Google Cloud account. The gcloud authorization will also allow Terraform to use the
+gcloud credentials to operate against Google Cloud.
 
-Deploy F5 VE and a complete application environment to GCP with Terraform
--------------------------------------------------------------------------
+Deploy F5 VE and a complete application environment to Google Cloud with Terraform
+----------------------------------------------------------------------------------
 
 From the Visual Studio Code Terminal, clone the github repository for this lab
 and change to the working directory.
 
 .. warning:: For a smooth ride, always invoke commands from inside the cloned
-   git repository (Agility2021_GCP_Terraform_ATC). To check you're in the right
+   git repository (f5-agility_GC_Terraform_ATC). To check you're in the right
    place, you can run the command ``pwd`` and the output should read
-   ``/home/ubuntu/projects/f5-agility_GCP_Terraform_ATC``
+   ``/home/ubuntu/projects/f5-agility_GC_Terraform_ATC``
 
 .. code-block:: bash
 
-   git clone https://github.com/f5devcentral/f5-agility_GCP_Terraform_ATC.git
-   cd f5-agility_GCP_Terraform_ATC/
+   git clone https://github.com/f5devcentral/f5-agility_GC_Terraform_ATC.git
+   cd f5-agility_GC_Terraform_ATC/
 
 .. image:: ./images/gitCloneRepoResults.png
    :scale: 75%
@@ -191,7 +191,7 @@ name, it will return that value.
    :scale: 75%
    :alt: tf output
 
-Login to GCP Console
+Login to Google Cloud App
 --------------------
 
 Click on "Firefox" under access methods (or use your own local browser if able)
@@ -201,7 +201,7 @@ you signed up for Agility with, and you just signed in to authenticate with
 
 Once your terraform apply has finished, navigate to "Compute Engine" -> "VM
 Instances" and locate your BIG-IP instances denoted by
-"studentX-Y-YYYY-f5vm0[1,2]." These are your BIG-IP units running within GCP
+"studentX-Y-YYYY-f5vm0[1,2]." These are your BIG-IP units running within Google Cloud
 
 .. warning:: We will be returning to lecture at this point of the lab. We will
    allow the BIG-IPs to start up for all students during the lecture.
