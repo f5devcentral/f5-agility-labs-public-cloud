@@ -17,7 +17,7 @@ declaration files for rest of the lab. They are located under the
 f5-agility_GC_Terraform_ATC/ATC_Declarations folder.
 
 Connect the F5 Extension to the BIG-IPs
-------------------------------------------
+---------------------------------------
 
 The first step will be to configure the F5 Extension to connect to the two
 BIG-IPs
