@@ -1,22 +1,21 @@
-PC201 - Deploying F5 Solutions to AWS with Terraform and iControl LX Extensions
+A&O Toolchain: BIG-IP HA in Public Cloud with Terraform
 ===============================================================================
 
-This is a proctor led intermediate level lab.
+This is an intermediate level instructor-led class.
 
-In this lab, we'll demystify how Terraform integrates with the F5 Automation and Orchestration toolchain to deploy and configure a dedicated AWS Security VPC. Topics covered include:
+The instructor will present content that relates to concepts used in the accompanying hands-on
+lab portion of the class (detailed in this lab guide).
 
-- Terraform
-- F5 Cloud-init
-- F5 Declarative Onboarding (DO)
-- F5 Application Services 3 Extension (AS3)
-- F5 Cloud Failover Extension (CFE)
-- F5 Telemetry Streaming (TS)
+In this lab, you will learn how to perform the following:
 
-We'll also explore common public cloud use cases such as:
+- Provision a pair of BIG-IP VE instances in AWS using Terraform
+- Onboard BIG-IP instances with F5 Automation Toolchain components - BIG-IP Runtime-init, Declarative Onboarding (DO) extension
+- Deploy a sample application with the F5 Application Services 3 (AS3) extension
+- Deploy the F5 Telemetry Streaming (TS) extension for Amazon CloudWatch integration
+- Deploy and test API-based BIG-IP failover with the F5 Cloud Failover Extension (CFE)
+- Deploy and test LB-based BIG-IP failover with AWS Network Load Balancer
+- Remove deployed AWS resources with Terraform
 
-- Retrofit an application with modern protocols (HTTP/2, TLS 1.3)
-- Proxy your application with F5 for comprehensive analytics
-- Protect your application with a layered application security policy to defend against Automated Threats.
 
 .. toctree::
    :maxdepth: 1
