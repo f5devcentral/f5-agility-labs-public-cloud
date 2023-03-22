@@ -1,5 +1,13 @@
-A&O Toolchain: BIG-IP HA in Public Cloud with Terraform
-===============================================================================
+A&O Toolchain: BIG-IP HA in Public Cloud with Terraform (Agility 2023 | 4 hours)
+==================================================================================
+
+.. note::
+
+   This lab relies on UDF Blueprint: **Agility 2023 - A&O BIG-IP HA in Public Cloud with Terraform**
+
+   The code provided for this lab was tested with **BIG-IP 16.1.x**.
+
+|
 
 This is an intermediate level instructor-led class.
 
@@ -16,9 +24,17 @@ In this lab, you will learn how to perform the following:
 - Deploy and test LB-based BIG-IP failover with AWS Network Load Balancer
 - Remove deployed AWS resources with Terraform
 
+Expected time to complete: **4 hours**
+
+Pre-requisite: None. A basic understanding of traditional (non-cloud) BIG-IP HA configuration would be valuable, but not required.
+
+|
 
 .. toctree::
-   :maxdepth: 1
+   :numbered:
+   :caption: CONTENTS
+   :maxdepth: 2
    :glob:
 
    module*/module*
+   conclusion
