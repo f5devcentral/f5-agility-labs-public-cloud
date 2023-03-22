@@ -17,10 +17,11 @@ The lab environment will also shut down automatically at the end of the schedule
 
 |
 
-Automation and Orchestration Labs
+Related Labs
 ================================================================================
 
-To learn more about F5 deployment in public cloud and automation/orchestration, consider attending some  of the other great labs that are available:
+To learn more about F5 BIG-IP deployment in public cloud and automation/orchestration options, consider attending some
+of these other great labs:
 
 - `Public Cloud Labs Index <https://clouddocs.f5.com/training/community/public-cloud/html/>`_
 - `Automation & Orchestration Labs Index <https://clouddocs.f5.com/training/community/automation/html/>`_
