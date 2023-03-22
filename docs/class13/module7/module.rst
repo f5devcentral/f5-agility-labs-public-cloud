@@ -1,14 +1,9 @@
-F5 Analytics Integration with AWS
+Deleting the Deployment
 ================================================================================
-
-.. todo::
-
-   add module intro/overview here
-
 
 In this module, you will:
 
--  xxxxx
+- Use the Terraform **destroy** command to completely remove the AWS deployment.
 
 
 .. toctree::
