@@ -28,8 +28,8 @@ This involves removing the failover group membership but retaining the configura
 
 - Login to BIG-IP 1 and BIG-IP 2
 
-- Navigate to Device Management > Overview > failoverGroup 
- 
+- Navigate to Device Management > Overview > failoverGroup
+
 - Execute the PostMan Lab 4.7, the group members will be removed.
 
 - Validate via the BIG-IP status on the top left, both should be Active and Sync.
