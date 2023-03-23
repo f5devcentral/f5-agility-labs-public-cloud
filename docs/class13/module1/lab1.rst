@@ -78,14 +78,14 @@ When you see the **Networks** prompt, click **Yes** to continue.
 You should now see the Windows desktop with the following:
 
 - AWS Console Sign-In shortcut
-- BASH Terminal shortcut
+- Postman
 
-The BASH Terminal window will launch automatically upon login. On first launch, it may take a minute to complete the startup script. When done, you will see the following information (some of which you will use later):
+Visual Studio Code (vscode) with BASH Terminal panel will launch automatically upon login. On first launch, it may take a minute to complete the startup script. When done, you will see the following information (some of which you will use later):
 
 - Terraform environment variables
 - AWS Console URL, Username ('udf'), and Password (*random*)
 - Public IP address of the jump host
-- Installed versions for AWS CLI, Terraform, and Ansible software
+- Installed versions for AWS CLI, Terraform, and other software
 
 |
 
@@ -95,13 +95,13 @@ The BASH Terminal window will launch automatically upon login. On first launch, 
 
 .. note::
 
-   The Windows jump host uses WSL (Windows Subsystem for Linux) to provide access to an Ubuntu Linux environment where Terraform and Ansible are installed.
+   The Windows jump host uses WSL (Windows Subsystem for Linux) to provide access to an Ubuntu Linux environment where Terraform is installed.
 
    The UDF system automatically creates a temporary AWS cloud account for use in the lab. The credentials are displayed whenever you launch the BASH Terminal.
 
    If you attempt to run through parts of this lab in your own environment (i.e., not using UDF), you will need to export your own AWS credentials for Terraform to use.
 
-Launch **Firefox** from the taskbar at the bottom of the desktop. The web browser will open to the **SSL Orchestrator 301 Lab Guide**. You might find it easier to use this copy of the guide for the rest of the lab.
+Launch **Firefox** from the taskbar at the bottom of the desktop. The web browser will open to the **Lab Guide**. You might find it easier to use this copy of the guide for the rest of the lab.
 
 
 .. |join_link| raw:: html
