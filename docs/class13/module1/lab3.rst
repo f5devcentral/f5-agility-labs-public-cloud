@@ -57,7 +57,7 @@ For future reference, this is the link to the same EC2 subscription: |ec2-bigip|
    Ensure that the subscription is successful (not **pending**) before proceeding to the next section.
 
 
-Keep your browser window open. You will need to return to it later.
+Minimize your browser window open (do not close it). You will return to it later.
 
 In the next section, you will use Terraform to build the AWS network infrastructure for this lab.
 

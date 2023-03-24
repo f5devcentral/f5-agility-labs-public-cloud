@@ -29,7 +29,7 @@ Review these files with **Visual Studio Code (VSCode)** by executing the followi
 
    *'code' + <space> + <dot>*
 
-Wait for VSCode to launch and display the file list in the left panel.
+Wait for VS Code to launch and display the file list in the left panel.
 
 .. tip::
 
@@ -37,7 +37,7 @@ Wait for VSCode to launch and display the file list in the left panel.
 
 |
 
-Click on each file that corresponds to the sections below. VSCode provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
+Click on each file that corresponds to the sections below. VS Code provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
 
 |
 

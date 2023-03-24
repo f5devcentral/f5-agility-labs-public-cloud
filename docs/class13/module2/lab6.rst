@@ -1,7 +1,7 @@
 Verify the BIG-IP (SSL Orchestrator) Configuration
 ================================================================================
 
-The SSL Orchestrator's public management IP address was provided in the Terraform outputs. To show the Terraform output values again, execute ``terraform output`` in the BASH Terminal and look for **sslo_management_public_ip**.
+The SSL Orchestrator's public management IP address was provided in the Terraform outputs. To show the Terraform output values again, execute ``terraform output`` in the BASH terminal and look for **sslo_management_public_ip**.
 
 Open a new web browser window and connect to the BIG-IP (SSL Orchestrator) TMUI: **https://<sslo_management_public_ip>**
 

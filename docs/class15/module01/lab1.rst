@@ -14,14 +14,14 @@ Your Deployment => Systems => Client => Access => VS Code.
 
 .. image:: ./images/2_click_on_join.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: BASH terminal
 
 3. Click on DEPLOYMENT buttom on the top left to begin provisioning your personal lab access server and network in AWS. Here we are creating a ubuntu server to access to AWS resources
 Here we are creating a ubuntu server to access to AWS resources
 
 .. image:: ./images/3_click_ondeployment.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: BASH terminal
 
 4. Ensure the 'Region' is ``` us-west-2 ```
    Currently the lab is only design for AWS resources in us-west-2
@@ -31,7 +31,7 @@ Here we are creating a ubuntu server to access to AWS resources
 
 .. image:: ./images/5_cloudaccount.png
    :scale: 50%
-   :alt: bash terminal
+   :alt: BASH terminal
 
 6. Copy the **API Key** & **API Secret key** into your clipboard
 

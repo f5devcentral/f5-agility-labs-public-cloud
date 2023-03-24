@@ -2,7 +2,7 @@ Perform manual app VS config
 ================================================================================
 
 
-Use VSCode F5 Extension to convert the config to AS3
+Use VS Code F5 Extension to convert the config to AS3
 ================================================================================
 
 

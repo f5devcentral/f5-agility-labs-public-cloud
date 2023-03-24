@@ -48,7 +48,7 @@ Review the other variables that are defined in this file. The comments describe 
 
 .. tip::
 
-   If you prefer to use the VSCode integrated terminal instead of a separate BASH Terminal window, that will also work. Just ensure that you are in the correct directory and execute all commands as if you were using the BASH Terminal window.
+   If you prefer to use the VS Code integrated terminal instead of a separate BASH terminal window, that will also work. Just ensure that you are in the correct directory and execute all commands as if you were using the BASH terminal window.
 
    To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu. You will start in the **/home/f5admin** directory, so you will have to execute ``cd ~/sslo-cloud-templates/terraform-aws-sslo`` again.
 
@@ -59,7 +59,7 @@ Initialize the Terraform
 
 Before you can apply a Terraform configuration, you must |init_link| it. This will download all required Terraform module dependencies.
 
-In your BASH Terminal, execute the following:
+In your BASH terminal, execute the following:
 
    .. code-block:: bash
 

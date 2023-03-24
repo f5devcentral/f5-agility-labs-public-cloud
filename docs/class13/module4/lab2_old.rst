@@ -75,7 +75,7 @@ Open a new browser tab. Connect via HTTPS to ``virtual_server01_elastic_ip`` or 
 .. image:: ./images/9_example_app_bigip1.png
 	   :scale: 50%
 
-From the vscode terminal, SSH to the active BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
+From the VS Code terminal, SSH to the active BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
 
 .. code-block:: bash
 
@@ -91,7 +91,7 @@ From the vscode terminal, SSH to the active BIG-IP and confirm the interfaces th
 .. image:: ./images/active_cfe_inspect.png
 	   :scale: 50%
 
-From the vscode terminal, SSH to the standby BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
+From the VS Code terminal, SSH to the standby BIG-IP and confirm the interfaces the F5 Cloud Failover Extension is tracking:
 
 .. code-block:: bash
 

@@ -31,7 +31,7 @@ window indicates a "bash" shell.
 
 .. image:: ./images/03_VSCode_Terminal_Confirm.png
    :scale: 50%
-   :alt: Bash terminal
+   :alt: BASH terminal
 
 
 Authenticate the 'gcloud' command line utility
