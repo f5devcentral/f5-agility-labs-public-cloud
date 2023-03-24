@@ -24,7 +24,7 @@ After signing in, click on the **Join** button.
 
 After joining the course, you will see the **COURSE SESSIONS** page. Click on the **LAUNCH** button for this course.
 
-  .. image:: ./images/udf-launch.png
+  .. image:: ./images/udf-sessions.png
      :align: left
 
 You will then see the **DOCUMENTATION** tab with some information about the lab resources and a link to the Lab Guide (this document).
