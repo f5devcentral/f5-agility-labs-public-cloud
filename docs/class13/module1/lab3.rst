@@ -5,10 +5,14 @@ Before you can deploy EC2 virtual machine instances, you must **subscribe** to t
 
 Type ``marketplace`` in the AWS Console search box at the top of the page.
 
+|
+
 Click on **AWS Marketplace Subscriptions** from the search results.
 
-.. image:: ./images/aws-mkt-0.png
-   :align: left
+  .. image:: ./images/aws-mkt-0.png
+     :align: left
+
+|
 
 In the menu to the left, click on **Discover products**. If you do not see this menu, click on the |hamburger| (*hamburger*) menu icon first.
 
@@ -16,19 +20,22 @@ Enter ``f5 advanced 25mbps`` in the **AWS Marketplace products** search box.
 
 Click on **F5 Advanced WAF with LTM, IPI, and Threat Campaigns (PAYG, 25Mbps)**.
 
-.. image:: ./images/aws-mkt-1.png
-   :align: left
+  .. image:: ./images/aws-mkt-1.png
+     :align: left
 
+|
 
 Click on **Continue to Subscribe**.
 
-.. image:: ./images/aws-mkt-2.png
-   :align: left
+  .. image:: ./images/aws-mkt-2.png
+     :align: left
+
+|
 
 Click on **Accept Terms**.
 
-.. image:: ./images/aws-mkt-3.png
-   :align: left
+  .. image:: ./images/aws-mkt-3.png
+     :align: left
 
 
 .. note::
@@ -42,11 +49,13 @@ Click on **Accept Terms**.
 
 When you are subscribed, you will see the **Effective Date** change from **Pending** to the current date.
 
-.. image:: ./images/aws-mkt-4.png
-   :align: left
+  .. image:: ./images/aws-mkt-4.png
+     :align: left
 
-.. image:: ./images/aws-mkt-5.png
-   :align: left
+|
+
+  .. image:: ./images/aws-mkt-5.png
+     :align: left
 
 
 For future reference, this is the link to the same EC2 subscription: |ec2-bigip|
@@ -58,9 +67,6 @@ For future reference, this is the link to the same EC2 subscription: |ec2-bigip|
 
 
 Minimize your browser window (do not close it). You will return to it later.
-
-In the next section, you will use Terraform to build the AWS network infrastructure for this lab.
-
 
 
 
