@@ -12,7 +12,7 @@ You should see output similar to the following:
 
    .. code-block:: bash
 
-      git clone https://github.com/f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform.git
+      f5admin@JUMPHOST:~$ git clone https://github.com/f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform.git
       Cloning into 'f5agilitylabs-big-ip-ha-public-cloud-terraform'...
       remote: Enumerating objects: 37, done.
       remote: Counting objects: 100% (37/37), done.
