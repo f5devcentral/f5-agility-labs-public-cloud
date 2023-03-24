@@ -49,7 +49,7 @@ From the AWS Console, CloudWatch => Logs => Log Groups => studentf5labdev => log
 .. image:: ./images/2023_8_aws_console_cloudwatch_logstream.png
 	   :scale: 50%
 
-Eventually you will see telemetry data from hostname: bigip1.f5lab.dev and hostname: bigip2.f5lab.dev appearing in to the log-stream.
+Eventually you will see system telemetry data from hostname: bigip1.f5lab.dev and hostname: bigip2.f5lab.dev appearing in to the log-stream.
 
 .. image:: ./images/2023_9_aws_console_cloudwatch_telemetry_streaming.png
 	   :scale: 50%
