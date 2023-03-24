@@ -14,7 +14,7 @@ Log into the AWS Console with the credentials shown in your BASH terminal.
 
 Accept/acknowledge any prompts that appear.
 
-In the top right-hand corner, select the **US East (N. Virginia) / us-east-1** region.
+In the top right-hand corner, select the **US West (Oregon) / us-west-2** region.
 
   .. image:: ./images/aws-console-3.png
      :align: left
