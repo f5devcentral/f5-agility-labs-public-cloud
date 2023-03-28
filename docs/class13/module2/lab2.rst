@@ -50,7 +50,7 @@ Virtual Lab Infrastructure Details (and Credentials)
 
 The following tables provide device/service network configuration details. Login credentials are also provided for use as directed in the lab exercises.
 
-.. list-table:: **F5 SSL Orchestrator**
+.. list-table:: **BIG-IP #1**
    :header-rows: 0
    :widths: auto
 
@@ -67,23 +67,7 @@ The following tables provide device/service network configuration details. Login
    * - System DNS
      - 169.254.169.253 (AWS DNS)
 
-   * - SSL Orchestrator Topology
-     - Name: l3inbound
-
-       VS Destination: 10.0.2.200\:443
-
-       SNAT: Automap
-
-       Pool member: 192.168.1.200\:443
-
-       Service Chain 1: SNORT1
-
-       Service Chain 2: SNORT1, SNORT2
-
-       Security Policy Rule 1: Client subnet 10.0.0.0/8 - Intercept - Service Chain 1
-
-       Security Policy Rule 2: Everything - Intercept - Service Chain 2
-
+   
 .. list-table:: **Windows Jump Host (win2019)**
    :header-rows: 0
    :widths: 200 300
@@ -92,42 +76,6 @@ The following tables provide device/service network configuration details. Login
      - Username: user
 
        Password: user
-
-.. list-table:: **L3 Service 1 (SNORT1)**
-   :header-rows: 0
-   :widths: auto
-
-   * - Login
-     - Username: ubuntu
-
-       Password: f5Twister!
-   * - TO Service
-     - Interface: 1.3
-
-       IP Address: 10.0.3.21/25
-
-   * - FROM Service
-     - Interface: 1.4
-
-       IP Address: 10.0.3.149/25
-
-.. list-table:: **L3 Service 2 (SNORT2)**
-   :header-rows: 0
-   :widths: auto
-
-   * - Login
-     - Username: ubuntu
-
-       Password: f5Twister!
-   * - TO Service
-     - Interface: 1.5
-
-       IP Address: 10.0.4.21/25
-
-   * - FROM Service
-     - Interface: 1.6
-
-       IP Address: 10.0.4.149/25
 
 
 .. warning::
