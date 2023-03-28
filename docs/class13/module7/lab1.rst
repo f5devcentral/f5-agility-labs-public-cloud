@@ -7,8 +7,14 @@ In the BASH terminal, execute the following:
 
    .. code-block:: bash
 
-      cd ~/sslo-cloud-templates/terraform-aws-sslo
+      cd ~/f5agilitylabs-big-ip-ha-public-cloud-terraform/terraform
       terraform destroy -auto-approve
+
+
+.. todo:: 
+
+   Update screen output blocks
+
 
 You will see output similar to the following:
 
