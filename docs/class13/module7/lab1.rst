@@ -7,7 +7,7 @@ In the BASH terminal, execute the following:
 
    .. code-block:: bash
 
-      cd ~/f5agilitylabs-big-ip-ha-public-cloud-terraform/terraform
+      cd ~/f5lab/terraform
       terraform destroy -auto-approve
 
 
