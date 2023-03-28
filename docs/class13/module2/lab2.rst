@@ -16,17 +16,15 @@ Target Infrastructure End-State
 The Terraform configuration that you will use in this lab module deploys the following:
 
 - AWS networking resources
-- Wordpress application instance
-- Layer-3 (L3) inspection service instances
-- BIG-IP (F5 SSL Orchestrator) VE instance
+- Application server instances
+- BIG-IP VE instances
 
+**Network Diagram (placeholder)**
 
-**SSL Orchestrator Network Diagram**
-
-.. image:: ./images/labinfo-1.png
+.. image:: ./images/labinfo-new.png
    :align: left
 
-The SSL Orchestrator interfaces are configured as follows:
+The BIG-IP VE interfaces are configured as follows:
 
 .. list-table:: **Interface Descriptions**
    :header-rows: 1
@@ -40,18 +38,11 @@ The SSL Orchestrator interfaces are configured as follows:
      - Connected to the Internet-facing subnet
    * - 1.2
      - Connected to the application-facing subnet
-   * - 1.3
-     - Connected to L3 Inspection Service #1 - "TO Service" subnet
-   * - 1.4
-     - Connected to L3 Inspection Service #1 - "FROM Service" subnet
-   * - 1.5
-     - Connected to L3 Inspection Service #2 - "TO Service" subnet
-   * - 1.6
-     - Connected to L3 Inspection Service #2 - "FROM Service" subnet
 
-.. note::
+.. todo:: 
 
-   For this lab, the L3 inspection devices are both Snort IDS devices. However, they could be a mix of the following types: Inline L3, HTTP, ICAP, or passive tap devices.
+   more editing
+
 
 
 Virtual Lab Infrastructure Details (and Credentials)
