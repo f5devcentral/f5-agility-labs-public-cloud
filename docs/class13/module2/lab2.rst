@@ -3,18 +3,10 @@ Lab Scenario
 
 .. _scenario:
 
-Two AWS VPCs are connected by an AWS Transit Gateway, which routes traffic between the VPCs. The **Application** VPC contains a Wordpress application server instance. The **Security** VPC contains the BIG-IP (SSL Orchestrator) VE and inspection device instances. Users will connect to a Virtual Server on the BIG-IP to access the Wordpress application.
+Two AWS VPCs are connected by an AWS Transit Gateway, which routes traffic between the VPCs. The **application** VPC contains two application server instances (each in a different availability zone). The **hub** VPC contains two BIG-IP VE instances (each in a different availability zone). Users will connect to a Virtual Server on the BIG-IP(s) to access the application.
 
-Inbound traffic will flow through one of two Service Chains before being forwarded to the application server. Two L3 inspection devices are configured. **Service Chain 1** includes only the first inspection device. **Service Chain 2** includes both inspection devices.
 
-Clients connecting from the **10.0.0.0/8** CIDR range will be sent through **Service Chain 1**. These users are considered 'internal' clients with lower risk, so require less inspection.
-
-.. image:: ./images/sslo-l3inbound-internal.png
-   :align: left
-
-Clients from all other source networks will be sent through **Service Chain 2**. These users are considered 'external' (Internet) clients with higher risk, so require more inspection.
-
-.. image:: ./images/sslo-l3inbound-all.png
+.. image:: ./images/aws-lab-diagram.png
    :align: left
 
 
