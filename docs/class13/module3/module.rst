@@ -8,7 +8,9 @@ App Deployment using Application Services 3 Extension (AS3) --- CARL
 
 In this module, you will:
 
--  xxxxx
+- Use the VS Code F5 Extension to convert an application configuration to Application Services 3 Extension (AS3) format
+- Deploy an application using AS3
+- Learn how to update an F5 Automation Toolchain extension
 
 
 .. toctree::
