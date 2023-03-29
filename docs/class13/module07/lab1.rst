@@ -186,3 +186,29 @@ Back to the browser tab with the example application. [CTRL] + [F5] a few times 
 
 .. image:: ./images/23_example_app_bigip1.png
 	   :scale: 50%
+
+Uninstall CFE iLX Extension
+-------------
+
+From Postman, “Lab - F5 Cloud Failover" => “Step 5: REST API - Uninstall CFE iLX Package - BIGIP1” => [Send]. A “200 OK” response indicates the declaration was successfully posted.
+
+.. image:: ./images/24_postman_cloud_failover_uninstall_post_bigip1.png
+	   :scale: 50%
+
+From Postman, “Lab - F5 Cloud Failover” => “Step 6: REST API - Uninstall CFE iLX Package – BIGIP2” => [Send]. A “200 OK” response indicates the declaration was successfully posted.
+
+.. image:: ./images/25_postman_cloud_failover_uninstall_post_bigip2.png
+	   :scale: 50%
+
+Confirm Removal of CFE iLX Extension 
+-------------
+
+Big-IP1 => iApps => Package Management LX => confirm that the f5-cloud-failover package is no longer in the list.
+
+.. image:: ./images/26_postman_cloud_failover_uninstall_verify_post_bigip1.png
+	   :scale: 50%
+
+Do the same for Big-IP2.
+
+.. image:: ./images/27_postman_cloud_failover_uninstall_verify_post_bigip2.png
+	   :scale: 50%
