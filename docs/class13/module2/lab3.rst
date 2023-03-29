@@ -44,7 +44,7 @@ Click on each file that corresponds to the sections below. VS Code provides Terr
 Terraform Providers
 --------------------------------------------------------------------------------
 
-Providers enable configuration of resources available from a service provider.
+Providers enable configuration of dependencies for resource providers (e.g., minimum version for AWS, Azure).
 
 .. list-table:: **Providers**
    :header-rows: 1
@@ -168,19 +168,6 @@ The base system settings and network configuration are provisioned using **F5 Au
        - |do_link|
 
 
-Terraform Outputs
---------------------------------------------------------------------------------
-
-.. list-table:: **Terraform Outputs**
-   :header-rows: 1
-   :widths: auto
-
-   * - Filename
-     - Description
-   * - outputs.tf
-     - Defines the values to be **output**. Some values are dynamically generated, so need to be output for use later in the lab.
-
-
 Miscellaneous
 --------------------------------------------------------------------------------
 Additional Terraform files are provided to support this lab.
@@ -193,8 +180,20 @@ Additional Terraform files are provided to support this lab.
      - Description
    * - aws-keypair.tf
      - Creates an AWS SSH keypair to be used for authentication to EC2 VM instances.
-   * - ansible_vars.tf
-     - Creates the Ansible Variables file that will be used in a later lab module.
+   
+
+Terraform Outputs
+--------------------------------------------------------------------------------
+
+.. list-table:: **Terraform Outputs**
+   :header-rows: 1
+   :widths: auto
+
+   * - Filename
+     - Description
+   * - outputs.tf
+     - Defines the values to be **output**. Some values are dynamically generated, so need to be output for use later in the lab.
+
 
 
 .. |runtime-init_link| raw:: html
