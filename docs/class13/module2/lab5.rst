@@ -123,7 +123,7 @@ Confirm that the following resources were created:
       :align: left
 
 
-The **BIG-IP** (SSL Orchestrator) uses 7 NICs (management, external, internal, dmz1, dmz2, dmz3, dmz4).
+The **BIG-IP** uses 7 NICs (management, external, internal, dmz1, dmz2, dmz3, dmz4).
 
 The first **inspection device** uses 3 NICs (management, dmz1, dmz2).
 

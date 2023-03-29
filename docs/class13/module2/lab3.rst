@@ -1,7 +1,7 @@
 Review the Terraform Configuration Files
 ================================================================================
 
-The GitHub repository that you cloned in a previous step contains a directory called **terraform-aws-sslo**. You will now review the Terraform configuration files to understand what they do.
+The GitHub repository that you cloned earlier contains a directory called **terraform**. You will now review the Terraform configuration files to understand what they do.
 
 
 Terraform Directory
@@ -10,7 +10,7 @@ In the BASH terminal, change to the Terraform directory.
 
    .. code-block:: bash
 
-      cd ~/sslo-cloud-templates/terraform-aws-sslo
+      cd ~/f5lab/terraform
       ls
 
 You should see several Terraform (\*.tf) files listed.
@@ -21,7 +21,7 @@ You should see several Terraform (\*.tf) files listed.
       ansible_vars.tf  main.tf          securitygroups.tf  transitgateway.tf         vm-inspect1.tf  vpc.tf
       aws-keypair.tf   outputs.tf       subnets.tf         variables.tf              vm-inspect2.tf
 
-Review these files with **Visual Studio Code (VSCode)** by executing the following:
+Review these files with **Visual Studio Code (VS Code)** by executing the following:
 
    .. code-block:: bash
 
@@ -121,7 +121,7 @@ Each EC2 VM instance is defined in a separate Terraform configuration file.
 
        Creates 1 **Network interface** (application subnet).
 
-       This application will be protected by SSL Orchestrator (when configured by Ansible in a later lab module).
+       This application will be protected by BIG-IP (when configured by Ansible in a later lab module).
    * - vm-inspect1.tf
      - Deploys a **Snort (Intrusion Detection and Prevention System)** instance as an L3 inspection device in the **Security** VPC.
 
@@ -134,7 +134,7 @@ Each EC2 VM instance is defined in a separate Terraform configuration file.
 
        To simplify this lab, both inspection devices use the same AWS image. Each Snort instance routes traffic between its TO Service and FROM Service interfaces.
    * - vm-bigip.tf
-     - Deploys a BIG-IP (SSL Orchestrator) VE instance in the **Security** VPC.
+     - Deploys a BIG-IP VE instance in the **Security** VPC.
 
        Creates 7 **Network interfaces** (management, external, internal, dmz1, dmz2, dmz3, and dmz4 subnets), public IPs, and F5 onboarding configuration.
 

@@ -19,7 +19,7 @@ The common Terraform deployment steps are as follows:
 Create a terraform.tfvars File
 --------------------------------------------------------------------------------
 
-In VSCode, click on the **terraform.tfvars.example** file. You will use this for the base variable settings of your deployment.
+In VS Code, click on the **terraform.tfvars.example** file. You will use this for the base variable settings of your deployment.
 
    .. image:: ./images/vscode-1.png
       :align: left
@@ -50,7 +50,7 @@ Review the other variables that are defined in this file. The comments describe 
 
    If you prefer to use the VS Code integrated terminal instead of a separate BASH terminal window, that will also work. Just ensure that you are in the correct directory and execute all commands as if you were using the BASH terminal window.
 
-   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu. You will start in the **/home/f5admin** directory, so you will have to execute ``cd ~/sslo-cloud-templates/terraform-aws-sslo`` again.
+   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu. You will start in the **/home/f5admin** directory, so you will have to execute ``cd ~/f5lab/terraform`` again.
 
 |
 
@@ -283,7 +283,7 @@ Take note of the values for the following outputs:
 - sslo_management_public_ip
 - sslo_vip
 
-You will need this information later to access the SSL Orchestrator management interface and to test the application.
+You will need this information later to access the BIG-IP management interface and to test the application.
 
 In the future, if you want to show the Terraform |output_link| values again, you can execute the following:
 
