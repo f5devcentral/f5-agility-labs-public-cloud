@@ -8,7 +8,8 @@ HA Failover via Cloud Load Balancer --- ANTHONY, GARLAND
 
 In this module, you will:
 
--  xxxxx
+-  Configure HA failover via an AWS Network Load Balancer
+-  Test BIG-IP failover
 
 
 .. toctree::

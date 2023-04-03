@@ -1,4 +1,4 @@
-F5 Telemetry Streaming (TS) to AWS CloudWatch
+F5 Telemetry Streaming (TS) to Amazon CloudWatch
 ================================================================================
 
 From Big-IP1, iApps => Package Management LX. Note the f5-telemetry package is installed.

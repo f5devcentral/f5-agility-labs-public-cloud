@@ -8,7 +8,7 @@ F5 Analytics Integration with AWS --- TYLER
 
 In this module, you will:
 
--  xxxxx
+-  Configure F5 Telemetry Streaming extension to send data to the Amazon CloudWatch service
 
 
 .. toctree::

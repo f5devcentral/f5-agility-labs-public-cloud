@@ -8,7 +8,8 @@ HA Failover via Cloud Failover Extension (CFE) --- DAVID
 
 In this module, you will:
 
--  xxxxx
+-  Configure HA failover via the F5 Cloud Failover Extension
+-  Test BIG-IP failover
 
 
 .. toctree::
