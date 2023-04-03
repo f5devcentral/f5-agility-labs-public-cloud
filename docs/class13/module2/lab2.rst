@@ -11,9 +11,10 @@ Target Infrastructure End-State
 
 The Terraform configuration that you will use in this lab module deploys the following:
 
-- AWS networking resources
-- Application server instances
-- BIG-IP VE instances
+- AWS networking resources (2 VPCs, subnets, transit gateway, route tables, etc)
+- Application server instances (2 Linux VMs)
+- BIG-IP VE instances (2 VMs) with F5 Automation Toolchain extensions (DO, AS3, TS, CFE)
+- BIG-IP base networking (VLANs, IP addresses, routes)
 
 **Network Diagram**
 
