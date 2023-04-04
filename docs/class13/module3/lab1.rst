@@ -31,7 +31,7 @@ Overview of the F5 Extension
 
 your abilities to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration schema validation, and also assist with connecting, deploying, retrieving and updating declarations on F5 devices.
 
-It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.
+It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration .
 
 - GET/POST/DELETE of all ATC services, including FAST/AS3/DO/TS/CF
 - links to quickly open related ATC documentation
