@@ -22,14 +22,17 @@ Open VS Code and navigate to the Extensions menu.  You may either press the Exte
 Search for F5, select the extension “The F5 Extension”, then Install.
 
 .. image:: ./images/installWithinCode_11.04.2020.gif
+   :alt: Animated GUI
    :align: left
+   :width: 80%
 
 In the list of extensions related to F5, you should also see F5 ACC Chariot, click Install.
 
 Overview of the F5 Extension
 ================================================================================
 
-your abilities to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration schema validation, and also assist with connecting, deploying, retrieving and updating declarations on F5 devices.
+Enhance your abilities to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration 
+schema validation, and also assist with connecting, deploying, retrieving and updating declarations on F5 devices.
 
 It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration .
 
@@ -42,20 +45,24 @@ It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration 
 - Extract TMOS applications (per virtual server)
 - Write, deploy and modify iRules/iApps (with vscode-irule extension for language support)
 
+**GUI Essentials**
 On the left hand tool bar/menu, select/click on the F5 logo.  This will launch the F5 Extension.
 You should see three panels on the left, one for BIG-IP Hosts, Documentation/Examples, and Config Explorer.
 
-## Create a device and connect
+**Create a device and connect**
 
 Select `Add Host` in the `F5: Hosts` view.  Then type in device details in the \<user\>@x.x.x.x format, hit `Enter` to submit
 
  .. image:: ./images/addDeviceConnect_11.04.2020.gif
-   :alt: drawing
+   :alt: Animated GUI
+   :align: left
    :width: 80%
 
 Perform manual app VS config
 ================================================================================
 Placeholder
+
+Full DIY in the GUI OR Automate it to some minor degree?
 
 
 Use VS Code F5 Extension to convert a configuration to AS3 format
