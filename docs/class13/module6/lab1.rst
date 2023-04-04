@@ -1,16 +1,18 @@
-What is Telemetry Streaming
+What is F5 Telemetry Streaming
 ================================================================================
 **F5 BIG-IP Telemetry Streaming (BIG-IP TS)** enables you to declaratively aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application. BIG-IP Telemetry Streaming is an iControl LX Extension delivered as a TMOS-independent RPM file, and uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. To use BIG-IP TS, you POST a single JSON declaration to BIG-IP TS’s declarative REST API endpoint.
-https://youtu.be/YeEAovBvUkY
 
 
 Lab Scenario
 ================================================================================
-Placeholder
+Two AWS VPCs are connected to an AWS Transit Gateway, which routes traffic between the VPCs. The **app** VPC contains two application server instances (each in a different availability zone). The **hub** VPC contains two BIG-IP VE instances (each in a different availability zone).
+
+You will configure F5 Telemetry Streaming to send System and Application log data to AWS Cloudwatch, then view the logs via the AWS Console.
 
 
-Verify installation of Telemetry Streaming
+Verify installation of F5 Telemetry Streaming
 ================================================================================
+Verify that F5 Telemetry Streaming has been installed via the WebUI and API
 
 
 Verify installation via the WebUI
@@ -24,30 +26,30 @@ Do the same for Big-IP2.
 	   :scale: 50%
 
 
-Verify installation via the Postman
+Verify installation via API
 --------------------------------------------------------------------------------
 
 From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP1.
+"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) is ready on Big-IP1.
 
 .. image:: ./images/2023_2_postman_telemetry_streaming_status_bigip1.png
 	   :scale: 50%
 
 From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 2: Confirm Telemetry Streaming REST API - BIGIP2” => [Send].
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) is ready on Big-IP2.
+"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) is ready on Big-IP2.
 
 .. image:: ./images/2023_3_postman_telemetry_streaming_status_bigip2.png
 	   :scale: 50%
 
 
-Review Telemetry Streaming declaration
+Review Telemetry Streaming Declaration
 ================================================================================
 Placeholder
 
 
-Deploy Telemetry configuration
+Deploy Telemetry Configuration
 ================================================================================
 
 From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 3: Telemetry Streaming AWS - BIGIP1” => [Send].
@@ -55,20 +57,20 @@ From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 3: Telemetry Stream
 .. image:: ./images/2023_4_postman_telemetry_streaming_body_bigip1.png
 	   :scale: 50%
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP1.
+"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) declaration successfully completed processing on Big-IP1.
 
 .. image:: ./images/2023_5_postman_telemetry_streaming_completed_bigip1.png
 	   :scale: 50%
 
 Do the same for Big-IP2. From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 4: Telemetry Streaming AWS - BIGIP2” => [Send].
 
-"Status: 200 OK" response signals that the Telemetry Streaming Extension (TS) declaration successfully completed processing on Big-IP2.
+"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) declaration successfully completed processing on Big-IP2.
 
 .. image:: ./images/2023_6_postman_telemetry_streaming_completed_bigip2.png
 	   :scale: 50%
 
 
-Reveiw Telemetry Streaming logs in the AWS Console using CloudWatch
+Reveiw Telemetry Streaming Logs in the AWS Console Using CloudWatch
 ================================================================================
 
 From the AWS Console, Services => type "cloudwatch" in the search box, choose "CloudWatch" from the drop-down results.
