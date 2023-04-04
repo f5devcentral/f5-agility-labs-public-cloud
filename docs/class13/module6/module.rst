@@ -1,36 +1,36 @@
 F5 Analytics Integration with AWS --- TYLER
 ================================================================================
 
-F5 Telemetry Streaming is a power tool that can be used to collect logs for for the BIG-IP System, and the applications it hosts.
+F5 Telemetry Streaming is a power tool that can be used to collect logs for for the BIG-IP System, and the applications it delivers.
 
 In this module, you will:
 
--  Learn about F5 Telemetry Streaming (TS)
--  Verify Telemetry Streaming (TS) Is Installed on BIG-IP1 and BIG-IP2
--  Reveiw and Deploy a Telemetry Streaming (TS) Configuration to BIG-IP1 and BIG-IP2
--  Observe the different typs of Telemetry Streaming (TS) logs in AWS CloudWatch
+-  Learn about F5 Telemetry Streaming (BIG-IP TS)
+-  Verify F5 Telemetry Streaming (BIG-IP TS) Is Installed on BIG-IP1 and BIG-IP2
+-  Reveiw and Deploy a F5 Telemetry Streaming (BIG-IP TS) Configuration to BIG-IP1 and BIG-IP2
+-  Observe the different typs of F5 Telemetry Streaming (BIG-IP TS) logs in AWS CloudWatch
 
 .. todo::
 
-   6.1. What is Telemetry Streaming
+   6.1. What is F5 Telemetry Streaming
 
    6.2. Lab Scenario
 
-   6.3. Verify installation of Telemetry Streaming
+   6.3. Verify installation of F5 Telemetry Streaming
 
       6.3.1  Verify installation via the WebUI
 
-      6.3.2  Verify installation via Postman
+      6.3.2  Verify installation via API
 
-   6.4. Review Telemetry Streaming declaration
+   6.4. Review F5 Telemetry Streaming Declaration
 
-   6.5  Deploy Telemetry configuration
+   6.5  Deploy F5 Telemetry Configuration
 
-   6.6. Reveiw Telemetry Streaming logs in the AWS Console using CloudWatch
+   6.6. Reveiw F5 Telemetry Streaming Logs in the AWS Console using CloudWatch
 
-      6.6.1  Review BIG-IP System Level logs
+      6.6.1  Review BIG-IP System Level Logs
 
-      6.6.2  Reivew Applicaion Level logs
+      6.6.2  Reivew Applicaion Level Logs
 
 
 .. toctree::
