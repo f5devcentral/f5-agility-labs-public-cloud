@@ -23,7 +23,7 @@ Do the same for Big-IP2.
 	   :scale: 50%
 
 
-Verify installation via the WebUI
+Verify installation via the Postman
 --------------------------------------------------------------------------------
 
 From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 1: Confirm Telemetry Streaming REST API - BIGIP1” => [Send].
