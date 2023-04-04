@@ -1,4 +1,14 @@
-F5 Telemetry Streaming (TS) to Amazon CloudWatch
+What is Telemetry Streaming
+================================================================================
+Placeholder
+
+
+Lab Scenario
+================================================================================
+Placeholder
+
+
+Verify installation of Telemetry Streaming
 ================================================================================
 
 From Big-IP1, iApps => Package Management LX. Note the f5-telemetry package is installed.
