@@ -26,11 +26,11 @@ In this module, you will:
 
    6.5  Deploy Telemetry configuration
 
-   6.5. Reveiw Telemetry Streaming logs in the AWS Console using CloudWatch
+   6.6. Reveiw Telemetry Streaming logs in the AWS Console using CloudWatch
 
-      6.5.1  Review BIG-IP System Level logs
+      6.6.1  Review BIG-IP System Level logs
 
-      6.5.2  Reivew Applicaion Level logs
+      6.6.2  Reivew Applicaion Level logs
 
 
 .. toctree::
