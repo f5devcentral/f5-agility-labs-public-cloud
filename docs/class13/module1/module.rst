@@ -1,4 +1,4 @@
-Lab Environment Access and Initial Setup --- JASON
+Lab Environment Access and Initial Setup
 ================================================================================
 
 This lab makes use of two environments:

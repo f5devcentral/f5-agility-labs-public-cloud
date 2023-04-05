@@ -64,7 +64,7 @@ Login using the following credentials:
   | Password:  | user |
   +------------+------+
 
-(It's OK, this resource is only accessible through your authenticated UDF session.)
+Don't worry about the simple password, this resource is only accessible through your authenticated UDF session.
 
   .. image:: ./images/jumphost-2.png
      :align: left
@@ -80,17 +80,18 @@ When you see the **Networks** prompt, click **Yes** to continue.
   .. image:: ./images/jumphost-3.png
      :align: left
 
-You should now see the Windows desktop with the following:
+Please be patient. It might take a minute for the startup script to complete.
 
-- AWS Console Sign-In (shortcut)
-- Postman
-
-Visual Studio Code (vscode) will launch automatically and display the **BASH terminal** panel. Please be patient. It might take a minute to complete the startup script. When done, you will see the following information (some of which you will use later):
+Visual Studio Code (vscode) will launch automatically and display the **BASH terminal** panel.  When done, you will see the following information (some of which you will use later):
 
 - Terraform environment variables
 - AWS Console URL, Username ('udf'), and Password (*random*)
 - Public IP address of the jump host
 - Installed versions for AWS CLI and Terraform
+
+Postman will also launch automatically. If it appears in front of the VS Code window, just minimize it.
+
+There will also be several shortcuts on the Windows desktop: Visual Studio Code, Postman, and an AWS Console Sign-In Link.
 
 |
 
@@ -102,7 +103,7 @@ Visual Studio Code (vscode) will launch automatically and display the **BASH ter
 
    The Windows jump host uses WSL (Windows Subsystem for Linux) to provide access to an Ubuntu Linux environment where Terraform is installed.
 
-   The UDF system automatically creates a temporary AWS cloud account for use in the lab. The credentials are displayed whenever you launch the BASH terminal.
+   The UDF system automatically creates a temporary AWS cloud account for use in the lab. The credentials are displayed whenever you launch the BASH terminal or execute the start.sh script.
 
    If you attempt to run through parts of this lab in your own environment (i.e., not using UDF), you will need to export your own AWS credentials for Terraform to use.
 
@@ -116,4 +117,3 @@ Launch **Firefox** from the taskbar at the bottom of the desktop. The web browse
 .. |interface_link| raw:: html
 
       <a href="https://help.udf.f5.com/en/articles/3832340-training-course-interface" target="_blank"> How to use the training course interface </a>
-

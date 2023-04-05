@@ -1,7 +1,7 @@
 Download the Lab Files
 ================================================================================
 
-Switch to the VS Code **BASH terminal**, clone the GitHub **f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform** repository. This repository contains additional files that are reqired for the lab exercises.
+Switch to the VS Code **BASH terminal** and clone the GitHub **f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform** repository. This repository contains additional files that are reqired for the lab exercises.
 
    .. code-block:: bash
 
@@ -12,20 +12,15 @@ You should see output similar to the following:
 
    .. code-block:: bash
 
-      f5admin@JUMPHOST:~$ git clone https://github.com/f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform.git f5lab
-      Cloning into 'f5lab'...
-      remote: Enumerating objects: 185, done.
-      remote: Counting objects: 100% (185/185), done.
-      remote: Compressing objects: 100% (133/133), done.
-      remote: Total 185 (delta 110), reused 123 (delta 52), pack-reused 0
-      Receiving objects: 100% (185/185), 41.79 KiB | 174.00 KiB/s, done.
-      Resolving deltas: 100% (110/110), done.
+      f5admin@JUMPHOST:~$ git clone https://github.com/f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform.git ~/f5lab
+      Cloning into '/home/f5admin/f5lab'...
+      remote: Enumerating objects: 76, done.
+      remote: Counting objects: 100% (41/41), done.
+      remote: Compressing objects: 100% (37/37), done.
+      remote: Total 76 (delta 6), reused 26 (delta 3), pack-reused 35
+      Unpacking objects: 100% (76/76), 35.08 KiB | 7.00 KiB/s, done.
 
 |
 
-.. todo::
 
-   Update with correct screen output when the repo files are finalized.
-
-
-This is the end of the **Lab Environment Access and Initial Setup** module.
+This is the end of the module.
