@@ -49,7 +49,7 @@ Review Telemetry Streaming Declaration
 Placeholder
 
 
-Deploy Telemetry Configuration
+Deploy Telemetry Streaming Configuration
 ================================================================================
 
 From Postman, “Lab 4.6 - Telemetry Streaming” => “Step 3: Telemetry Streaming AWS - BIGIP1” => [Send].

@@ -24,7 +24,7 @@ In this module, you will:
 
    6.4. Review F5 Telemetry Streaming Declaration
 
-   6.5  Deploy F5 Telemetry Configuration
+   6.5  Deploy F5 Telemetry Streaming Configuration
 
    6.6. Reveiw F5 Telemetry Streaming Logs in the AWS Console using CloudWatch
 
