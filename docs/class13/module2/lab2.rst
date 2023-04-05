@@ -39,18 +39,18 @@ The following tables provide device network configuration details. Login credent
 
    
    * - Instance
-     - BIG-IP #1
-     - BIG-IP #2
+     - **BIG-IP #1**
+     - **BIG-IP #2**
 
-   * - Availability Zone
+   * - **Availability Zone**
      - AZ-1
      - AZ-2
 
-   * - Management IP
+   * - **Management IP**
      - Primary: 10.0.101.11/24 + Associated Elastic IP (Public) address
      - Primary: 10.0.102.11/24 + Associated Elastic IP (Public) address
 
-   * - External Subnet
+   * - **External Subnet**
      - Primary: 10.0.1.11/24
 
        Secondary: 10.0.1.12, 10.0.1.101, 10.0.1.102, 10.0.1.103, 10.0.1.104
@@ -58,19 +58,19 @@ The following tables provide device network configuration details. Login credent
 
        Secondary: 10.0.2.12, 10.0.2.101, 10.0.2.102, 10.0.2.103, 10.0.2.104
 
-   * - Internal Subnet
+   * - **Internal Subnet**
      - Primary: 10.0.10.11/24
      - Primary: 10.0.20.11/24
 
-   * - Default Route
+   * - **Default Route**
      - 10.0.1.1 (external subnet)
      - 10.0.2.1 (external subnet)
 
-   * - Static Route
+   * - **Static Route**
      - 10.1.0.0/16 (app-vpc) via 10.0.10.1 (internal subnet)
      - 10.1.0.0/16 (app-vpc) via 10.0.20.1 (internal subnet)
 
-   * - TMUI Login
+   * - **TMUI Login**
      - Username: admin
 
        Password: <<randomly-generated>
@@ -83,7 +83,7 @@ The following tables provide device network configuration details. Login credent
 
        Check Terraform outputs for password.
 
-   * - SSH Login
+   * - **SSH Login**
      - Username: admin
 
        Password: <ssh-key>
@@ -96,7 +96,7 @@ The following tables provide device network configuration details. Login credent
 
        The **root** account is disabled.
 
-   * - System DNS
+   * - **System DNS**
      - 169.254.169.253 (AWS DNS)
      - 169.254.169.253 (AWS DNS)
 
@@ -106,23 +106,23 @@ The following tables provide device network configuration details. Login credent
    :header-rows: 0
    :widths: 300 700 700
 
-   * - 
-     - App Server #1
-     - App Server #2
+   * -
+     - **App Server #1**
+     - **App Server #2**
 
-   * - Availability Zone
+   * - **Availability Zone**
      - AZ-1
      - AZ-2
 
-   * - IP Address
+   * - **IP Address**
      - Primary: 10.1.200.80/24
      - Primary: 10.1.201.80/24
 
-   * - Default Route
+   * - **Default Route**
      - 10.1.200.1 (app subnet)
      - 10.1.201.1 (app subnet)
    
-   * - SSH Login
+   * - **SSH Login**
      - Username: ec2-user
 
        Password: <ssh-key>
@@ -131,7 +131,7 @@ The following tables provide device network configuration details. Login credent
 
        Password: <ssh-key>
 
-   * - System DNS
+   * - **System DNS**
      - 169.254.169.253 (AWS DNS)
      - 169.254.169.253 (AWS DNS)
 
@@ -139,7 +139,7 @@ The following tables provide device network configuration details. Login credent
 
 .. list-table:: **Windows Jump Host (win2019)**
    :header-rows: 0
-   :widths: 300 400
+   :widths: 300 500
 
    * - RDP Login
      - Username: user
@@ -148,6 +148,6 @@ The following tables provide device network configuration details. Login credent
 
 
 .. warning::
-   Simple passwords may be used in this lab environment in order to make it easier for students to access the infrastructure. The jump host in this lab environment is only accessible to you after successfully authenticating to the UDF portal.
+   Simple passwords may be used in this lab environment in order to make it easier for students to access the infrastructure. The jump host in this lab environment is only accessible by you after successfully authenticating to the UDF portal.
 
    If deploying in your own lab, please follow recommended security practices by using strong passwords and restricting network access.
