@@ -1,4 +1,4 @@
-Download the Lab Files
+Download the Lab Files and Setup Environment
 ================================================================================
 
 Switch to the VS Code **BASH terminal** and clone the GitHub **f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform** repository. This repository contains additional files that are reqired for the lab exercises.
@@ -22,5 +22,13 @@ You should see output similar to the following:
 
 |
 
+Change to the repo directory and run the ``setup.sh`` script. This script creates environment variables and shell command aliases that you will use later on.
+
+  .. code-block:: bash
+
+     cd ~/f5lab
+     source ./setup.sh
+
+|
 
 This is the end of the module.
