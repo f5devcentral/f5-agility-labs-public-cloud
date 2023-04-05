@@ -17,11 +17,13 @@ You should see several Terraform (\*.tf) files listed.
 
    .. code-block:: bash
 
-      README.md        f5_onboard.tmpl  routetable.tf      terraform.tfvars.example  vm-bigip.tf     vm-webapp.tf
-      ansible_vars.tf  main.tf          securitygroups.tf  transitgateway.tf         vm-inspect1.tf  vpc.tf
-      aws-keypair.tf   outputs.tf       subnets.tf         variables.tf              vm-inspect2.tf
+      ami-search.tf  bigip1.tf            cloudwatch.tf        main.tf              templates           vpc-app.tf
+      appserver1.tf  bigip2.tf            credentials.tf       nat-gateway.tf       tmp                 vpc-hub.tf
+      appserver2.tf  certs.tf             internet-gateway.tf  postman-env-file.tf  transit-gateway.tf
+      bigip-vips.tf  cfe-dependencies.tf  jumphost-ip.tf       securitygroups.tf    variables.tf
 
-Review these files with **Visual Studio Code (VS Code)** by executing the following:
+
+Review these files with **VS Code** by executing the following:
 
    .. code-block:: bash
 
@@ -29,7 +31,7 @@ Review these files with **Visual Studio Code (VS Code)** by executing the follow
 
    *'code' + <space> + <dot>*
 
-Wait for VS Code to launch and display the file list in the left panel.
+Wait for VS Code to launch a new window and display the file list in the left panel.
 
 .. tip::
 
@@ -72,7 +74,7 @@ Variables allow you to create flexible and scalable Terraform deployments by eli
    * - terraform.tfvars.example
      - Examples of explicitly configured Terraform variable values.
 
-       This is a template for your own **terraform.tfvars** file, which will set values for the variables defined in the **variables.tf** file.
+       This is a template for your own **terraform.tfvars** file, which will set (or override) values for the variables defined in the **variables.tf** file.
 
 
 Virtual Network
@@ -86,29 +88,37 @@ Network objects types are defined in separate Terraform configuration files.
 
    * - Filename
      - Description
-   * - vpc.tf
-     - Creates the **Security** and **Application** VPCs.
-   * - subnets.tf
-     - Creates the subnets in the **Security** and **Application** VPCs.
-   * - routetable.tf
-     - Creates the Internet Gateway and custom route tables needed to steer traffic through the inspection devices.
-
-       An **Internet Gateway** is needed to provide external access to resources within the VPCs.
-
-       **Route Tables** are needed to steer traffic to specific gateways. They are applied to the **"TO Service"** (dmz1 and dmz3) and **"FROM Service"** (dmz2 and dmz4) subnets of the L3 inspection devices. This ensures the proper traffic flows through the inspection devices.
-
+   * - vpc-hub.tf
+     - Creates the **hub** VPC, subnets, and route tables (to Internet and app VPC).
+   * - vpc-app.tf
+     - Creates the **app** VPC, subnets, and route tables.
    * - transitgateway.tf
-     - Creates the **Transit Gateway** to route between the **Security** and **Application** VPCs. This simplifies the peering of VPCS.
+     - Creates the **Transit Gateway** to route traffic between the **hub** and **app** VPCs. This simplifies the peering of VPCs.
+   * - internet-gateway.tf
+     - Creates the Internet Gateway. A route table in the vpc-hub.tf file defines a default route to the Internet Gateway.
+
+       An **Internet Gateway** provides external access to resources within the VPCs.
+   * - nat-gateway.tf
+     - Creates the NAT Gateway for outbound Internet access from the application subnet. This is  needed for the app servers to perform their onboarding. A route table in the vpc-hub.tf file is associated with the 'internal' subnet to send app server outbound traffic to the Internet Gateway.
+
    * - securitygroups.tf
      - Creates the network Security Groups that control access to/from the VPC Subnets.
 
        A Security Group protects the BIG-IP public management IP - allowing only connections from your jump host's public IP address.
 
+   * - bigip-vips.tf
+     - Creates an Elastic IP address (EIP) / public IP and associates it to a private BIG-IP Virtual IP Address. This allows Internet clients to reach a BIG-IP Virtual Server.
+
+.. note::
+
+   Access to lab Public IPs is restricted by a Security Group that contains your jump host public IP address.
+
+|
 
 EC2 Instances
 --------------------------------------------------------------------------------
 
-Each EC2 VM instance is defined in a separate Terraform configuration file.
+Each EC2 VE instance is defined in a separate Terraform file.
 
 .. list-table:: **EC2 VM Deployment**
    :header-rows: 1
@@ -116,35 +126,39 @@ Each EC2 VM instance is defined in a separate Terraform configuration file.
 
    * - Filename
      - Description
-   * - vm-webapp.tf
-     - Deploys the **Wordpress** demo application server in the **Application** VPC.
+   * - appserver1.tf
+     - Deploys a demo application server instance in AZ1 of the **app** VPC.
 
-       Creates 1 **Network interface** (application subnet).
+       Creates a **Network interface** (app_az1 subnet).
 
-       This application will be protected by BIG-IP (when configured by Ansible in a later lab module).
-   * - vm-inspect1.tf
-     - Deploys a **Snort (Intrusion Detection and Prevention System)** instance as an L3 inspection device in the **Security** VPC.
+   * - appserver2.tf
+     - Deploys a demo application server instance in AZ2 of the **app** VPC.
 
-       Creates 3 **Network interfaces**  (management, TO Service, and FROM Service subnets). The instance routes traffic between its TO Service and FROM Service interfaces.
+       Creates a **Network interface** (app_az2 subnet).
 
-   * - vm-inspect2.tf
-     - Deploys a second **Snort (Intrusion Detection and Prevention System)** instance as an L3 inspection device in the **Security** VPC.
+   * - bigip1.tf
+     - Deploys a BIG-IP VE instance in AZ1 of the **hub** VPC.
 
-       Creates 3 **Network interfaces**  (management, TO Service, and FROM Service subnets). The instance routes traffic between its TO Service and FROM Service interfaces.
+       Creates the following:
 
-       To simplify this lab, both inspection devices use the same AWS image. Each Snort instance routes traffic between its TO Service and FROM Service interfaces.
-   * - vm-bigip.tf
-     - Deploys a BIG-IP VE instance in the **Security** VPC.
+       - 3 **Network interfaces** (hub_bigip1_mgmt, hub_bigip1_external, hub_bigip1_internal)
+       - An EIP / public IP that is associated with the BIG-IP's private management self IP to provide remote administration access).
+       - F5 onboarding configuration (BIG-IP Runtime Init and F5 Automation Toolchain extensions)
 
-       Creates 7 **Network interfaces** (management, external, internal, dmz1, dmz2, dmz3, and dmz4 subnets), public IPs, and F5 onboarding configuration.
+   * - bigip2.tf
+     - Deploys a BIG-IP VE instance in AZ2 of the **hub** VPC.
 
-       Elastic IP addresses (EIPs) / public IPs are created and associated to a NIC to provide inbound access to EC2 instances. The BIG-IP VE will have the following EIPs assigned to provide remote administration access, as well as access to the application Virtual Server IP:
+       Creates the following:
 
-       - Public Management IP -> Private BIG-IP Management IP
-       - Public Application Virtual Server IP -> Private BIG-IP Application Virtual Server IP
+       - 3 **Network interfaces** (hub_bigip1_mgmt, hub_bigip1_external, hub_bigip1_internal)
+       - An EIP / public IP that is associated with the BIG-IP's private management self IP to provide remote administration access.
+       - F5 onboarding configuration (BIG-IP Runtime Init and F5 Automation Toolchain extensions)
 
-       Access to the BIG-IP public Management IP is protected by a network Security Group that contains your jump host public IP address.
+.. note::
 
+   Access to the lab BIG-IP Management Public IPs is restricted by a Security Group that contains your jump host public IP address.
+
+|
 
 F5 Automation
 --------------------------------------------------------------------------------
@@ -178,9 +192,28 @@ Additional Terraform files are provided to support this lab.
 
    * - Filename
      - Description
-   * - aws-keypair.tf
-     - Creates an AWS SSH keypair to be used for authentication to EC2 VM instances.
-   
+   * - credentials.tf
+     - Creates an AWS Key Pair for SSH access to BIG-IPs and Linux app servers. Also creates a random 16-character password for the BIG-IP admin user account (used for BIG-IP GUI access).
+   * - jumphost-ip.tf
+     - Determines the jump host's public IP address. Referenced by the security groups that restrict access to the lab Public IPs.
+   * - ami-search.tf
+     - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the f5_ami_search_name and linux_ami_search_name variables. The most recent image version is selected When multiple AMI IDs are returned.
+   * - certs.tf
+     - Creates ECDSA certificates for the lab environment.
+
+       .. todo:: This might be removed from the lab.
+
+   * - cfe-dependencies.tf
+     - Creates an S3 Bucket and IAM policy for use with the Cloud Failover Extension.
+   * - cloudwatch.tf
+     - Creates Amazon CloudWatch resources (used for analytics integration)
+   * - postman-env-file.tf
+     - Creates a Postman environment variables file based on Terraform variables and dynamic data.
+   * - templates/f5lab_postman_env_template.json
+     - Template for the Postman environment variables file that is generated by postman-env-file.tf.
+   * - templates/f5_onboard_3nic_custom.tmpl
+     - Template for BIG-IP onboarding (BIG-IP Runtime Init, F5 ATC extensions installation, and DO configuration).
+
 
 Terraform Outputs
 --------------------------------------------------------------------------------
@@ -189,10 +222,81 @@ Terraform Outputs
    :header-rows: 1
    :widths: auto
 
-   * - Filename
+   * - Output Name
+     - Value (example)
      - Description
-   * - outputs.tf
-     - Defines the values to be **output**. Some values are dynamically generated, so need to be output for use later in the lab.
+   * - AWS_CONSOLE_LINK
+     - "https://322012783122.signin.aws.amazon.com/console"
+     -
+   * - AWS_PASSWORD
+     - "xY&+66d6vt|18Wz{@NbM2(WQ"
+     -
+   * - AWS_USER
+     - "udf"
+     -
+   * - appsvr1_private_address
+     - 10.1.200.80
+     -
+   * - appsvr2_private_address
+     - 10.1.201.80
+     -
+   * - bigip1_mgmt_public_ip
+     - 52.34.106.47
+     -
+   * - bigip1_password
+     - ttwOrFT1lwsCEMP1
+     -
+   * - bigip1_private_external_address
+     - 10.0.1.11/24
+     -
+   * - bigip1_private_internal_address
+     - 10.0.10.11/24
+     -
+   * - bigip1_private_mgmt_address
+     - 10.0.101.11/24
+     -
+   * - bigip1_username
+     - admin
+     -
+   * - bigip2_mgmt_public_ip
+     - 52.10.70.80
+     -
+   * - bigip2_password
+     - ttwOrFT1lwsCEMP1
+     -
+   * - bigip2_private_external_address
+     - 10.0.2.11/24
+     -
+   * - bigip2_private_internal_address
+     - 10.0.20.11/24
+     -
+   * - bigip2_private_mgmt_address
+     - 10.0.102.11/24
+     -
+   * - bigip2_username
+     - admin
+     -
+   * - f5_ami_id
+     - ami-07b879247e4b415ff
+     -
+   * - f5_ami_name
+     - F5 BIGIP-17.1.0-0.0.16 PAYG-Adv WAF Plus 25Mbps-230222034728-3c272b55-0405-4478-a772-d0402ccf13f9
+     -
+   * - jumphost_ip
+     - 52.27.102.168
+     -
+   * - linux_ami_id
+     - ami-099e00fe4091e48af
+     -
+   * - linux_ami_name
+     - amzn2-ami-minimal-hvm-2.0.20230320.0-x86_64-ebs
+     -
+   * - random_password
+     - ttwOrFT1lwsCEMP1
+     -
+   * - vip1_public_ip
+     - 44.224.128.190
+     -
 
 
 
