@@ -7,7 +7,9 @@ You will configure an application deployment via AS3.
 
 .. todo:: 
 
-   WIP
+   Build out manual config via automation or manually?
+   Transform the original AS3 Declarations to work with vscode and contribute to the main code repo.
+   Screen captures for all the steps.
 
 
 **Network Diagram**
