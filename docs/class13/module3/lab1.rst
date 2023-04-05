@@ -119,9 +119,7 @@ Select `Add Host` in the `F5: Hosts` view.  Then type in device details in the \
 
 Perform manual app VS config
 ================================================================================
-Placeholder
-
-Full DIY in the GUI OR Automate it to some minor degree?
+Placeholder - Manual config via GUI 
 
 
 Use VS Code F5 Extension to convert a configuration to AS3 format
