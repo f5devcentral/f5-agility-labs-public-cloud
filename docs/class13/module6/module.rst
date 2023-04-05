@@ -1,7 +1,7 @@
 F5 Analytics Integration with AWS --- TYLER
 ================================================================================
 
-F5 Telemetry Streaming is a power tool that can be used to collect logs for for the BIG-IP System, and the applications it delivers.
+F5 Telemetry Streaming is a power tool that can be used to collect logs from BIG-IP Systems and the applications it delivers.
 
 In this module, you will:
 
