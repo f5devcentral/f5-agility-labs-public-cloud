@@ -7,7 +7,7 @@ In this module, you will:
 
 -  Learn about F5 Telemetry Streaming (BIG-IP TS)
 -  Verify F5 Telemetry Streaming (BIG-IP TS) Is Installed on BIG-IP1 and BIG-IP2
--  Reveiw and Deploy a F5 Telemetry Streaming (BIG-IP TS) Configuration to BIG-IP1 and BIG-IP2
+-  Reveiw and Deploy an F5 Telemetry Streaming (BIG-IP TS) Configuration to BIG-IP1 and BIG-IP2
 -  Observe the different typs of F5 Telemetry Streaming (BIG-IP TS) logs in AWS CloudWatch
 
 .. todo::
@@ -28,9 +28,9 @@ In this module, you will:
 
    6.6. Reveiw F5 Telemetry Streaming Logs in the AWS Console using CloudWatch
 
-      6.6.1  Review BIG-IP System Level Logs
+      6.6.1  Review BIG-IP System Logs
 
-      6.6.2  Reivew Applicaion Level Logs
+      6.6.2  Reivew Applicaion Event Logs
 
 
 .. toctree::
