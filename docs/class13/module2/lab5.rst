@@ -6,6 +6,8 @@ Now, you will check the objects that were created by Terraform. The deployment i
 - VPC and Subnets
 - Route Tables
 - Transit Gateway
+- Internet Gateway
+- NAT Gateway
 - Network Interfaces
 - Elastic IP Addresses
 - SSH Keypair

@@ -12,7 +12,6 @@ You should see output similar to the following:
 
    .. code-block:: bash
 
-      f5admin@JUMPHOST:~$ git clone https://github.com/f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform.git ~/f5lab
       Cloning into '/home/f5admin/f5lab'...
       remote: Enumerating objects: 76, done.
       remote: Counting objects: 100% (41/41), done.

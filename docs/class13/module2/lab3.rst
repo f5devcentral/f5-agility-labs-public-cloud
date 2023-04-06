@@ -17,8 +17,8 @@ You should see several Terraform (\*.tf) files listed.
 
    .. code-block:: bash
 
-      ami-search.tf  bigip1.tf            cloudwatch.tf        main.tf              templates           vpc-app.tf
-      appserver1.tf  bigip2.tf            credentials.tf       nat-gateway.tf       tmp                 vpc-hub.tf
+      ami-search.tf  bigip1.tf            cloudwatch.tf        main.tf              templates                 vpc-app.tf
+      appserver1.tf  bigip2.tf            credentials.tf       nat-gateway.tf       terraform.tfvars.example  vpc-hub.tf
       appserver2.tf  certs.tf             internet-gateway.tf  postman-env-file.tf  transit-gateway.tf
       bigip-vips.tf  cfe-dependencies.tf  jumphost-ip.tf       securitygroups.tf    variables.tf
 
@@ -222,60 +222,8 @@ Additional Terraform files are included to support this lab.
 Terraform Outputs
 --------------------------------------------------------------------------------
 
-.. list-table:: **Terraform Outputs**
-   :header-rows: 1
-   :widths: auto
-
-   * - Key
-     - Value (Example)
-   * - AWS_CONSOLE_LINK
-     - "https://322012783122.signin.aws.amazon.com/console"
-   * - AWS_PASSWORD
-     - "xY&+66d6vt|18Wz{@NbM2(WQ"
-   * - AWS_USER
-     - "udf"
-   * - appsvr1_private_address
-     - 10.1.200.80
-   * - appsvr2_private_address
-     - 10.1.201.80
-   * - bigip1_mgmt_public_ip
-     - 52.34.106.47
-   * - bigip1_password
-     - ttwOrFT1lwsCEMP1
-   * - bigip1_private_external_address
-     - 10.0.1.11/24
-   * - bigip1_private_internal_address
-     - 10.0.10.11/24
-   * - bigip1_private_mgmt_address
-     - 10.0.101.11/24
-   * - bigip1_username
-     - admin
-   * - bigip2_mgmt_public_ip
-     - 52.10.70.80
-   * - bigip2_password
-     - ttwOrFT1lwsCEMP1
-   * - bigip2_private_external_address
-     - 10.0.2.11/24
-   * - bigip2_private_internal_address
-     - 10.0.20.11/24
-   * - bigip2_private_mgmt_address
-     - 10.0.102.11/24
-   * - bigip2_username
-     - admin
-   * - f5_ami_id
-     - ami-07b879247e4b415ff
-   * - f5_ami_name
-     - F5 BIGIP-17.1.0-0.0.16 PAYG-Adv WAF Plus 25Mbps-230222034728-3c272b55-0405-4478-a772-d0402ccf13f9
-   * - jumphost_ip
-     - 52.27.102.168
-   * - linux_ami_id
-     - ami-099e00fe4091e48af
-   * - linux_ami_name
-     - amzn2-ami-minimal-hvm-2.0.20230320.0-x86_64-ebs
-   * - random_password
-     - ttwOrFT1lwsCEMP1
-   * - vip1_public_ip
-     - 44.224.128.190
+Output values are included in some of the TF files (rather than consolidated in a separate outputs.tf file).
+The outputs are covered in the next section.
 
 
 .. |runtime-init_link| raw:: html

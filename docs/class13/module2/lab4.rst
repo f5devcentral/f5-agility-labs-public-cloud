@@ -3,12 +3,12 @@ Deploy the Terraform Configuration
 
 In this section, you will customize the Terraform configuration to deploy the infrastructure in AWS.
 
-The common Terraform deployment steps are as follows:
+Then, you will step through a common Terraform deployment flow as follows:
 
 - terraform init
 - terraform validate
 - terraform plan
-- terraform apply -auto-approve
+- terraform apply
 
 
 Create a terraform.tfvars File
@@ -24,19 +24,21 @@ In VS Code, click on the **terraform.tfvars.example** file. You will use this fo
 
 Save it to a new file by selecting **File->Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
 
-Update the ``emailid`` variable with your e-mail address.
-
-Review the other variables that are defined in this file. These variables define the important attributes required for the AWS deployment.
-
-|
-
    .. image:: ./images/vscode-2.png
       :align: left
 
 |
 
+Review the other variables that are defined in this file. They define the important attribute values required for the AWS deployment.
+
+You may update the ``emailid`` variable with your e-mail address.
 
 Press **<CTRL-S>** to save the file.
+
+
+.. attention::
+
+   Please do not change anything else in this file. The configuration is specific to the operation of this lab environment and related documentation.
 
 |
 
@@ -45,7 +47,7 @@ Initialize the Terraform
 
 Before you can apply a Terraform configuration, you must |init_link| it. This will download all required Terraform module dependencies.
 
-In your BASH terminal, execute the following:
+Switch back to the other VS Code window (with the BASH terminal) and execute the following:
 
    .. code-block:: bash
 
@@ -58,16 +60,25 @@ You should see output similar to the following:
       Initializing the backend...
 
       Initializing provider plugins...
-      - Finding hashicorp/local versions matching "~> 1.2"...
-      - Finding latest version of hashicorp/aws...
       - Finding latest version of hashicorp/null...
+      - Finding latest version of hashicorp/random...
+      - Finding latest version of hashicorp/tls...
+      - Finding latest version of hashicorp/http...
+      - Finding hashicorp/local versions matching "~> 1.2"...
       - Finding hashicorp/template versions matching "~> 2.1"...
-      - Installing hashicorp/local v1.4.0...
-      - Installed hashicorp/local v1.4.0 (signed by HashiCorp)
-      - Installing hashicorp/aws v4.60.0...
-      - Installed hashicorp/aws v4.60.0 (signed by HashiCorp)
+      - Finding latest version of hashicorp/aws...
+      - Installing hashicorp/aws v4.61.0...
+      - Installed hashicorp/aws v4.61.0 (signed by HashiCorp)
       - Installing hashicorp/null v3.2.1...
       - Installed hashicorp/null v3.2.1 (signed by HashiCorp)
+      - Installing hashicorp/random v3.4.3...
+      - Installed hashicorp/random v3.4.3 (signed by HashiCorp)
+      - Installing hashicorp/tls v4.0.4...
+      - Installed hashicorp/tls v4.0.4 (signed by HashiCorp)
+      - Installing hashicorp/http v3.2.1...
+      - Installed hashicorp/http v3.2.1 (signed by HashiCorp)
+      - Installing hashicorp/local v1.4.0...
+      - Installed hashicorp/local v1.4.0 (signed by HashiCorp)
       - Installing hashicorp/template v2.2.0...
       - Installed hashicorp/template v2.2.0 (signed by HashiCorp)
 
@@ -136,42 +147,16 @@ You should see output similar to the following:
 
       <...>
 
-      Plan: 61 to add, 0 to change, 0 to destroy.
+      Plan: 62 to add, 0 to change, 0 to destroy.
 
       Changes to Outputs:
-        + inspection_service_ip_1    = (known after apply)
-        + inspection_service_ip_2    = (known after apply)
-        + sslo_dmz1                  = [
-            + "10.0.3.7",
-            + "10.0.3.8",
-          ]
-        + sslo_dmz2                  = [
-            + "10.0.3.244",
-            + "10.0.3.245",
-          ]
-        + sslo_dmz3                  = [
-            + "10.0.4.7",
-            + "10.0.4.8",
-          ]
-        + sslo_dmz4                  = [
-            + "10.0.4.244",
-            + "10.0.4.245",
-          ]
-        + sslo_external              = [
-            + "10.0.2.11",
-            + "10.0.2.200",
-          ]
-        + sslo_internal              = (known after apply)
-        + sslo_management            = (known after apply)
-        + sslo_management_public_dns = (known after apply)
-        + sslo_management_public_ip  = (known after apply)
-        + sslo_vip                   = (known after apply)
-        + webapp_internal            = (known after apply)
 
-      ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      <...>
 
-      Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if
-      you run "terraform apply" now.
+      ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+      Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take
+      exactly these actions if you run "terraform apply" now.
 
 |
 
@@ -194,7 +179,7 @@ This will take several minutes to complete.
 
 .. note::
 
-   The **-auto-approve** (or **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proceeding with the configuration changes.
+   The **-auto-approve** (or double-dash **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proceeding with the configuration changes.
 
 |
 
@@ -222,50 +207,73 @@ After successful completion, you should see output similar to the following:
 
       <...>
 
-      Apply complete! Resources: 2 added, 4 changed, 0 destroyed.
+      Apply complete! Resources: 62 added, 0 changed, 0 destroyed.
 
       Outputs:
 
-      inspection_service_ip_1 = "10.0.3.21"
-      inspection_service_ip_2 = "10.0.4.21"
-      sslo_dmz1 = toset([
-        "10.0.3.7",
-        "10.0.3.8",
-      ])
-      sslo_dmz2 = toset([
-        "10.0.3.244",
-        "10.0.3.245",
-      ])
-      sslo_dmz3 = toset([
-        "10.0.4.7",
-        "10.0.4.8",
-      ])
-      sslo_dmz4 = toset([
-        "10.0.4.244",
-        "10.0.4.245",
-      ])
-      sslo_external = toset([
-        "10.0.2.11",
-        "10.0.2.200",
-      ])
-      sslo_internal = "10.0.5.11"
-      sslo_management = "10.0.1.11"
-      sslo_management_public_dns = "ec2-x-x-x-x.compute-1.amazonaws.com"
-      sslo_management_public_ip = "x.x.x.x"
-      sslo_vip = "x.x.x.x"
-      webapp_internal = "192.168.1.200"
+      <...>
 
 |
 
 Terraform Outputs
 --------------------------------------------------------------------------------
 
-Take note of the values for the following outputs:
+The Terraform outputs include the following:
 
-- sslo_management_public_ip
-- sslo_vip
+.. list-table:: **Terraform Outputs (EXAMPLES)**
+   :header-rows: 1
+   :widths: auto
 
-You will need this information later to access the BIG-IP management interface and to test the application.
+   * - Key
+     - Value
+   * - AWS_CONSOLE_LINK
+     - "https://xxxxxxxxxxxx.signin.aws.amazon.com/console"
+   * - AWS_PASSWORD
+     - "xY&+66d6vt|18Wz{@NbM2(WQ"
+   * - AWS_USER
+     - "udf"
+   * - appsvr1_private_address
+     - 10.1.200.80
+   * - appsvr2_private_address
+     - 10.1.201.80
+   * - bigip1_mgmt_public_ip
+     - 52.34.106.47
+   * - bigip1_password
+     - ttwOrFT1lwsCEMP1
+   * - bigip1_private_external_address
+     - 10.0.1.11/24
+   * - bigip1_private_internal_address
+     - 10.0.10.11/24
+   * - bigip1_private_mgmt_address
+     - 10.0.101.11/24
+   * - bigip1_username
+     - admin
+   * - bigip2_mgmt_public_ip
+     - 52.10.70.80
+   * - bigip2_password
+     - ttwOrFT1lwsCEMP1
+   * - bigip2_private_external_address
+     - 10.0.2.11/24
+   * - bigip2_private_internal_address
+     - 10.0.20.11/24
+   * - bigip2_private_mgmt_address
+     - 10.0.102.11/24
+   * - bigip2_username
+     - admin
+   * - f5_ami_id
+     - ami-07b879247e4b415ff
+   * - f5_ami_name
+     - F5 BIGIP-17.1.0-0.0.16 PAYG-Adv WAF Plus 25Mbps-230222034728-3c272b55-0405-4478-a772-d0402ccf13f9
+   * - jumphost_ip
+     - 52.27.102.168
+   * - linux_ami_id
+     - ami-099e00fe4091e48af
+   * - linux_ami_name
+     - amzn2-ami-minimal-hvm-2.0.20230320.0-x86_64-ebs
+   * - random_password
+     - ttwOrFT1lwsCEMP1
+   * - vip1_public_ip
+     - 44.224.128.190
 
 In the future, if you want to show the Terraform |output_link| values again, you can execute the following:
 
