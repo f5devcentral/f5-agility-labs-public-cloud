@@ -275,6 +275,8 @@ The Terraform outputs include the following:
    * - vip1_public_ip
      - 44.224.128.190
 
+|
+
 In the future, if you want to show the Terraform |output_link| values again, you can execute the following:
 
    .. code-block:: bash

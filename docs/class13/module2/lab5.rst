@@ -26,7 +26,7 @@ Type ``vpc`` in the AWS Console search box at the top of the page and select **V
 
 The VPC Dashboard will show a summary of your resources.
 
-   .. image:: ./images/aws-vpc-1a.png
+   .. image:: ./images/aws-vpc-2.png
       :align: left
 
 
@@ -35,18 +35,18 @@ VPC and Subnets
 
 Click on **Your VPCs** from the left panel menu.
 
-   .. image:: ./images/aws-vpc-2.png
+   .. image:: ./images/aws-vpc-3.png
       :align: left
 
 Two (2) **VPCs** were created.
 
-   .. image:: ./images/aws-vpc-3.png
+   .. image:: ./images/aws-vpc-4.png
       :align: left
 
 
 Click on the *sslo-sslo-securitystack* **VPC ID** to view the configuration.
 
-   .. image:: ./images/aws-vpc-4.png
+   .. image:: ./images/aws-vpc-5.png
       :align: left
 
 You may ignore the "Failed to load rule groups" error.
@@ -54,7 +54,7 @@ You may ignore the "Failed to load rule groups" error.
 
 Click on **Your VPCs** to return to the VPCs list and then click on the *sslo-sslo-appstack* **VPC ID**.
 
-   .. image:: ./images/aws-vpc-5.png
+   .. image:: ./images/aws-vpc-6.png
       :align: left
 
 You may ignore the "Failed to load rule groups" error.

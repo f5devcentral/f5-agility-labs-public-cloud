@@ -1,56 +1,96 @@
-Prepare Postman
+Check Status of F5 Automation Toolchain Extensions
 ================================================================================
-
-From the Visual Studio Code Terminal, copy the postman_rendered.json file to the desktop. This file contains the environment variables for a Postman collection.
-
-.. code-block:: bash
-
-   cp ./postman_rendered.json /mnt/c/Users/user/Desktop/
-
-.. image:: ./images/1_postman_rendered.png
-	   :scale: 50%
+You will configure and use the Postman client to query the F5 ATC extension APIs.
 
 
-The postman_rendered.json file was copied to the Windows desktop.
+Retrieve the Postman Configuration Files
+-------------------------------------------------------------------------------
 
-.. image:: ./images/2_postman_rendered_desktop.png
-	   :scale: 50%
+The ``~/f5lab/postman`` folder contains two files:
+- f5lab_postman_collection.json
+- f5lab_postman_environment.json
 
+The collection file contains a set of API calls for this lab.
+The environment variables file was created by Terraform using current deployment information.
 
-Open Postman. Click the gear icon in the upper-right-hand corner to review Settings. Ensure that "SSL certificate verification" is turned "OFF". Close Settings.
+In the VS Code terminal, copy the these files to the jump host desktop.
 
-.. image:: ./images/6_postman_ssl_cert_verification_off.png
-	   :scale: 50%
+	.. code-block:: bash
 
+		cp ~/f5lab/postman/* /mnt/c/Users/user/Desktop/
 
-In the left-pane tab, select "Collections" and click "Import" above. Choose "Link" as the source to import from and Import the collection using the URL below:
+|
 
-.. code-block:: bash
-
-   https://raw.githubusercontent.com/tmarfil/f5agility2022-pc201/master/postman/f5agility2022-pc201-postman-collection.json
-.. image:: ./images/3_postman_import_collection.png
-	   :scale: 50%
-
-
-Confirm the **F5 Agility 2021 PC201 Lab** Collection has been imported.
-
-.. image:: ./images/4_postman_collection_imported.png
-	   :scale: 50%
+You should now see two additional icons on the Windows desktop.
 
 
-In the left-pane tab, sellect "Environments" and click "Import" above. Choose "File" as the source to import from and navigate to **This PC\\Desktop\\postman_rendered.json** and click "Open".
+Postman Configuration
+-------------------------------------------------------------------------------
 
-.. image:: ./images/5_postman_import_environment.png
-	   :scale: 50%
+Switch to the Postman window (re-launch it from the desktop shortcut if you closed it earlier).
+
+Click on the **gear** button (left of the **Sign In** button) and select **Settings**.
+
+Ensure that "SSL certificate verification" is turned "OFF" and then close the Settings dialog.
+
+.. image:: ./images/postman-ssl-cert-verification.png
+   :align: left
+
+|
+
+In the left-panel, click on the **Import** button. 
+
+.. image:: ./images/postman-import-1.png
+   :align: left
+
+|
+
+Shift-click to select both Postman JSON files and drag them to the **import** dialog.
 
 
-Click on "Import" to import the environment.
+.. image:: ./images/postman-import-2.png
+   :align: left
 
-.. image:: ./images/5_postman_environment_imported.png
-	   :scale: 50%
+|
+
+The files will be listed in a table. Click on the **Import** button to continue.
+
+.. image:: ./images/postman-import-3.png
+   :align: left
+
+|
+
+Confirm that the **Agility Lab - BIG-IP HA in Public Cloud** collection has been imported.
+
+.. image:: ./images/postman-import-4.png
+   :align: left
+
+|
+
+Confirm the environment was successfully imported by selecting "**Agility Lab - Environment var...**" from the Environment drop-down menu in the upper-right-hand corner.
+
+.. image:: ./images/postman-import-5.png
+   :align: left
+
+|
+
+Check F5 ATC Extensions
+-------------------------------------------------------------------------------
+
+Send API calls from Postman to check the status of the F5 ATC extensions on each BIG-IP.
+
+In the left panel, expand the collection. Navigate to **Check F5 ATC Status** > **BIG-IP #1** > **bigip1 - Check DO**
+
+Click on the **Send** button to make an API call to the DO endpoint. You should receive a response (JSON format) containing a status of **OK** and version information.
 
 
-Confirm the environment was successfully imported by selecting the "**Agility 2020 - Use Terraform to...**" environment from the Environment drop-down menu in the upper-right-hand corner.
+.. image:: ./images/postman-test-1.png
+   :align: left
 
-.. image:: ./images/00_postman_environment_check.png
-	   :scale: 50%
+|
+
+Send the other API calls for BIG-IP #1 and BIG-IP #2.
+
+.. note:: 
+
+   Only the DO extension will return a **status**. The others will return only version information.
