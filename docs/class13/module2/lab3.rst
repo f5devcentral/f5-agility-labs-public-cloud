@@ -175,11 +175,11 @@ The base system settings and network configuration are provisioned using **F5 Au
      - Description
    * - templates/f5_onboard_3nic_custom.tmpl
      - Template for rendering **BIG-IP Runtime Init** and **Declarative Onboarding** configuration data.
-       A shell script file is produced that:
+       A cloud-init script is created that will:
 
-       - Installs and executes the BIG-IP Runtime Init onboarding tool
-       - Installs F5 Automation Toolchain extension packages for DO, AS3, CFE, and TS
-       - Deploys a DO declaration to configure the base system settings (glboal settings, admin user/password, SSH key, resource provisioning, etc) and network settings (3 interfaces, VLANs, self IPs, routes)
+       - Install and executes the BIG-IP Runtime Init onboarding tool
+       - Install F5 Automation Toolchain extension packages for DO, AS3, CFE, and TS
+       - Deploy a DO declaration to configure the base system settings (glboal settings, admin user/password, SSH key, resource provisioning, etc) and network settings (3 interfaces, VLANs, self IPs, routes)
 
        The **bigip1.tf** and **bigip2.tf** files reference this template to generate their onboarding configuration file.
 

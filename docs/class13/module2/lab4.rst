@@ -11,11 +11,6 @@ The common Terraform deployment steps are as follows:
 - terraform apply -auto-approve
 
 
-.. attention::
-
-   Before starting this section, please ensure that you have a valid BIG-IP VE license key. Your Agility Labs instructor will provide one to you.
-
-
 Create a terraform.tfvars File
 --------------------------------------------------------------------------------
 
@@ -25,32 +20,23 @@ In VS Code, click on the **terraform.tfvars.example** file. You will use this fo
       :align: left
 
 
+|
+
 Save it to a new file by selecting **File->Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
 
-Uncomment the **license_key** variable and enter the **BIG-IP BYOL base registration key** that was provided by your instructor.
+Update the ``emailid`` variable with your e-mail address.
 
-Add your jump host's public IP address to the remote access ACL. Use a **/32** mask.
+Review the other variables that are defined in this file. These variables define the important attributes required for the AWS deployment.
 
-   .. note::
-
-      The IP information was displayed in the BASH terminal when it first launched. You can view it again by launching another BASH terminal or by executing ``myip``.
-
-Press **<CTRL-S>** to save the file.
+|
 
    .. image:: ./images/vscode-2.png
       :align: left
 
 |
 
-Review the other variables that are defined in this file. The comments describe the purpose of each variable.
 
-|
-
-.. tip::
-
-   If you prefer to use the VS Code integrated terminal instead of a separate BASH terminal window, that will also work. Just ensure that you are in the correct directory and execute all commands as if you were using the BASH terminal window.
-
-   To open the integrated terminal, press <CTRL-\`> (back-tick) or select **View > Terminal** from the top menu. You will start in the **/home/f5admin** directory, so you will have to execute ``cd ~/f5lab/terraform`` again.
+Press **<CTRL-S>** to save the file.
 
 |
 
@@ -228,11 +214,7 @@ This will take several minutes to complete.
           │ us know by writing to aws-verification@amazon.com for further assistance.
           │       status code: 400, request id: a3fd2a74-1451-4c8a-a56a-901df30875d4
           │
-          │   with aws_instance.sslo,
-          │   on vm-bigip.tf line 125, in resource "aws_instance" "sslo":
-          │  125: resource "aws_instance" "sslo" {
-          │
-          ╵
+
 
 After successful completion, you should see output similar to the following:
 
@@ -290,7 +272,6 @@ In the future, if you want to show the Terraform |output_link| values again, you
    .. code-block:: bash
 
       terraform output
-
 
 
 
