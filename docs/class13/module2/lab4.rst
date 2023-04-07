@@ -14,7 +14,7 @@ Then, you will step through a common Terraform deployment flow as follows:
 Create a terraform.tfvars File
 --------------------------------------------------------------------------------
 
-In VS Code, click on the **terraform.tfvars.example** file. You will use this for the base variable settings of your deployment.
+In VS Code, click on the **terraform** directory, and then click on the **terraform.tfvars.example** file. You will use this for the base variable settings of your deployment.
 
    .. image:: ./images/vscode-1.png
       :align: left
