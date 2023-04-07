@@ -14,7 +14,13 @@ Then, you will step through a common Terraform deployment flow as follows:
 Create a terraform.tfvars File
 --------------------------------------------------------------------------------
 
-In VS Code, click on the **terraform.tfvars.example** file. You will use this for the base variable settings of your deployment.
+Variables allow you to easily customize the deployment settings, instead of editing values in multiple Terraform files.
+
+A **terraform.tfvars** file is commonly used to define variable values used in the Terraform deployment.
+These values override any default values that may be defined in the **variables.tf** file.
+You will use the included sample **tfvars** file for the base settings of your deployment.
+
+In VS Code, click on the **terraform.tfvars.example** file.
 
    .. image:: ./images/vscode-1.png
       :align: left
@@ -31,7 +37,7 @@ Save it to a new file by selecting **File->Save As...** from the menu at the top
 
 Review the other variables that are defined in this file. They define the important attribute values required for the AWS deployment.
 
-You may update the ``emailid`` variable with your e-mail address.
+You may (optional) update the ``emailid`` variable with your e-mail address.
 
 Press **<CTRL-S>** to save the file.
 
@@ -108,7 +114,7 @@ You should see output similar to the following:
 Validate the Terraform
 --------------------------------------------------------------------------------
 
-Before applying a Terraform configuration, you can |validate_link| the configuration files for syntax or consistency errors.
+Before applying a Terraform configuration, you can |validate_link| the configuration files for syntax or consistency errors. This will not test remote resources.
 
 Execute the following:
 
@@ -133,7 +139,7 @@ You should see output similar to the following:
 Review the Terraform Plan
 --------------------------------------------------------------------------------
 
-Before applying a Terraform configuration, you can review the configuration |plan_link| that would be applied. This lists the objects that would be *added*, *changed*, and/or *destroyed*.
+Before applying a Terraform configuration, you can review the configuration |plan_link| that would be applied. This will also test remote resources. A list of the objects that would be *added*, *changed*, and/or *destroyed* will be displayed.
 
 Execute the following:
 

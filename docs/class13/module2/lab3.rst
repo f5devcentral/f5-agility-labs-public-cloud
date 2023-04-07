@@ -13,7 +13,7 @@ In the BASH terminal, change to the Terraform directory.
       cd ~/f5lab/terraform
       ls
 
-You should see several Terraform (\*.tf) files listed.
+You should see several Terraform (\*.tf) files listed. The various components of the lab are deployed via separate configuration files to make it easier to manage.
 
    .. code-block:: bash
 
@@ -205,13 +205,13 @@ Additional Terraform files are included to support this lab.
    * - jumphost-ip.tf
      - Determines the jump host's public IP address. Referenced by the security groups that restrict access to the lab Public IPs.
    * - ami-search.tf
-     - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the f5_ami_search_name and linux_ami_search_name variables. The most recent image version is selected When multiple AMI IDs are returned.
+     - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the **f5_ami_search_name** and **linux_ami_search_name** variables. The most recent image version is selected When multiple AMI IDs are returned.
    * - certs.tf
      - Creates ECDSA certificates for the lab environment.
    * - cfe-dependencies.tf
      - Creates an S3 Bucket and IAM policy for use with the Cloud Failover Extension.
    * - cloudwatch.tf
-     - Creates Amazon CloudWatch resources (used for analytics integration)
+     - Creates Amazon CloudWatch resources for analytics integration.
    * - postman-env-file.tf
      - Creates a Postman environment variables file based on Terraform variables and dynamic data.
    * - templates/f5lab_postman_env_template.json
@@ -222,7 +222,7 @@ Additional Terraform files are included to support this lab.
 Terraform Outputs
 --------------------------------------------------------------------------------
 
-Output values are included in some of the TF files (rather than consolidated in a separate outputs.tf file).
+Output values are included in some of the Terraform files (rather than consolidated in a separate outputs.tf file).
 The outputs are covered in the next section.
 
 

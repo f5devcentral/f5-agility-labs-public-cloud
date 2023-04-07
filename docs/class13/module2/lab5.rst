@@ -141,13 +141,9 @@ Confirm that the following resources were created:
       :align: left
 
 
-The **BIG-IP** uses 7 NICs (management, external, internal, dmz1, dmz2, dmz3, dmz4).
+Each **BIG-IP** has 3 NICs (management, external, internal).
 
-The first **inspection device** uses 3 NICs (management, dmz1, dmz2).
-
-The second **inspection device** uses 3 NICs (management, dmz3, dmz4).
-
-The **webapp** server uses 1 NIC (application).
+Each App Server uses 1 NIC.
 
 |
 
