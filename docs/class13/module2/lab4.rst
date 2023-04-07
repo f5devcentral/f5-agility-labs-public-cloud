@@ -20,7 +20,7 @@ A **terraform.tfvars** file is commonly used to define variable values used in t
 These values override any default values that may be defined in the **variables.tf** file.
 You will use the included sample **tfvars** file for the base settings of your deployment.
 
-In VS Code, click on the **terraform.tfvars.example** file.
+In VS Code, click on the **terraform** directory, and then the **terraform.tfvars.example** file.
 
    .. image:: ./images/vscode-1.png
       :align: left

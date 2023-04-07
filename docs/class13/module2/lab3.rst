@@ -4,6 +4,27 @@ Review the Terraform Configuration Files
 The GitHub repository that you cloned earlier contains a directory called **terraform**. You will now review the Terraform configuration files to understand what they do.
 
 
+
+Prepare VSCode to view and edit files from the git project
+--------------------------------------------------------------------------------
+Execute the following in **VS Code** to open a new window with the current project folder opened:
+
+   .. code-block:: bash
+
+      code .
+
+   *'code' + <space> + <dot>*
+
+Wait for VS Code to launch a new window and display the file list in the left panel.
+
+.. tip::
+
+   If the font is too small or too large, you can adjust the size by pressing **<CTRL-+>** (control-plus) or **<CTRL-->** (control-minus).
+
+Click on each file that corresponds to the sections below. VS Code provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
+
+
+
 Terraform Directory
 --------------------------------------------------------------------------------
 In the BASH terminal, change to the Terraform directory.
@@ -23,25 +44,6 @@ You should see several Terraform (\*.tf) files listed. The various components of
       bigip-vips.tf  cfe-dependencies.tf  jumphost-ip.tf       securitygroups.tf    variables.tf
 
 
-Review these files with **VS Code** by executing the following:
-
-   .. code-block:: bash
-
-      code .
-
-   *'code' + <space> + <dot>*
-
-Wait for VS Code to launch a new window and display the file list in the left panel.
-
-.. tip::
-
-   If the font is too small or too large, you can adjust the size by pressing **<CTRL-+>** (control-plus) or **<CTRL-->** (control-minus).
-
-|
-
-Click on each file that corresponds to the sections below. VS Code provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
-
-|
 
 Terraform Providers
 --------------------------------------------------------------------------------
