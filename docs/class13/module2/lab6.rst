@@ -1,9 +1,19 @@
-Verify the BIG-IP Configuration
+Verify the BIG-IP Configurations
 ================================================================================
 
-The BIG-IP's public management IP address was provided in the Terraform outputs. To show the Terraform output values again, execute ``terraform output`` in the BASH terminal and look for **bigip1_mgmtPublicIP** and **bigip2_mgmtPublicIP**.
+Each BIG-IP's public management IP address was provided in the Terraform outputs. To show the Terraform output values again, execute ``terraform output`` in the BASH terminal and look for the **bigip1_mgmt_public_ip** and **bigip2_mgmt_public_ip** outputs.
 
-Open a new web browser window and connect to the BIG-IP TMUI: **https://<bigip1_mgmtPublicIP>**
+   .. code-block:: bash
+
+      bigip1_mgmt_public_ip = "a.b.c.d"
+      bigip2_mgmt_public_ip = "e.f.g.h"
+      bigip1_password = "xxxxxxxxxxxxxxxx"
+      bigip2_password = "xxxxxxxxxxxxxxxx"
+      random_password = "xxxxxxxxxxxxxxxx"
+
+Also note the values of **bigip1_password** and **bigip2_password**. They should be the same as **random_password**.
+
+Open a new web browser tab and connect to the first BIG-IP's TMUI: https:// *<bigip1_mgmt_public_ip>*
 
 Accept the SSL security warning.
 
@@ -12,12 +22,12 @@ Log in using the following credentials:
   +------------+----------------------+
   | Username:  | admin                |
   +------------+----------------------+
-  | Password:  | <randomly-generated> |
+  | Password:  | *<random_password>*  |
   +------------+----------------------+
 
   |
 
-  .. image:: ./images/bigip-login-2.png
+  .. image:: ./images/bigip-login.png
      :align: left
 
 |
@@ -30,6 +40,16 @@ Log in using the following credentials:
 
 |
 
+F5 Automation Toolchain Extensions
+--------------------------------------------------------------------------------
+
+Click on **iApps > Package Management LX** from the left panel menu. You will see the list of iControl LX packages that were installed by BIG-IP Runtime Init.
+
+   .. image:: ./images/ilx_pkg.png
+      :align: left
+
+|
+
 VLANs
 --------------------------------------------------------------------------------
 
@@ -38,7 +58,9 @@ Click on **Network > VLANs** from the left panel menu and confirm that the follo
    .. image:: ./images/bigip-vlans.png
       :align: left
 
-VLANs need to be created in advance for all the network interfaces.
+The ATC DO declaration configured the **external** and **internal** VLANs.
+
+|
 
 Self IPs
 --------------------------------------------------------------------------------
@@ -48,7 +70,9 @@ Click on **Network > Self IPs** from the left panel menu and confirm that the fo
    .. image:: ./images/bigip-selfips.png
       :align: left
 
-Self IPs only need to be created for the transit networks: external (client-facing) and internal (server-facing). Other self IPs will be created automatically as needed by BIG-IP.
+The ATC DO declaration configured self IPs on the **external** and **internal** VLANs.
+
+|
 
 Network > Routes
 --------------------------------------------------------------------------------
@@ -59,18 +83,12 @@ Click on **Network > Routes** from the left panel menu and confirm that the foll
       :align: left
 
 
-A network route is needed for the application subnet.
+The ATC DO declaration configured two routes:
 
+- The **default** route is via the **external** VLAN.
+- The **app-route** static route enables access to the **app** VPC.
 
-Local Traffic > Pools
---------------------------------------------------------------------------------
-
-Click on **Local Traffic > Pools** from the left panel menu and confirm that there are no pools configured.
-
-   .. image:: ./images/bigip-pools.png
-      :align: left
-
-Later on, BIG-IP will create a pool automatically for an inbound L3 Topology.
+|
 
 Local Traffic > Virtual Servers
 --------------------------------------------------------------------------------
@@ -80,18 +98,17 @@ Click on **Local Traffic > Virtual Servers** from the left panel menu and confir
    .. image:: ./images/bigip-virtuals.png
       :align: left
 
-Later on, BIG-IP will create a Virtual Server automatically for an inbound L3 Topology.
-
-BIG-IP > Configuration
---------------------------------------------------------------------------------
-
-Click on **BIG-IP > Configuration** from the left panel menu.
-
-You will see the configuration introduction page because there is currently no configuration.
-
-   .. image:: ./images/sslo-empty.png
-      :align: left
-
 |
 
-This is the end of the **Automating BIG-IP Provisioning with Terraform** module.
+BIG-IP #2
+--------------------------------------------------------------------------------
+
+Open a new web browser window and connect to the TMUI: https:// *<bigip2_mgmt_public_ip>*.
+
+Review the configuration settings:
+
+- **iApps > Package Management LX**
+- **Network > VLANs**
+- **Network > Self IPs**
+- **Network > Routes**
+- **Local Traffic > Virtual Servers**

@@ -25,7 +25,7 @@ You will see output similar to the following:
       Plan: 0 to add, 0 to change, 62 to destroy.
 
       Changes to Outputs:
-        - AWS_CONSOLE_LINK                = "https://322012783122.signin.aws.amazon.com/console" -> null
+        - AWS_CONSOLE_LINK                = "https://xxxxxxxxxxxx.signin.aws.amazon.com/console" -> null
         - AWS_PASSWORD                    = "xY&+66d6vt|18Wz{@NbM2(WQ" -> null
         - AWS_USER                        = "udf" -> null
         - appsvr1_private_address         = "10.1.200.80" -> null

@@ -9,6 +9,7 @@ In this module, you will:
 -  Review the infrastructure needed to support BIG-IP VE in AWS
 -  Use Terraform to deploy BIG-IPs into AWS
 -  Review the configuration that is created
+-  Use Postman to query the F5 Automation Toolchain Extensions
 
 
 

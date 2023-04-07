@@ -91,6 +91,10 @@ Click on the **Send** button to make an API call to the DO endpoint. You should 
 
 Send the other API calls for BIG-IP #1 and BIG-IP #2.
 
-.. note:: 
+.. note::
 
    Only the DO extension will return a **status**. The others will return only version information.
+
+|
+
+This is the end of the module.

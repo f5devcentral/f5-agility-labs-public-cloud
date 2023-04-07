@@ -29,6 +29,7 @@ The VPC Dashboard will show a summary of your resources.
    .. image:: ./images/aws-vpc-2.png
       :align: left
 
+|
 
 VPC and Subnets
 --------------------------------------------------------------------------------
@@ -38,32 +39,39 @@ Click on **Your VPCs** from the left panel menu.
    .. image:: ./images/aws-vpc-3.png
       :align: left
 
+|
+
 Two (2) **VPCs** were created.
 
    .. image:: ./images/aws-vpc-4.png
       :align: left
 
+|
 
-Click on the *sslo-sslo-securitystack* **VPC ID** to view the configuration.
+Click on the *f5lab-hub-vpc* **VPC ID** to view the configuration.
 
    .. image:: ./images/aws-vpc-5.png
       :align: left
 
 You may ignore the "Failed to load rule groups" error.
 
+|
 
-Click on **Your VPCs** to return to the VPCs list and then click on the *sslo-sslo-appstack* **VPC ID**.
+Click on **Your VPCs** to return to the VPCs list and then click on the *f5lab-app-vpc* **VPC ID**.
 
    .. image:: ./images/aws-vpc-6.png
       :align: left
 
 You may ignore the "Failed to load rule groups" error.
 
+|
+
 Click on **Subnets** from the left panel menu and confirm that following resources were created:
 
    .. image:: ./images/aws-vpc-subnets.png
       :align: left
 
+|
 
 Route Tables
 --------------------------------------------------------------------------------
@@ -72,6 +80,7 @@ Click on **Route Tables** from the left panel menu and confirm that the followin
    .. image:: ./images/aws-vpc-rt.png
       :align: left
 
+|
 
 Internet Gateway
 --------------------------------------------------------------------------------
@@ -80,16 +89,25 @@ Click on **Internet Gateways** from the left panel menu and confirm that the fol
    .. image:: ./images/aws-vpc-igw.png
       :align: left
 
+|
+
+NAT Gateway
+--------------------------------------------------------------------------------
+Click on **NAT Gateways** from the left panel menu and confirm that the following resource was created:
+
+   .. image:: ./images/aws-vpc-ngw.png
+      :align: left
+
+|
 
 Security Groups
 --------------------------------------------------------------------------------
-Scroll down in the left panel menu to the **SECURITY** section and click on **Security Groups**.
-
-Confirm that the following resources were created:
+In the left panel menu **Security** section, click on **Security Groups**. Confirm that the following resources were created:
 
    .. image:: ./images/aws-vpc-sg.png
       :align: left
 
+|
 
 Transit Gateway
 --------------------------------------------------------------------------------
@@ -100,20 +118,18 @@ Confirm that the following resources were created:
    .. image:: ./images/aws-vpc-tgw.png
       :align: left
 
+|
 
 EC2 Dashboard
 --------------------------------------------------------------------------------
 Type ``ec2`` in the AWS Console search box at the top of the page and select **EC2** from the search results.
 
-   .. image:: ./images/aws-ec2-1.png
-      :align: left
-
-
 The EC2 Dashboard will show a summary of your resources.
 
-   .. image:: ./images/aws-ec2-2.png
+   .. image:: ./images/aws-ec2-dashboard.png
       :align: left
 
+|
 
 Network Interfaces
 --------------------------------------------------------------------------------
@@ -133,6 +149,7 @@ The second **inspection device** uses 3 NICs (management, dmz3, dmz4).
 
 The **webapp** server uses 1 NIC (application).
 
+|
 
 Elastic IP Addresses
 --------------------------------------------------------------------------------
@@ -141,6 +158,7 @@ Click on **Elastic IPs** from the left panel menu and confirm that the following
    .. image:: ./images/aws-ec2-eip.png
       :align: left
 
+|
 
 SSH Key
 --------------------------------------------------------------------------------
@@ -149,6 +167,7 @@ Click on **Key Pairs** from the left panel menu and confirm that the following r
    .. image:: ./images/aws-ec2-keypair.png
       :align: left
 
+|
 
 EC2 Instances
 --------------------------------------------------------------------------------
@@ -157,13 +176,54 @@ Click on **Instances** from the left panel menu and confirm that the following r
    .. image:: ./images/aws-ec2-instance-1.png
       :align: left
 
-   |
+|
 
-   .. attention::
+.. attention::
 
-     The **sslo-vm_bigip_sslo** instance might still be in **Initializing** state (look at the **Status check** column). Eventually, this will transition to **2/2 checks passed**.
+   Instances might still be in **Initializing** state (look at the **Status check** column). Eventually, this will transition to **2/2 checks passed**.
 
-     .. image:: ./images/aws-ec2-instance-2.png
-         :align: left
+   Do not proceed until the **Status check** column is *green* for all instances.
 
-     Do not proceed until the **Status check** column is *green* for all instances.
+|
+
+**BIG-IP #1**
+
+Click on **bigip1-az1-3nic-payg** to view instance details, then click on the **Networking** tab to view network settings.
+
+   .. image:: ./images/aws-ec2-instance-2.png
+      :align: left
+
+|
+
+Scroll down to see the NIC and Elastic IPs that are associated with this BIG-IP instance.
+
+   .. image:: ./images/aws-ec2-instance-3.png
+      :align: left
+
+|
+
+**BIG-IP #2**
+
+Click on **bigip2-az2-3nic-payg** to view instance details.
+
+   .. image:: ./images/aws-ec2-instance-4.png
+      :align: left
+
+|
+
+**App Server #1**
+
+Click on **appsvr1** to view instance details.
+
+   .. image:: ./images/aws-ec2-instance-5.png
+      :align: left
+
+|
+
+**App Server #2**
+
+Click on **appsvr2** to view instance details.
+
+   .. image:: ./images/aws-ec2-instance-6.png
+      :align: left
+
