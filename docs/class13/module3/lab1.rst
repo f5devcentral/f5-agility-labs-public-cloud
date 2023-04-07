@@ -15,6 +15,8 @@ You will configure an application deployment via AS3.
 **Network Diagram**
 
 .. image:: ./images/aws-lab-diagram.png
+   :alt: Lab diagram 
+   :width: 80%
    :align: left
 
 
