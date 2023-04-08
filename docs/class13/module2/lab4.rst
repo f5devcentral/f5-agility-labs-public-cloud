@@ -18,9 +18,9 @@ Variables allow you to easily customize the deployment settings, instead of edit
 
 A **terraform.tfvars** file is commonly used to define variable values used in the Terraform deployment.
 These values override any default values that may be defined in the **variables.tf** file.
-You will use the included sample **tfvars** file for the base settings of your deployment.
+You will use the included example **tfvars** file for the base settings of your deployment.
 
-In VS Code, click on the **terraform** directory, and then the **terraform.tfvars.example** file.
+Click on the **terraform.tfvars.example** file.
 
    .. image:: ./images/vscode-1.png
       :align: left
@@ -53,10 +53,11 @@ Initialize the Terraform
 
 Before you can apply a Terraform configuration, you must |init_link| it. This will download all required Terraform module dependencies.
 
-Switch back to the other VS Code window (with the BASH terminal) and execute the following:
+Switch back to the other VS Code window (BASH terminal) and execute the following:
 
    .. code-block:: bash
 
+      cd terraform
       terraform init
 
 You should see output similar to the following:
