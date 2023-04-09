@@ -75,12 +75,7 @@ Accept the next warning prompt.
      :align: left
 
 
-When you see the **Networks** prompt, click **Yes** to continue.
-
-  .. image:: ./images/jumphost-3.png
-     :align: left
-
-Please be patient. It might take a minute for the startup script to complete.
+Please be patient. It might take a minute for the startup process to complete.
 
 Visual Studio Code (vscode) will launch automatically and display the **BASH terminal** panel.  When done, you will see the following information (some of which you will use later):
 
@@ -107,7 +102,9 @@ There will also be several shortcuts on the Windows desktop: Visual Studio Code,
 
    If you attempt to run through parts of this lab in your own environment (i.e., not using UDF), you will need to export your own AWS credentials for Terraform to use.
 
-Launch **Firefox** from the taskbar at the bottom of the desktop. The web browser will open to the Lab Guide. You might find it easier to use this copy of the guide for the rest of the lab.
+|
+
+Launch **Chrome** from the taskbar at the bottom of the Windows desktop. The web browser contains a bookmark to the Lab Guide. You might find it easier to use this copy of the guide for the rest of the lab.
 
 
 .. |join_link| raw:: html
