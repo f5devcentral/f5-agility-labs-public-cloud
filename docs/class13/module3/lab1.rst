@@ -10,8 +10,7 @@ You will use VSCode with the F5 Extension to examine a qkview and to deploy appl
 
 **Network Diagram**
 
-  .. image:: ./images/as3-lab-diagram.png
-     :alt: Lab diagram
-     :align: left
-     :width: 80%
-
+.. image:: ./images/as3-lab-diagram.png
+   :alt: Lab diagram
+   :align: left
+   :width: 100%
