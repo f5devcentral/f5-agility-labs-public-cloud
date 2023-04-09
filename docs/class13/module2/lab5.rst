@@ -131,9 +131,19 @@ The EC2 Dashboard will show a summary of your resources.
 
 |
 
+
+SSH Key
+--------------------------------------------------------------------------------
+Scroll down in the left panel menu to find and click on **Key Pairs** from the left panel menu and confirm that the following resource was created:
+
+   .. image:: ./images/aws-ec2-keypair.png
+      :align: left
+
+|
+
 Network Interfaces
 --------------------------------------------------------------------------------
-Scroll down in the left panel menu to find and click on **Network Intefaces**.
+Click on **Network Intefaces**.
 
 Confirm that the following resources were created:
 
@@ -152,15 +162,6 @@ Elastic IP Addresses
 Click on **Elastic IPs** from the left panel menu and confirm that the following resources were created:
 
    .. image:: ./images/aws-ec2-eip.png
-      :align: left
-
-|
-
-SSH Key
---------------------------------------------------------------------------------
-Click on **Key Pairs** from the left panel menu and confirm that the following resource was created:
-
-   .. image:: ./images/aws-ec2-keypair.png
       :align: left
 
 |
@@ -184,7 +185,7 @@ Click on **Instances** from the left panel menu and confirm that the following r
 
 **BIG-IP #1**
 
-Click on **bigip1-az1-3nic-payg** to view instance details, then click on the **Networking** tab to view network settings.
+Click on the **bigip1** instance to view details, then click on the **Networking** tab to view network settings.
 
    .. image:: ./images/aws-ec2-instance-2.png
       :align: left
@@ -200,7 +201,7 @@ Scroll down to see the NIC and Elastic IPs that are associated with this BIG-IP 
 
 **BIG-IP #2**
 
-Click on **bigip2-az2-3nic-payg** to view instance details.
+Click on the **bigip2** instance to view details, then click on the **Networking** tab to view network settings.
 
    .. image:: ./images/aws-ec2-instance-4.png
       :align: left
@@ -209,7 +210,7 @@ Click on **bigip2-az2-3nic-payg** to view instance details.
 
 **App Server #1**
 
-Click on **appsvr1** to view instance details.
+Click on the **appsvr1** instance to view details.
 
    .. image:: ./images/aws-ec2-instance-5.png
       :align: left
@@ -218,7 +219,7 @@ Click on **appsvr1** to view instance details.
 
 **App Server #2**
 
-Click on **appsvr2** to view instance details.
+Click on the **appsvr2** instance to view details.
 
    .. image:: ./images/aws-ec2-instance-6.png
       :align: left
