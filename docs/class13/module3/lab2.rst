@@ -6,8 +6,8 @@ That VSCode window shows WSL in the lower left green panel and has a blue status
 
 .. image:: ./images/1_vscode_WSL_statusbar.png
    :alt: VSCode Status bar - WSL blue 
-   :align: left
-   :width: 80%
+   :align: center
+   :width: 40%
 
 Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
 Search for F5, select the extension “The F5 Extension”, then Install.
@@ -71,6 +71,14 @@ Select the qkview file.
    :alt: Open qkview file
    :align: left
    :width: 80%
+
+It will take a little while to ingest the file and read it.
+When it is done, you will see the machine name of the device and a tree structure below it.
+
+.. image:: ./images/6_vscode_openqkview_file.png
+   :alt: Open qkview file
+   :align: left
+   :width: 30%
 
 
 
