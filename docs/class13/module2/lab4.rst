@@ -222,6 +222,12 @@ After successful completion, you should see output similar to the following:
 
 |
 
+.. note::
+
+   Although Terraform has completed creation of the AWS resources, the BIG-IP Runtime Init and Declarative Onboarding components will take at least another 5 minutes to complete. You will not be able to log into the BIG-IP TMUI (GUI) until then.
+
+|
+
 Terraform Outputs
 --------------------------------------------------------------------------------
 
