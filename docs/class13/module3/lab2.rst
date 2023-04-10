@@ -7,6 +7,7 @@ That VSCode window shows WSL in the lower left green panel and has a blue status
 .. image:: ./images/1_vscode_WSL_statusbar.png
    :alt: VSCode Status bar - WSL blue 
    :align: left
+   :width: 80%
 
 Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
 Search for F5, select the extension “The F5 Extension”, then Install.
@@ -49,6 +50,7 @@ Select the F5 icon in the left navigation panel.
 .. image:: ./images/4_vscode_OpenExtension.png
    :alt: F5 Extension Icon
    :align: left
+   :height: 50%
 
 In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from local file.
 
@@ -57,7 +59,8 @@ In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from loc
    :align: left
    :width: 80%
 
-In the toolbar that appears, navigate to the 
+In the toolbar that appears, navigate to the /home/f5admin/f5lab/ATC/f5extension directory.
+Select the qkview file.
 
 .. image:: ./images/6_vscode_openqkview_file.png
    :alt: Open qkview file
@@ -73,8 +76,7 @@ Placeholder
 
 
 Review AS3 declaration
-================================================================================
-Placeholder
+--------------------------------------------------------------------------------Placeholder
 
 
 
