@@ -13,15 +13,17 @@ You should see output similar to the following:
    .. code-block:: bash
 
       Cloning into '/home/f5admin/f5lab'...
-      remote: Enumerating objects: 76, done.
-      remote: Counting objects: 100% (41/41), done.
-      remote: Compressing objects: 100% (37/37), done.
-      remote: Total 76 (delta 6), reused 26 (delta 3), pack-reused 35
-      Unpacking objects: 100% (76/76), 35.08 KiB | 7.00 KiB/s, done.
+      remote: Enumerating objects: 223, done.
+      remote: Counting objects: 100% (188/188), done.
+      remote: Compressing objects: 100% (96/96), done.
+      remote: Total 223 (delta 102), reused 153 (delta 83), pack-reused 35
+      Receiving objects: 100% (223/223), 93.40 MiB | 8.78 MiB/s, done.
+      Resolving deltas: 100% (109/109), done.
+      Updating files: 100% (55/55), done.
 
 |
 
-Change to the repo directory and run the ``setup.sh`` script. This script creates environment variables and shell command aliases that you will use later on.
+Change to the repo directory and run the setup script. This script creates environment variables and shell command aliases that you will use later on.
 
   .. code-block:: bash
 

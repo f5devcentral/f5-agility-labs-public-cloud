@@ -2,8 +2,7 @@ App Deployment using Application Services 3 Extension (AS3) --- CARL
 ================================================================================
 
 We begin our journey with Application Services 3 Extension by first examining a working 
-configuration and converting it into an AS3 Declaration.  You will be using a free, multiplatform tool
-from Microsoft called VS Code along with some extensions that make these tasks much easier.
+configuration and converting it into an AS3 Declaration. You will continue to use VS Code, along with some extensions that make these tasks much easier.
 
 In this module, you will:
 

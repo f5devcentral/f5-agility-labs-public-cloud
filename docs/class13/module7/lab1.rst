@@ -1,4 +1,4 @@
-Delete the AWS Deployment (Terraform) --- JASON
+Delete the AWS Deployment (Terraform)
 ================================================================================
 
 The |destroy_link| command deletes the resources that were created by the Terraform configuration.

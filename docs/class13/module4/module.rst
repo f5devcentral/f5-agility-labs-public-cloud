@@ -1,11 +1,6 @@
 HA Failover via Cloud Failover Extension (CFE) --- DAVID
 ================================================================================
 
-.. todo::
-
-   add module intro/overview here
-
-
 In this module, you will:
 
 -  Configure HA failover via the F5 Cloud Failover Extension

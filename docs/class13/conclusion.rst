@@ -82,3 +82,4 @@ Bugs and Requests for enhancements are handled in two ways:
    - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 
 -  Open an :issues:`Issue <>` within the repository.
+

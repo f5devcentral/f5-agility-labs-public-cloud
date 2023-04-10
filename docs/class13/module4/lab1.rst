@@ -10,34 +10,3 @@ You will configure HA failover via the F5 Cloud Failover Extension (pre-installe
 
 .. image:: ./images/aws-lab-diagram-ha-cfe.png
    :align: left
-
-
-
-Check status of BIG-IPs
-================================================================================
-2 VE instances
-
-
-Configure HA cluster
-================================================================================
-sync failover group
-
-
-Configure and deploy CFE
-================================================================================
-use Postman
-
-
-Re-deploy application configuration (AS3)
-================================================================================
-
-leveraging config sync
-
-
-Test HA failover
-================================================================================
-
-
-Remove CFE
-================================================================================
-
