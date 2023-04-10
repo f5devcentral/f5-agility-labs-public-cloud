@@ -1,23 +1,52 @@
-Install The F5 Extensions
+Examine a qkview of an existing device 
 ================================================================================
-Navigate to the Extensions manager on the VS Code left-hand menu,.  You may either click on the Extensions icon or use the <CTRL-Shift-X> shortcut.
 
-Search for F5, select the extension “The F5 Extension”, then Install.
+Select the F5 icon in the left navigation panel.  
 
-.. image:: ./images/installWithinCode_11.04.2020.gif
-   :alt: Animated GUI
+.. image:: ./images/4_vscode_OpenExtension.png
+   :alt: F5 Extension Icon
+   :align: left
+   :width: 10%
+
+In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from local file.
+
+.. image:: ./images/5_vscode_openqkviewbutton.png
+   :alt: Open qkview button
    :align: left
    :width: 80%
 
-In the list of extensions related to F5, you should also see F5 ACC Chariot, click Install.
+In the toolbar that appears, navigate to the /home/f5admin/f5lab/ATC/f5extension directory.
+Select the qkview file.
 
-Click on the F5 logo in the left-hand menu.  This will launch the F5 Extension.
-You should see three panels on the left, one for BIG-IP Hosts, Documentation/Examples, and Config Explorer.
+.. image:: ./images/6_vscode_openqkview_file.png
+   :alt: Open qkview file
+   :align: left
+   :width: 80%
+
+It will take a little while to ingest the file and read it.
+When it is done, you will see the machine name of the device and a tree structure below it.
+
+.. image:: ./images/6_vscode_qkviewopened.png
+   :alt: Open qkview file
+   :align: left
+   :width: 30%
 
 
 
-Examine a qkview of an existing device
-================================================================================
+Use VS Code F5 Extension to convert a configuration to AS3 format
+--------------------------------------------------------------------------------
+Placeholder
+
+
+
+Review AS3 declaration
+--------------------------------------------------------------------------------
+Placeholder
+
+
+
+
+
 
 
 
