@@ -22,7 +22,12 @@ Search for F5, select the extension “The F5 Extension”, then Install.
    :align: left
    :width: 80%
 
-In the list of extensions related to F5, you should also see F5 ACC Chariot, click Install.
+In the list of extensions related to F5, you will also see F5 ACC Chariot, click Install.
+
+.. image:: ./images/2_vscode_ACCExtensioninstall.png
+   :alt: F5 ACC Installing
+   :align: left
+   :width: 80%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
@@ -76,7 +81,8 @@ Placeholder
 
 
 Review AS3 declaration
---------------------------------------------------------------------------------Placeholder
+--------------------------------------------------------------------------------
+Placeholder
 
 
 
