@@ -6,7 +6,7 @@ Select the F5 icon in the left navigation panel.
 .. image:: ./images/4_vscode_OpenExtension.png
    :alt: F5 Extension Icon
    :align: left
-   :width: 10%
+   :width: 80%
 
 In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from local file.
 
