@@ -79,9 +79,9 @@ Check F5 ATC Extensions
 
 Send API calls from Postman to check the status of the F5 ATC extensions on each BIG-IP.
 
-In the left panel, expand the collection. Navigate to **Check F5 ATC Status** > **BIG-IP #1** > **bigip1 - Check DO**
+In the left panel, expand the collection. Navigate to **Check F5 ATC Status**  > **Step 1-A: bigip1 - DO - Get extension status**
 
-Click on the **Send** button to make an API call to the DO endpoint. You should receive a response (JSON format) containing a status of **OK** and version information.
+Click on the **Send** button to make an API call to the DO endpoint on **BIG-IP #1**. You should receive a response (JSON format) containing a status of **OK** and version information.
 
 
 .. image:: ./images/postman-test-1.png
@@ -89,12 +89,17 @@ Click on the **Send** button to make an API call to the DO endpoint. You should 
 
 |
 
-Send the other API calls for BIG-IP #1 and BIG-IP #2.
-
 .. note::
 
    Only the DO extension will return a **status**. The others will return only version information.
 
 |
+
+Select **Step 1-B** and click on the **Send** button to check the status of **BIG-IP #2**.
+
+Select **Step 2-A** to retrieve the current DO configuration settings for **BIG-IP #1**. Review the response body JSON and note the settings. These should be the same as that defined in the **f5_onboard_3nic_custom.tmpl** template file for **BIG-IP Runtime Init**. They should also correspond to the settings that you reviewed in the BIG-IP TMUI and AWS EC2 (BIG-IP) instances.
+
+Send the remaining 'steps' in the **Check F5 ATC STatus** folder to check the status of the AS3, CFE, and TS extensions.
+
 
 This is the end of the module.
