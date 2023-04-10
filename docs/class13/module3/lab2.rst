@@ -36,6 +36,15 @@ You should see three panels on the left, one for BIG-IP Hosts, Documentation/Exa
 Examine a qkview of an existing device 
 --------------------------------------------------------------------------------
 
+First we need to move the qkview file from the WSL system to your desktop.  In the terminal window in VSCode, execute the command below:
+
+   .. code-block:: bash
+
+      cp ~/f5lab/ATC/f5extension/* /mnt/c/Users/user/Desktop/
+
+
+
+
 
 
 Use VS Code F5 Extension to convert a configuration to AS3 format
