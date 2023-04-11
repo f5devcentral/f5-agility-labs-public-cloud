@@ -1,30 +1,70 @@
 
 
-Check status of BIG-IPs
+Check CFE Status
 ================================================================================
-2 VE instances
+
+This was performed in module 2. ...
 
 
 Configure HA cluster
 ================================================================================
-sync failover group
+
+During the initial onboarding process, the two BIG-IPs were configured as followings:
+
+- Same Device Group
+- Sync-Failover sync group
+- Config sync on 'internal' interface
+
 
 
 Configure and deploy CFE
 ================================================================================
-use Postman
+
+.. note:: 
+
+   Before sending the CFE declaration to the BIG-IPs, ensure that BIG-IP #1 is ACTIVE. If BIG-IP #2 is ACTIVE, then force it to STANDBY before proceeding.
 
 
-Re-deploy application configuration (AS3)
+use Postman to send the CFE declaration to both devices....
+
+
+Application configuration (AS3)
 ================================================================================
 
-leveraging config sync
+AS3 config from previous module should be synchronized between the two BIG-IPs.
 
 
 Test HA failover
 ================================================================================
 
+...
 
-Remove CFE
+.. image:: ./images/cfe-bigip1-active.png
+   :align: left
+
+|
+
+.. image:: ./images/cfe-bigip1-failover.png
+   :align: left
+
+|
+
+.. image:: ./images/cfe-bigip1-failover-2.png
+   :align: left
+
+|
+
+.. image:: ./images/cfe-bigip2-active.png
+   :align: left
+
+
+
+
+
+
+Remove CFE Configuration
 ================================================================================
+
+Send base declaration with no custom settings
+
 
