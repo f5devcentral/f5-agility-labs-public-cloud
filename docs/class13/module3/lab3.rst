@@ -35,30 +35,23 @@ When it is done, you will see the machine name of the device and a tree structur
 
 Use VS Code F5 Extension to Explore the configuration
 --------------------------------------------------------------------------------
-Placeholder
+Lets take a quick tour of what you can see in the config explorer.
+
+First item under the Config Explorer is the name of the system that generated the qkview.
+**XC Diagnostics** is disabled by default.  Enabling this allows you to determine the readiness to migrate the configuration elements into F5's SaaS offering.
+**Sources** is where all of the conf files can be examined.
+**Partitions** is where you can drill down to the applications.  This is where we will do some digging.
+
+The remaining menu items can be explored later
 
 
 
 Convert an application/virtual server into an AS3 Declaration
 --------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-Use VS Code F5 Extension to convert a configuration to AS3 format
-================================================================================
-Placeholder
-
-
-
-Review AS3 declaration
-================================================================================
-Placeholder
-
+**Partitions** is where you can drill down to the applications.  This is where we will do some digging.
+* pick an app
+* highlight the text in the app conf window and select convert to as3 declaration.
+ 
 
 
