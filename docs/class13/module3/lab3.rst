@@ -33,15 +33,15 @@ When it is done, you will see the machine name of the device and a tree structur
 
 
 
-Use VS Code F5 Extension to convert a configuration to AS3 format
+Use VS Code F5 Extension to Explore the configuration
 --------------------------------------------------------------------------------
 Placeholder
 
 
 
-Review AS3 declaration
+Convert an application/virtual server into an AS3 Declaration
 --------------------------------------------------------------------------------
-Placeholder
+
 
 
 
@@ -59,43 +59,6 @@ Placeholder
 Review AS3 declaration
 ================================================================================
 Placeholder
-
-
-
-Connecting to your BIG-IP Devices
-================================================================================
-Placeholder
-
-
-
-Updating F5 Automation Toolchain Extensions
-================================================================================
-Placeholder
-
-
-
-Deploy AS3 configuration
-================================================================================
-Placeholder
-**Create a device and connect**
-
-Select `Add Host` in the `F5: Hosts` view.  Then type in device details in the \<user\>@x.x.x.x format, hit `Enter` to submit
-
- .. image:: ./images/addDeviceConnect_11.04.2020.gif
-   :alt: Animated GUI
-   :align: left
-   :width: 80%
-
-
-
-Test application access
-================================================================================
-Placeholder
-
-
-
-
-
 
 
 
