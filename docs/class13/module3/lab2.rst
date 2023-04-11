@@ -1,6 +1,15 @@
-Install The F5 Extension and the F5 ACC Chariot extension
+Install The F5 Extension and the F5 ACC Chariot Extension
 ================================================================================
-In VSCode, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
+
+Earlier in the lab you opened another VSCode window where you inspected and then edited the Terraform file.
+That VSCode window shows WSL in the lower left green panel and has a blue status bar like this:
+
+.. image:: ./images/1_vscode_WSL_statusbar.png
+   :alt: VSCode Status bar - WSL blue 
+   :align: center
+   :width: 40%
+
+Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
 Search for F5, select the extension “The F5 Extension”, then Install.
 
 .. image:: ./images/installWithinCode_11.04.2020.gif
@@ -8,15 +17,25 @@ Search for F5, select the extension “The F5 Extension”, then Install.
    :align: left
    :width: 80%
 
-In the list of extensions related to F5, you should also see F5 ACC Chariot, click Install.
+.. image:: ./images/2_vscode_f5extinstall.png
+   :alt: F5 Extension Installing
+   :align: left
+   :width: 80%
+
+In the list of extensions related to F5, you will also see F5 ACC Chariot, click Install.
+
+.. image:: ./images/2_vscode_ACCExtensioninstall.png
+   :alt: F5 ACC Installing
+   :align: left
+   :width: 80%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
 
-Enhance your abilities to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration 
-schema validation, and also assist with connecting, deploying, retrieving and updating declarations on F5 devices.
+The F5 Extension enhances your ability to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration 
+schema validation, and also assists with connecting, deploying, retrieving and updating declarations on F5 devices.
 
-It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration .
+It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.  Below are some of the high level features:
 
 - GET/POST/DELETE of all ATC services, including FAST/AS3/DO/TS/CF
 - links to quickly open related ATC documentation
@@ -26,36 +45,5 @@ It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration 
 - Hovers to view decoded information for (certificates/base64)
 - Extract TMOS applications (per virtual server)
 - Write, deploy and modify iRules/iApps (with vscode-irule extension for language support)
-
-**GUI Essentials**
-On the left hand tool bar/menu, select/click on the F5 logo.  This will launch the F5 Extension.
-You should see three panels on the left, one for BIG-IP Hosts, Documentation/Examples, and Config Explorer.
-
-
-
-Examine a qkview of an existing device 
---------------------------------------------------------------------------------
-
-First we need to move the qkview file from the WSL system to your desktop.  In the terminal window in VSCode, execute the command below:
-
-   .. code-block:: bash
-
-      cp ~/f5lab/ATC/f5extension/* /mnt/c/Users/user/Desktop/
-
-
-
-
-
-
-Use VS Code F5 Extension to convert a configuration to AS3 format
---------------------------------------------------------------------------------
-Placeholder
-
-
-
-Review AS3 declaration
-================================================================================
-Placeholder
-
 
 
