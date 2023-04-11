@@ -5,7 +5,7 @@ Two AWS VPCs are connected to an AWS Transit Gateway, which routes traffic betwe
 You will configure F5 Telemetry Streaming to send System and Application log data to AWS Cloudwatch, then view the logs via the AWS Console.
 
 
-**Diagram**
+**Network Diagram**
 
 .. image:: ./images/2023_ts-lab-diagram.png.png
    :align: left
