@@ -115,5 +115,6 @@ Do the same for **BIG-IP #2**.
 
 The other F5 ATC extensions (AS3, CFE, and TS) will be checked in later lab modules.
 
+Minimize the Postman window. You will use it again in a later lab module.
 
 This is the end of the module.
