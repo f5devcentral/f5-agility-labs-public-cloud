@@ -7,5 +7,5 @@ You will configure F5 Telemetry Streaming to send System and Application log dat
 
 **Network Diagram**
 
-.. image:: ./images/2023_ts-lab-diagram.png.png
+.. image:: ./images/2023_ts-lab-diagram.png
    :align: left
