@@ -1,56 +1,61 @@
-Using the F5 Extension to deploy applications and update ATC components
+Examine a qkview
 ================================================================================
 
+Select the F5 icon in the left navigation panel.  
 
-Connecting to your BIG-IP Devices
---------------------------------------------------------------------------------
-Select `Add Host` in the `F5: Hosts` view.  Then type in device details in the \<user\>@x.x.x.x format, hit `Enter` to submit
-
- .. image:: ./images/addDeviceConnect_11.04.2020.gif
-   :alt: Animated GUI
+.. image:: ./images/4_vscode_OpenExtension.png
+   :alt: F5 Extension Icon
    :align: left
    :width: 80%
 
-In the VSCode window that you have run all of your Terraform, copy the password used for your BIG-IP devices.
-In the vscode window with the F5 Extension, click on the Host you just configured.  This will open a dialogue for the password.
-**Create a device and connect**
+In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from local file.
 
-.. note::
-  DO NOT USE the right mouse button to paste the passowrd, this will cause the password dialog box to go 
-  away and you will have to delete the host to get the opportunity to enter the pasword again.
+.. image:: ./images/5_vscode_openqkviewbutton.png
+   :alt: Open qkview button
+   :align: left
+   :width: 80%
 
-Repeat this for the other BIG-IP.
+In the toolbar that appears, navigate to the /home/f5admin/f5lab/ATC/f5extension directory.
+Select the qkview file.
 
+.. image:: ./images/6_vscode_openqkview_file.png
+   :alt: Open qkview file
+   :align: left
+   :width: 80%
 
-Deploy AS3 configuration
--------------------------------------------------------------------------------
-Make sure you are connected to BIG-IP1.  
-Go to the Management GUI on BIG-IP1 notice it is set to Standby. Leave it that way for now.
-Switch to the file view in VSCode.
-Navigate to the ATC/AS3 directory.
+It will take a little while to ingest the file and read it.
+When it is done, you will see the machine name of the device and a tree structure below it.
 
-Basic deployment with Autodiscovery
-
-HA deployment
-
-HA deployment wih modern protocols
-
-HTTPS deployment that uses ECDSA certificates
+.. image:: ./images/6_vscode_qkviewopened.png
+   :alt: Open qkview file
+   :align: left
+   :width: 30%
 
 
-Test application access
+
+Use VS Code F5 Extension to Explore the configuration
 --------------------------------------------------------------------------------
-Placeholder
+Lets take a quick tour of what you can see in the config explorer.
+
+First item under the Config Explorer is the name of the system that generated the qkview.
+
+**XC Diagnostics** is disabled by default.  Enabling this allows you to determine the readiness to migrate the configuration elements into F5's SaaS offering.
+
+**Sources** is where all of the conf files can be examined.
+
+**Partitions** is where you can drill down to the applications.  This is where we will do some digging.
+
+The remaining menu items can be explored later
 
 
 
-Updating F5 Automation Toolchain Extensions
+Convert an application/virtual server into an AS3 Declaration
 --------------------------------------------------------------------------------
 
+**Partitions** is where you can drill down to the applications.  This is where we will do some digging.
 
-
-
-
-
+* pick an app
+* highlight the text in the app conf window and select convert to as3 declaration.
+ 
 
 
