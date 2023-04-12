@@ -30,8 +30,6 @@ In this module, you will:
 
       6.6.1  Review BIG-IP System Logs
 
-      6.6.2  Reivew Applicaion Event Logs
-
 
 .. toctree::
    :caption: CONTENTS
