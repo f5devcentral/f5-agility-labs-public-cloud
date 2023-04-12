@@ -12,6 +12,7 @@ From Cloudwatch in the AWS Console, navigate to Logs > Log Groups > studentf5lab
 	   :scale: 50%
 
 Once system Telemetry data appears from hostname: **ip-10-0-101-11.us-west-2.compute.internal.com** and hostname: **ip-10-0-102-11.us-west-2.compute.internal.com**, click on the drop down for one of the log entries to examime the system data.
+
 .. image:: ./images/2023_9_aws_console_cloudwatch_telemetry_streaming.png
 	   :scale: 50%
 
