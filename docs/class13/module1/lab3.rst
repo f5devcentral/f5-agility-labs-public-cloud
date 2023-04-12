@@ -32,7 +32,7 @@ Click on **Continue to Subscribe**.
 
 |
 
-Click on **Accept Terms**.
+If there isn't an existing entitlement, click on the **Accept Terms** button. Otherwise, skip to the next step.
 
   .. image:: ./images/aws-mkt-3.png
      :align: left
@@ -40,7 +40,7 @@ Click on **Accept Terms**.
 
 .. note::
 
-   If you see an error message, click on **Accept Terms** again.
+   If you see an error message after clicking on the **Accept Terms** button, just click it again.
 
    .. image:: ./images/aws-mkt-error.png
       :align: left

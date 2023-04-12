@@ -13,13 +13,13 @@ You should see output similar to the following:
    .. code-block:: bash
 
       Cloning into '/home/f5admin/f5lab'...
-      remote: Enumerating objects: 223, done.
-      remote: Counting objects: 100% (188/188), done.
-      remote: Compressing objects: 100% (96/96), done.
-      remote: Total 223 (delta 102), reused 153 (delta 83), pack-reused 35
-      Receiving objects: 100% (223/223), 93.40 MiB | 8.78 MiB/s, done.
-      Resolving deltas: 100% (109/109), done.
-      Updating files: 100% (55/55), done.
+      remote: Enumerating objects: 404, done.
+      remote: Counting objects: 100% (369/369), done.
+      remote: Compressing objects: 100% (208/208), done.
+      remote: Total 404 (delta 207), reused 288 (delta 149), pack-reused 35
+      Receiving objects: 100% (404/404), 93.43 MiB | 5.07 MiB/s, done.
+      Resolving deltas: 100% (214/214), done.
+      Updating files: 100% (61/61), done.
 
 |
 
