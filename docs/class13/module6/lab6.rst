@@ -20,4 +20,4 @@ Scroll though the system telemetry data metrics being collected for each of the 
 
 .. note::
 
-Each BIG-IP is sending Telemetry logs every 60 seconds to Cloudwatch.
+   Each BIG-IP is sending Telemetry logs every 60 seconds to Cloudwatch.
