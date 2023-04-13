@@ -11,7 +11,7 @@ In this module, you will:
 -  Learn about the F5 Extension.
 -  Deploy applications using AS3
 -  Use the VS Code F5 Extension to Examine a system and convert an application to an Application 
--  Services 3 Extension (AS3) declaration
+Services 3 Extension (AS3) declaration
 
 .. note::
 
