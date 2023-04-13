@@ -37,7 +37,35 @@ successful connection that there is a hexagon with an F5 in the middle.
 Verify AS3 state on each device
 -------------------------------------------------------------------------------
 
+When the F5 Extension connects to a device it runs a series of queries to give you quick access to a variety of 
+information.  In the status bar at the bottom of the VScode window, you can see the elements of the ATC that are installed.
+You can click on this text to get some updates from the system.
 
+.. image:: ./images/5f5Extension_statusbar.png
+  :alt: VSCode status bar with arrow pointing to AS3 version
+
+Here you can see that the Terraform build out process installed four of the five components of the ATC, AS3, DO, TS, and CFE.
+
+Next we will issue a rest call to the AS3 listener to ensure it is functioning.  For this we will use a feature of the F5 Extension called
+Make HTTP Request available in the context menu.
+
+Ensure you are connected to BIG-IP1, then navigate to /ATC/AS3. Open the as3check_makehttprequest.json.
+
+.. image:: ./images/6f5Extension_makehttprequest.png
+  :alt: Showing the location of the file to open
+
+Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select **Make HTTP Request**.
+
+.. image:: ./images/7f5Extension_makehttprequest.png
+  :alt: context menu 
+
+Once the response has been received, it will appear in a new panel.  You should see that the version returned matches the version number in the statusbar.
+
+.. image:: ./images/8f5Extension_makehttprequest.png
+  :alt: Response windows
+
+Connect to Big-IP2 and repeat the steps above.
+ 
 
 
 
