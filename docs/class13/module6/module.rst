@@ -12,9 +12,9 @@ In this module, you will:
 
 .. todo::
 
-   6.1. What is F5 Telemetry Streaming
+   6.1. Lab Scenario
 
-   6.2. Lab Scenario
+   6.2. What is F5 Telemetry Streaming
 
    6.3. Verify installation of F5 Telemetry Streaming
 
@@ -27,8 +27,6 @@ In this module, you will:
    6.5  Deploy F5 Telemetry Streaming Configuration
 
    6.6. Reveiw F5 Telemetry Streaming Logs in the AWS Console using CloudWatch
-
-      6.6.1  Review BIG-IP System Logs
 
 
 .. toctree::
