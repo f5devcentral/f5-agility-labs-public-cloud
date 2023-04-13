@@ -29,51 +29,64 @@ Step1 Create HTTP Virtual Servers with AS3 and Service Discovery
 --------------------------------------------------------------------------------
 
 
+Open the **ATC\AS3\Step1_as3_AWS_Autodiscovery.json** file.  In the window with the JSON declaration, 
+select all of the text.  If you scroll down a little bit you will see that we are telling AWS to 
+look for tagged instances and add them to the pool.
 
 .. image:: ./images/02as3_step1a.png
     :alt: load JSON file
     :width: 80%
 
 
+Now right click on the selected text and select **Post as AS3 Declaration**.
+
 .. image:: ./images/02as3_step1b.png
     :alt: POST as AS3 declaration
     :width: 80%
 
+As the extension waits for confirmation that the declaration was correct and able to be processed, you will see this:
 
 .. image:: ./images/02as3_step1c.png
     :alt: Posting Declaration
     :width: 80%
 
+Here you can see that all sections of the declaration were successful.
 
 .. image:: ./images/02as3_step1_success.png
     :alt: Successful deployment
     :width: 80%
 
+Confirm new partition/tenant. MORE INSTRUCTIONS TO COME
 
 .. image:: ./images/02as3_step1verify1.png
     :alt: BIGIP management GUI partition verification
     :width: 80%
 
+Confirm Pool populated. MORE INSTRUCTIONS TO COME
 
 .. image:: ./images/02as3_step1verify1pool.png
     :alt: BIGIP management GUI shared pool verification
     :width: 80%
 
+Confirm Virtual Servers MORE INSTRUCTIONS TO COME
 
 .. image:: ./images/02as3_step1verify1vs.png
     :alt: BIGIP management GUI VS verification
     :width: 80%
 
+BIGIP2 COnfirm Partition/tenant
 
 .. image:: ./images/02as3_step1verify2.png
     :alt: BIGIP management GUI partition verification
     :width: 80%
 
+Big-IP2 confirm pool 
 
 .. image:: ./images/02as3_step1verify2pool.png
     :alt: BIGIP management GUI shared pool verification
     :width: 80%
 
+Big-IP2
 
 .. image:: ./images/02as3_step1verify2vs.png
     :alt: BIGIP management GUI VS verification
