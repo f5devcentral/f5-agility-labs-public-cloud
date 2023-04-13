@@ -47,3 +47,5 @@ It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.
 - Write, deploy and modify iRules/iApps (with vscode-irule extension for language support)
 
 
+   .. note:: 
+      Full documentation can be read here - https://f5devcentral.github.io/vscode-f5/#/README 
