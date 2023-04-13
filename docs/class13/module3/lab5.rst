@@ -33,7 +33,7 @@ When it is done, you will see the machine name of the device and a tree structur
 
 
 
-Use VS Code F5 Extension to Explore the configuration
+Using the F5 Extension to Explore a qkview
 --------------------------------------------------------------------------------
 Lets take a quick tour of what you can see in the config explorer.
 

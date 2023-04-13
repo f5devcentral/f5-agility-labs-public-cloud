@@ -7,7 +7,7 @@ zone). The **hub** VPC contains two BIG-IP VE instances (each in a different ava
 
 Only one of the BIG-IP instances and the two application servers are needed in this lab module.
 
-You will use VSCode with the F5 Extension to examine a qkview and to deploy applications with AS3.
+You will use VSCode with the F5 Extension to deploy applications with AS3 and to examine a qkview.
 
 
 **Network Diagram**

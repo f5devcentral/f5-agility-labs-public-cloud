@@ -1,4 +1,4 @@
-Using the F5 Extension to deploy applications and update ATC components
+Connecting the F5 Extension to your devices and verifying the state of AS3
 ================================================================================
 
 

@@ -1,4 +1,4 @@
-Deploy AS3 configuration
+Using the F5 Extension to Deploy AS3 declarations
 ===============================================================================
 Make sure you are connected to BIG-IP1.  
 
