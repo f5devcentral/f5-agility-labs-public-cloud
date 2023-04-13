@@ -48,4 +48,4 @@ It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.
 
 
    .. note:: 
-      Full documentation can be read here - https://f5devcentral.github.io/vscode-f5/#/README 
+      'Full documentation can be read here <https://f5devcentral.github.io/vscode-f5/#/README>'
