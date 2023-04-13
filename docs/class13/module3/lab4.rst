@@ -7,17 +7,18 @@ Go to the Management GUI on BIG-IP1 notice it is set to Standby. Leave it that w
 In the Management GUI, navigate to Local Traffic --> Virtual Servers and see that you only have two partions with no configuration.
 
 BIG-IP1
+
 .. image:: ./images/01as3_noconfig.png
     :alt: BIGIP management GUI no config
     :width: 80%
 
 Big-IP2
+
 .. image:: ./images/01as3_noconfig_2.png
     :alt: BIGIP management GUI no config
     :width: 80%
 
 Close the json file you had open to prepare for the next steps.
-
 
 Switch to the file view in VSCode.
 
