@@ -19,9 +19,6 @@ Big-IP2
 Close the json file you had open to prepare for the next steps.
 
 
-
-
-
 Switch to the file view in VSCode.
 
 Navigate to the ATC/AS3 directory.
@@ -71,18 +68,164 @@ Step1 Basic deployment with Autodiscovery
     :width: 80%
 
 
+Step2 HTTPS deployment
+--------------------------------------------------------------------------------
+Close the untitled panel
+close the Step1 declaration.
+Open Step2_as3_HTTPS_Autodiscovery.json
+
+
+.. todo:: 
+    screengrabs and narrative
+
+
+.. image:: ./images/02as3_step2a.png
+    :alt: load JSON file
+    :width: 80%
+
+.. image:: ./images/02as3_step2b.png
+    :alt: POST as AS3 declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step1c.png
+    :alt: Posting Declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step2_success.png
+    :alt: Successful deployment
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
+
+
+Step3 HTTPS deployment wih modern protocols
+--------------------------------------------------------------------------------
+Close the untitled panel
+close the Step1 declaration.
+Open Step3_as3_HTTPS_Autodiscovery.json
+
+
+.. todo:: 
+    screengrabs and narrative
+
+
+.. image:: ./images/02as3_step2a.png
+    :alt: load JSON file
+    :width: 80%
+
+.. image:: ./images/02as3_step2b.png
+    :alt: POST as AS3 declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step1c.png
+    :alt: Posting Declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step2_success.png
+    :alt: Successful deployment
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
 
 
 
-
-Step2 HA deployment
-
-Step3 HA deployment wih modern protocols
 
 Step4 HTTPS deployment that uses ECDSA certificates
+--------------------------------------------------------------------------------
+Close the untitled panel
+close the Step1 declaration.
+Open Step2_as3_HTTPS_Autodiscovery.json
 
+.. todo:: 
+    screengrabs and narrative
+
+
+.. image:: ./images/02as3_step2a.png
+    :alt: load JSON file
+    :width: 80%
+
+.. image:: ./images/02as3_step2b.png
+    :alt: POST as AS3 declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step1c.png
+    :alt: Posting Declaration
+    :width: 80%
+
+.. image:: ./images/02as3_step2_success.png
+    :alt: Successful deployment
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify1vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2.png
+    :alt: BIGIP management GUI partition verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2pool.png
+    :alt: BIGIP management GUI shared pool verification
+    :width: 80%
+
+.. image:: ./images/02as3_step2verify2vs.png
+    :alt: BIGIP management GUI VS verification
+    :width: 80%
 
 Test application access
 --------------------------------------------------------------------------------
-Placeholder
+
+
 
