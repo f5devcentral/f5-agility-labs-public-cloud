@@ -158,14 +158,14 @@ Step3 Adding ECDSA certificates to your application
 
 #. Close the previous declaration.
 
-#. Open ``Step3_as3_ecdsaCerts_Autodiscovery.json``
+#. Open ``Step3_as3_ecdsaCerts_Autodiscovery.json`` and select all of the text.
 
 
     .. image:: ./images/02as3_step3a.png
         :alt: load JSON file
         :width: 80%
 
-
+#. Right click and select ``POST as AS3 Declaration``.
 
     .. image:: ./images/02as3_step3b.png
         :alt: POST as AS3 declaration
@@ -190,7 +190,12 @@ Step3 Adding ECDSA certificates to your application
 
 #. In the browser verify that you see the ECDSA ciphers in use.        
 
-    .. image:: ./images/02as3_step2_vshttp2.png
+
+    .. image:: ./images/developertools.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 50%
+
+    .. image:: ./images/02as3_step3_ciphers.png
         :alt: BIGIP management GUI http2 verification
         :width: 80%
 
