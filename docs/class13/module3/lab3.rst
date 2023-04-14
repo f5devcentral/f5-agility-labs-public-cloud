@@ -8,6 +8,13 @@ Connecting to your BIG-IP Devices
 
 #. Just under the ``VSCode`` icon is the explore icon, select this and navigate to the ``/ATC/f5extension`` directory. Open the ``devices.json`` file.
 
+    .. image:: ./images/1f5Extension_deviceimport.png
+       :width: 80%
+       :alt: Directory image
+
+#. Highlight all of the text in the json file.
+
+
     .. code-block:: json
    
         [
@@ -21,12 +28,6 @@ Connecting to your BIG-IP Devices
             }
         ]
 
-
-    .. image:: ./images/1f5Extension_deviceimport.png
-       :width: 80%
-       :alt: Directory image
-
-#. Highlight all of the text in the json file.
 
     .. image:: ./images/2f5Extension_deviceimport.png
        :width: 80%
