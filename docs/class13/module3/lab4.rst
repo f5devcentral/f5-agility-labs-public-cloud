@@ -133,79 +133,69 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
 #. Verify connectivity to the HTTPS application and note the ciphers in use
 
+     * Open you browser and in a new tab, navigate to the IP address ``vip1_public_ip``
      * Use developer tools to see the ciphers in use
 
-    .. image:: ./images/developertools.png
+
+    .. image:: ./images/02as3_step2_web.png
         :alt: BIGIP management GUI shared pool verification
         :width: 80%
 
+    .. image:: ./images/developertools.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 50%
+
     .. image:: ./images/02as3_step2_Ciphers.png
         :alt: BIGIP management GUI VS verification
-        :width: 80%
+        :width: 50%
 
 
 
-Step3 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
+Step3 Adding ECDSA certificates to your application
 --------------------------------------------------------------------------------
 
 #. Close the untitled panel
 
-#. Close the Step1 declaration.
+#. Close the previous declaration.
 
-#. Open Step2_as3_HTTPS_Autodiscovery.json
+#. Open ``Step3_as3_ecdsaCerts_Autodiscovery.json``
 
 
-    .. image:: ./images/02as3_step2a.png
+    .. image:: ./images/02as3_step3a.png
         :alt: load JSON file
         :width: 80%
 
 
-    .. image:: ./images/02as3_step2b.png
+
+    .. image:: ./images/02as3_step3b.png
         :alt: POST as AS3 declaration
         :width: 80%
 
 
-    .. image:: ./images/02as3_step1c.png
+
+    .. image:: ./images/02as3_step3_success.png
         :alt: Posting Declaration
         :width: 80%
 
 
-    .. image:: ./images/02as3_step2_success.png
-        :alt: Successful deployment
+
+#. In the Management GUI for both BIG-IP devices, confirm the creation of 
+
+     * Two ECDSA certificates were created
+         * System -> certificate Management ->Traffic Certificate Management -> SSL Certificate List 
+
+    .. image:: ./images/02as3_step3_ecdsacerts.png
+        :alt: BIGIP management GUI ECDSA certificates
+        :width: 80%
+
+#. In the browser verify that you see the ECDSA ciphers in use.        
+
+    .. image:: ./images/02as3_step2_vshttp2.png
+        :alt: BIGIP management GUI http2 verification
         :width: 80%
 
 
-    .. image:: ./images/02as3_step2verify1.png
-        :alt: BIGIP management GUI partition verification
-        :width: 80%
 
-
-    .. image:: ./images/02as3_step2verify1pool.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 80%
-
-
-    .. image:: ./images/02as3_step2verify1vs.png
-        :alt: BIGIP management GUI VS verification
-        :width: 80%
-
-
-    .. image:: ./images/02as3_step2verify2.png
-        :alt: BIGIP management GUI partition verification
-        :width: 80%
-
-
-    .. image:: ./images/02as3_step2verify2pool.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 80%
-
-
-    .. image:: ./images/02as3_step2verify2vs.png
-        :alt: BIGIP management GUI VS verification
-        :width: 80%
-
-Test application access
---------------------------------------------------------------------------------
 
 
 
