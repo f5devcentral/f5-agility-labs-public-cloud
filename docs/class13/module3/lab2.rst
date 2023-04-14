@@ -14,26 +14,26 @@ Earlier in the lab you opened another VSCode window where you inspected and then
  
    .. image:: ./images/icon_VSCodeExtensions_inactive.png
       :align: left
-
+      :alt: VSCode Extensions icon
 
 #. Search for ``F5``, select the extension ``The F5 Extension``, then ``Install``.
 
-.. image:: ./images/installWithinCode_11.04.2020.gif
-   :alt: Animated GUI
-   :align: left
-   :width: 80%
+   .. image:: ./images/installWithinCode_11.04.2020.gif
+      :alt: Animated GUI
+      :align: left
+      :width: 80%
 
-.. image:: ./images/2_vscode_f5extinstall.png
-   :alt: F5 Extension Installing
-   :align: left
-   :width: 80%
+   .. image:: ./images/2_vscode_f5extinstall.png
+      :alt: F5 Extension Installing
+      :align: left
+      :width: 80%
 
 #. In the list of extensions related to F5, you will also see ``F5 ACC Chariot``, click ``Install``.
 
-.. image:: ./images/2_vscode_ACCExtensioninstall.png
-   :alt: F5 ACC Installing
-   :align: left
-   :width: 80%
+   .. image:: ./images/2_vscode_ACCExtensioninstall.png
+      :alt: F5 ACC Installing
+      :align: left
+      :width: 80%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
