@@ -19,7 +19,7 @@ Make sure you are connected to BIG-IP1 in the F5 Extension.
         :alt: BIGIP management GUI no config
         :width: 95%
 
-#. Close the json file you had open to prepare for the next steps.
+#. Close the ``as3check_makehttprequest.json`` file to prepare for the next steps.
 
 #. Switch to the file view in ``VSCode``.
 

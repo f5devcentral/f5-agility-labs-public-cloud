@@ -68,15 +68,15 @@ information.  In the status bar at the bottom of the VScode window, you can see 
 
 
    .. code-block:: json
-      {
-        "url": "/mgmt/shared/appsvcs/info"
-      }
+        {
+            "url": "/mgmt/shared/appsvcs/info"
+        }
 
 
     .. image:: ./images/6f5Extension_makehttprequest.png
        :alt: Showing the location of the file to open
 
-#. Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select **Make HTTP Request**.
+#. Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select ``Make HTTP Request``.
 
     .. image:: ./images/7f5Extension_makehttprequest.png
        :alt: context menu 
