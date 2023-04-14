@@ -9,6 +9,7 @@ Connecting to your BIG-IP Devices
 #. Just under the ``VSCode`` icon is the explore icon, select this and navigate to the ``/ATC/f5extension`` directory. Open the ``devices.json`` file.
 
     .. code-block:: json
+   
         [
             {
                 "device": "admin@52.11.43.7",
@@ -37,12 +38,10 @@ Connecting to your BIG-IP Devices
        :width: 80%
        :alt: Directory image
 
-#. We are using this file to import multiple devices all at once, including the passwords.  This can also be 
-done without the passwords, so that you would have to add the passwords manually when connecting.
 
+#. We are using this file to import multiple devices all at once, including the passwords.  This can also be done without the passwords, so that you would have to add the passwords manually when connecting.
 
-#. Select the F5 icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon 
-successful connection that there is a hexagon with an F5 in the middle.
+#. Select the F5 icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon successful connection that there is a hexagon with an F5 in the middle.
 
     .. image:: ./images/4f5Extension_deviceconnect.png
        :alt: Connected devices
@@ -60,8 +59,7 @@ information.  In the status bar at the bottom of the VScode window, you can see 
 
 #. Here you can see that the Terraform build out process installed four of the five components of the ATC, AS3, DO, TS, and CFE.
 
-#. Next we will issue a rest call to the AS3 listener to ensure it is functioning.  For this we will use a feature of the F5 Extension called
-``Make HTTP Request`` available in the context menu.
+#. Next we will issue a rest call to the AS3 listener to ensure it is functioning.  For this we will use a feature of the F5 Extension called ``Make HTTP Request`` available in the context menu.
 
 #. Ensure you are connected to BIG-IP1, then navigate to ``/ATC/AS3``. Open the ``as3check_makehttprequest.json``.
 
