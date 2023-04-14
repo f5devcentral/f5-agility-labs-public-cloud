@@ -12,6 +12,7 @@ Earlier in the lab you opened another VSCode window where you inspected and then
 #. Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut. 
  
    .. image:: ./images/icon_VSCodeExtensions_inactive.png
+      :scale: 50%
       :align: left
       :alt: VSCode Extensions icon
 
@@ -20,19 +21,19 @@ Earlier in the lab you opened another VSCode window where you inspected and then
    .. image:: ./images/installWithinCode_11.04.2020.gif
       :alt: Animated GUI
       :align: left
-      :scale: 90%
+      :width: 90%
 
    .. image:: ./images/2_vscode_f5extinstall.png
       :alt: F5 Extension Installing
       :align: left
-      :scale: 90%
+      :width: 90%
 
 #. In the list of extensions related to F5, you will also see ``F5 ACC Chariot``, click ``Install``.
 
    .. image:: ./images/2_vscode_ACCExtensioninstall.png
       :alt: F5 ACC Installing
       :align: left
-      :scale: 90%
+      :width: 90%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
@@ -52,4 +53,4 @@ It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.
 - Write, deploy and modify iRules/iApps (with vscode-irule extension for language support)
 
    .. note:: 
-      `Full documentation can be read here <https://f5devcentral.github.io/vscode-f5/>`_
+      `F5 Extension documentation hub <https://f5devcentral.github.io/vscode-f5/>`_
