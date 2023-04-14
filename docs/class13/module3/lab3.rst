@@ -10,9 +10,12 @@ Connecting to your BIG-IP Devices
 
     .. image:: ./images/icon_VSCodeExplorer_inactive.png
        :alt: VSCode Explorer icon
+       :align: left
+       :width: 70px
 
     .. image:: ./images/1f5Extension_deviceimport.png
        :width: 80%
+       :align: left
        :alt: Directory image
 
 #. Highlight all of the text in the json file.
@@ -49,9 +52,11 @@ Connecting to your BIG-IP Devices
 
     .. image:: ./images/icon_F5Extension_inactive.png
        :alt: F5 extension icon
+       :align: left
 
     .. image:: ./images/4f5Extension_deviceconnect.png
        :alt: Connected devices
+       :align: left
 
 
 Verify AS3 state on each device
