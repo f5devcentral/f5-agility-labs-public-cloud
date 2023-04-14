@@ -1,7 +1,9 @@
 Review Telemetry Streaming Logs in the AWS Console Using CloudWatch
 ================================================================================
 
-From the AWS Console in Chrome, nagigate to Services then type "cloudwatch" in the search box. Choose "CloudWatch" from the drop-down results.
+From the AWS Console in Chrome, nagigate to Services then type ``cloudwatch`` in the search box at the tip of the page.
+
+Click on **CloudWatch** from the drop-down results.
 
 .. image:: ./images/2023_7_aws_console_search_cloudwatch.png
 	   :scale: 50%
