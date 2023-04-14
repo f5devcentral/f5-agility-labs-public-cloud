@@ -20,19 +20,19 @@ Earlier in the lab you opened another VSCode window where you inspected and then
    .. image:: ./images/installWithinCode_11.04.2020.gif
       :alt: Animated GUI
       :align: left
-       :scale: 90%
+      :scale: 90%
 
    .. image:: ./images/2_vscode_f5extinstall.png
       :alt: F5 Extension Installing
       :align: left
-       :scale: 90%
+      :scale: 90%
 
 #. In the list of extensions related to F5, you will also see ``F5 ACC Chariot``, click ``Install``.
 
    .. image:: ./images/2_vscode_ACCExtensioninstall.png
       :alt: F5 ACC Installing
       :align: left
-       :scale: 90%
+      :scale: 90%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
