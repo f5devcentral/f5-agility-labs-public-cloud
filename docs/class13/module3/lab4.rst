@@ -179,7 +179,7 @@ Step3 Adding ECDSA certificates to your application
 
 
 
-#. In the Management GUI for both BIG-IP devices, confirm the creation of 
+#. In the Management GUI for both BIG-IP devices, confirm the creation of:
 
      * Two ECDSA certificates were created
          * System -> certificate Management ->Traffic Certificate Management -> SSL Certificate List 
