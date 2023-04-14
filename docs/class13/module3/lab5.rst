@@ -1,7 +1,7 @@
 Examine a qkview
 ================================================================================
 
-Select the F5 icon in the left navigation panel.  
+Select the ``F5`` icon in the left navigation panel.  
 
 .. image:: ./images/4_vscode_OpenExtension.png
    :alt: F5 Extension Icon

@@ -1,9 +1,9 @@
 Using the F5 Extension to Deploy AS3 declarations
 ===============================================================================
 
-Make sure you are connected to BIG-IP1 in the F5 Extension.
+Connect to ``BIG-IP1`` in the F5 Extension.
 
-#. Go to the Management GUI on BIG-IP1 notice it is set to ``Standby``. Leave it that way for now.
+#. Go to the Management GUI on ``BIG-IP1`` notice it is set to ``Standby``. Leave it that way for now.
 
 #. In the Management GUI, navigate to ``Local Traffic --> Virtual Servers`` and see that you only have two partions with no configuration.
 
@@ -119,8 +119,8 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
 #. In the Management GUI for both BIG-IP devices, confirm the creation of 
 
-     * Pair of HTTPS virtual servers were created
-     * Virtual servers have a http/2 profile attached
+     * Pair of ``HTTPS virtual servers`` were created
+     * Virtual servers have a ``http/2 profile`` attached
 
   
     .. image:: ./images/02as3_step2_vs.png
@@ -147,7 +147,7 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
     .. image:: ./images/02as3_step2_Ciphers.png
         :alt: BIGIP management GUI VS verification
-        :width: 50%
+        :width: 80%
 
 
 
