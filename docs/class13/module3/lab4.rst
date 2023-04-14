@@ -19,7 +19,7 @@ Make sure you are connected to BIG-IP1 in the F5 Extension.
         :alt: BIGIP management GUI no config
         :width: 95%
 
-#. Close the ``as3check_makehttprequest.json`` file to prepare for the next steps.
+#. Close the ``as3check_makehttprequest.json`` file.
 
 #. Switch to the file view in ``VSCode``.
 
@@ -37,7 +37,7 @@ Step1 Create HTTP Virtual Servers with AS3 and Service Discovery
         :width: 80%
 
 
-#. Now right click on the selected text and select ``Post as AS3 Declaration``.
+#. Select all of the text and then right click to select ``Post as AS3 Declaration``.
 
     .. image:: ./images/02as3_step1b.png
         :alt: POST as AS3 declaration
@@ -95,7 +95,7 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
 #. Close the ``untitled`` panel
 
-#. Close the ``Step1_as3_AWS_Autodiscovery.json`` file from Step1.
+#. Close the ``Step1_as3_AWS_Autodiscovery.json`` file.
 
 #. Open ``Step3_as3_HTTPS_Autodiscovery.json``, select all of the text and then right click to select ``POST as AS3 Declaration``.
 
@@ -121,23 +121,25 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
      * Pair of HTTPS virtual servers were created
      * Virtual servers have a http/2 profile attached
+
   
-    .. image:: ./images/02as3_step2verify1vs.png
+    .. image:: ./images/02as3_step2_vs.png
         :alt: BIGIP management GUI VS verification
         :width: 80%
 
-
-    .. image:: ./images/02as3_step2verify2.png
-        :alt: BIGIP management GUI partition verification
+    .. image:: ./images/02as3_step2_vshttp2.png
+        :alt: BIGIP management GUI http2 verification
         :width: 80%
 
+#. Verify connectivity to the HTTPS application and note the ciphers in use
 
-    .. image:: ./images/02as3_step2verify2pool.png
+     * Use developer tools to see the ciphers in use
+
+    .. image:: ./images/developertools.png
         :alt: BIGIP management GUI shared pool verification
         :width: 80%
 
-
-    .. image:: ./images/02as3_step2verify2vs.png
+    .. image:: ./images/02as3_step2_Ciphers.png
         :alt: BIGIP management GUI VS verification
         :width: 80%
 
