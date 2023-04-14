@@ -1,22 +1,23 @@
 Using the F5 Extension to Deploy AS3 declarations
 ===============================================================================
+
 Make sure you are connected to BIG-IP1 in the F5 Extension.
 
-#. Go to the Management GUI on BIG-IP1 notice it is set to Standby. Leave it that way for now.
+#. Go to the Management GUI on BIG-IP1 notice it is set to ``Standby``. Leave it that way for now.
 
-#. In the Management GUI, navigate to Local Traffic --> Virtual Servers and see that you only have two partions with no configuration.
+#. In the Management GUI, navigate to ``Local Traffic --> Virtual Servers`` and see that you only have two partions with no configuration.
 
-**BIG-IP1**
+    **BIG-IP1**
 
-.. image:: ./images/01as3_noconfig.png
-    :alt: BIGIP management GUI no config
-    :width: 95%
+    .. image:: ./images/01as3_noconfig.png
+        :alt: BIGIP management GUI no config
+        :width: 95%
 
-**BIG-IP2**
+    **BIG-IP2**
 
-.. image:: ./images/01as3_noconfig_2.png
-    :alt: BIGIP management GUI no config
-    :width: 95%
+    .. image:: ./images/01as3_noconfig_2.png
+        :alt: BIGIP management GUI no config
+        :width: 95%
 
 #. Close the json file you had open to prepare for the next steps.
 
@@ -29,129 +30,126 @@ Step1 Create HTTP Virtual Servers with AS3 and Service Discovery
 --------------------------------------------------------------------------------
 
 
-#. Open the **ATC\AS3\Step1_as3_AWS_Autodiscovery.json** file.  In the window with the JSON declaration, 
-select all of the text.  If you scroll down a little bit you will see that we are telling AWS to 
-look for tagged instances and add them to the pool.
+#. Open the ``ATC\AS3\Step1_as3_AWS_Autodiscovery.json`` file.  In the window with the JSON declaration, select all of the text.  If you scroll down a little bit you will see that we are telling AWS to look for tagged instances and add them to the pool.
 
-.. image:: ./images/02as3_step1a.png
-    :alt: load JSON file
-    :width: 80%
+    .. image:: ./images/02as3_step1a.png
+        :alt: load JSON file
+        :width: 80%
 
 
 #. Now right click on the selected text and select **Post as AS3 Declaration**.
 
-.. image:: ./images/02as3_step1b.png
-    :alt: POST as AS3 declaration
-    :width: 80%
+    .. image:: ./images/02as3_step1b.png
+        :alt: POST as AS3 declaration
+        :width: 80%
 
 #. As the extension waits for confirmation that the declaration was correct and able to be processed, you will see this:
 
-.. image:: ./images/02as3_step1c.png
-    :alt: Posting Declaration
-    :width: 80%
+    .. image:: ./images/02as3_step1c.png
+        :alt: Posting Declaration
+        :width: 80%
 
 #. Here you can see that all sections of the declaration were successful.
 
-.. image:: ./images/02as3_step1_success.png
-    :alt: Successful deployment
-    :width: 80%
+    .. image:: ./images/02as3_step1_success.png
+        :alt: Successful deployment
+        :width: 80%
 
 #. Confirm new partition/tenant. MORE INSTRUCTIONS TO COME
 
-.. image:: ./images/02as3_step1verify1.png
-    :alt: BIGIP management GUI partition verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify1.png
+        :alt: BIGIP management GUI partition verification
+        :width: 80%
 
 #. Confirm Pool populated. MORE INSTRUCTIONS TO COME
 
-.. image:: ./images/02as3_step1verify1pool.png
-    :alt: BIGIP management GUI shared pool verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify1pool.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 80%
 
 #. Confirm Virtual Servers MORE INSTRUCTIONS TO COME
 
-.. image:: ./images/02as3_step1verify1vs.png
-    :alt: BIGIP management GUI VS verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify1vs.png
+        :alt: BIGIP management GUI VS verification
+        :width: 80%
 
 #. BIG-IP2 Confirm Partition/tenant
 
-.. image:: ./images/02as3_step1verify2.png
-    :alt: BIGIP management GUI partition verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify2.png
+        :alt: BIGIP management GUI partition verification
+        :width: 80%
 
 #. BIG-IP2 confirm pool 
 
-.. image:: ./images/02as3_step1verify2pool.png
-    :alt: BIGIP management GUI shared pool verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify2pool.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 80%
 
 #. BIG-IP2
 
-.. image:: ./images/02as3_step1verify2vs.png
-    :alt: BIGIP management GUI VS verification
-    :width: 80%
+    .. image:: ./images/02as3_step1verify2vs.png
+        :alt: BIGIP management GUI VS verification
+        :width: 80%
 
 
 Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 --------------------------------------------------------------------------------
-Close the untitled panel
-close the Step1 declaration.
-Open Step3_as3_HTTPS_Autodiscovery.json
+
+#. Close the ``untitled`` panel
+
+#. Close the declaration from Step1.
+
+#. Open Step3_as3_HTTPS_Autodiscovery.json
 
 
-.. todo:: 
-    screengrabs and narrative
+    .. image:: ./images/02as3_step2a.png
+        :alt: load JSON file
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2a.png
-    :alt: load JSON file
-    :width: 80%
+    .. image:: ./images/02as3_step2b.png
+        :alt: POST as AS3 declaration
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2b.png
-    :alt: POST as AS3 declaration
-    :width: 80%
+    .. image:: ./images/02as3_step1c.png
+        :alt: Posting Declaration
+        :width: 80%
 
 
-.. image:: ./images/02as3_step1c.png
-    :alt: Posting Declaration
-    :width: 80%
+    .. image:: ./images/02as3_step2_success.png
+        :alt: Successful deployment
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2_success.png
-    :alt: Successful deployment
-    :width: 80%
+    .. image:: ./images/02as3_step2verify1.png
+        :alt: BIGIP management GUI partition verification
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2verify1.png
-    :alt: BIGIP management GUI partition verification
-    :width: 80%
+    .. image:: ./images/02as3_step2verify1pool.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2verify1pool.png
-    :alt: BIGIP management GUI shared pool verification
-    :width: 80%
+    .. image:: ./images/02as3_step2verify1vs.png
+        :alt: BIGIP management GUI VS verification
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2verify1vs.png
-    :alt: BIGIP management GUI VS verification
-    :width: 80%
+    .. image:: ./images/02as3_step2verify2.png
+        :alt: BIGIP management GUI partition verification
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2verify2.png
-    :alt: BIGIP management GUI partition verification
-    :width: 80%
+    .. image:: ./images/02as3_step2verify2pool.png
+        :alt: BIGIP management GUI shared pool verification
+        :width: 80%
 
 
-.. image:: ./images/02as3_step2verify2pool.png
-    :alt: BIGIP management GUI shared pool verification
-    :width: 80%
-
-
-.. image:: ./images/02as3_step2verify2vs.png
-    :alt: BIGIP management GUI VS verification
-    :width: 80%
+    .. image:: ./images/02as3_step2verify2vs.png
+        :alt: BIGIP management GUI VS verification
+        :width: 80%
 
 
 
