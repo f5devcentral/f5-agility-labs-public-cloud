@@ -58,7 +58,7 @@ Step1 Create HTTP Virtual Servers with AS3 and Service Discovery
 #. In the Management GUI for both BIG-IP devices, confirm the creation of 
 * A new partition/tenant
 * Pool was created and populated with two pool members
-* Pair of virtual servers weer created
+* Pair of virtual servers were created
 
     **BIG-IP1**
     .. image:: ./images/02as3_step1verify1.png
@@ -94,39 +94,30 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
 
 #. Close the ``Step1_as3_AWS_Autodiscovery.json`` file from Step1.
 
-#. Open ``Step3_as3_HTTPS_Autodiscovery.json``
-
+#. Open ``Step3_as3_HTTPS_Autodiscovery.json``, select all of the text and then right click to select ``POST as AS3 Declaration``.
 
     .. image:: ./images/02as3_step2a.png
         :alt: load JSON file
         :width: 80%
 
-
     .. image:: ./images/02as3_step2b.png
         :alt: POST as AS3 declaration
         :width: 80%
-
 
     .. image:: ./images/02as3_step1c.png
         :alt: Posting Declaration
         :width: 80%
 
+#. When successful, the BIG-IP will return a ``200`` with a message of ``success``.
 
     .. image:: ./images/02as3_step2_success.png
         :alt: Successful deployment
         :width: 80%
 
-
-    .. image:: ./images/02as3_step2verify1.png
-        :alt: BIGIP management GUI partition verification
-        :width: 80%
-
-
-    .. image:: ./images/02as3_step2verify1pool.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 80%
-
-
+#. In the Management GUI for both BIG-IP devices, confirm the creation of 
+* Pair of HTTPS virtual servers were created
+* Virtual servers have a http/2 profile attached
+  
     .. image:: ./images/02as3_step2verify1vs.png
         :alt: BIGIP management GUI VS verification
         :width: 80%
