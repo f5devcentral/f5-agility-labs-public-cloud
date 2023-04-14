@@ -12,7 +12,7 @@ Earlier in the lab you opened another VSCode window where you inspected and then
 
 #. Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut. 
  
-   .. image:: ./images/images/icon_VSCodeExtensions_inactive.png
+   .. image:: ./images/icon_VSCodeExtensions_inactive.png
       :align: left
 
 
