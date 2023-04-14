@@ -9,7 +9,6 @@ Connecting to your BIG-IP Devices
 Open the ``devices.json`` file.
 
  .. code-block:: json
-
 [
     {
         "device": "admin@52.11.43.7",
