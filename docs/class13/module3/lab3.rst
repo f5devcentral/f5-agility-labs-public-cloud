@@ -21,21 +21,21 @@ Open the ``devices.json`` file.
 ]
 
 
-.. image:: ./images/1f5Extension_deviceimport.png
-  :width: 80%
-  :alt: Directory image
+   .. image:: ./images/1f5Extension_deviceimport.png
+     :width: 80%
+     :alt: Directory image
 
 #. Highlight all of the text in the json file.
 
-.. image:: ./images/2f5Extension_deviceimport.png
-  :width: 80%
-  :alt: Directory image
+   .. image:: ./images/2f5Extension_deviceimport.png
+     :width: 80%
+     :alt: Directory image
 
 #. Then right click or cmd click on the highlighted text.  Select ``Import Devices``.
 
-.. image:: ./images/3f5Extension_deviceimport.png
-  :width: 80%
-  :alt: Directory image
+   .. image:: ./images/3f5Extension_deviceimport.png
+     :width: 80%
+     :alt: Directory image
 
 #. We are using this file to import multiple devices all at once, including the passwords.  This can also be 
 done without the passwords, so that you would have to add the passwords manually when connecting.
@@ -44,8 +44,8 @@ done without the passwords, so that you would have to add the passwords manually
 #. Select the F5 icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon 
 successful connection that there is a hexagon with an F5 in the middle.
 
-.. image:: ./images/4f5Extension_deviceconnect.png
-  :alt: Connected devices
+   .. image:: ./images/4f5Extension_deviceconnect.png
+     :alt: Connected devices
 
 
 Verify AS3 state on each device
@@ -55,8 +55,8 @@ When the ``F5 Extension`` connects to a device it runs a series of queries to gi
 information.  In the status bar at the bottom of the VScode window, you can see the elements of the ATC that are installed.
 #. You can click on this text to get some updates from the system.
 
-.. image:: ./images/5f5Extension_statusbar.png
-  :alt: VSCode status bar with arrow pointing to AS3 version
+   .. image:: ./images/5f5Extension_statusbar.png
+     :alt: VSCode status bar with arrow pointing to AS3 version
 
 #. Here you can see that the Terraform build out process installed four of the five components of the ATC, AS3, DO, TS, and CFE.
 
@@ -65,26 +65,23 @@ information.  In the status bar at the bottom of the VScode window, you can see 
 
 #. Ensure you are connected to BIG-IP1, then navigate to ``/ATC/AS3``. Open the ``as3check_makehttprequest.json``.
 
-.. code-block:: json
+   .. code-block:: json
   {
     "url": "/mgmt/shared/appsvcs/info"
 }
 
-.. image:: ./images/6f5Extension_makehttprequest.png
-  :alt: Showing the location of the file to open
+   .. image:: ./images/6f5Extension_makehttprequest.png
+     :alt: Showing the location of the file to open
 
 #. Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select **Make HTTP Request**.
 
-.. image:: ./images/7f5Extension_makehttprequest.png
-  :alt: context menu 
+   .. image:: ./images/7f5Extension_makehttprequest.png
+     :alt: context menu 
 
 #. Once the response has been received, it will appear in a new panel.  You should see that the version returned matches the version number in the statusbar.
 
-.. image:: ./images/8f5Extension_makehttprequest.png
-  :alt: Response windows
+   .. image:: ./images/8f5Extension_makehttprequest.png
+     :alt: Response windows
 
 #. Connect to BIG-IP2 and repeat the steps above.
  
-
-
-
