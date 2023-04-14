@@ -53,6 +53,8 @@ Verify AS3 state on each device
 
 When the ``F5 Extension`` connects to a device it runs a series of queries to give you quick access to a variety of 
 information.  In the status bar at the bottom of the VScode window, you can see the elements of the ATC that are installed.
+
+
 #. You can click on this text to get some updates from the system.
 
    .. image:: ./images/5f5Extension_statusbar.png
@@ -64,10 +66,12 @@ information.  In the status bar at the bottom of the VScode window, you can see 
 
 #. Ensure you are connected to BIG-IP1, then navigate to ``/ATC/AS3``. Open the ``as3check_makehttprequest.json``.
 
+
    .. code-block:: json
       {
         "url": "/mgmt/shared/appsvcs/info"
       }
+
 
     .. image:: ./images/6f5Extension_makehttprequest.png
        :alt: Showing the location of the file to open
