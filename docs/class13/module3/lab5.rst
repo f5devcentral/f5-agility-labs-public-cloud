@@ -48,6 +48,9 @@ First item under the Config Explorer is the name of the system that generated th
 The remaining menu items can be explored later
 
 
+.. todo:: 
+   Narrative and formatting
+
 
 Convert an application/virtual server into an AS3 Declaration
 --------------------------------------------------------------------------------
@@ -57,5 +60,23 @@ Convert an application/virtual server into an AS3 Declaration
 * pick an app
 * highlight the text in the app conf window and select convert to as3 declaration.
  
+   .. image:: ./images/03f5ext_qkviewImport.png
+      :alt: qkview Import
+      :width: 80%
+
+   .. image:: ./images/03f5ext_importcomplete.png
+      :alt: qkview Import completed
+      :width: 80%
+
+   .. image:: ./images/03f5ext_convertas3.png
+      :alt: Convert itwiki3
+      :width: 80%
+
+   .. image:: ./images/03f5ext_convertas3_result.png
+      :alt: AS3 output
+      :width: 80%
+
+
+
 
 
