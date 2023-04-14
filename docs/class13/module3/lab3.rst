@@ -4,30 +4,31 @@ Connecting the F5 Extension to your devices and verifying the state of AS3
 
 Connecting to your BIG-IP Devices
 --------------------------------------------------------------------------------
-Just under the VSCode icon is the explore icon, select this and navigate to the /ATC/f5extension directory.
+
+#. Just under the VSCode icon is the explore icon, select this and navigate to the /ATC/f5extension directory.
 Open the devices.json file.
 
 .. image:: ./images/1f5Extension_deviceimport.png
   :width: 80%
   :alt: Directory image
 
-Highlight all of the text in the json file.
+#. Highlight all of the text in the json file.
 
 .. image:: ./images/2f5Extension_deviceimport.png
   :width: 80%
   :alt: Directory image
 
-Then right click or cmd click on the highlighted text.  Select Import Devices.
+#. Then right click or cmd click on the highlighted text.  Select Import Devices.
 
 .. image:: ./images/3f5Extension_deviceimport.png
   :width: 80%
   :alt: Directory image
 
-We are using this file to import multiple devices all at once, including the passwords.  This can also be 
+#. We are using this file to import multiple devices all at once, including the passwords.  This can also be 
 done without the passwords, so that you would have to add the passwords manually when connecting.
 
 
-Select the F5 icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon 
+#. Select the F5 icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon 
 successful connection that there is a hexagon with an F5 in the middle.
 
 .. image:: ./images/4f5Extension_deviceconnect.png
@@ -49,22 +50,22 @@ Here you can see that the Terraform build out process installed four of the five
 Next we will issue a rest call to the AS3 listener to ensure it is functioning.  For this we will use a feature of the F5 Extension called
 Make HTTP Request available in the context menu.
 
-Ensure you are connected to BIG-IP1, then navigate to /ATC/AS3. Open the as3check_makehttprequest.json.
+#. Ensure you are connected to BIG-IP1, then navigate to /ATC/AS3. Open the as3check_makehttprequest.json.
 
 .. image:: ./images/6f5Extension_makehttprequest.png
   :alt: Showing the location of the file to open
 
-Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select **Make HTTP Request**.
+#. Select all of the text of the JSON file and right click on the text.  This opens the context mentu where you can select **Make HTTP Request**.
 
 .. image:: ./images/7f5Extension_makehttprequest.png
   :alt: context menu 
 
-Once the response has been received, it will appear in a new panel.  You should see that the version returned matches the version number in the statusbar.
+#. Once the response has been received, it will appear in a new panel.  You should see that the version returned matches the version number in the statusbar.
 
 .. image:: ./images/8f5Extension_makehttprequest.png
   :alt: Response windows
 
-Connect to Big-IP2 and repeat the steps above.
+#. Connect to BIG-IP2 and repeat the steps above.
  
 
 

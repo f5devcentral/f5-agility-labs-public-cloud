@@ -2,14 +2,14 @@ Install The F5 Extension and the F5 ACC Chariot Extension
 ================================================================================
 
 Earlier in the lab you opened another VSCode window where you inspected and then edited the Terraform file.
-That VSCode window shows WSL in the lower left green panel and has a blue status bar like this:
+#. That VSCode window shows WSL in the lower left green panel and has a blue status bar like this:
 
 .. image:: ./images/1_vscode_WSL_statusbar.png
    :alt: VSCode Status bar - WSL blue 
    :align: center
    :width: 40%
 
-Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
+#. Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
 Search for F5, select the extension “The F5 Extension”, then Install.
 
 .. image:: ./images/installWithinCode_11.04.2020.gif
@@ -22,7 +22,7 @@ Search for F5, select the extension “The F5 Extension”, then Install.
    :align: left
    :width: 80%
 
-In the list of extensions related to F5, you will also see F5 ACC Chariot, click Install.
+#. In the list of extensions related to F5, you will also see F5 ACC Chariot, click Install.
 
 .. image:: ./images/2_vscode_ACCExtensioninstall.png
    :alt: F5 ACC Installing
