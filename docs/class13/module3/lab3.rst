@@ -9,12 +9,12 @@ Connecting to your BIG-IP Devices
 #. Just under the ``VSCode`` icon in the upper left corner is the explore icon, select this and navigate to the ``/ATC/f5extension`` directory. Open the ``devices.json`` file.
 
     .. image:: ./images/icon_VSCodeExplorer_inactive.png
-       :alt: VSCode Explorer icon
        :align: left
-       :width: 70px
+       :scale: 50%
+       :alt: VSCode Explorer icon
 
     .. image:: ./images/1f5Extension_deviceimport.png
-       :width: 80%
+       :scale: 90%
        :align: left
        :alt: Directory image
 
@@ -36,13 +36,13 @@ Connecting to your BIG-IP Devices
 
 
     .. image:: ./images/2f5Extension_deviceimport.png
-       :width: 80%
+       :scale: 90%
        :alt: Directory image
 
 #. Then right click or cmd click on the highlighted text.  Select ``Import Devices``.
 
     .. image:: ./images/3f5Extension_deviceimport.png
-       :width: 80%
+       :scale: 90%
        :alt: Directory image
 
 
@@ -51,8 +51,9 @@ Connecting to your BIG-IP Devices
 #. Select the ``F5`` icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon successful connection that there is a hexagon with an F5 in the middle.
 
     .. image:: ./images/icon_F5Extension_inactive.png
-       :alt: F5 extension icon
+       :scale: 50%       
        :align: left
+       :alt: F5 extension icon
 
     .. image:: ./images/4f5Extension_deviceconnect.png
        :alt: Connected devices

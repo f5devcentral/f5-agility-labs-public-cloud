@@ -8,7 +8,6 @@ Earlier in the lab you opened another VSCode window where you inspected and then
    .. image:: ./images/1_vscode_WSL_statusbar.png
       :alt: VSCode Status bar - WSL blue 
       :align: center
-      :width: 40%
 
 #. Within the VSCode window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut. 
  
@@ -21,19 +20,19 @@ Earlier in the lab you opened another VSCode window where you inspected and then
    .. image:: ./images/installWithinCode_11.04.2020.gif
       :alt: Animated GUI
       :align: left
-      :width: 80%
+       :scale: 90%
 
    .. image:: ./images/2_vscode_f5extinstall.png
       :alt: F5 Extension Installing
       :align: left
-      :width: 80%
+       :scale: 90%
 
 #. In the list of extensions related to F5, you will also see ``F5 ACC Chariot``, click ``Install``.
 
    .. image:: ./images/2_vscode_ACCExtensioninstall.png
       :alt: F5 ACC Installing
       :align: left
-      :width: 80%
+       :scale: 90%
 
 Overview of the F5 Extension
 --------------------------------------------------------------------------------
