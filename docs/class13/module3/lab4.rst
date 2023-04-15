@@ -125,7 +125,7 @@ Step2 Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
         * Pair of ``HTTPS virtual servers`` were created
         * Virtual servers have a ``http/2 profile`` attached
 
-    
+ 
         .. image:: ./images/02as3_step2_vs.png
             :alt: BIGIP management GUI VS verification
             :width: 90%
@@ -181,8 +181,8 @@ Step3 Adding ECDSA certificates to your application
 
     #. In the Management GUI for both BIG-IP devices, confirm the creation of:
 
-    * Two ECDSA certificates were created
-        * System -> certificate Management ->Traffic Certificate Management -> SSL Certificate List 
+        * Two ECDSA certificates were created
+            * System -> certificate Management ->Traffic Certificate Management -> SSL Certificate List 
 
         .. image:: ./images/02as3_step3_ecdsacerts.png
             :alt: BIGIP management GUI ECDSA certificates
