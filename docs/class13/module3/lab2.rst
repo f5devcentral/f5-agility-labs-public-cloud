@@ -1,34 +1,54 @@
-Install The F5 Extension and the F5 ACC Chariot Extension
+F5 Extensions for VS Code
 ================================================================================
 
-In a previous lab module, you opened another VS Code window to inspect the Terraform folder.
 
-#. That VS Code window shows WSL in the lower left green panel and has a blue status bar like this:
+Overview of the F5 Extension
+--------------------------------------------------------------------------------
 
-   .. image:: ./images/1_vscode_WSL_statusbar.png
-      :alt: VS Code Status bar - WSL blue
-      :align: left
+The F5 Extension simplifies development of F5 Automation Toolchain declarations by providing snippets, examples, and declaration validation. It also assists with connecting, deploying, retrieving, converting, and updating declarations on F5 devices.
 
-#. Within the VS Code window that is connected to WSL, navigate to the Extensions menu.  You may either press the Extensions icon or use the CTL + Shift + X shortcut.
+Here are some example tasks that you can perform:
+
+- Send API calls for all ATC services (DO, AS3, TS, CFE, FAST)
+- Provides links to related ATC documentation and examples from the Github repository
+- Install/unInstall of ATC packages
+- Convert JSON <-> YAML
+- View decoded information for base64 formatted certificates
+- Extract application configurations (per virtual server)
+- Write, deploy, and modify iRules/iApps (with vscode-irule extension for language support)
+
+
+For more information, see |vscode_f5_extension|.
+
+|
+
+Install "F5 Extension" and "F5 ACC Chariot" Extensions
+--------------------------------------------------------------------------------
+
+#. Switch back to VS Code window that shows your Terraform folder.
+
+#. Navigate to the **Extensions** menu. You may either click on the **Extensions** icon or use the **<CTRL-SHIFT-X>** keyboard shortcut.
 
    .. image:: ./images/icon_VS CodeExtensions_inactive.png
       :scale: 50%
       :align: left
       :alt: VS Code Extensions icon
 
-#. Search for **F5**, select the extension **The F5 Extension**, then **Install**.
+#. Type ``F5`` in the search box and then select **The F5 Extension**.
 
    .. image:: ./images/installWithinCode_11.04.2020.gif
       :alt: Animated GUI
       :align: left
       :width: 90%
 
+#. In the extension description panel (to the right of the search results), click on the **Install** button.
+
    .. image:: ./images/2_vscode_f5extinstall.png
       :alt: F5 Extension Installing
       :align: left
       :width: 90%
 
-#. In the list of extensions related to F5, you will also see **F5 ACC Chariot**, click **Install**.
+#. In the list of extensions, you will also see **F5 ACC Chariot**. Select it and click on the **Install** button.
 
    .. image:: ./images/2_vscode_ACCExtensioninstall.png
       :alt: F5 ACC Installing
@@ -36,22 +56,7 @@ In a previous lab module, you opened another VS Code window to inspect the Terra
       :width: 90%
 
 
-Overview of the F5 Extension
---------------------------------------------------------------------------------
 
-The F5 Extension enhances your ability to write (A)utomated (T)ool(C)hain declarations with snippets, examples and declaration schema validation, and also assists with connecting, deploying, retrieving and updating declarations on F5 devices.
+.. |vscode_f5_extension| raw:: html
 
-It can also help with iRules/iApps, BIG-IQ, and regular configuration/migration.  Below are some of the high level features:
-
-- GET/POST/DELETE of all ATC services, including FAST/AS3/DO/TS/CF
-- links to quickly open related ATC documentation
-- Direct access to ATC examples from git repo
-- Install/UnInstall of ATC rpms
-- Convert JSON <-> YAML
-- Hovers to view decoded information for (certificates/base64)
-- Extract TMOS applications (per virtual server)
-- Write, deploy and modify iRules/iApps (with vscode-irule extension for language support)
-
-   .. note::
-
-      `F5 Extension documentation hub <https://f5devcentral.github.io/vscode-f5/>`_
+   <a href="https://f5devcentral.github.io/vscode-f5/" target="_blank"> F5 VS Code Extension documentation </a>

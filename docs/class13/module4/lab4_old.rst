@@ -148,7 +148,7 @@ From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the 
 .. image:: ./images/15_aws_console_elastic_ip_moved_to_bigip2.png
 	   :scale: 50%
 
-Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
+Back to the browser tab with the example application. <CTRL-F5> a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
 
 .. image:: ./images/16_example_app_bigip2_bypass_warning.png
 	   :scale: 50%
@@ -182,7 +182,7 @@ From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the 
 .. image:: ./images/21_aws_console_elastic_ip_moved_to_bigip1.png
 	   :scale: 50%
 
-Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
+Back to the browser tab with the example application. <CTRL-F5> a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
 
 .. image:: ./images/22_example_app_bigip1_bypass_warning.png
 	   :scale: 50%

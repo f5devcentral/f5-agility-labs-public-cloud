@@ -10,7 +10,7 @@ Examine a qkview
 
 
 
-#. In the lower left part of the screen, select the Imoprt.conf/UCS/QKVIEW from local file.
+#. In the lower left part of the screen, select **Import.conf/UCS/QKVIEW from local file**.
 
    .. image:: ./images/5_vscode_openqkviewbutton.png
       :alt: Open qkview button

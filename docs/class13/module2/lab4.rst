@@ -28,7 +28,7 @@ Click on the **terraform.tfvars.example** file.
 
 |
 
-Save it to a new file by selecting **File->Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
+Save it to a new file by selecting **File > Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
 
    .. image:: ./images/vscode-2.png
       :align: left

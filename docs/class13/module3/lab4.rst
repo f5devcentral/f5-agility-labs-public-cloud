@@ -1,200 +1,275 @@
-Using the F5 Extension to Deploy AS3 declarations
+Deploy AS3 declarations with F5 VS Code Extension
 ===============================================================================
 
-#. Connect to **BIG-IP #1** in the F5 Extension.
 
-#. Go to the Management GUI on **BIG-IP #1** notice it is set to **Standby**. Leave it that way for now.
+Connect to BIG-IPs
+--------------------------------------------------------------------------------
 
-#. In the Management GUI, navigate to **Local Traffic --> Virtual Servers** and see that you only have two partions with no configuration.
+#. Go to the **BIG-IP #1** TMUI. Notice that it is in the **Standby** state. Leave it as is for now.
+
+
+#. Navigate to **Local Traffic > Virtual Servers**. Note that have two administrative partitions: **Common** and **LOCAL_ONLY**.
+
+   **Common** is the default parititon. **LOCAL_ONLY** is a special partition that was created during the onboarding process to support configurations unique to each BIG-IP (will not be synchronized).
 
     **BIG-IP #1**
 
     .. image:: ./images/01as3_noconfig.png
-        :alt: BIGIP management GUI no config
-        :width: 95%
+       :alt: BIGIP management GUI no config
+       :width: 95%
 
     **BIG-IP #2**
 
     .. image:: ./images/01as3_noconfig_2.png
-        :alt: BIGIP management GUI no config
-        :width: 95%
+       :alt: BIGIP management GUI no config
+       :width: 95%
+
+    |
 
 
-Step 1: Create HTTP Virtual Servers with AS3 and Service Discovery
+Create HTTP Virtual Servers with AS3 and Service Discovery
 --------------------------------------------------------------------------------
 
 #. Close the **as3check_makehttprequest.json** file.
 
-#. Switch to the file view in **VS Code**.
+
+#. Switch to the file Explorer view in **VS Code**.
 
     .. image:: ./images/icon_VS CodeExplorer_inactive.png
-        :width: 70px
-        :alt: File/folder explorer icon
+       :width: 70px
+       :alt: File/folder explorer icon
+
+    |
 
 #. Navigate to the **ATC/AS3** directory.
 
-#. Open the **ATC/AS3/Step1_as3_AWS_Autodiscovery.json** file.  In the window with the JSON declaration, select all of the text.  If you scroll down a little bit you will see that we are telling AWS to look for tagged instances and add them to the pool.
+
+#. Open the **Step1_as3_AWS_Autodiscovery.json** file.  In the window with the JSON declaration, select all of the text.  Scroll down and you will see that we are telling AS3 to look for tagged AWS EC2 instances to add to the pool.
 
     .. image:: ./images/02as3_step1a.png
-        :alt: load JSON file
-        :width: 90%
+       :alt: load JSON file
+       :width: 90%
 
-#. Select all of the text and then right click to select **Post as AS3 Declaration**.
+    |
+
+#. Select all of the text and right click. Then, select **Post as AS3 Declaration**.
 
     .. image:: ./images/02as3_step1b.png
-        :alt: POST as AS3 declaration
-        :width: 90%
+       :alt: POST as AS3 declaration
+       :width: 90%
 
-#. As the extension waits for confirmation that the declaration was correct and able to be processed, you will see this:
+    |
+
+
+#. As the extension waits for AS3 to validate and apply the declaration, you will see the following:
 
     .. image:: ./images/02as3_step1c.png
-        :alt: Posting Declaration
-        :width: 90%
+       :alt: Posting Declaration
+       :width: 90%
+
+    |
+
 
 #. Here you can see that all sections of the declaration were successful. Below the highlighted box is the declaration that you submitted.
 
     .. image:: ./images/02as3_step1_success.png
-        :alt: Successful deployment
-        :width: 90%
+       :alt: Successful deployment
+       :width: 90%
 
-#. In the Management GUI for both BIG-IP devices, confirm the creation of:
+    |
 
-    * A new partition/tenant
-    * Pool was created and populated with two pool members
-    * Pair of virtual servers were created
+
+#. In the TMUI of both BIG-IP devices, confirm the creation of:
+
+    * A new BIG-IP administrative partition (AS3 'tenant')
+    * A new Pool with two pool members
+    * Two new virtual servers
+
+    .. note::
+
+       Since configuration sync was enabled as part of the BIG-IP onboarding, you will see the same configuration on both BIG-IP instances.
+
+    |
 
     **BIG-IP #1**
 
     .. image:: ./images/02as3_step1verify1.png
-        :alt: BIGIP management GUI partition verification
-        :width: 90%
+       :alt: BIGIP management GUI partition verification
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step1verify1pool.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 90%
+       :alt: BIGIP management GUI shared pool verification
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step1verify1vs.png
-        :alt: BIGIP management GUI VS verification
-        :width: 90%
+       :alt: BIGIP management GUI VS verification
+       :width: 90%
 
     |
 
     **BIG-IP #2**
 
     .. image:: ./images/02as3_step1verify2.png
-        :alt: BIGIP management GUI partition verification
-        :width: 90%
+       :alt: BIGIP management GUI partition verification
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step1verify2pool.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 90%
+       :alt: BIGIP management GUI shared pool verification
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step1verify2vs.png
-        :alt: BIGIP management GUI VS verification
-        :width: 90%
+       :alt: BIGIP management GUI VS verification
+       :width: 90%
+
+    |
 
 
-Step 2: Enable modern protocols such as HTTP/2 with AS3 and Service Discovery
+Enable HTTP/2 with AS3
 --------------------------------------------------------------------------------
 
-#. Close the **untitled** panel
+By default, BIG-IP uses HTTP/1.1. HTTP/2 is a more modern HTTP protocol version.
 
-#. Close the **Step1_as3_AWS_Autodiscovery.json** file.
 
-#. Open **Step3_as3_HTTPS_Autodiscovery.json**, select all of the text and then right click to select **POST as AS3 Declaration**.
+#. Close the **untitled** file tab.
+
+
+#. Close the **Step1_as3_AWS_Autodiscovery.json** file tab.
+
+
+#. Open **Step3_as3_HTTPS_Autodiscovery.json**, select all of the text, right click, and then select **POST as AS3 Declaration**.
 
     .. image:: ./images/02as3_step2a.png
-        :alt: load JSON file
-        :width: 90%
+       :alt: load JSON file
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step2b.png
-        :alt: POST as AS3 declaration
-        :width: 90%
+       :alt: POST as AS3 declaration
+       :width: 90%
+
+    |
 
     .. image:: ./images/02as3_step1c.png
-        :alt: Posting Declaration
-        :width: 90%
+       :alt: Posting Declaration
+       :width: 90%
 
-#. When successful, the BIG-IP will return a **200** with a message of **success**.
+    |
+
+
+#. When successful, the BIG-IP will return a status code of **200** and a message of **SUCCESS**.
 
     .. image:: ./images/02as3_step2_success.png
-        :alt: Successful deployment
-        :width: 90%
+       :alt: Successful deployment
+       :width: 90%
 
-#. In the Management GUI for both BIG-IP devices, confirm the following:
+    |
 
-    * Pair of **HTTPS virtual servers** were created
-    * Virtual servers have a **http/2 profile** attached
+
+#. In the TMUI of both BIG-IP devices, confirm the following:
+
+   * Two **HTTPS virtual servers** were created
+   * The two irtual servers have an **HTTP/2 Profile (Client)** attached
 
 
     .. image:: ./images/02as3_step2_vs.png
-        :alt: BIGIP management GUI VS verification
-        :width: 90%
+       :alt: BIGIP management GUI VS verification
+       :width: 90%
 
     .. image:: ./images/02as3_step2_vshttp2.png
-        :alt: BIGIP management GUI http2 verification
-        :width: 90%
+       :alt: BIGIP management GUI http2 verification
+       :width: 90%
 
-#. Verify connectivity to the HTTPS application and note the ciphers in use
+    |
 
-* Open you browser and in a new tab, navigate to the IP address **vip1_public_ip**
-* Use developer tools to see the ciphers in use
 
+#. Now, you will verify connectivity to the HTTPS application and examine the ciphers used.
+
+   * Open the web browser and, navigate to the IP address **vip1_public_ip** (refer to ``terraform output`` if needed).
+   * Use the web browser's **developer tools** to see the ciphers in use.
 
     .. image:: ./images/02as3_step2_web.png
-        :alt: BIGIP management GUI shared pool verification
-        :width: 90%
+       :alt: BIGIP management GUI shared pool verification
+       :width: 90%
+
+    |
 
     .. image:: ./images/developertools.png
-        :alt: BIGIP management GUI shared pool verification
+       :alt: BIGIP management GUI shared pool verification
+       :width: 70%
+
+    |
 
     .. image:: ./images/02as3_step2_Ciphers.png
-        :alt: BIGIP management GUI VS verification
+       :alt: BIGIP management GUI VS verification
+
+    |
 
 
-Step 3: Adding ECDSA certificates to your application
+Adding ECDSA certificates to the application
 --------------------------------------------------------------------------------
 
-#. Close the untitled panel
+Elliptic Curve Cryptography (ECC) provides strong security with smaller key sizes than traditional RSA cryptography. ECC is also more computationally efficient, which is better for use with mobile devices. You will now apply ECDSA certificates to your application virtual servers.
 
-#. Close the previous declaration.
+#. Close the **untitled** file tab.
+
+
+#. Close the previous AS3 declaration.
+
 
 #. Open **Step3_as3_ecdsaCerts_Autodiscovery.json** and select all of the text.
 
-
     .. image:: ./images/02as3_step3a.png
-        :alt: load JSON file
-        :width: 90%
+       :alt: load JSON file
+       :width: 90%
+
+    |
+
 
 #. Right click and select **POST as AS3 Declaration**.
 
     .. image:: ./images/02as3_step3b.png
-        :alt: POST as AS3 declaration
-        :width: 90%
+       :alt: POST as AS3 declaration
+       :width: 90%
 
-
+    |
 
     .. image:: ./images/02as3_step3_success.png
-        :alt: Posting Declaration
-        :width: 90%
+       :alt: Posting Declaration
+       :width: 90%
+
+    |
 
 
-
-#. In the Management GUI for both BIG-IP devices, confirm the creation of:
+#. In the TMUI of both BIG-IP devices, confirm the following:
 
     * Two ECDSA certificates were created
-        * System -> certificate Management ->Traffic Certificate Management -> SSL Certificate List
+        * **System > certificate Management > Traffic Certificate Management > SSL Certificate List**
 
     .. image:: ./images/02as3_step3_ecdsacerts.png
-        :alt: BIGIP management GUI ECDSA certificates
-        :width: 90%
+       :alt: BIGIP management GUI ECDSA certificates
+       :width: 90%
 
-#. In the browser verify that you see the ECDSA ciphers in use.
+    |
 
+
+#. In the browser, verify that you see the ECDSA ciphers in use.
 
     .. image:: ./images/developertools.png
-        :alt: BIGIP management GUI shared pool verification
+       :alt: BIGIP management GUI shared pool verification
+       :width: 70%
+
+    |
 
     .. image:: ./images/02as3_step3_ciphers.png
-        :alt: BIGIP management GUI http2 verification
-        :width: 90%
+       :alt: BIGIP management GUI http2 verification
+       :width: 90%
+

@@ -134,7 +134,7 @@ From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the 
 .. image:: ./images/cfe-failover-test-5.png
    :align: left
 
-Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
+Back to the browser tab with the example application. <CTRL-F5> a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
 
 .. image:: ./images/cfe-failover-test-6.png
    :align: left
@@ -166,7 +166,7 @@ From the AWS Console, Services => NETWORK & SECURITY => Elastic IPs. Select the 
 .. image:: ./images/cfe-failover-test-11.png
    :align: left
 
-Back to the browser tab with the example application. [CTRL] + [F5] a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
+Back to the browser tab with the example application. <CTRL-F5> a few times to refresh the browser. We are using self-signed certificates in the lab. Bypass the TLS warnings. “Accept the Risk and Continue”.
 
 .. image:: ./images/cfe-failover-test-12.png
    :align: left

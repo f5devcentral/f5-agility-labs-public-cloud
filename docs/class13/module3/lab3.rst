@@ -1,24 +1,29 @@
-Connecting the F5 Extension to your devices and verifying the state of AS3
+Managing Devices with F5 VS Code Extension
 ================================================================================
 
 
-Connecting to your BIG-IP Devices
+Connect to your BIG-IP Devices
 --------------------------------------------------------------------------------
 
+#. Click on the **Explorer** icon (top left corner - below the **VS Code** icon).
 
-#. Just under the **VS Code** icon in the upper left corner is the explore icon, select this and navigate to the **/ATC/f5extension** directory. Open the **devices.json** file.
+
+#. Navigate to the **/ATC/f5extension** folder and open the **devices.json** file.
 
     .. image:: ./images/icon_VS CodeExplorer_inactive.png
         :scale: 50%
         :align: left
         :alt: VS Code Explorer icon
 
+    |
+
     .. image:: ./images/1f5Extension_deviceimport.png
         :align: left
         :alt: Directory image
 
-#. Highlight all of the text in the json file.
+    |
 
+#. Highlight all of the text in the json file.
 
     .. code-block:: json
 
@@ -38,13 +43,17 @@ Connecting to your BIG-IP Devices
     .. image:: ./images/2f5Extension_deviceimport.png
         :alt: Directory image
 
-#. Then right click or cmd click on the highlighted text.  Select **Import Devices**.
+
+#. Right-click (Mac: Command-click) on the highlighted text and select **Import Devices**.
 
     .. image:: ./images/3f5Extension_deviceimport.png
         :alt: Directory image
 
+    |
+
 
 #. We are using this file to import multiple devices all at once, including the passwords.  This can also be done without the passwords, so that you would have to add the passwords manually when connecting.
+
 
 #. Select the **F5** icon in the left navigation menu.  Connect to each of the BIG-IP hosts.  Notice that upon successful connection that there is a hexagon with an F5 in the middle.
 
@@ -64,7 +73,11 @@ Connecting to your BIG-IP Devices
 
 #. Here you can see that the Terraform build out process installed four of the five components of the ATC, AS3, DO, TS, and CFE.
 
-#. Next we will issue a rest call to the AS3 listener to ensure it is functioning.  For this we will use a feature of the F5 Extension called **Make HTTP Request** available in the context menu.
+
+Check AS3 Extension Status
+--------------------------------------------------------------------------------
+
+#. Now, we will issue a REST call to the AS3 API endpoint to ensure that it is functioning.  We will use a feature of the F5 Extension called **Make HTTP Request** available in the context menu.
 
 #. Ensure you are connected to **BIG-IP #1**, then navigate to **/ATC/AS3** and open **as3check_makehttprequest.json**.
 
