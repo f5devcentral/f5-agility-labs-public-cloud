@@ -9,17 +9,12 @@ Only one of the BIG-IP instances and the two application servers are needed in t
 Infrastructure Target State
 ================================================================================
 
-The AS3 configuration that you will use in this lab module deploys the following:
+You will deploy AS3 configurations for the following:
 
 - Two HTTP applications using AWS autodiscovery
 - Two HTTPS applications configured to use HTTP/2
 - Update the two HTTPS applications to use ECDSA certificates
 - Examine a Qkview and convert one application into an AS3 declaration
-
-
-.. note::
-
-   This module does not cover HA clustering/failover configuration. That will be done in a later module.
 
 
 **Network Diagram**
@@ -28,4 +23,3 @@ The AS3 configuration that you will use in this lab module deploys the following
    :alt: Lab diagram
    :align: left
    :width: 100%
-

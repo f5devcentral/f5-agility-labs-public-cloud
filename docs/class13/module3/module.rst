@@ -1,23 +1,14 @@
-App Deployment using Application Services 3 Extension (AS3) --- CARL
+App Deployment using Application Services 3 Extension (AS3)
 ================================================================================
 
-We begin our journey with Application Services 3 (AS3) Extension by first examining a working 
-configuration and converting it into an AS3 Declaration. You will continue to use VS Code, along 
-with some extensions that make these tasks much easier.
+Application Services 3 (AS3) is an F5 ATC extension that enables declarative configuration of  virtual servers.
 
 In this module, you will:
 
--  Install extensions into VS Code.
--  Learn about the F5 Extension.
--  Deploy applications using AS3
--  Use the VS Code F5 Extension to Examine a system and convert an application to an Application 
-Services 3 Extension (AS3) declaration
-
-.. note::
-
-   This module does not cover HA clustering/failover configuration. That was already done in the 
-   initial Terraform deployment using DO.
-
+-  Install VS Code extensions to management F5 ATC components.
+-  Learn about the F5 Extension for VS Code.
+-  Review a working TMSH configuration and then convert it into an AS3 Declaration.
+-  Deploy applications using AS3.
 
 .. toctree::
    :caption: CONTENTS

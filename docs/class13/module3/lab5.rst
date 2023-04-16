@@ -1,7 +1,7 @@
 Examine a qkview
 ================================================================================
 
-#. Select the ``F5`` icon in the left navigation panel.  
+#. Select the **F5** icon in the left navigation panel.
 
 
    .. image:: ./images/icon_F5Extension_inactive.png
@@ -43,11 +43,11 @@ Lets take a quick tour of what you can see in the config explorer.
 
 First item under the Config Explorer is the name of the system that generated the qkview.
 
-``XC Diagnostics`` is disabled by default.  Enabling this allows you to determine the readiness to migrate the configuration elements into F5's SaaS offering.
+**XC Diagnostics** is disabled by default.  Enabling this allows you to determine the readiness to migrate the configuration elements into F5's SaaS offering.
 
-``Sources`` all of the conf files from the device.
+**Sources** all of the conf files from the device.
 
-``Partitions`` all of the partitions and the virtual servers/apps.
+**Partitions** all of the partitions and the virtual servers/apps.
 
 The remaining menu items can be explored later
 
@@ -57,11 +57,11 @@ Convert an application/virtual server into an AS3 Declaration
 
 
 
-   #. ``Partitions`` is where you can drill down to the applications.  This is where we will do some digging.
+   #. **Partitions** is where you can drill down to the applications.  This is where we will do some digging.
 
       * pick an app
       * highlight the text in the app conf window and select convert to as3 declaration.
-      
+
          .. image:: ./images/02f5ext_qkviewImport.png
             :alt: qkview Import
 
@@ -73,7 +73,4 @@ Convert an application/virtual server into an AS3 Declaration
 
          .. image:: ./images/03f5ext_convertas3_result.png
             :alt: AS3 output
-
-
-
 
