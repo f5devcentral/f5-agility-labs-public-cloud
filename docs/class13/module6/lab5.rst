@@ -27,7 +27,7 @@ From Postman, nagigate to “Module 6 - Telemetry Streaming” > **“TS-2-A [bi
 
 .. note::
 
-   Chaning the API call from a POST to a GET using the same URL will pull the **Telemetry System** configuration currently deployed from each BIG-IP. You can use this GET method to view the full **TS** configuration at anytime.
+   Changing the API call from a POST to a GET using the same URL will pull the **Telemetry System** configuration currently deployed from each BIG-IP. You can use this GET method to view the full **TS** configuration at anytime.
 
 .. attention::
 

@@ -39,7 +39,7 @@ Check AWS Resource Tags for CFE Failover Objects
 --------------------------------------------------------------------------------
 
 #. In the AWS Console, navigate to **Services > EC2 > NETWORK & SECURITY > Elastic IPs**.
- 
+
 #. Select the Elastic IP (public IP) mapped to **10.0.1.101**.
 
 #. Select the **Tags** tab below. Note the Elastic IP has been tagged for use with CFE.
