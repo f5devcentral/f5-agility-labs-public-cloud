@@ -7,7 +7,7 @@ You will now remove the CFE configuration from both BIG-IPs to prepare the envir
 
    A response status code of “200” indicates that the declaration was successfully posted.
 
-   .. image:: ./images/cfe-cleanup-bigip1.png
+   .. image:: ./images/cfe-postman-cleanup-3a.png
       :align: left
 
    |
@@ -16,7 +16,7 @@ You will now remove the CFE configuration from both BIG-IPs to prepare the envir
 
    A response status code of “200” indicates that the declaration was successfully posted.
 
-   .. image:: ./images/cfe-cleanup-bigip2.png
+   .. image:: ./images/cfe-postman-cleanup-3b.png
       :align: left
 
 |
