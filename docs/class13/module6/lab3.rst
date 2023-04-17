@@ -1,33 +1,38 @@
 Verify installation of F5 Telemetry Streaming
 ================================================================================
 
-Verify that **F5 Telemetry Streaming** has been installed via the WebUI and API
+Verify that the **Telemetry Streaming** extension has been installed via the WebUI and API.
 
 
 Verify installation via the WebUI
 --------------------------------------------------------------------------------
 
-From BIG-IP1, naviagte to **iApps > Package Management LX**. Note the f5-telemetry package is installed.
+#. From BIG-IP #1, navigate to **iApps > Package Management LX**. Note that the **f5-telemetry** package is installed.
 
-Do the same for BIG-IP2.
+#. Do the same for BIG-IP #2.
 
-.. image:: ./images/2023_1_bigip1_telemetry_streaming_icontrol_lx_installed.png
-	   :scale: 50%
+   .. image:: ./images/2023_1_bigip1_telemetry_streaming_icontrol_lx_installed.png
+      :scale: 50%
 
 
 Verify installation via API
 --------------------------------------------------------------------------------
 
-From Postman, naviagte to “Module 6 - Telemetry Streaming” > **“TS-1-A [bigip1] Get extension status”** > and click [Send].
+#. In Postman, expand the **Module 6 - Telemetry Streaming** folder.
 
-"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) is ready on BIG-IP1.
+#. Click on the **TS-1-A [bigip1] Get extension status** request and send it to the BIG-IP.
 
-.. image:: ./images/2023_2_postman_telemetry_streaming_status_bigip1.png
-	   :scale: 50%
+   A response status code of "200 OK" indicates TS is ready.
 
-From Postman, nagigate to “Module 6 - Telemetry Streaming” > **“TS-1-B [bigip2] Get extension status”** > and click [Send].
+   .. image:: ./images/2023_2_postman_telemetry_streaming_status_bigip1.png
+      :scale: 50%
 
-"Status: 200 OK" response signals that the F5 Telemetry Streaming Extension (BIG-IP TS) is ready on BIG-IP2.
+   |
 
-.. image:: ./images/2023_3_postman_telemetry_streaming_status_bigip2.png
-	   :scale: 50%
+#. Click on the **TS-1-B [bigip2] Get extension status** request and send it to the BIG-IP.
+
+   A response status code of "200 OK" indicates TS is ready.
+
+   .. image:: ./images/2023_3_postman_telemetry_streaming_status_bigip2.png
+      :scale: 50%
+

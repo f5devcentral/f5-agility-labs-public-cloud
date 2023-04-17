@@ -21,14 +21,14 @@ Check F5 CFE Status
 
 #. Click on the **CFE-1-A [bigip1] Get extension status** request and send it to the BIG-IP.
 
-   A response status code of "200" indicates CFE is ready.
+   A response status code of "200 OK" indicates CFE is ready.
 
    .. image:: ./images/2_postman_check_cloud_failover_status_bigip1.png
       :scale: 50%
 
    |
 
-#. Repeat for the **CFE-1-A [bigip1] Get extension status** request and confirm that a response status code of "200" is returned.
+#. Repeat for the **CFE-1-A [bigip1] Get extension status** request and confirm that a response status code of "200 OK" is returned.
 
    .. image:: ./images/3_postman_check_cloud_failover_status_bigip2.png
       :scale: 50%

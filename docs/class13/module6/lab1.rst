@@ -1,12 +1,7 @@
-Lab Scenario
+What is F5 Telemetry Streaming?
 ================================================================================
 
-Two AWS VPCs are connected to an AWS Transit Gateway, which routes traffic between the VPCs. The **app** VPC contains two application server instances (each in a different availability zone). The **hub** VPC contains two BIG-IP VE instances (each in a different availability zone).
+**Telemetry Streaming (TS)** is an iControl LX Extension that enables you to aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application. It is delivered as a TMOS-independent RPM file.
 
-Each student will configure **F5 Telemetry Streaming** to send System log data to AWS Cloudwatch, then view the logs via the AWS Console. Connectivity from BIG-IP1 and BIG-IP2 to CloudWatch will use the internal Vlan.
+Telemetry Streaming uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. To use TS, you POST a single JSON declaration to the BIG-IP's TS REST API endpoint.
 
-
-**Network Diagram**
-
-.. image:: ./images/2023_ts-lab-diagram.png
-   :align: left

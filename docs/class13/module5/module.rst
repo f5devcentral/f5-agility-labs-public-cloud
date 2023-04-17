@@ -1,4 +1,4 @@
-HA Failover via Cloud Load Balancer --- ANTHONY, GARLAND
+HA Failover via Cloud Load Balancer
 ================================================================================
 
 In this module, you will:
@@ -7,7 +7,7 @@ In this module, you will:
 -  Test BIG-IP failover
 
 
-.. todo:: 
+.. todo::
 
    @Anthony Review screenshots and update as needed.
 
