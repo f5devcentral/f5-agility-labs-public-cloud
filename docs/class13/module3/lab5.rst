@@ -3,12 +3,8 @@ Examine a qkview
 
 #. Select the **F5** icon in the left navigation panel.
 
-
    .. image:: ./images/icon_F5Extension_inactive.png
       :align: left
-      :width: 50%
-
-
 
 #. In the lower left part of the screen, select **Import.conf/UCS/QKVIEW from local file**.
 
@@ -17,22 +13,26 @@ Examine a qkview
       :align: left
       :width: 90%
 
-In the toolbar that appears, navigate to the /home/f5admin/f5lab/ATC/f5extension directory.
-Select the qkview file.
 
-.. image:: ./images/6_vscode_openqkview_file.png
-   :alt: Open qkview file
-   :align: left
-   :width: 90%
+#. In the toolbar that appears, navigate to their ``/home/f5admin/f5lab/ATC/f5extension`` directory. Select the qkview file.
 
-It will take a little while to ingest the file and read it.
-When it is done, you will see the machine name of the device and a tree structure below it.
+   .. image:: ./images/6_vscode_openqkview_file.png
+      :alt: Open qkview file
+      :align: left
+      :width: 90%
 
-.. image:: ./images/6_vscode_qkviewopened.png
-   :alt: Open qkview file
-   :align: left
-   :width: 30%
 
+#. It will take a little while to ingest the file and read it. When it is done, you will see the machine name of the device and a tree structure below it.
+
+   .. image:: ./images/03f5ext_importcomplete.png
+      :alt: qkview Import completed
+
+
+#. **Optional** Secondary way to open a qkview/ucs/.conf file.  In the Explorer view, you can right click on the qkview file and select ``Explore TMOS Config``.
+
+   .. image:: ./images/03f5ext_qkviewImport2.png
+      :width: 90%
+      
 
 
 Using the F5 Extension to Explore a qkview
@@ -56,21 +56,18 @@ Convert an application/virtual server into an AS3 Declaration
 --------------------------------------------------------------------------------
 
 
+#. Expand the ``Partitions``, then expand ``Common`` and search for ``ITWiki3.0``. 
+   
+   #. Select the application and then select all of the text in the window.
+   
+   #. Right click and select ``Convert to AS3 with ACC``.
 
-   #. **Partitions** is where you can drill down to the applications.  This is where we will do some digging.
 
-      * pick an app
-      * highlight the text in the app conf window and select convert to as3 declaration.
+      .. image:: ./images/03f5ext_convertas3.png
+         :alt: Convert itwiki3
 
-         .. image:: ./images/02f5ext_qkviewImport.png
-            :alt: qkview Import
+#. A new window will open with your new AS3 declaration that will replicate that configuration.  
 
-         .. image:: ./images/03f5ext_importcomplete.png
-            :alt: qkview Import completed
-
-         .. image:: ./images/03f5ext_convertas3.png
-            :alt: Convert itwiki3
-
-         .. image:: ./images/03f5ext_convertas3_result.png
-            :alt: AS3 output
+      .. image:: ./images/03f5ext_convertas3_result.png
+         :alt: AS3 output
 
