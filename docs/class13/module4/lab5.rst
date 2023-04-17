@@ -172,7 +172,7 @@ Force Failback to BIG-IP #1
 
    .. image:: ./images/cfe-failover-verify-aws-2.png
       :align: left
-   
+
    |
 
 #. Switch to the browser tab with the example application and press **<CTRL-F5>** a few times to refresh the page.

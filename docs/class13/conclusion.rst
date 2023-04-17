@@ -62,10 +62,6 @@ Revision History
      - Tony Marfil
      - Lab creation - 2 hour duration
 
-.. todo::
-
-   confirm version history
-
 
 Lab Guide Repository (GitHub)
 ================================================================================

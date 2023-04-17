@@ -9,6 +9,7 @@ You will now remove the CFE configuration from both BIG-IPs to prepare the envir
 
    .. image:: ./images/cfe-postman-cleanup-3a.png
       :align: left
+      :scale: 50%
 
    |
 
@@ -18,6 +19,7 @@ You will now remove the CFE configuration from both BIG-IPs to prepare the envir
 
    .. image:: ./images/cfe-postman-cleanup-3b.png
       :align: left
+      :scale: 50%
 
 |
 
