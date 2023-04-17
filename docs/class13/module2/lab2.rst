@@ -1,13 +1,19 @@
 Lab Scenario
 ================================================================================
 
-.. _scenario:
+Network Diagram
+--------------------------------------------------------------------------------
 
 Two AWS VPCs are connected by an AWS Transit Gateway, which routes traffic between the VPCs. The **app** VPC contains two application server instances (each in a different availability zone). The **hub** VPC contains two BIG-IP VE instances (each in a different availability zone). Users must connect to a Virtual Server on a BIG-IP to access the application.
 
+.. image:: ./images/aws-lab-diagram.png
+   :align: left
+
+|
+
 
 Infrastructure Target State
-================================================================================
+--------------------------------------------------------------------------------
 
 The Terraform configuration that you will use in this lab module deploys the following:
 
@@ -21,11 +27,6 @@ The Terraform configuration that you will use in this lab module deploys the fol
    This module does not cover HA clustering/failover configuration. That will be done in a later module.
 
 |
-
-**Network Diagram**
-
-.. image:: ./images/aws-lab-diagram.png
-   :align: left
 
 
 Virtual Lab Infrastructure Details (and Credentials)
