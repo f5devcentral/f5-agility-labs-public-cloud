@@ -23,14 +23,11 @@ During the initial onboarding process, the two BIG-IPs were configured as follow
 - Network Failover on 'internal' interface
 
 
-Active-Active BIG-IP VE Instances via AWS NLB
+Summary of Lab Steps
 --------------------------------------------------------------------------------
 
-You will change the setup of the two BIG-IPs to an active-active configuration and leverage an AWS Network Load Balancer (NLB) to distribute traffic to application virtual servers. This involves removing the failover group membership, retaining the configuration sync, creating the NLB (via Terraform) and re-creating the AS3 applications (via Terraform).
-
-Summary of lab steps:
-   - Create the NLB.
-   - Break the network failover config between the BIG-IPs.
-   - Test the NLB by stopping virtual servers on the BIG-IPs to simulate failure events.
-   - Validate the NLB activity via the AWS console.
+- Create the AWS Network Load Balancer.
+- Diable Network Failover (active-standby) between the BIG-IPs.
+- Test the Network Load Balancer by stopping virtual servers on the BIG-IPs to simulate failure events.
+- Validate the Network Load Balancer activity via the AWS console.
 
