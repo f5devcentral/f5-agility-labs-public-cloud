@@ -3,16 +3,16 @@ Delete the AWS Deployment (Terraform)
 
 The |destroy_link| command deletes the resources that were created by the Terraform configuration.
 
-In the BASH terminal, execute the following:
+#. In the BASH terminal, execute the following:
 
    .. code-block:: bash
 
       cd ~/f5lab/terraform
       terraform destroy -auto-approve
 
-|
+   |
 
-You will see output similar to the following:
+   You will see output similar to the following:
 
    .. code-block:: bash
 
@@ -58,11 +58,9 @@ You will see output similar to the following:
 
       Destroy complete! Resources: 62 destroyed.
 
-|
+   |
 
-Return to the **AWS Console** dashboards to confirm that your **EC2 Instances** and **VPCs** were deleted.
-
-|
+#. Return to the **AWS Console** dashboards to confirm that your **EC2 Instances** and **VPCs** were deleted.
 
 
 

@@ -16,30 +16,28 @@ Create a terraform.tfvars File
 
 Variables allow you to easily customize the deployment settings, instead of editing values in multiple Terraform files.
 
-A **terraform.tfvars** file is commonly used to define variable values used in the Terraform deployment.
-These values override any default values that may be defined in the **variables.tf** file.
-You will use the included example **tfvars** file for the base settings of your deployment.
+A **terraform.tfvars** file is commonly used to define variable values used in the Terraform deployment. These values override any default values that may be defined in the **variables.tf** file. You will use the included example **tfvars** file for the base settings of your deployment.
 
-Click on the **terraform.tfvars.example** file.
+#. Click on the **terraform.tfvars.example** file.
 
    .. image:: ./images/vscode-1.png
       :align: left
 
 
-|
+   |
 
-Save it to a new file by selecting **File > Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
+#. Save it to a new file by selecting **File > Save As...** from the menu at the top, or by presssing **<CTRL-SHIFT-S>**. Enter ``terraform.tfvars`` as the new filename.
 
    .. image:: ./images/vscode-2.png
       :align: left
 
-|
+   |
 
-Review the other variables that are defined in this file. They define the important attribute values required for the AWS deployment.
+#. Review the other variables that are defined in this file. They define the important attribute values required for the AWS deployment.
 
-You may (optional) update the ``emailid`` variable with your e-mail address.
+#. You may (optional) update the ``emailid`` variable with your e-mail address.
 
-Press **<CTRL-S>** to save the file.
+#. Press **<CTRL-S>** to save the file.
 
 
 .. attention::
@@ -53,14 +51,14 @@ Initialize the Terraform
 
 Before you can apply a Terraform configuration, you must |init_link| it. This will download all required Terraform module dependencies.
 
-Switch back to the other VS Code window (BASH terminal) and execute the following:
+#. Switch back to the other VS Code window (BASH terminal) and execute the following:
 
    .. code-block:: bash
 
       cd terraform
       terraform init
 
-You should see output similar to the following:
+   You should see output similar to the following:
 
    .. code-block:: bash
 
@@ -117,13 +115,13 @@ Validate the Terraform
 
 Before applying a Terraform configuration, you can |validate_link| the configuration files for syntax or consistency errors. This will not test remote resources.
 
-Execute the following:
+#. Execute the following:
 
    .. code-block:: bash
 
       terraform validate
 
-You should see output similar to the following:
+   You should see output similar to the following:
 
    .. code-block:: bash
 
@@ -142,13 +140,13 @@ Review the Terraform Plan
 
 Before applying a Terraform configuration, you can review the configuration |plan_link| that would be applied. This will also test remote resources. A list of the objects that would be *added*, *changed*, and/or *destroyed* will be displayed.
 
-Execute the following:
+#. Execute the following:
 
    .. code-block:: bash
 
       terraform plan
 
-You should see output similar to the following:
+   You should see output similar to the following:
 
    .. code-block:: bash
 
@@ -176,23 +174,24 @@ You should see output similar to the following:
 Apply the Terraform Plan
 --------------------------------------------------------------------------------
 
-To |apply_link| the Terraform configuration, execute the following:
+#. To |apply_link| the Terraform configuration, execute the following:
 
    .. code-block:: bash
 
       terraform apply -auto-approve
 
-This will take several minutes to complete.
+   This will take several minutes to complete.
 
-.. note::
 
-   The **-auto-approve** (or double-dash **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proceeding with the configuration changes.
+   .. note::
 
-|
+      The **-auto-approve** (or double-dash **--auto-approve**) flag allows you to bypass the approval prompt that would be received before proceeding with the configuration changes.
 
-.. attention::
+   |
 
-   If you receive an error similar to the following (for any of the EC2 instances), wait about 5 minutes and then try to ``apply`` again. It might require multiple attempts due to timing.
+   .. attention::
+
+      If you receive an error similar to the following (for any of the EC2 instances), wait about 5 minutes and then try to ``apply`` again. It might require multiple attempts due to timing.
 
       .. code-block:: bash
 
@@ -208,7 +207,7 @@ This will take several minutes to complete.
           │
 
 
-After successful completion, you should see output similar to the following:
+   After successful completion, you should see output similar to the following:
 
    .. code-block:: bash
 
@@ -220,7 +219,7 @@ After successful completion, you should see output similar to the following:
 
       <...>
 
-|
+   |
 
 .. note::
 

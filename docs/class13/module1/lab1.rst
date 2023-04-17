@@ -8,35 +8,34 @@ If you are not familiar with the process for joining a training course, refer to
 
 Your course registration email contains a link to the UDF course.
 
-
   .. image:: ./images/udf-email.png
      :align: left
 
-Click on the link and log into the student portal with your UDF credentials. If you do not remember your password, click on the **Forgot your password?** link.
+#. Click on the link and log into the student portal with your UDF credentials. If you do not remember your password, click on the **Forgot your password?** link.
 
-  .. image:: ./images/udf-login.png
-     :align: left
+   .. image:: ./images/udf-login.png
+      :align: left
 
-After signing in, click on the **Join** button.
+#. After signing in, click on the **Join** button.
 
-  .. image:: ./images/udf-join.png
-     :align: left
+   .. image:: ./images/udf-join.png
+      :align: left
 
-After joining the course, you will see the **COURSE SESSIONS** page. Click on the **LAUNCH** button for this course.
+#. After joining the course, you will see the **COURSE SESSIONS** page. Click on the **LAUNCH** button for this course.
 
-  .. image:: ./images/udf-sessions.png
-     :align: left
+   .. image:: ./images/udf-sessions.png
+      :align: left
 
-You will then see the **DOCUMENTATION** tab with some information about the lab resources and a link to the Lab Guide (this document).
+   You will then see the **DOCUMENTATION** tab with some information about the lab resources and a link to the Lab Guide (this document).
 
-  .. image:: ./images/udf-documentation.png
-     :align: left
+   .. image:: ./images/udf-documentation.png
+      :align: left
 
-.. note::
+   .. note::
 
-   You will only need an RDP client to perform the lab exercises. SSH access to the lab environment is not required, so no SSH Key needs to be configured in UDF.
+      You will only need an RDP client to perform the lab exercises. SSH access to the lab environment is not required, so no SSH Key needs to be configured in UDF.
 
-Click on the **DEPLOYMENT** tab to see all of your lab resources. You will only need to access the Windows jump host.
+#. Click on the **DEPLOYMENT** tab to see all of your lab resources. You will only need to access the Windows jump host.
 
   .. image:: ./images/udf-deployment.png
      :align: left
@@ -47,52 +46,53 @@ Under **win2019**, click on the **ACCESS** drop-down menu.
 
      If you cannot click on the **ACCESS** button, then the jump host has not finished booting. Wait until you see a green triangle beside the resource name.
 
-Click on a resolution to use for your RDP session. This lab is best experienced in 1920x1080 resolution. An RDP file will be downloaded to your computer.
+#. Click on a resolution to use for your RDP session. This lab is best experienced in 1920x1080 resolution. An RDP file will be downloaded to your computer.
 
-Launch the RDP file and accept the warning prompts.
+#. Launch the RDP file and accept the warning prompts.
 
-  .. image:: ./images/jumphost-1.png
-     :align: left
+   .. image:: ./images/jumphost-1.png
+      :align: left
 
-At the login prompt (Windows RDP client app), click on **More choices**, then **Use a different account**.
+#. At the login prompt (Windows RDP client app), click on **More choices**, then **Use a different account**.
 
-Login using the following credentials:
+#. Login using the following credentials:
 
-  +------------+------+
-  | Username:  | user |
-  +------------+------+
-  | Password:  | user |
-  +------------+------+
+   +------------+------+
+   | Username:  | user |
+   +------------+------+
+   | Password:  | user |
+   +------------+------+
 
-Don't worry about the simple password, this resource is only accessible through your authenticated UDF session.
+   Don't worry about the simple password, this resource is only accessible through your authenticated UDF session.
 
-  .. image:: ./images/jumphost-2.png
-     :align: left
+   .. image:: ./images/jumphost-2.png
+      :align: left
 
-Accept the next warning prompt.
+#. Accept the next warning prompt.
 
-  .. image:: ./images/jumphost-2b.png
-     :align: left
+   .. image:: ./images/jumphost-2b.png
+      :align: left
 
 
-Please be patient. It might take a minute for the startup process to complete.
+   Please be patient. It might take a minute for the startup process to complete.
 
-Visual Studio Code (vscode) will launch automatically and display the **BASH terminal** panel.  When done, you will see the following information (some of which you will use later):
+   Visual Studio Code (vscode) will launch automatically and display the **BASH terminal** panel.  When done, you will see the following information (some of which you will use later):
 
-- Terraform environment variables
-- AWS Console URL, Username ('udf'), and Password (*random*)
-- Public IP address of the jump host
-- Installed versions for AWS CLI and Terraform
+   - Terraform environment variables
+   - AWS Console URL, Username ('udf'), and Password (*random*)
+   - Public IP address of the jump host
+   - Installed versions for AWS CLI and Terraform
 
-Postman will also launch automatically. If it appears in front of the VS Code window, just minimize it.
+   Postman will also launch automatically. If it appears in front of the VS Code window, just minimize it.
 
-There will also be several shortcuts on the Windows desktop: Visual Studio Code, Postman, and an AWS Console Sign-In Link.
+   There will also be several shortcuts on the Windows desktop: Visual Studio Code, Postman, and an AWS Console Sign-In Link.
 
 |
 
   .. image:: ./images/jumphost-4.png
      :align: left
 
+|
 
 .. note::
 

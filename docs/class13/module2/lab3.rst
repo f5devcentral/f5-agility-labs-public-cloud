@@ -9,13 +9,13 @@ Terraform Directory
 
 The **terraform** directory contains all of the configuration files needed to deploy the lab environment in AWS.
 
-In the VS Code terminal, list the Terraform directory.
+#. In the VS Code terminal, list the Terraform directory.
 
    .. code-block:: bash
 
       ls terraform
 
-You should see several Terraform (\*.tf) files listed. The various components of the lab are deployed via separate configuration files to make it easier to manage.
+   You should see several Terraform (\*.tf) files listed. The various components of the lab are deployed via separate configuration files to make it easier to manage.
 
    .. code-block:: bash
 
@@ -28,7 +28,7 @@ You should see several Terraform (\*.tf) files listed. The various components of
 View Terraform Files
 --------------------------------------------------------------------------------
 
-Review these files with VS Code by executing the following:
+#. Review these files with VS Code by executing the following:
 
    .. code-block:: bash
 
@@ -36,18 +36,20 @@ Review these files with VS Code by executing the following:
 
    *'code' + <space> + <dot>*
 
-Wait for VS Code to launch a new window and display the project directory in the left panel.
+   Wait for VS Code to launch a new window and display the project directory in the left panel.
 
-.. tip::
+   |
 
-   If the font is too small or too large, you can adjust the size by pressing **<CTRL-+>** (control-plus) or **<CTRL-->** (control-minus).
+   .. tip::
+
+      If the font is too small or too large, you can adjust the size by pressing **<CTRL-+>** (control-plus) or **<CTRL-->** (control-minus).
 
 
-|
+   |
 
-Click on the **terraform** directory to expand it.
+#. Click on the **terraform** directory to expand it.
 
-Click on each file that corresponds to the sections below. VS Code provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
+#. Click on each file that corresponds to the sections below. VS Code provides Terraform syntax highlighting when the **HashiCorp Terraform extension** is installed.
 
 
 Terraform Providers
