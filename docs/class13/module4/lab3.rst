@@ -23,6 +23,8 @@ Check F5 CFE Status
 
    A response status code of "200 OK" indicates CFE is ready.
 
+   The response body should also contain contain version information (JSON format).
+
    .. image:: ./images/cfe-postman-verify-1a.png
       :scale: 50%
 
@@ -40,16 +42,18 @@ Check AWS Resource Tags for CFE Failover Objects
 
 #. In the AWS Console, navigate to **Services > EC2 > NETWORK & SECURITY > Elastic IPs**.
 
-#. Select the Elastic IP (public IP) mapped to **10.0.1.101**.
+#. Select the Elastic IP (public IP) mapped to private IP address **10.0.1.101**.
 
 #. Select the **Tags** tab below. Note the Elastic IP has been tagged for use with CFE.
 
    .. image:: ./images/cfe-aws-tags-eip.png
       :scale: 50%
 
+   |
+
 #. In the AWS Console, navigate to **Services > VPC > Route Tables**.
 
-#. Select the **Default** route table.
+#. Select the **f5lab_hub_default_rt** route table.
 
 #. Select the **Tags** tab below. Note the route table has been tagged for use with CFE.
 
@@ -58,7 +62,7 @@ Check AWS Resource Tags for CFE Failover Objects
 
    |
 
-#. In the AWS Console, navigate to **Services > S3**. Note the S3 bucket has been tagged for use with CFE.
+#. In the AWS Console, navigate to **Services > Amazon S3**. Note the S3 bucket has been tagged for use with CFE.
 
    .. image:: ./images/cfe-aws-tags-s3.png
       :scale: 50%

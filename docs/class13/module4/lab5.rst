@@ -111,9 +111,9 @@ Force Failover to BIG-IP #2
    .. image:: ./images/cfe-failover-logging-2.png
       :align: left
 
-   |   
+   |
 
-#. In the AWS Console, navigate to **Services > NETWORK & SECURITY > Elastic IPs** and select the Elastic IP (public IP) previously mapped to **10.0.1.101**.
+#. In the AWS Console, navigate to **Services > NETWORK & SECURITY > Elastic IPs** and select the Elastic IP (public IP) previously mapped to private IP address **10.0.1.101**.
 
 #. Click on the refresh button until you see the new mapping to **10.0.2.101** (**BIG-IP #2**).
 
@@ -166,9 +166,9 @@ Force Failback to BIG-IP #1
 
    |
 
-#. In the AWS Console, navigate to **Services > NETWORK & SECURITY > Elastic IPs** and select the Elastic IP (public IP) previously mapped to **10.0.2.101**.
+#. In the AWS Console, navigate to **Services > NETWORK & SECURITY > Elastic IPs** and select the Elastic IP (public IP) previously mapped to private IP address **10.0.2.101**.
 
-#. Click on the refresh button until you see the new mapping to **10.0.1.101** (**BIG-IP #1**).
+#. Click on the refresh button until you see the new mapping to private IP address **10.0.1.101** (**BIG-IP #1**).
 
    .. image:: ./images/cfe-failover-verify-aws-2.png
       :align: left

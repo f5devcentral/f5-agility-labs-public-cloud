@@ -6,7 +6,7 @@ Check Active-Standby Status
 
 .. important::
 
-   Before sending the CFE declaration to the BIG-IPs, ensure that BIG-IP #1 is ACTIVE. If BIG-IP #2 is ACTIVE, then force it to STANDBY before proceeding.
+   Before sending the CFE declaration to the BIG-IPs, ensure that **BIG-IP #1** is **ACTIVE**. If BIG-IP #2 is ACTIVE, then force it to STANDBY before proceeding.
 
 |
 
