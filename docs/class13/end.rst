@@ -1,7 +1,7 @@
 END OF LAB
 ==================================================================================
 
-.. attention:: 
+.. attention::
 
    You have reached the end of the lab. If you click the **Next** button now,
    you will be taken to a different lab.
