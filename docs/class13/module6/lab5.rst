@@ -41,7 +41,7 @@ GET the TS Declaration
 
 .. note::
 
-   Changing the API call from a POST to a GET using the same URL will pull the **Telemetry System** configuration currently deployed on each BIG-IP. You can use this GET method to view the full **TS** configuration at anytime.
+   Changing the request method of the API call from **POST** to **GET** will retrieve the **Telemetry System** configuration currently deployed on each BIG-IP. You can use this GET request to view the full **TS** configuration at any time.
 
 |
 

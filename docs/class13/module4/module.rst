@@ -7,11 +7,6 @@ In this module, you will:
 -  Test BIG-IP failover
 
 
-.. todo::
-
-   @David Screenshots need to be updated based on new lab topology (IP addresses and Postman collection)
-
-
 .. toctree::
    :caption: CONTENTS
    :maxdepth: 1
