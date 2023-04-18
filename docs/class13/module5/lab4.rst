@@ -6,7 +6,7 @@ Check AS3 applications are serving the traffic
 
 #. In the **AWS Console**, navigate to **EC2 Dashboard > Load Balancing** to validate that the NLB is working correctly. There will be only one entry. Click on it to see more details.
 
-   .. image:: ./images/aws-lab-diagram-nlb-dns-entry.png
+   .. image:: ./images/aws-lab-diagram-nlb-dns.png
       :align: left
 
    |
