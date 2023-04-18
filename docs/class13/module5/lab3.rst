@@ -7,7 +7,7 @@ You will use Terraform to create a new AWS Network Load Balancer resource and re
 Terraform Updates
 --------------------------------------------------------------------------------
 
-#. In the **VS Code terminal**, enter ``copy ~/f5lab/terraform/ha-via-lb/* ~/f5lab/terraform`` to copy additional files from the **ha-via-lb** folder to the main terraform folder.
+#. In the **VS Code terminal**, enter ``cp ~/f5lab/terraform/ha-via-lb/* ~/f5lab/terraform`` to copy additional files from the **ha-via-lb** folder to the main terraform folder.
 
 #. Enter ``terraform init`` to download additional providers.
 
