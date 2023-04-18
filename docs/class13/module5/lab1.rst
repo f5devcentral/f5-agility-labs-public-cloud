@@ -27,7 +27,7 @@ Summary of Lab Steps
 --------------------------------------------------------------------------------
 
 - Create the AWS Network Load Balancer.
-- Diable Network Failover (active-standby) between the BIG-IPs.
-- Test the Network Load Balancer by stopping virtual servers on the BIG-IPs to simulate failure events.
+- Disable Network Failover between the BIG-IPs to make the BIG-IPs active-active.
+- Test the Network Load Balancer by disabling virtual servers on the BIG-IPs to simulate failure events.
 - Validate the Network Load Balancer activity via the AWS console.
 
