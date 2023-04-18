@@ -19,7 +19,7 @@ Terraform Updates
 
 #. Enter ``terraform apply -auto-approve`` to deploy the updates.
 
-#. In the **AWS Console**, navigate to **EC2 Dashboard > Load Balancing** to examine the new NLB resource.
+#. In the **AWS Console**, navigate to **EC2 Dashboard > Load Balancers** to examine the new NLB resource.
 
    **EC2 Dashboard**
 
