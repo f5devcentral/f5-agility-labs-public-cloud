@@ -4,14 +4,23 @@ Test HA Failover
 Check AS3 applications are serving the traffic
 --------------------------------------------------------------------------------
 
-#. In the **AWS Console**, nagivate to **EC2 Dashboard > Load Balancing** to validate that the NLB is working correctly. There will be only one entry. Click on it to see more details.
+#. In the **AWS Console**, navigate to **EC2 Dashboard > Load Balancing** to validate that the NLB is working correctly. There will be only one entry. Click on it to see more details.
 
-#. Click **target groups** at the bottom right to view the health of each BIG-IP Virtual Server. Both should show healthy.
+   .. image:: ./images/aws-lab-diagram-nlb-dns-entry.png
+      :align: left
 
-   **Example Traffic Website with NLB**
+   |
+
+#. Click the **copy** shortcut beside the **DNS name** and paste into your web browser with **https://<dns name>**.
+
+   You should see the example application page from one of the servers.
 
    .. image:: ./images/aws-lab-diagram-nlb-traffic.png
       :align: left
+
+   |
+
+#. Click **target groups** at the bottom right to view the health of each BIG-IP Virtual Server. Both should show healthy.
 
 |
 
@@ -24,24 +33,28 @@ Disable the virtual servers on BIG-IP #1.
 
 #. In Postman, expand the **Failover Test > BIG-IP #1** folder.
 
-#. Send the **NLB-1-A [bigip1] Check For Virtual Server Example01a** request.
+#. Send the **NLB-1-A [bigip1] Check For Virtual Server Example01a** request and then check for a "200 OK" status code with the name showing **example01a**.
 
-#. Send the **NLB-2-A [bigip1] Disable Virtual Server Example01a** request to disable the application virtual server.
+#. Send the **NLB-2-A [bigip1] Disable Virtual Server Example01a** request to disable the application virtual server and then check for a "200 OK" status code.
 
-#. Send the **NLB-3-A [bigip1] Check For Virtual Server Example01a** request.
+#. Send the **NLB-3-A [bigip1] Check For Virtual Server Example01b** request and then check for a "200 OK" status code.
 
-#. Send the **NLB-4-A [bigip1] Disable Virtual Server Example01a** request to disable the second application virtual server.
+#. Send the **NLB-4-A [bigip1] Disable Virtual Server Example01b** request to disable the second application virtual server and then check for a "200 OK" status code.
+
+#. In the TMUI of **BIG-IP #1**, select the **example01** partition and then navigate to **Local Traffic > Virtual Servers**.
+
+#. Verify that the virtual server statuses are no longer *green*.
 
 #. Return to the AWS console **Target Groups** page. One should be shown as unhealthy.
+
+   .. image:: ./images/aws-lab-diagram-nlb-traffic-groups-one-unhealthy.png
+      :align: left
+
+   |
 
 #. Browse to the NLB link using the DNS name on the **Load Balancers** page.
 
    The web page should still load.
-
-   **Example NLB Traffic Group Health Status**
-
-   .. image:: ./images/aws-lab-diagram-nlb-traffic-groups.png
-      :align: left
 
 |
 
@@ -52,16 +65,24 @@ Disable the virtual servers on BIG-IP #2.
 
 #. In Postman, expand the **Failover Test > BIG-IP #2** folder.
 
-#. Send the **NLB-1-B [bigip2] Check For Virtual Server Example01a** request.
+#. Send the **NLB-1-B [bigip2] Check For Virtual Server Example01a** request and then check for a "200 OK" status code with the name showing **example01a**.
 
-#. Send the **NLB-2-B [bigip2] Disable Virtual Server Example01a** request to disable the application virtual server.
+#. Send the **NLB-2-B [bigip2] Disable Virtual Server Example01a** request to disable the application virtual server and then check for a "200 OK" status code.
 
-#. Send the **NLB-3-B [bigip2] Check For Virtual Server Example01a** request.
+#. Send the **NLB-3-B [bigip2] Check For Virtual Server Example01b** request and then check for a "200 OK" status code.
 
-#. Send the **NLB-4-B [bigip2] Disable Virtual Server Example01a** request to disable the second application virtual server.
+#. Send the **NLB-4-B [bigip2] Disable Virtual Server Example01b** request to disable the second application virtual server and then check for a "200 OK" status code.
 
+#. In the TMUI of **BIG-IP #2**, select the **example01** partition and then navigate to **Local Traffic > Virtual Servers**.
+
+#. Verify that the virtual server statuses are no longer *green*.
 
 #. Return to the AWS console **Target Groups** page. Now, both should be shown as unhealthy.
+
+   .. image:: ./images/aws-lab-diagram-nlb-traffic-groups-both-unhealthy.png
+      :align: left
+
+   |
 
 #. Browse to the NLB link using the DNS name on the **Load Balancers** page.
 
@@ -98,6 +119,11 @@ Enable virtual servers
 #. Browse to the NLB link using the DNS name on the **Load Balancers** page.
 
    The web page should continue to load.
+
+   **Example NLB Traffic Group Health Status**
+
+   .. image:: ./images/aws-lab-diagram-nlb-traffic-groups.png
+      :align: left
 
 |
 
