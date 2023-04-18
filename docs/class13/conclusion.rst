@@ -28,6 +28,20 @@ of these other great labs:
 
 |
 
+Contributors
+================================================================================
+
+This lab and related content would not exist without the dedication of the following individuals (alphabetical order):
+
+- Carl Brothers
+- Tyler Brown
+- Jason Chiu
+- David Fielder
+- Tony Marfil
+- Anthony Ritchie
+
+|
+
 Revision History
 ================================================================================
 
@@ -47,20 +61,6 @@ Revision History
    * - 1.0 (Agility 2021)
      - Tony Marfil
      - Lab creation - 2 hour duration
-
-|
-
-Contributors
-================================================================================
-
-This lab and related content would not exist without the dedication of the following individuals (alphabetical order):
-
-- Carl Brothers
-- Tyler Brown
-- Jason Chiu
-- David Fielder
-- Tony Marfil
-- Anthony Ritchie
 
 |
 
