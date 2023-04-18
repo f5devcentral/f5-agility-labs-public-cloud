@@ -31,15 +31,14 @@ of these other great labs:
 Contributors
 ================================================================================
 
-This lab and related content wouldn't exist without the dedication of the following individuals:
+This lab and related content would not exist without the dedication of the following individuals (alphabetical order):
 
-- Jason Chiu
-- Tyler Brown
 - Carl Brothers
+- Tyler Brown
+- Jason Chiu
 - David Fielder
-- Anthony Ritchie
-- Garland Moore
 - Tony Marfil
+- Anthony Ritchie
 
 
 Revision History
