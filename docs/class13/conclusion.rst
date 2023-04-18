@@ -28,6 +28,28 @@ of these other great labs:
 
 |
 
+Revision History
+================================================================================
+
+.. list-table::
+   :header-rows: 0
+   :widths: auto
+
+   * - **Version**
+     - **Lead**
+     - **Changes**
+   * - 3.0 (Agility 2023)
+     - Jason Chiu
+     - Lab update - expanded to 4 hours of fabulous content
+   * - 2.0 (Agility 2022)
+     - Tony Marfil
+     - Lab update
+   * - 1.0 (Agility 2021)
+     - Tony Marfil
+     - Lab creation - 2 hour duration
+
+|
+
 Contributors
 ================================================================================
 
@@ -40,33 +62,14 @@ This lab and related content would not exist without the dedication of the follo
 - Tony Marfil
 - Anthony Ritchie
 
-
-Revision History
-================================================================================
-
-.. list-table::
-   :header-rows: 0
-   :widths: auto
-
-   * - **Version**
-     - **Contributors**
-     - **Changes**
-   * - 3.0 (Agility 2023)
-     - Jason Chiu
-     - Lab update - expanded to 4 hours of fabulous content
-   * - 2.0 (Agility 2022)
-     - Tony Marfil
-     - Lab update
-   * - 1.0 (Agility 2021)
-     - Tony Marfil
-     - Lab creation - 2 hour duration
-
+|
 
 Lab Guide Repository (GitHub)
 ================================================================================
 The content contained here adheres to a DevOps methodology and
 automation pipeline.  All content contained here is sourced from the
 following GitHub repository:
+
 
 |github_repo|
 
