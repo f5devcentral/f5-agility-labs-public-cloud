@@ -1,4 +1,4 @@
-Remove CFE configuration (preparation for next lab module)
+Remove CFE configuration
 ================================================================================
 
 You will now remove the CFE configuration from both BIG-IPs to prepare the environment for the next lab module.
