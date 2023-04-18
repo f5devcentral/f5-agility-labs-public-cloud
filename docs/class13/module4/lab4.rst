@@ -21,7 +21,6 @@ Check Active-Standby Status
 
    .. image:: ./images/cfe-fix-active-standby-1.png
       :align: left
-      :scale: 50%
 
 
 
@@ -29,14 +28,12 @@ Check Active-Standby Status
 
    .. image:: ./images/cfe-fix-active-standby-2.png
       :align: left
-      :scale: 50%
 
 
 #. On **BIG-IP #1**, confirm that it is now **ACTIVE**.
 
    .. image:: ./images/cfe-fix-active-standby-3.png
       :align: left
-      :scale: 50%
 
 |
 
@@ -50,7 +47,6 @@ Send the CFE Declaration to Both Devices
 
    .. image:: ./images/cfe-postman-config-2a.png
       :align: left
-      :scale: 50%
 
 
 #. The CFE declaration must also be sent to **BIG-IP #2**. Send the **CFE-2-B [bigip2] Configure cloud failover** request.
@@ -59,4 +55,3 @@ Send the CFE Declaration to Both Devices
 
    .. image:: ./images/cfe-postman-config-2b.png
       :align: left
-      :scale: 50%
