@@ -31,16 +31,16 @@ of these other great labs:
 Contributors
 ================================================================================
 
-This lab and related content wouldn't exist without the dedication of the following individuals:
+This lab and related content would not exist without the dedication of the following individuals (alphabetical order):
 
-- Jason Chiu
-- Tyler Brown
 - Carl Brothers
+- Tyler Brown
+- Jason Chiu
 - David Fielder
-- Anthony Ritchie
-- Garland Moore
 - Tony Marfil
+- Anthony Ritchie
 
+|
 
 Revision History
 ================================================================================
@@ -50,7 +50,7 @@ Revision History
    :widths: auto
 
    * - **Version**
-     - **Contributors**
+     - **Lead**
      - **Changes**
    * - 3.0 (Agility 2023)
      - Jason Chiu
@@ -62,16 +62,14 @@ Revision History
      - Tony Marfil
      - Lab creation - 2 hour duration
 
-.. todo::
-
-   confirm version history
-
+|
 
 Lab Guide Repository (GitHub)
 ================================================================================
 The content contained here adheres to a DevOps methodology and
 automation pipeline.  All content contained here is sourced from the
 following GitHub repository:
+
 
 |github_repo|
 
