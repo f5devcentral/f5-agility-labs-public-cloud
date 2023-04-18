@@ -47,6 +47,7 @@ Send the CFE Declaration to Both Devices
 
    .. image:: ./images/cfe-postman-config-2a.png
       :align: left
+      :width: 90%
 
 
 #. The CFE declaration must also be sent to **BIG-IP #2**. Send the **CFE-2-B [bigip2] Configure cloud failover** request.
@@ -55,3 +56,4 @@ Send the CFE Declaration to Both Devices
 
    .. image:: ./images/cfe-postman-config-2b.png
       :align: left
+      :width: 90%
