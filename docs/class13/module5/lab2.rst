@@ -13,9 +13,9 @@ Disable Network Failover (Active-Standby)
 
    A response status code of “200” indicates that the declaration was successfully posted.
 
-  .. todo::
+   .. todo::
 
-     Screenshot update needed
+      Screenshot update needed
 
 
    .. image:: ./images/cfe-cleanup-device-group.png
