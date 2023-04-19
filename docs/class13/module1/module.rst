@@ -8,7 +8,7 @@ This lab makes use of two environments:
 
 In this module, you will:
 
-- Log into the F5 UDF portal and connecgt to a Windows jump host using a Microsoft Remote Desktop Protocol (RDP) client.
+- Log into the F5 UDF portal and connect to a Windows jump host using a Microsoft Remote Desktop Protocol (RDP) client.
 - Log into the AWS Console.
 - Download additional files needed for this lab.
 

@@ -144,7 +144,7 @@ By default, BIG-IP uses HTTP/1.1. HTTP/2 is a more modern HTTP protocol version.
 #. Close the **Step1_as3_AWS_Autodiscovery.json** file tab.
 
 
-#. Open **Step3_as3_HTTPS_Autodiscovery.json**, select all of the text, right click, and then select **POST as AS3 Declaration**.
+#. Open **Step2_as3_HTTPS_ModernProtocols_Autodiscovery.json**, select all of the text, right click, and then select **POST as AS3 Declaration**.
 
     .. image:: ./images/02as3_step2a.png
        :alt: load JSON file

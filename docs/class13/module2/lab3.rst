@@ -217,6 +217,10 @@ Additional Terraform files are included to support this lab.
      - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the **f5_ami_search_name** and **linux_ami_search_name** variables. The most recent image version is selected When multiple AMI IDs are returned.
    * - certs.tf
      - Creates ECDSA certificates for the lab environment.
+   * - as3declaration-file.tf
+     - Creates the an AS3 declaration file with ECDSA certificates. This is used with the **F5 VS Code Extension** in Module 3.
+   * - f5extension-importdevices-file.tf
+     - Creates a JSON file containing the BIG-IP public management IP addresses. This is used with the **F5 VS Code Extension** in Module 3.
    * - cfe-dependencies.tf
      - Creates an S3 Bucket and IAM policy for use with the Cloud Failover Extension.
    * - cloudwatch.tf
