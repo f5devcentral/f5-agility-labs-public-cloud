@@ -93,7 +93,7 @@ BIG-IP #1: Self IPs
 BIG-IP #1: Network > Routes
 --------------------------------------------------------------------------------
 
-#. Click on **Network > Routes** from the left panel menu and confirm that no routes exist. Note that this ist he **Common** partition.
+#. Click on **Network > Routes** from the left panel menu and confirm that no routes exist. Note that this is the **Common** partition.
 
    .. image:: ./images/bigip-routes.png
       :align: left
@@ -107,10 +107,11 @@ BIG-IP #1: Network > Routes
 
    |
 
-   The ATC DO declaration configured two routes in the **LOCAL_ONLY** partition. This is required to support config-sync in the **BIG-IP HA across AWS availabilty zones** use-case.
+   The **default** route is via the **internal** VLAN, which enables access to the **app** VPC (via the AWS Transit Gateway).
 
-   - The **default** route is via the **external** VLAN.
-   - The **app-route** static route enables access to the **app** VPC.
+   .. note::
+
+      The ATC DO declaration configured a default route in the **LOCAL_ONLY** partition instead of the **Common** partition. This is required to support config-sync in the **BIG-IP HA across AWS availabilty zones** use-case where each BIG-IP instance is connected to different subnets. In cloud providers that allow the same subnet across multiple availabilty zones, the default route (and other static routes) can be configured in the **Common** partition and synchronized between the BIG-IP instances.
 
 |
 
