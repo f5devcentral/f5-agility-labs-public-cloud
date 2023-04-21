@@ -1,10 +1,10 @@
 Verify installation of F5 Telemetry Streaming
 ================================================================================
 
-Verify that the **Telemetry Streaming** extension has been installed via the WebUI and API.
+Verify that the **Telemetry Streaming** extension has been installed via the TMUI and API.
 
 
-Verify installation via the WebUI
+Verify installation via the TMUI
 --------------------------------------------------------------------------------
 
 #. From BIG-IP #1, navigate to **iApps > Package Management LX**. Note that the **f5-telemetry** package is installed.
@@ -20,7 +20,7 @@ Verify installation via API
 
 #. In Postman, expand the **Module 6 - Telemetry Streaming** folder.
 
-#. Click on the **TS-1-A [bigip1] Get extension status** request and send it to the BIG-IP.
+#. Click on the **TS-1-A [bigip1] Get extension status** request and send it to the **BIG-IP #1**.
 
    A response status code of "200 OK" indicates TS is ready.
 
@@ -29,7 +29,7 @@ Verify installation via API
 
    |
 
-#. Click on the **TS-1-B [bigip2] Get extension status** request and send it to the BIG-IP.
+#. Click on the **TS-1-B [bigip2] Get extension status** request and send it to the **BIG-IP #2**.
 
    A response status code of "200 OK" indicates TS is ready.
 

@@ -7,9 +7,22 @@ You will use Terraform to create a new AWS Network Load Balancer resource and re
 Terraform Updates
 --------------------------------------------------------------------------------
 
-#. In the **VS Code terminal**, enter ``cp ~/f5lab/terraform/ha-via-lb/* ~/f5lab/terraform`` to copy additional files from the **ha-via-lb** folder to the main terraform folder.
+#. In the **VS Code terminal**, copy additional files from the **ha-via-lb** folder to the main terraform folder.
 
-#. Enter ``terraform init`` to download additional providers.
+   .. code-block:: bash
+
+      cp ~/f5lab/terraform/ha-via-lb/* ~/f5lab/terraform
+
+   |
+
+#. Enter re-initialize Terraform to download additional providers.
+
+   .. code-block:: bash
+
+      terraform init
+
+
+   |
 
    .. note::
 
@@ -17,7 +30,14 @@ Terraform Updates
 
    |
 
-#. Enter ``terraform apply -auto-approve`` to deploy the updates.
+#. Apply the Terraform updates.
+
+   .. code-block:: bash
+
+      terraform apply -auto-approve
+
+
+   |
 
 #. In the **AWS Console**, navigate to **EC2 Dashboard > Load Balancers** to examine the new NLB resource.
 
@@ -25,5 +45,7 @@ Terraform Updates
 
    .. image:: ./images/aws-lab-diagram-ec2-dashboard.png
       :align: left
+
+   |
 
 #. In the TMUI of each BIG-IP, verify that the AS3 configurations were deployed (check the partitions).

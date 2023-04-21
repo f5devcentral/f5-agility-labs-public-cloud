@@ -34,7 +34,7 @@ Check CFE Configuration
    |
 
 
-#. From the VS Code terminal, SSH to the active BIG-IP and confirm the interfaces that CFE is tracking. Use the ``bigip2`` BASH alias to connect and then enter ``yes`` to trust the BIG-IP's SSH fingerprint.
+#. From the VS Code terminal, SSH to the standby BIG-IP and confirm the interfaces that CFE is tracking. Use the ``bigip2`` BASH alias to connect and then enter ``yes`` to trust the BIG-IP's SSH fingerprint.
 
    .. code-block:: bash
 
@@ -113,7 +113,7 @@ Force Failover to BIG-IP #2
 
    |
 
-#. In the AWS Console, navigate to **Services > NETWORK & SECURITY > Elastic IPs** and select the Elastic IP (public IP) previously mapped to private IP address **10.0.1.101**.
+#. In the AWS Console, navigate to **Services > EC2 > Network & Security > Elastic IPs** and select the Elastic IP (public IP) previously mapped to private IP address **10.0.1.101**.
 
 #. Click on the refresh button until you see the new mapping to **10.0.2.101** (**BIG-IP #2**).
 
