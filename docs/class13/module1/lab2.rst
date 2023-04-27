@@ -9,7 +9,7 @@ Access the AWS Console
 
    |
 
-#. Select the **AWS Console Password** value (in VS Code terminal) and copy it (<CTRL-C>).
+#. Select the **AWS Console Password** value (in **VS Code** terminal) and copy it (<CTRL-C>).
 
    .. image:: ./images/aws-console-1.png
       :align: left

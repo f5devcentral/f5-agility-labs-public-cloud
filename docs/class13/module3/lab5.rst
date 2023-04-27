@@ -4,7 +4,7 @@ Convert an existing config to AS3 using the F5 VS Code Extension
 Import a Qkview File
 --------------------------------------------------------------------------------
 
-#. Select the **F5** icon in the left navigation panel.
+#. Click on the the **F5 Extension** icon in the left navigation panel.
 
    .. image:: ./images/icon_F5Extension_inactive.png
       :align: left
@@ -64,17 +64,20 @@ Convert an application/virtual server into an AS3 Declaration
 
 #. Expand the **Partitions**, then expand **Common** and search for **ITWiki3.0**.
 
-   #. Select the application and then select all of the text in the window.
+#. Select the application and then select all of the text in the window.
 
-   #. Right click and select **Convert to AS3 with ACC**.
+#. Right-click and select **Convert to AS3 with ACC**.
 
-      .. image:: ./images/03f5ext_convertas3.png
-         :alt: Convert itwiki3
+   .. image:: ./images/03f5ext_convertas3.png
+      :alt: Convert itwiki3
 
-     |
+   |
 
-#. A new window will open with your new AS3 declaration that will replicate that configuration.
+#. A new window will open with your new AS3 declaration that matches that configuration.
 
-      .. image:: ./images/03f5ext_convertas3_result.png
-         :alt: AS3 output
+   .. image:: ./images/03f5ext_convertas3_result.png
+      :alt: AS3 output
 
+|
+
+This is the end of the module.

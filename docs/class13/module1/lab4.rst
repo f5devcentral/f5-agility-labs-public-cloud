@@ -1,7 +1,7 @@
 Download the Lab Files and Setup Environment
 ================================================================================
 
-#. Switch to the **VS Code terminal** and clone the GitHub **f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform** repository. This repository contains additional files that are reqired for the lab exercises.
+#. Switch to the **VS Code** terminal and clone the GitHub **f5jason/f5agilitylabs-big-ip-ha-public-cloud-terraform** repository. This repository contains additional files that are reqired for the lab exercises.
 
    .. code-block:: bash
 
@@ -13,13 +13,13 @@ Download the Lab Files and Setup Environment
    .. code-block:: bash
 
       Cloning into '/home/f5admin/f5lab'...
-      remote: Enumerating objects: 404, done.
-      remote: Counting objects: 100% (369/369), done.
-      remote: Compressing objects: 100% (208/208), done.
-      remote: Total 404 (delta 207), reused 288 (delta 149), pack-reused 35
-      Receiving objects: 100% (404/404), 93.43 MiB | 5.07 MiB/s, done.
-      Resolving deltas: 100% (214/214), done.
-      Updating files: 100% (61/61), done.
+      remote: Enumerating objects: 500, done.
+      remote: Counting objects: 100% (232/232), done.
+      remote: Compressing objects: 100% (66/66), done.
+      remote: Total 500 (delta 182), reused 185 (delta 165), pack-reused 268
+      Receiving objects: 100% (500/500), 93.44 MiB | 2.94 MiB/s, done.
+      Resolving deltas: 100% (275/275), done.
+      Updating files: 100% (68/68), done.
 
    |
 

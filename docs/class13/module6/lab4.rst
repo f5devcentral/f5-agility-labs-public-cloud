@@ -6,7 +6,7 @@ Review Telemetry Streaming Declaration
 #. Click on the **Request > Body** tab. The preview plane will show the **Telemetry Streaming** configuration that will be sent to BIG-IP #1.
 
    .. image:: ./images/2023_11_postman_telemetry_streaming_configuration_review_bigip1.png
-      :scale: 50%
+      :scale: 90%
 
    |
 
@@ -15,7 +15,7 @@ Review Telemetry Streaming Declaration
 #. Click on the **Request > Body** tab. The preview plane will show the **Telemetry Streaming** configuration that will be sent to BIG-IP #1.
 
    .. image:: ./images/2023_12_postman_telemetry_streaming_configuration_review_bigip2.png
-      :scale: 50%
+      :scale: 90%
 
    |
 

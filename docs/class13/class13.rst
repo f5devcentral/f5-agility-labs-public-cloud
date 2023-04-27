@@ -1,11 +1,11 @@
-A&O Toolchain: BIG-IP HA in Public Cloud with Terraform (Agility 2023 | 4 hours)
+A&O Toolchain: BIG-IP HA in Public Cloud with Terraform (Agility Labs 2023)
 ==================================================================================
 
 .. note::
 
    This lab relies on UDF Blueprint: **Agility 2023 - A&O BIG-IP HA in Public Cloud with Terraform**
 
-   The code provided for this lab was tested with **BIG-IP 17.1.x**.
+   The code provided for this lab was tested with **BIG-IP 17.1.0.1**.
 
 |
 

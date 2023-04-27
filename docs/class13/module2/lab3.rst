@@ -9,7 +9,7 @@ Terraform Directory
 
 The **terraform** directory contains all of the configuration files needed to deploy the lab environment in AWS.
 
-#. In the VS Code terminal, list the Terraform directory.
+#. In the **VS Code** terminal, list the Terraform directory.
 
    .. code-block:: bash
 
@@ -19,10 +19,12 @@ The **terraform** directory contains all of the configuration files needed to de
 
    .. code-block:: bash
 
-      ami-search.tf  bigip1.tf            cloudwatch.tf        main.tf              templates                 vpc-app.tf
-      appserver1.tf  bigip2.tf            credentials.tf       nat-gateway.tf       terraform.tfvars.example  vpc-hub.tf
-      appserver2.tf  certs.tf             internet-gateway.tf  postman-env-file.tf  transit-gateway.tf
-      bigip-vips.tf  cfe-dependencies.tf  jumphost-ip.tf       securitygroups.tf    variables.tf
+      ami-search.tf           bigip2.tf                          ha-via-lb            postman-env-file.tf       vpc-app.tf
+      appserver1.tf           certs.tf                           internet-gateway.tf  securitygroups.tf         vpc-hub.tf
+      appserver2.tf           cfe-dependencies.tf                jumphost-ip.tf       templates
+      as3declaration-file.tf  cloudwatch.tf                      locals.tf            terraform.tfvars.example
+      bigip-vips.tf           credentials.tf                     main.tf              transit-gateway.tf
+      bigip1.tf               f5extension-importdevices-file.tf  nat-gateway.tf       variables.tf
 
 
 View Terraform Files
@@ -64,7 +66,7 @@ Providers enable configuration of dependencies for resource providers (e.g., min
    * - Filename
      - Description
    * - main.tf
-     - Defines the AWS Terraform Provider dependency.
+     - Defines the AWS Terraform Provider dependencies.
 
 |
 
@@ -137,6 +139,12 @@ Each EC2 VE instance is defined in a separate Terraform file.
 
    * - Filename
      - Description
+   * - ami-search.tf
+     - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the **f5_ami_search_name** and **linux_ami_search_name** variables. The most recent image version is selected When multiple AMI IDs are returned.
+   * - credentials.tf
+     - Creates an AWS Key Pair for SSH access to BIG-IPs and Linux app servers. A copy of these values will also be stored locally (**f5lab.key, f5lab.pub**)
+
+       Also creates a random 16-character password for the BIG-IP admin user account (used for BIG-IP GUI access).
    * - appserver1.tf
      - Deploys a demo application server instance in AZ1 of the **app** VPC.
 
@@ -176,7 +184,7 @@ F5 Automation
 
 The base system settings and network configuration are provisioned using **F5 Automation Toolchain** extensions.
 
-.. list-table:: **F5 Onboarding Template**
+.. list-table:: **BIG-IP Onboarding**
    :header-rows: 1
    :widths: auto
 
@@ -190,12 +198,60 @@ The base system settings and network configuration are provisioned using **F5 Au
        - Install F5 Automation Toolchain extension packages for DO, AS3, CFE, and TS
        - Deploy a DO declaration to configure the base system settings (glboal settings, admin user/password, SSH key, resource provisioning, etc) and network settings (3 interfaces, VLANs, self IPs, routes)
 
-       The **bigip1.tf** and **bigip2.tf** files reference this template to generate their onboarding configuration file.
+       The **bigip1.tf** and **bigip2.tf** files reference this template to generate their onboarding configuration file. The rendered template output will be saved to local files (**bigip1_f5_onboard.rendered** and **bigip2_f5_onboard.rendered**) which you can view after applying the Terraform.
 
        See the following links for more details:
 
        - |runtime-init_link|
        - |do_link|
+
+|
+
+.. list-table:: **App Deployment with AS3**
+   :header-rows: 1
+   :widths: auto
+
+   * - Filename
+     - Description
+   * - certs.tf
+     - Creates ECDSA key and certificate files (**example01a.f5lab.dev.key, example01a.f5lab.dev.cert, example01b.f5lab.dev.key, example01b.f5lab.dev.cert**)
+   * - as3declaration-file.tf
+     - Creates an AS3 declaration file with ECDSA certificates. This is used with the **F5 VS Code Extension**.
+   * - f5extension-importdevices-file.tf
+     - Creates a JSON file containing the BIG-IP public management IP addresses. This is used with the **F5 VS Code Extension**.
+
+|
+
+.. list-table:: **HA via API with CFE**
+   :header-rows: 1
+   :widths: auto
+
+   * - Filename
+     - Description
+   * - cfe-dependencies.tf
+     - Creates an S3 Bucket and IAM policy for use with the Cloud Failover Extension.
+
+|
+
+.. list-table:: **HA via LB**
+   :header-rows: 1
+   :widths: auto
+
+   * - Filename
+     - Description
+   * - ha-via-lb/nlb.tf
+     - Creates an AWS Network Load Balancer for BIG-IP HA failover
+
+|
+
+.. list-table:: **Telemetry Streaming**
+   :header-rows: 1
+   :widths: auto
+
+   * - Filename
+     - Description
+   * - cloudwatch.tf
+     - Creates Amazon CloudWatch resources for analytics integration.
 
 |
 
@@ -209,22 +265,8 @@ Additional Terraform files are included to support this lab.
 
    * - Filename
      - Description
-   * - credentials.tf
-     - Creates an AWS Key Pair for SSH access to BIG-IPs and Linux app servers. Also creates a random 16-character password for the BIG-IP admin user account (used for BIG-IP GUI access).
    * - jumphost-ip.tf
      - Determines the jump host's public IP address. Referenced by the security groups that restrict access to the lab Public IPs.
-   * - ami-search.tf
-     - Creates Terraform data sources containing the Amazon Machine Image (AMI) IDs for the BIG-IP VE and Linux app server EC2 instances. They are filtered based on the **f5_ami_search_name** and **linux_ami_search_name** variables. The most recent image version is selected When multiple AMI IDs are returned.
-   * - certs.tf
-     - Creates ECDSA certificates for the lab environment.
-   * - as3declaration-file.tf
-     - Creates the an AS3 declaration file with ECDSA certificates. This is used with the **F5 VS Code Extension** in Module 3.
-   * - f5extension-importdevices-file.tf
-     - Creates a JSON file containing the BIG-IP public management IP addresses. This is used with the **F5 VS Code Extension** in Module 3.
-   * - cfe-dependencies.tf
-     - Creates an S3 Bucket and IAM policy for use with the Cloud Failover Extension.
-   * - cloudwatch.tf
-     - Creates Amazon CloudWatch resources for analytics integration.
    * - postman-env-file.tf
      - Creates a Postman environment variables file based on Terraform variables and dynamic data.
    * - templates/f5lab_postman_env_template.json

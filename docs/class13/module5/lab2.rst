@@ -11,7 +11,7 @@ Disable Network Failover (Active-Standby)
 
 #. Send the **Prep-1-A [bigip1] Disable active-standby failover (make active-active)** request.
 
-   A response status code of “200 OK” indicates that the declaration was successfully posted.
+   A response status code of **200 OK** indicates that the declaration was successfully posted.
 
    .. image:: ./images/cfe-cleanup-device-group.png
       :align: left
