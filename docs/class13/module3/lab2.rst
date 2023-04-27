@@ -34,6 +34,8 @@ Install "F5 Extension" and "F5 ACC Chariot" Extensions
       :align: left
       :alt: VS Code Extensions icon
 
+   |
+
 #. Type ``F5`` in the search box and then select **The F5 Extension**.
 
    .. image:: ./images/installWithinCode_11.04.2020.gif
@@ -41,12 +43,16 @@ Install "F5 Extension" and "F5 ACC Chariot" Extensions
       :align: left
       :width: 90%
 
+   |
+
 #. In the extension description panel (to the right of the search results), click on the **Install** button.
 
    .. image:: ./images/2_vscode_f5extinstall.png
       :alt: F5 Extension Installing
       :align: left
       :width: 90%
+
+   |
 
 #. In the list of extensions, you will also see **F5 ACC Chariot**. Select it and click on the **Install** button.
 

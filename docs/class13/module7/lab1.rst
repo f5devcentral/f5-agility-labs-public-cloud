@@ -3,7 +3,7 @@ Delete the AWS Deployment (Terraform)
 
 The |destroy_link| command deletes the resources that were created by the Terraform configuration.
 
-#. In the BASH terminal, execute the following:
+#. In the **VS Code** terminal, execute the following:
 
    .. code-block:: bash
 
@@ -14,7 +14,7 @@ The |destroy_link| command deletes the resources that were created by the Terraf
 
    You will see output similar to the following:
 
-   .. code-block:: bash
+   .. code-block:: text
 
       <...>
 
@@ -22,7 +22,7 @@ The |destroy_link| command deletes the resources that were created by the Terraf
 
       <...>
 
-      Plan: 0 to add, 0 to change, 62 to destroy.
+      Plan: 0 to add, 0 to change, 64 to destroy.
 
       Changes to Outputs:
         - AWS_CONSOLE_LINK                = "https://xxxxxxxxxxxx.signin.aws.amazon.com/console" -> null
@@ -56,7 +56,7 @@ The |destroy_link| command deletes the resources that were created by the Terraf
       aws_ec2_transit_gateway.tgw: Still destroying... [id=tgw-096ce265d857281bc, 2m0s elapsed]
       aws_ec2_transit_gateway.tgw: Destruction complete after 2m4s
 
-      Destroy complete! Resources: 62 destroyed.
+      Destroy complete! Resources: 64 destroyed.
 
    |
 

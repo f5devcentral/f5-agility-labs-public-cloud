@@ -24,7 +24,7 @@ Check Active-Standby Status
 
 
 
-#. Scroll to the bottom of the page and click on the **Force to Standby** button.
+#. Scroll to the bottom of the page and click on the **Force to Standby** button, then click **OK** to confirm.
 
    .. image:: ./images/cfe-fix-active-standby-2.png
       :align: left
@@ -43,17 +43,11 @@ Send the CFE Declaration to Both Devices
 
 #. In the Postman **Module 4 - Cloud Failover Extension** folder, send the **CFE-2-A [bigip1] Configure cloud failover** request.
 
-   A response status code of “200 OK” indicates that the declaration was successfully posted.
+   A response status code of **200 OK** indicates that the declaration was successfully posted.
 
    .. image:: ./images/cfe-postman-config-2a.png
       :align: left
       :width: 90%
 
 
-#. The CFE declaration must also be sent to **BIG-IP #2**. Send the **CFE-2-B [bigip2] Configure cloud failover** request.
-
-   A response status code of “200 OK” indicates that the declaration was successfully posted.
-
-   .. image:: ./images/cfe-postman-config-2b.png
-      :align: left
-      :width: 90%
+#. The CFE declaration must also be sent to **BIG-IP #2**. Send the **CFE-2-B [bigip2] Configure cloud failover** request and confirm that the declaration was successfully posted.
