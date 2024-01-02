@@ -280,9 +280,9 @@ The Terraform outputs include the following:
    * - bigip2_username
      - admin
    * - f5_ami_id
-     - ami-056a053acf172f5b8
+     - ami-02e15a79338c198cf
    * - f5_ami_name
-     - F5 BIGIP-17.1.0.1-0.0.4 PAYG-Adv WAF Plus 25Mbps-230407095221-3c272b55-0405-4478-a772-d0402ccf13f9
+     - F5 BIGIP-17.1.1.1-0.0.2 PAYG-Adv WAF Plus 25Mbps-231129011259-3c272b55-0405-4478-a772-d0402ccf13f9
    * - jumphost_ip
      - 52.27.102.168
    * - linux_ami_id

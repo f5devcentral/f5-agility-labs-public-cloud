@@ -1,4 +1,4 @@
-F5 Analytics Integration with AWS
+F5 Analytics Integration with AWS (Optional)
 ================================================================================
 
 In this module, you will:
