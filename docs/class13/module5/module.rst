@@ -1,4 +1,4 @@
-HA Failover via Cloud Load Balancer
+HA Failover via Cloud Load Balancer (Optional)
 ================================================================================
 
 In this module, you will:
