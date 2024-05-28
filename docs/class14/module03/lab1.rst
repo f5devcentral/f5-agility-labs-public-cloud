@@ -3,8 +3,8 @@ Prepare the F5 Extension
 
 The rest of the lab we will be working with the F5 Automation Toolchain. This
 is a set of declarative API endpoints that you can install on top of TMOS to
-allow you to more simply manage BIG-IPs through an API. As part of the upcoming
-GCP Terraform module, these modules will be installed by default. Navigate in
+allow you to more simply manage BIG-IPs through an API. As part of the 
+Google Cloud Terraform module, these modules will be installed by default. Navigate in
 the TMUI to "iApps -> Package management LX" and you'll see four packages (The
 fifth is Service Discovery and is now a subset of AS3):
 
@@ -14,10 +14,10 @@ fifth is Service Discovery and is now a subset of AS3):
 
 The terraform apply you performed in the last step generated the necessary
 declaration files for rest of the lab. They are located under the
-f5-agility_GCP_Terraform_ATC/ATC_Declarations folder.
+f5-agility_GC_Terraform_ATC/ATC_Declarations folder.
 
 Connect the F5 Extension to the BIG-IPs
-------------------------------------------
+---------------------------------------
 
 The first step will be to configure the F5 Extension to connect to the two
 BIG-IPs
@@ -55,7 +55,7 @@ Do the same for big-ip 2.
 Submit Declarative Onboarding declarations
 ------------------------------------------
 
-From f5-agility_GCP_Terraform_ATC click on Lab4.1-DO under the drop down menu,
+From f5-agility_GC_Terraform_ATC click on Lab4.1-DO under the drop down menu,
 select "do_BIGIP1.json" request.
 
 .. image:: ./images/Lab4.1-DO-BIGIP1.png

@@ -1,5 +1,5 @@
-Deploying F5 to GCP with Terraform
-==================================
+Deploying F5 to Google Cloud with Terraform
+===========================================
 
 .. toctree::
    :maxdepth: 1
