@@ -11,7 +11,7 @@ The lab environment will also shut down automatically at the end of the schedule
 
 .. attention::
 
-   Please complete the **Agility Labs Survey** and provide your feedback to help us make this lab even better.
+   Please complete the **AppWorld Labs Survey** and provide your feedback to help us make this lab even better.
 
    Thank you for participating!
 
@@ -38,6 +38,7 @@ This lab and related content would not exist without the dedication of the follo
 - Jason Chiu
 - David Fielder
 - Tony Marfil
+- Michael O'Leary
 - Anthony Ritchie
 
 |
@@ -52,6 +53,9 @@ Revision History
    * - **Version**
      - **Lead**
      - **Changes**
+   * - 4.0 (AppWorld 2024)
+     - Michael O'Leary
+     - Lab update - reduced to 2 hours but left additional hours optional
    * - 3.0 (Agility 2023)
      - Jason Chiu
      - Lab update - expanded to 4 hours of fabulous content
